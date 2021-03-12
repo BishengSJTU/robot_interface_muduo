@@ -45,4 +45,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/TcpServer_test.dir/DependInfo.cmake"
   "CMakeFiles/TcpClient_test.dir/DependInfo.cmake"
   "CMakeFiles/RobotInterface.dir/DependInfo.cmake"
+  "CMakeFiles/Buffer_test.dir/DependInfo.cmake"
   )

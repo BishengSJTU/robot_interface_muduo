@@ -391,6 +391,8 @@ CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../datetime/Timestamp.
 CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../datetime/Types.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../datetime/copyable.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../datetime/noncopyable.h
+CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../logging/LogStream.h
+CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../logging/Logging.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../logging/StringPiece.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../net/Buffer.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../net/Callbacks.h
@@ -407,6 +409,7 @@ CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../thread/CurrentThrea
 CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../thread/Mutex.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../thread/Thread.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../thread/ThreadPool.h
+CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../robot_interface/codec.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../robot_interface/robot.cc
 CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../robot_interface/robot.h
 
@@ -414,6 +417,8 @@ CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../datetime/
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../datetime/Types.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../datetime/copyable.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../datetime/noncopyable.h
+CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../logging/LogStream.h
+CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../logging/Logging.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../logging/StringPiece.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../net/Buffer.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../net/Callbacks.h
@@ -430,6 +435,7 @@ CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../thread/Cu
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../thread/Mutex.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../thread/Thread.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../thread/ThreadPool.h
+CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../robot_interface/codec.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../robot_interface/robot.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../robot_interface/robot_interface.cc
 

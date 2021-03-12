@@ -67,5 +67,11 @@ target_link_libraries(TcpClient_test pthread)
 add_executable(RobotInterface
         robot_interface/robot.cc
         robot_interface/robot_interface.cc
+        robot_interface/codec.h
         ${ALL_SOURCES})
 target_link_libraries(RobotInterface pthread)
+
+add_executable(Buffer_test
+        test/Buffer_test.cc
+        ${ALL_SOURCES})
+target_link_libraries(Buffer_test pthread)

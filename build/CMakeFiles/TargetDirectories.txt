@@ -3,3 +3,4 @@
 /home/bisheng/robot_interface_muduo/build/CMakeFiles/TcpClient_test.dir
 /home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir
 /home/bisheng/robot_interface_muduo/build/CMakeFiles/rebuild_cache.dir
+/home/bisheng/robot_interface_muduo/build/CMakeFiles/Buffer_test.dir
