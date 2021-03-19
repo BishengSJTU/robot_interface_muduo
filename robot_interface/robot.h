@@ -33,7 +33,7 @@ public:
         IS_CHECKING = 0x04,
         IS_WALKING = 0x05,
         IS_IN_WINDOW = 0x06,
-        PREPARE_CHARGING = 0x07,
+        CHARGE_PREPARE = 0x07,
         CHARGE_FINISHED = 0x08,
         IS_IN_CAB = 0x09,
         IS_INITIALIZING = 0xF0,
@@ -49,6 +49,17 @@ public:
         muduo::string actualRFID; //读卡器传来的RFID
         std::set<int64_t> readyCab; //准备就绪的档案柜
         bool singleArchiveFinshed; //单本动作完成被成功接收
+    };
+    // 任务类型
+    enum TASK_TYPE {
+        DEPOSIT_TASK = 0x01,
+        WITHDRAW_TASK = 0x02,
+        CHARGE_TASK = 0x03,
+        INQUIRE = 0x04,
+        RFID_INFO = 0x05,
+        SINGLE_ARCHIVE_FINISH = 0x06,
+        CAB_READY = 0x07,
+        ALL_FINISH = 0X08
     };
     Robot();
     void eventLoopThread(); //收发消息及定时器函数线程
@@ -76,7 +87,10 @@ private:
 
     MutexLock externalInfoMutex_;
     ExternalInfo externalInfo_ GUARDED_BY(externalInfoMutex_);
+    Condition externalCondition_ GUARDED_BY(externalInfoMutex_);
+
     static const char connectMsg_[8];
+    static const char powerLowerLimit = 0x1c;
 };
 
 #endif
