@@ -70,7 +70,13 @@ void Robot::execTaskThread() {
         if(power <= powerLowerLimit) {
             if(taskType == CHARGE_TASK) {
                 {
-                    ; //执行充电指令.wait to complete
+                    MutexLockGuard lock(robotInfoMutex_);
+                    robotInfo_.currentState = CHARGE_PREPARE;
+                }
+                ; //执行充电指令.wait to complete
+                {
+                    MutexLockGuard lock(robotInfoMutex_);
+                    robotInfo_.currentState = IS_CHARGING;
                 }
             } else if (taskType == DEPOSIT_TASK || taskType == WITHDRAW_TASK) {
                 for(std::size_t i = 0; i < 12; i++) {
@@ -101,7 +107,9 @@ void Robot::execTaskThread() {
                     actualRFID = externalInfo_.actualRFID;
                     externalInfo_.actualRFID = "";
                 }
-
+                {
+                    ;//取出存取口的所有档案
+                }
 
                 break;
             }
