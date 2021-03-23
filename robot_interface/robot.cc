@@ -1,12 +1,19 @@
 #include "robot.h"
 
 const char Robot::connectMsg_[8] = {static_cast<char>(0xA1), 0x00, 0x00, 0x00, 0x11, 0x00, 0x01 , static_cast<char>(0xAA)};
+char Robot::singleFinishMsg_[8] = {static_cast<char>(0xA1), 0x00, 0x00, 0x01, 0x06, 0x00, 0x01 , static_cast<char>(0x00)};
 
 Robot::Robot():
 codec_(std::bind(&Robot::onCompleteMessage, this, muduo::_1, muduo::_2, muduo::_3)),
 taskCondition_(taskMessageMutex_),
 externalCondition_(externalInfoMutex_)
 {
+    {
+        MutexLockGuard lock(externalInfoMutex_);
+        externalInfo_.readyCab = {};
+        externalInfo_.actualRFID = "";
+        externalInfo_.singleArchiveFinshed = false;
+    }
 
 }
 
@@ -46,7 +53,7 @@ void Robot::execTaskThread() {
         // 判断此时机器人状态是否空闲或者在充电中，若不属于上述两种状态，直接忽略该任务
         if((state != IS_CHARGING) && (state != IS_FREE)) {
             if (taskType == DEPOSIT_TASK || taskType == WITHDRAW_TASK) {
-                for(std::size_t i = 0; i < 12; i++) {
+                for(int64_t  i = 0; i < turntablePositionTotalNum; i++) {
                     if(response[7 + 2 * i] = 0xA1)
                     response[7 + 2 * i] = 0x00;
                 }
@@ -79,7 +86,7 @@ void Robot::execTaskThread() {
                     robotInfo_.currentState = IS_CHARGING;
                 }
             } else if (taskType == DEPOSIT_TASK || taskType == WITHDRAW_TASK) {
-                for(std::size_t i = 0; i < 12; i++) {
+                for(int64_t i = 0; i < turntablePositionTotalNum; i++) {
                     if(response[7 + 2 * i] = 0xA1)
                         response[7 + 2 * i] = 0x00;
                 }
@@ -95,8 +102,10 @@ void Robot::execTaskThread() {
             //存档
             case DEPOSIT_TASK: {
                 {
-                    ; // 跑到窗口.wait to complete
+                    MutexLockGuard lock(robotInfoMutex_);
+                    robotInfo_.currentState = IS_DEPOSITING;
                 }
+                ; // 跑到窗口.wait to complete
                 // 等待接收RFID消息
                 muduo::string actualRFID;
                 {
@@ -107,10 +116,181 @@ void Robot::execTaskThread() {
                     actualRFID = externalInfo_.actualRFID;
                     externalInfo_.actualRFID = "";
                 }
-                {
-                    ;//取出存取口的所有档案
+                //根据RFID结果取出存取口的所有档案
+                const char* dataRFID = actualRFID.data();
+                int64_t turntablePosition = 0;
+                std::map<int64_t, std::vector<int64_t> > cabIDTurntablePositionsMap;
+                for(int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                    if(data[7 + 2 * i] == 0xA1) {
+                        turntablePosition++;
+                        ;//取出档案
+                        int64_t cabID = data[8 + 2 * i];
+                        if(cabIDTurntablePositionsMap.find(cabID) == cabIDTurntablePositionsMap.end()) {
+                            std::vector<int64_t> turntablePositions;
+                            turntablePositions.push_back(turntablePosition);
+                            cabIDTurntablePositionsMap.insert(std::make_pair(cabID, turntablePositions));
+                        } else {
+                            cabIDTurntablePositionsMap.find(cabID)->second.push_back(turntablePosition);
+                        }
+                    }
                 }
 
+                for(auto cabIDTurntablePositions : cabIDTurntablePositionsMap) {
+                    int64_t cabID = cabIDTurntablePositions.first;
+                    std::vector<int64_t> turntablePositions = cabIDTurntablePositions.second;; // 跑到对应柜子前
+                    //　等待档案柜就绪
+                    {
+                        MutexLockGuard lock(externalInfoMutex_);
+                        while (externalInfo_.readyCab.find(cabID) == externalInfo_.readyCab.end()) {
+                            externalCondition_.wait();
+                        }
+                        externalInfo_.readyCab.erase(cabID);
+                    }
+
+                    //此柜需要操作的总的档案数量
+                    int64_t operationArchiveNum = turntablePositions.size();
+
+                    // 额外等待档案柜就绪次数
+                    int64_t extraOperationTimes =
+                            (operationArchiveNum % cabPositionTotalNum == 0)
+                            ? (operationArchiveNum / cabPositionTotalNum - 1)
+                            : (operationArchiveNum / cabPositionTotalNum);
+
+
+                    for (int64_t turntableNum = 1; turntableNum <= operationArchiveNum; turntableNum++) {
+                        ; //将档案从转盘中放入柜中
+                        // 额外等待次数>0并且本轮操作结束，等待档案柜就绪
+                        if (extraOperationTimes > 0 && (turntableNum % cabPositionTotalNum == 0)) {
+                            singleFinishMsg_[7] = cabID;
+                            muduo::StringPiece singleFinishMsg(singleFinishMsg_);
+                            write(singleFinishMsg);
+                            {
+                                MutexLockGuard lock(externalInfoMutex_);
+                                while (externalInfo_.singleArchiveFinshed == false) {
+                                    externalCondition_.wait();
+                                }
+                                externalInfo_.singleArchiveFinshed = true;
+                            }
+                            {
+                                MutexLockGuard lock(externalInfoMutex_);
+                                while (externalInfo_.readyCab.find(cabID) == externalInfo_.readyCab.end()) {
+                                    externalCondition_.wait();
+                                }
+                                externalInfo_.readyCab.erase(cabID);
+                                extraOperationTimes--;
+                            }
+                        }
+                    }
+
+                    singleFinishMsg_[7] = cabID;
+                    muduo::StringPiece singleFinishMsg(singleFinishMsg_);
+                    write(singleFinishMsg);
+                    {
+                        MutexLockGuard lock(externalInfoMutex_);
+                        while (externalInfo_.singleArchiveFinshed == false) {
+                            externalCondition_.wait();
+                        }
+                        externalInfo_.singleArchiveFinshed = true;
+                    }
+                }
+
+                {
+                    MutexLockGuard lock(robotInfoMutex_);
+                    robotInfo_.currentState = IS_FREE;
+                }
+                break;
+            }
+
+            // 取档
+            case WITHDRAW_TASK: {
+                {
+                    MutexLockGuard lock(robotInfoMutex_);
+                    robotInfo_.currentState = IS_WITHDRAWING;
+                }
+                //根据任务清单将所有档案归类
+                int64_t turntablePosition = 0;
+                std::map<int64_t, std::vector<int64_t> > cabIDTurntablePositionsMap;
+                for(int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                    if(data[7 + 2 * i] == 0xA1) {
+                        turntablePosition++;
+                        int64_t cabID = data[8 + 2 * i];
+                        if(cabIDTurntablePositionsMap.find(cabID) == cabIDTurntablePositionsMap.end()) {
+                            std::vector<int64_t> turntablePositions;
+                            turntablePositions.push_back(turntablePosition);
+                            cabIDTurntablePositionsMap.insert(std::make_pair(cabID, turntablePositions));
+                        } else {
+                            cabIDTurntablePositionsMap.find(cabID)->second.push_back(turntablePosition);
+                        }
+                    }
+                }
+
+                for(auto cabIDTurntablePositions : cabIDTurntablePositionsMap) {
+                    int64_t cabID = cabIDTurntablePositions.first;
+                    std::vector<int64_t> turntablePositions = cabIDTurntablePositions.second;
+                    ; // 跑到对应柜子前
+                    //　等待档案柜就绪
+                    {
+                        MutexLockGuard lock(externalInfoMutex_);
+                        while (externalInfo_.readyCab.find(cabID) == externalInfo_.readyCab.end()) {
+                            externalCondition_.wait();
+                        }
+                        externalInfo_.readyCab.erase(cabID);
+                    }
+
+                    //此柜需要操作的总的档案数量
+                    int64_t operationArchiveNum = turntablePositions.size();
+
+                    // 额外等待档案柜就绪次数
+                    int64_t extraOperationTimes =
+                            (operationArchiveNum % cabPositionTotalNum == 0)
+                            ? (operationArchiveNum / cabPositionTotalNum - 1)
+                            : (operationArchiveNum / cabPositionTotalNum);
+
+
+                    for (int64_t turntableNum = 1; turntableNum <= operationArchiveNum; turntableNum++) {
+                        ; //将档案从柜中放入转盘中
+                        // 额外等待次数>0并且本轮操作结束，等待档案柜就绪
+                        if (extraOperationTimes > 0 && (turntableNum % cabPositionTotalNum == 0)) {
+                            singleFinishMsg_[7] = cabID;
+                            muduo::StringPiece singleFinishMsg(singleFinishMsg_);
+                            write(singleFinishMsg);
+                            {
+                                MutexLockGuard lock(externalInfoMutex_);
+                                while (externalInfo_.singleArchiveFinshed == false) {
+                                    externalCondition_.wait();
+                                }
+                                externalInfo_.singleArchiveFinshed = true;
+                            }
+                            {
+                                MutexLockGuard lock(externalInfoMutex_);
+                                while (externalInfo_.readyCab.find(cabID) == externalInfo_.readyCab.end()) {
+                                    externalCondition_.wait();
+                                }
+                                externalInfo_.readyCab.erase(cabID);
+                                extraOperationTimes--;
+                            }
+                        }
+                    }
+
+                    singleFinishMsg_[7] = cabID;
+                    muduo::StringPiece singleFinishMsg(singleFinishMsg_);
+                    write(singleFinishMsg);
+                    {
+                        MutexLockGuard lock(externalInfoMutex_);
+                        while (externalInfo_.singleArchiveFinshed == false) {
+                            externalCondition_.wait();
+                        }
+                        externalInfo_.singleArchiveFinshed = true;
+                    }
+                }
+
+                ; // 跑到存取口前，将档案放入
+
+
+                {
+                    MutexLockGuard lock(robotInfoMutex_);
+                    robotInfo_.currentState = IS_FREE;
+                }
                 break;
             }
             default:
@@ -242,7 +422,7 @@ void Robot::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             }
             break;
         }
-        //单本动作完成外部接收完成06
+        //单次动作完成外部接收完成06
         case SINGLE_ARCHIVE_FINISH: {
             char responseData[8];
             for(auto i = 0; i < message.size(); i++) {

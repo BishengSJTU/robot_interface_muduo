@@ -2,7 +2,9 @@
 #define ROBOT_H
 
 #include <iostream>
+#include <map>
 #include <set>
+#include <vector>
 #include <boost/bind.hpp>
 #include "TcpClient.h"
 #include "EventLoop.h"
@@ -48,7 +50,7 @@ public:
     {
         muduo::string actualRFID; //读卡器传来的RFID
         std::set<int64_t> readyCab; //准备就绪的档案柜
-        bool singleArchiveFinshed; //单本动作完成被成功接收
+        bool singleArchiveFinshed; //单次动作完成被成功接收
     };
     // 任务类型
     enum TASK_TYPE {
@@ -90,7 +92,10 @@ private:
     Condition externalCondition_ GUARDED_BY(externalInfoMutex_);
 
     static const char connectMsg_[8];
+    static char singleFinishMsg_[8];
     static const char powerLowerLimit = 0x1c;
+    static const std::size_t turntablePositionTotalNum = 12;
+    static const std::size_t cabPositionTotalNum = 12;
 };
 
 #endif
