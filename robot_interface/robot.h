@@ -91,8 +91,9 @@ private:
     ExternalInfo externalInfo_ GUARDED_BY(externalInfoMutex_);
     Condition externalCondition_ GUARDED_BY(externalInfoMutex_);
 
-    static const char connectMsg_[8];
-    static char singleFinishMsg_[8];
+    static u_char connectMsg_[8];
+    static u_char singleFinishMsg_[8];
+    static u_char stateMsg_[9];
     static const char powerLowerLimit = 0x1c;
     static const std::size_t turntablePositionTotalNum = 12;
     static const std::size_t cabPositionTotalNum = 12;

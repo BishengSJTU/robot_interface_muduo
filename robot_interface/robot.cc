@@ -1,8 +1,8 @@
 #include "robot.h"
 
-const char Robot::connectMsg_[8] = {static_cast<char>(0xA1), 0x00, 0x00, 0x00, 0x11, 0x00, 0x01 , static_cast<char>(0xAA)};
-char Robot::singleFinishMsg_[8] = {static_cast<char>(0xA1), 0x00, 0x00, 0x01, 0x06, 0x00, 0x01 , static_cast<char>(0x00)};
-
+u_char Robot::connectMsg_[8] = {0xA1, 0x00, 0x00, 0x00, 0x11, 0x00, 0x01 , 0xAA};
+u_char Robot::singleFinishMsg_[8] = {0xA1, 0x00, 0x00, 0x01, 0x06, 0x00, 0x01 , 0x00};
+u_char Robot::stateMsg_[9] = {0xA1, 0x00, 0x00, 0x00, 0x04, 0x00, 0x02, 0x00, 0x00};
 Robot::Robot():
 codec_(std::bind(&Robot::onCompleteMessage, this, muduo::_1, muduo::_2, muduo::_3)),
 taskCondition_(taskMessageMutex_),
@@ -29,7 +29,7 @@ void Robot::eventLoopThread() {
 }
 
 void Robot::execTaskThread() {
-    while(1) {
+    while (1) {
         StringPiece task;
         string response(task.data(), task.size());
         // 等待任务消息到来，否则此线程阻塞
@@ -51,13 +51,13 @@ void Robot::execTaskThread() {
             power = robotInfo_.currentPower;
         }
         // 判断此时机器人状态是否空闲或者在充电中，若不属于上述两种状态，直接忽略该任务
-        if((state != IS_CHARGING) && (state != IS_FREE)) {
+        if ((state != IS_CHARGING) && (state != IS_FREE)) {
             if (taskType == DEPOSIT_TASK || taskType == WITHDRAW_TASK) {
-                for(int64_t  i = 0; i < turntablePositionTotalNum; i++) {
-                    if(response[7 + 2 * i] = 0xA1)
-                    response[7 + 2 * i] = 0x00;
+                for (int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                    if (response[7 + 2 * i] = 0xA1)
+                        response[7 + 2 * i] = 0x00;
                 }
-            } else if(taskType == CHARGE_TASK || taskType == ALL_FINISH) {
+            } else if (taskType == CHARGE_TASK || taskType == ALL_FINISH) {
                 response[7] = 0x00;
             }
             StringPiece responseMsg(response);
@@ -65,8 +65,8 @@ void Robot::execTaskThread() {
             continue;
         }
         // 如果正在充电或准备充电，忽略充电任务
-        if(state == IS_CHARGING || state == CHARGE_PREPARE) {
-            if(taskType == CHARGE_TASK) {
+        if (state == IS_CHARGING || state == CHARGE_PREPARE) {
+            if (taskType == CHARGE_TASK) {
                 response[7] = 0x00;
                 StringPiece responseMsg(response);
                 write(responseMsg);
@@ -74,23 +74,22 @@ void Robot::execTaskThread() {
             }
         }
         // 电量小于最低电量，只接收充电任务
-        if(power <= powerLowerLimit) {
-            if(taskType == CHARGE_TASK) {
+        if (power <= powerLowerLimit) {
+            if (taskType == CHARGE_TASK) {
                 {
                     MutexLockGuard lock(robotInfoMutex_);
                     robotInfo_.currentState = CHARGE_PREPARE;
-                }
-                ; //执行充电指令.wait to complete
+                }; //执行充电指令.wait to complete
                 {
                     MutexLockGuard lock(robotInfoMutex_);
                     robotInfo_.currentState = IS_CHARGING;
                 }
             } else if (taskType == DEPOSIT_TASK || taskType == WITHDRAW_TASK) {
-                for(int64_t i = 0; i < turntablePositionTotalNum; i++) {
-                    if(response[7 + 2 * i] = 0xA1)
+                for (int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                    if (response[7 + 2 * i] = 0xA1)
                         response[7 + 2 * i] = 0x00;
                 }
-            } else if(taskType == ALL_FINISH) {
+            } else if (taskType == ALL_FINISH) {
                 response[7] = 0x00;
             }
             StringPiece responseMsg(response);
@@ -98,14 +97,13 @@ void Robot::execTaskThread() {
             continue;
         }
         // 可执行任务状态
-        switch(taskType) {
+        switch (taskType) {
             //存档
             case DEPOSIT_TASK: {
                 {
                     MutexLockGuard lock(robotInfoMutex_);
                     robotInfo_.currentState = IS_DEPOSITING;
-                }
-                ; // 跑到窗口.wait to complete
+                }; // 跑到窗口.wait to complete
                 // 等待接收RFID消息
                 muduo::string actualRFID;
                 {
@@ -117,15 +115,14 @@ void Robot::execTaskThread() {
                     externalInfo_.actualRFID = "";
                 }
                 //根据RFID结果取出存取口的所有档案
-                const char* dataRFID = actualRFID.data();
+                const char *dataRFID = actualRFID.data();
                 int64_t turntablePosition = 0;
                 std::map<int64_t, std::vector<int64_t> > cabIDTurntablePositionsMap;
-                for(int64_t i = 0; i < turntablePositionTotalNum; i++) {
-                    if(data[7 + 2 * i] == 0xA1) {
-                        turntablePosition++;
-                        ;//取出档案
+                for (int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                    if (data[7 + 2 * i] == 0xA1) {
+                        turntablePosition++;;//取出档案
                         int64_t cabID = data[8 + 2 * i];
-                        if(cabIDTurntablePositionsMap.find(cabID) == cabIDTurntablePositionsMap.end()) {
+                        if (cabIDTurntablePositionsMap.find(cabID) == cabIDTurntablePositionsMap.end()) {
                             std::vector<int64_t> turntablePositions;
                             turntablePositions.push_back(turntablePosition);
                             cabIDTurntablePositionsMap.insert(std::make_pair(cabID, turntablePositions));
@@ -135,7 +132,7 @@ void Robot::execTaskThread() {
                     }
                 }
 
-                for(auto cabIDTurntablePositions : cabIDTurntablePositionsMap) {
+                for (auto cabIDTurntablePositions : cabIDTurntablePositionsMap) {
                     int64_t cabID = cabIDTurntablePositions.first;
                     std::vector<int64_t> turntablePositions = cabIDTurntablePositions.second;; // 跑到对应柜子前
                     //　等待档案柜就绪
@@ -157,8 +154,8 @@ void Robot::execTaskThread() {
                             : (operationArchiveNum / cabPositionTotalNum);
 
 
-                    for (int64_t turntableNum = 1; turntableNum <= operationArchiveNum; turntableNum++) {
-                        ; //将档案从转盘中放入柜中
+                    for (int64_t turntableNum = 1;
+                         turntableNum <= operationArchiveNum; turntableNum++) { ; //将档案从转盘中放入柜中
                         // 额外等待次数>0并且本轮操作结束，等待档案柜就绪
                         if (extraOperationTimes > 0 && (turntableNum % cabPositionTotalNum == 0)) {
                             singleFinishMsg_[7] = cabID;
@@ -169,7 +166,7 @@ void Robot::execTaskThread() {
                                 while (externalInfo_.singleArchiveFinshed == false) {
                                     externalCondition_.wait();
                                 }
-                                externalInfo_.singleArchiveFinshed = true;
+                                externalInfo_.singleArchiveFinshed = false;
                             }
                             {
                                 MutexLockGuard lock(externalInfoMutex_);
@@ -190,7 +187,7 @@ void Robot::execTaskThread() {
                         while (externalInfo_.singleArchiveFinshed == false) {
                             externalCondition_.wait();
                         }
-                        externalInfo_.singleArchiveFinshed = true;
+                        externalInfo_.singleArchiveFinshed = false;
                     }
                 }
 
@@ -201,7 +198,7 @@ void Robot::execTaskThread() {
                 break;
             }
 
-            // 取档
+                // 取档
             case WITHDRAW_TASK: {
                 {
                     MutexLockGuard lock(robotInfoMutex_);
@@ -210,11 +207,11 @@ void Robot::execTaskThread() {
                 //根据任务清单将所有档案归类
                 int64_t turntablePosition = 0;
                 std::map<int64_t, std::vector<int64_t> > cabIDTurntablePositionsMap;
-                for(int64_t i = 0; i < turntablePositionTotalNum; i++) {
-                    if(data[7 + 2 * i] == 0xA1) {
+                for (int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                    if (data[7 + 2 * i] == 0xA1) {
                         turntablePosition++;
                         int64_t cabID = data[8 + 2 * i];
-                        if(cabIDTurntablePositionsMap.find(cabID) == cabIDTurntablePositionsMap.end()) {
+                        if (cabIDTurntablePositionsMap.find(cabID) == cabIDTurntablePositionsMap.end()) {
                             std::vector<int64_t> turntablePositions;
                             turntablePositions.push_back(turntablePosition);
                             cabIDTurntablePositionsMap.insert(std::make_pair(cabID, turntablePositions));
@@ -224,10 +221,9 @@ void Robot::execTaskThread() {
                     }
                 }
 
-                for(auto cabIDTurntablePositions : cabIDTurntablePositionsMap) {
+                for (auto cabIDTurntablePositions : cabIDTurntablePositionsMap) {
                     int64_t cabID = cabIDTurntablePositions.first;
-                    std::vector<int64_t> turntablePositions = cabIDTurntablePositions.second;
-                    ; // 跑到对应柜子前
+                    std::vector<int64_t> turntablePositions = cabIDTurntablePositions.second;; // 跑到对应柜子前
                     //　等待档案柜就绪
                     {
                         MutexLockGuard lock(externalInfoMutex_);
@@ -247,8 +243,8 @@ void Robot::execTaskThread() {
                             : (operationArchiveNum / cabPositionTotalNum);
 
 
-                    for (int64_t turntableNum = 1; turntableNum <= operationArchiveNum; turntableNum++) {
-                        ; //将档案从柜中放入转盘中
+                    for (int64_t turntableNum = 1;
+                         turntableNum <= operationArchiveNum; turntableNum++) { ; //将档案从柜中放入转盘中
                         // 额外等待次数>0并且本轮操作结束，等待档案柜就绪
                         if (extraOperationTimes > 0 && (turntableNum % cabPositionTotalNum == 0)) {
                             singleFinishMsg_[7] = cabID;
@@ -259,7 +255,7 @@ void Robot::execTaskThread() {
                                 while (externalInfo_.singleArchiveFinshed == false) {
                                     externalCondition_.wait();
                                 }
-                                externalInfo_.singleArchiveFinshed = true;
+                                externalInfo_.singleArchiveFinshed = false;
                             }
                             {
                                 MutexLockGuard lock(externalInfoMutex_);
@@ -280,12 +276,11 @@ void Robot::execTaskThread() {
                         while (externalInfo_.singleArchiveFinshed == false) {
                             externalCondition_.wait();
                         }
-                        externalInfo_.singleArchiveFinshed = true;
+                        externalInfo_.singleArchiveFinshed = false;
                     }
                 }
 
                 ; // 跑到存取口前，将档案放入
-
 
                 {
                     MutexLockGuard lock(robotInfoMutex_);
