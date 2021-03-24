@@ -311,7 +311,7 @@ void Robot::onConnection(const TcpConnectionPtr& conn) {
     }
 
     if(conn->connected()) {
-        StringPiece message(connectMsg_, sizeof(connectMsg_));
+        StringPiece message(connectMsg_);
         write(message);
     }
 }

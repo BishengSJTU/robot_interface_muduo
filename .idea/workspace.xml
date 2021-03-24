@@ -15,9 +15,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea00259e-2efd-419c-bb95-908181337d76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/robot_interface/robot.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/robot.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot_interface/robot.h" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/robot.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -69,8 +67,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robot_interface/robot.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+            <state relative-caret-position="285">
+              <caret line="313" column="41" lean-forward="true" selection-start-line="313" selection-start-column="41" selection-end-line="313" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -131,7 +129,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>timeoutMs</find>
       <find>kPollTimeMs</find>
       <find>setTimeZone</find>
       <find>dummyOutput</find>
@@ -161,6 +158,7 @@
       <find>turntablePosition</find>
       <find>单</find>
       <find>singleArchiveFinshed</find>
+      <find>singleFinishMsg_</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -351,12 +349,12 @@
       <workItem from="1616063970160" duration="4027000" />
       <workItem from="1616400446500" duration="20305000" />
       <workItem from="1616577638677" duration="2656000" />
-      <workItem from="1616571752342" duration="2263000" />
+      <workItem from="1616571752342" duration="3062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161639000" />
+    <option name="totallyTimeSpent" value="162438000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -786,8 +784,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/robot_interface/robot.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="59" column="35" lean-forward="true" selection-start-line="59" selection-start-column="35" selection-end-line="59" selection-end-column="35" />
+        <state relative-caret-position="285">
+          <caret line="313" column="41" lean-forward="true" selection-start-line="313" selection-start-column="41" selection-end-line="313" selection-end-column="41" />
         </state>
       </provider>
     </entry>
