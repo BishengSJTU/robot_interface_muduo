@@ -36,6 +36,14 @@ assert.h
 
 ../datetime/noncopyable.h
 
+../logging/LogFile.h
+Mutex.h
+../logging/Mutex.h
+Types.h
+../logging/Types.h
+memory
+-
+
 ../logging/LogStream.h
 noncopyable.h
 ../logging/noncopyable.h
@@ -971,7 +979,11 @@ robot.h
 /home/bisheng/robot_interface_muduo/robot_interface/robot.h
 iostream
 -
+map
+-
 set
+-
+vector
 -
 boost/bind.hpp
 -
@@ -997,6 +1009,10 @@ robot.h
 /home/bisheng/robot_interface_muduo/robot_interface/robot.h
 Thread.h
 /home/bisheng/robot_interface_muduo/robot_interface/Thread.h
+LogFile.h
+/home/bisheng/robot_interface_muduo/robot_interface/LogFile.h
+Logging.h
+/home/bisheng/robot_interface_muduo/robot_interface/Logging.h
 
 /home/bisheng/robot_interface_muduo/thread/Atomic.h
 noncopyable.h

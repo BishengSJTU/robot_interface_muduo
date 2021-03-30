@@ -2,9 +2,10 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="archive_robot" targetName="Buffer_test" />
+      <config projectName="archive_robot" targetName="LogFile_test" />
       <config projectName="archive_robot" targetName="RobotInterface" />
       <config projectName="archive_robot" targetName="TcpServer_test" />
+      <config projectName="archive_robot" targetName="Buffer_test" />
       <config projectName="archive_robot" targetName="TcpClient_test" />
     </generated>
   </component>
@@ -15,7 +16,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea00259e-2efd-419c-bb95-908181337d76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/RobotInterface" beforeDir="false" afterPath="$PROJECT_DIR$/build/RobotInterface" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/archive_robot.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/archive_robot.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/robot_interface/robot.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/robot.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot_interface/robot.h" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/robot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot_interface/robot_interface.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/robot_interface.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/LogFile_test.cc" beforeDir="false" afterPath="$PROJECT_DIR$/test/LogFile_test.cc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -32,19 +61,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/net/TcpConnection.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1548">
-              <caret line="86" column="24" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robot_interface/robot_interface.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+            <state relative-caret-position="90">
+              <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -55,11 +75,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robot_interface/robot.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="93" column="11" lean-forward="true" selection-start-line="93" selection-start-column="11" selection-end-line="93" selection-end-column="11" />
-              <folding>
-                <element signature="e#33#52#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="72">
+              <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -67,60 +84,29 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robot_interface/robot.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="313" column="41" lean-forward="true" selection-start-line="313" selection-start-column="41" selection-end-line="313" selection-end-column="41" />
+            <state relative-caret-position="267">
+              <caret line="675" column="79" selection-start-line="675" selection-start-column="79" selection-end-line="675" selection-end-column="79" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logging/StringPiece.h">
+        <entry file="file://$PROJECT_DIR$/test/TcpServer_test.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1350">
-              <caret line="75" column="61" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/net/EventLoopThread.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1224">
-              <caret line="68" column="9" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/net/EventLoopThread.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="738">
-              <caret line="41" column="37" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thread/Condition.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="486">
+              <caret line="37" column="5" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
               <folding>
-                <element signature="e#160#182#0" expanded="true" />
+                <element signature="e#0#22#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/thread/Mutex.h">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robot_interface/codec.h">
+        <entry file="file://$PROJECT_DIR$/net/Channel.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="43" column="51" selection-start-line="43" selection-start-column="51" selection-end-line="43" selection-end-column="51" />
+            <state relative-caret-position="126">
+              <caret line="94" selection-start-line="94" selection-end-line="94" />
             </state>
           </provider>
         </entry>
@@ -129,28 +115,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>kPollTimeMs</find>
-      <find>setTimeZone</find>
-      <find>dummyOutput</find>
-      <find>setF</find>
-      <find>main debug</find>
-      <find>connect</find>
-      <find>toHostPort</find>
-      <find>mutex_</find>
-      <find>connection_</find>
-      <find>networkToHost32</find>
-      <find>prepend</find>
-      <find>peek</find>
-      <find>onStringMessage</find>
-      <find>send</find>
-      <find>data</find>
-      <find>connectionMutex_</find>
-      <find>StringPiece</find>
-      <find>cond_</find>
-      <find>notifyAll</find>
-      <find>single</find>
-      <find>12</find>
-      <find>ExternalInfo</find>
       <find>externalInfoMutex_</find>
       <find>cabIDTurntablePositions</find>
       <find>size_t</find>
@@ -158,7 +122,29 @@
       <find>turntablePosition</find>
       <find>单</find>
       <find>singleArchiveFinshed</find>
+      <find>StringPiece</find>
+      <find>stringpiece</find>
+      <find>response</find>
+      <find>connectMsg_</find>
       <find>singleFinishMsg_</find>
+      <find>robotInfo_</find>
+      <find>stateMsg_</find>
+      <find>DEPOSIT_TASK</find>
+      <find>powerLowerLimit</find>
+      <find>taskMessage_</find>
+      <find>taskType</find>
+      <find>currentState</find>
+      <find>flushFunc</find>
+      <find>ALL_FINISH_TASK</find>
+      <find>Channel::handle_event() POLLHUP</find>
+      <find>stdout</find>
+      <find>g_file</find>
+      <find>g_logFile</find>
+      <find>LOG</find>
+      <find>POLLHUP</find>
+      <find>stateMsg</find>
+      <find>singleFinishMsg</find>
+      <find>write</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -195,14 +181,12 @@
         <option value="$PROJECT_DIR$/CMakeFiles/robot_interface.dir/build.make" />
         <option value="$PROJECT_DIR$/datetime/TimeZone.h" />
         <option value="$PROJECT_DIR$/test/test1.cc" />
-        <option value="$PROJECT_DIR$/test/LogFile_test.cc" />
         <option value="$PROJECT_DIR$/net/TcpClient.cc" />
         <option value="$PROJECT_DIR$/net/TcpClient.h" />
         <option value="$PROJECT_DIR$/net/Acceptor.h" />
         <option value="$PROJECT_DIR$/net/Connector.h" />
         <option value="$PROJECT_DIR$/test/Channel_test.cc" />
         <option value="$PROJECT_DIR$/net/Connector.cc" />
-        <option value="$PROJECT_DIR$/net/Channel.cc" />
         <option value="$PROJECT_DIR$/test/EventLoop_test1.cc" />
         <option value="$PROJECT_DIR$/test/EventLoop_test2.cc" />
         <option value="$PROJECT_DIR$/test/EventLoop_test3.cc" />
@@ -211,10 +195,12 @@
         <option value="$PROJECT_DIR$/test/TcpConnection_test.cc" />
         <option value="$PROJECT_DIR$/test/Logging_test.cc" />
         <option value="$PROJECT_DIR$/test/TcpClient_test.cc" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/test/Buffer_test.cc" />
         <option value="$PROJECT_DIR$/robot_interface/codec.h" />
         <option value="$PROJECT_DIR$/test/TcpServer_test.cc" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/test/LogFile_test.cc" />
+        <option value="$PROJECT_DIR$/net/Channel.cc" />
         <option value="$PROJECT_DIR$/robot_interface/robot_interface.cc" />
         <option value="$PROJECT_DIR$/robot_interface/robot.h" />
         <option value="$PROJECT_DIR$/robot_interface/robot.cc" />
@@ -303,6 +289,11 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="LogFile_test" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="archive_robot" TARGET_NAME="LogFile_test" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="archive_robot" RUN_TARGET_NAME="LogFile_test">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RobotInterface" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="archive_robot" TARGET_NAME="RobotInterface" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="archive_robot" RUN_TARGET_NAME="RobotInterface">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -320,6 +311,7 @@
     </configuration>
     <list>
       <item itemvalue="CMake Application.Buffer_test" />
+      <item itemvalue="CMake Application.LogFile_test" />
       <item itemvalue="CMake Application.RobotInterface" />
       <item itemvalue="CMake Application.TcpClient_test" />
       <item itemvalue="CMake Application.TcpServer_test" />
@@ -350,11 +342,13 @@
       <workItem from="1616400446500" duration="20305000" />
       <workItem from="1616577638677" duration="2656000" />
       <workItem from="1616571752342" duration="3062000" />
+      <workItem from="1617063759994" duration="10146000" />
+      <workItem from="1617085557725" duration="4190000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162438000" />
+    <option name="totallyTimeSpent" value="176774000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -369,7 +363,7 @@
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21035856" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21673307" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -417,32 +411,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/net/TcpConnection.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="15" selection-start-line="15" selection-end-line="15" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/Channel.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#269#298#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/TcpClient.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
-          <folding>
-            <element signature="e#387#405#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/net/TcpClient.cc" />
     <entry file="file://$PROJECT_DIR$/net/Socket.h">
       <provider selected="true" editor-type-id="text-editor">
@@ -480,9 +448,6 @@
         <state relative-caret-position="-216" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/net/EventLoop.h">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Channel_test.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-34">
@@ -494,13 +459,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/net/Connector.cc" />
-    <entry file="file://$PROJECT_DIR$/net/Channel.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="43" column="3" selection-start-line="43" selection-start-column="3" selection-end-line="43" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Timer_test1.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -589,16 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/Logging_test.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1062">
-          <caret line="59" column="19" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/EventLoop_test2.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -606,37 +554,6 @@
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/LogFile_test.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logging/Logging.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-648" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logging/Logging.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-144">
-          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logging/LogFile.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-49" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logging/LogFile.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2237">
-          <caret line="133" selection-start-line="133" selection-end-line="133" />
         </state>
       </provider>
     </entry>
@@ -672,13 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1242">
-          <caret line="69" column="25" selection-start-line="69" selection-start-column="25" selection-end-line="69" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/net/Buffer.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
@@ -705,16 +615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/TcpServer_test.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" column="25" selection-start-line="28" selection-start-column="25" selection-end-line="28" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/net/TcpConnection.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1548">
@@ -722,34 +622,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot_interface/robot_interface.cc">
+    <entry file="file://$PROJECT_DIR$/net/EventLoopThread.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logging/StringPiece.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="75" column="61" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="61" />
+        <state relative-caret-position="738">
+          <caret line="41" column="37" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/net/EventLoopThread.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1224">
+        <state relative-caret-position="563">
           <caret line="68" column="9" selection-start-line="68" selection-start-column="4" selection-end-line="68" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/net/EventLoopThread.h">
+    <entry file="file://$PROJECT_DIR$/net/EventLoop.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="37" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="37" />
+        <state relative-caret-position="-918" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="792">
+          <caret line="44" column="20" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/StringPiece.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="81" column="20" selection-start-line="81" selection-start-column="20" selection-end-line="81" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -772,20 +674,115 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logging/LogStream.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5503" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/LogStream.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3073" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/Logging.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2083">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+          <folding>
+            <element signature="e#219#241#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/Logging.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-373" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/LogFile.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2394">
+          <caret line="133" selection-start-line="133" selection-end-line="133" />
+          <folding>
+            <element signature="e#160#180#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/net/Channel.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1177">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logging/LogFile.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-535">
+          <folding>
+            <element signature="e#219#237#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/LogFile_test.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/Logging_test.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="99" column="11" selection-start-line="99" selection-start-column="2" selection-end-line="99" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_interface/robot_interface.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/TcpServer_test.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="37" column="5" lean-forward="true" selection-start-line="35" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/net/Channel.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/robot_interface/robot.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="93" column="11" lean-forward="true" selection-start-line="93" selection-start-column="11" selection-end-line="93" selection-end-column="11" />
-          <folding>
-            <element signature="e#33#52#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/robot_interface/robot.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="313" column="41" lean-forward="true" selection-start-line="313" selection-start-column="41" selection-end-line="313" selection-end-column="41" />
+        <state relative-caret-position="267">
+          <caret line="675" column="79" selection-start-line="675" selection-start-column="79" selection-end-line="675" selection-end-column="79" />
         </state>
       </provider>
     </entry>

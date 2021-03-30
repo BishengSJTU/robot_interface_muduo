@@ -22,14 +22,15 @@ int main(int argc, char* argv[])
   printf("name:%s", ::basename(name));
   g_logFile.reset(new muduo::LogFile(::basename(name), 200*1000));
   muduo::Logger::setOutput(outputFunc);
-//  muduo::Logger::setFlush(flushFunc);
+  muduo::Logger::setFlush(flushFunc);
 
   muduo::string line = "ABCDEFGHIJKLMNOPQRSTUVWXYZ ";
 
   for (int i = 0; i < 10000; ++i)
   {
-    LOG_INFO << line << i;
+    LOG_INFO << line;
 
     usleep(1000);
   }
+    while(1);
 }

@@ -2,6 +2,7 @@
 #define ROBOT_H
 
 #include <iostream>
+#include <sstream>
 #include <map>
 #include <set>
 #include <vector>
@@ -61,7 +62,7 @@ public:
         RFID_INFO = 0x05,
         SINGLE_ARCHIVE_FINISH = 0x06,
         CAB_READY = 0x07,
-        ALL_FINISH = 0X08
+        ALL_FINISH_TASK = 0X08
     };
     Robot();
     void eventLoopThread(); //收发消息及定时器函数线程
@@ -91,12 +92,10 @@ private:
     ExternalInfo externalInfo_ GUARDED_BY(externalInfoMutex_);
     Condition externalCondition_ GUARDED_BY(externalInfoMutex_);
 
-    static u_char connectMsg_[8];
-    static u_char singleFinishMsg_[8];
-    static u_char stateMsg_[9];
-    static const char powerLowerLimit = 0x1c;
-    static const std::size_t turntablePositionTotalNum = 12;
-    static const std::size_t cabPositionTotalNum = 12;
+    static const char powerLowerLimit = 0x1c; //电量下限28
+    static const char powerHighLimit = 0x60; //电量上限96
+    static const std::size_t turntablePositionTotalNum = 12; //转盘总位置数
+    static const std::size_t cabPositionTotalNum = 12; //抽屉式档案柜平台位置数
 };
 
 #endif

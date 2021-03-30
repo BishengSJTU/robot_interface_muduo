@@ -44,10 +44,10 @@ include_directories(datetime logging net thread robot_interface)
 #        ${ALL_SOURCES})
 #target_link_libraries(TcpConnection_test pthread)
 #
-#add_executable(LogFile_test
-#        test/LogFile_test.cc
-#        ${ALL_SOURCES})
-#target_link_libraries(LogFile_test pthread)
+add_executable(LogFile_test
+        test/LogFile_test.cc
+        ${ALL_SOURCES})
+target_link_libraries(LogFile_test pthread)
 
 #add_executable(Logging_test
 #        test/Logging_test.cc

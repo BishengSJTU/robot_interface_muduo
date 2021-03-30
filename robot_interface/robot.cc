@@ -1,8 +1,5 @@
 #include "robot.h"
 
-u_char Robot::connectMsg_[8] = {0xA1, 0x00, 0x00, 0x00, 0x11, 0x00, 0x01 , 0xAA};
-u_char Robot::singleFinishMsg_[8] = {0xA1, 0x00, 0x00, 0x01, 0x06, 0x00, 0x01 , 0x00};
-u_char Robot::stateMsg_[9] = {0xA1, 0x00, 0x00, 0x00, 0x04, 0x00, 0x02, 0x00, 0x00};
 Robot::Robot():
 codec_(std::bind(&Robot::onCompleteMessage, this, muduo::_1, muduo::_2, muduo::_3)),
 taskCondition_(taskMessageMutex_),
@@ -29,6 +26,9 @@ void Robot::eventLoopThread() {
 }
 
 void Robot::execTaskThread() {
+    u_char singleFinishMsgArray[8] = {0xA1, 0x00, 0x00, 0x01, 0x06, 0x00, 0x01, 0x00};
+    u_char stateMsgArray[9] = {0xA1, 0x00, 0x00, 0x00, 0x04, 0x00, 0x02, 0x00, 0x00};
+
     while (1) {
         StringPiece task;
         string response(task.data(), task.size());
@@ -57,11 +57,19 @@ void Robot::execTaskThread() {
                     if (response[7 + 2 * i] = 0xA1)
                         response[7 + 2 * i] = 0x00;
                 }
-            } else if (taskType == CHARGE_TASK || taskType == ALL_FINISH) {
+            } else if (taskType == CHARGE_TASK || taskType == ALL_FINISH_TASK) {
                 response[7] = 0x00;
             }
             StringPiece responseMsg(response);
             write(responseMsg);
+            {
+                std::stringstream ss;
+                for(auto i = 0; i < responseMsg.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                }
+                std::string log = ss.str();
+                LOG_INFO << "Send message:" << log;
+            }
             continue;
         }
         // 如果正在充电或准备充电，忽略充电任务
@@ -70,6 +78,14 @@ void Robot::execTaskThread() {
                 response[7] = 0x00;
                 StringPiece responseMsg(response);
                 write(responseMsg);
+                {
+                    std::stringstream ss;
+                    for(auto i = 0; i < responseMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "Send message:" << log;
+                }
                 continue;
             }
         }
@@ -79,7 +95,8 @@ void Robot::execTaskThread() {
                 {
                     MutexLockGuard lock(robotInfoMutex_);
                     robotInfo_.currentState = CHARGE_PREPARE;
-                }; //执行充电指令.wait to complete
+                }
+                ; ///执行充电指令
                 {
                     MutexLockGuard lock(robotInfoMutex_);
                     robotInfo_.currentState = IS_CHARGING;
@@ -89,11 +106,19 @@ void Robot::execTaskThread() {
                     if (response[7 + 2 * i] = 0xA1)
                         response[7 + 2 * i] = 0x00;
                 }
-            } else if (taskType == ALL_FINISH) {
+            } else if (taskType == ALL_FINISH_TASK) {
                 response[7] = 0x00;
             }
             StringPiece responseMsg(response);
             write(responseMsg);
+            {
+                std::stringstream ss;
+                for(auto i = 0; i < responseMsg.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                }
+                std::string log = ss.str();
+                LOG_INFO << "Send message:" << log;
+            }
             continue;
         }
         // 可执行任务状态
@@ -103,7 +128,20 @@ void Robot::execTaskThread() {
                 {
                     MutexLockGuard lock(robotInfoMutex_);
                     robotInfo_.currentState = IS_DEPOSITING;
-                }; // 跑到窗口.wait to complete
+                    stateMsgArray[7] = robotInfo_.currentPower;
+                    stateMsgArray[8] = 0x01;
+                }
+                write(stateMsgArray);
+                {
+                    std::stringstream ss;
+                    for(auto i = 0; i < sizeof(stateMsgArray); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "Send message:" << log;
+                }
+
+                ; /// 跑到窗口
                 // 等待接收RFID消息
                 muduo::string actualRFID;
                 {
@@ -155,12 +193,20 @@ void Robot::execTaskThread() {
 
 
                     for (int64_t turntableNum = 1;
-                         turntableNum <= operationArchiveNum; turntableNum++) { ; //将档案从转盘中放入柜中
+                         turntableNum <= operationArchiveNum; turntableNum++) {
+                        ; /// 将档案从转盘中放入柜中
                         // 额外等待次数>0并且本轮操作结束，等待档案柜就绪
                         if (extraOperationTimes > 0 && (turntableNum % cabPositionTotalNum == 0)) {
-                            singleFinishMsg_[7] = cabID;
-                            muduo::StringPiece singleFinishMsg(singleFinishMsg_);
-                            write(singleFinishMsg);
+                            singleFinishMsgArray[7] = cabID;
+                            write(singleFinishMsgArray);
+                            {
+                                std::stringstream ss;
+                                for(auto i = 0; i < sizeof(singleFinishMsgArray); i++) {
+                                    ss << std::hex << (unsigned int)(unsigned char)singleFinishMsgArray[i] << ",";
+                                }
+                                std::string log = ss.str();
+                                LOG_INFO << "Send message:" << log;
+                            }
                             {
                                 MutexLockGuard lock(externalInfoMutex_);
                                 while (externalInfo_.singleArchiveFinshed == false) {
@@ -179,9 +225,17 @@ void Robot::execTaskThread() {
                         }
                     }
 
-                    singleFinishMsg_[7] = cabID;
-                    muduo::StringPiece singleFinishMsg(singleFinishMsg_);
-                    write(singleFinishMsg);
+                    singleFinishMsgArray[7] = cabID;
+                    write(singleFinishMsgArray);
+                    {
+                        std::stringstream ss;
+                        for(auto i = 0; i < sizeof(singleFinishMsgArray); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)singleFinishMsgArray[i] << ",";
+                        }
+                        std::string log = ss.str();
+                        LOG_INFO << "Send message:" << log;
+                    }
+
                     {
                         MutexLockGuard lock(externalInfoMutex_);
                         while (externalInfo_.singleArchiveFinshed == false) {
@@ -191,19 +245,41 @@ void Robot::execTaskThread() {
                     }
                 }
 
+                for (int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                    if (response[7 + 2 * i] = 0xA1)
+                        response[7 + 2 * i] = 0x01;
+                }
+                StringPiece responseMsg(response);
+                write(responseMsg);
                 {
-                    MutexLockGuard lock(robotInfoMutex_);
-                    robotInfo_.currentState = IS_FREE;
+                    std::stringstream ss;
+                    for(auto i = 0; i < responseMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "Send message:" << log;
                 }
                 break;
             }
 
-                // 取档
+            // 取档
             case WITHDRAW_TASK: {
                 {
                     MutexLockGuard lock(robotInfoMutex_);
                     robotInfo_.currentState = IS_WITHDRAWING;
+                    stateMsgArray[7] = robotInfo_.currentPower;
+                    stateMsgArray[8] = 0x02;
                 }
+                write(stateMsgArray);
+                {
+                    std::stringstream ss;
+                    for(auto i = 0; i < sizeof(stateMsgArray); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "Send message:" << log;
+                }
+
                 //根据任务清单将所有档案归类
                 int64_t turntablePosition = 0;
                 std::map<int64_t, std::vector<int64_t> > cabIDTurntablePositionsMap;
@@ -247,9 +323,16 @@ void Robot::execTaskThread() {
                          turntableNum <= operationArchiveNum; turntableNum++) { ; //将档案从柜中放入转盘中
                         // 额外等待次数>0并且本轮操作结束，等待档案柜就绪
                         if (extraOperationTimes > 0 && (turntableNum % cabPositionTotalNum == 0)) {
-                            singleFinishMsg_[7] = cabID;
-                            muduo::StringPiece singleFinishMsg(singleFinishMsg_);
-                            write(singleFinishMsg);
+                            singleFinishMsgArray[7] = cabID;
+                            write(singleFinishMsgArray);
+                            {
+                                std::stringstream ss;
+                                for(auto i = 0; i < sizeof(singleFinishMsgArray); i++) {
+                                    ss << std::hex << (unsigned int)(unsigned char)singleFinishMsgArray[i] << ",";
+                                }
+                                std::string log = ss.str();
+                                LOG_INFO << "Send message:" << log;
+                            }
                             {
                                 MutexLockGuard lock(externalInfoMutex_);
                                 while (externalInfo_.singleArchiveFinshed == false) {
@@ -268,9 +351,16 @@ void Robot::execTaskThread() {
                         }
                     }
 
-                    singleFinishMsg_[7] = cabID;
-                    muduo::StringPiece singleFinishMsg(singleFinishMsg_);
-                    write(singleFinishMsg);
+                    singleFinishMsgArray[7] = cabID;
+                    write(singleFinishMsgArray);
+                    {
+                        std::stringstream ss;
+                        for(auto i = 0; i < sizeof(singleFinishMsgArray); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)singleFinishMsgArray[i] << ",";
+                        }
+                        std::string log = ss.str();
+                        LOG_INFO << "Send message:" << log;
+                    }
                     {
                         MutexLockGuard lock(externalInfoMutex_);
                         while (externalInfo_.singleArchiveFinshed == false) {
@@ -280,16 +370,155 @@ void Robot::execTaskThread() {
                     }
                 }
 
-                ; // 跑到存取口前，将档案放入
+                ; /// 跑到存取口前，将档案放入
+
+                for (int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                    if (response[7 + 2 * i] = 0xA1)
+                        response[7 + 2 * i] = 0x01;
+                }
+                StringPiece responseMsg(response);
+                write(responseMsg);
+                {
+                    std::stringstream ss;
+                    for(auto i = 0; i < responseMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "Send message:" << log;
+                }
+                break;
+            }
+
+            case CHARGE_TASK: {
+                if(data[7] == 0xA1) {
+                    {
+                        MutexLockGuard lock(robotInfoMutex_);
+                        robotInfo_.currentState = CHARGE_PREPARE;
+                        stateMsgArray[7] = robotInfo_.currentPower;
+                        stateMsgArray[8] = 0x07;
+                    }
+                    write(stateMsgArray);
+                    {
+                        std::stringstream ss;
+                        for(auto i = 0; i < sizeof(stateMsgArray); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                        }
+                        std::string log = ss.str();
+                        LOG_INFO << "Send message:" << log;
+                    }
+                    ; ///　跑到充电桩前，完成充电动作
+
+                    response[7] = 0x01;
+                    StringPiece responseMsg(response);
+                    write(responseMsg);
+                    {
+                        std::stringstream ss;
+                        for(auto i = 0; i < responseMsg.size(); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                        }
+                        std::string log = ss.str();
+                        LOG_INFO << "Send message:" << log;
+                    }
+                    {
+                        MutexLockGuard lock(robotInfoMutex_);
+                        robotInfo_.currentState = IS_CHARGING;
+                        stateMsgArray[7] = robotInfo_.currentPower;
+                        stateMsgArray[8] = 0x03;
+                    }
+                    write(stateMsgArray);
+                    {
+                        std::stringstream ss;
+                        for(auto i = 0; i < sizeof(stateMsgArray); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                        }
+                        std::string log = ss.str();
+                        LOG_INFO << "Send message:" << log;
+                    }
+                }
+                else if(data[7] == 0xA0) {
+                    {
+                        MutexLockGuard lock(robotInfoMutex_);
+                        robotInfo_.currentState = CHARGE_FINISHED;
+                        stateMsgArray[7] = robotInfo_.currentPower;
+                        stateMsgArray[8] = 0x08;
+                    }
+                    write(stateMsgArray);
+                    {
+                        std::stringstream ss;
+                        for(auto i = 0; i < sizeof(stateMsgArray); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                        }
+                        std::string log = ss.str();
+                        LOG_INFO << "Send message:" << log;
+                    }
+                    ; ///　跑到休息区
+
+                    response[7] = 0x01;
+                    StringPiece responseMsg(response);
+                    write(responseMsg);
+                    {
+                        std::stringstream ss;
+                        for(auto i = 0; i < responseMsg.size(); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                        }
+                        std::string log = ss.str();
+                        LOG_INFO << "Send message:" << log;
+                    }
+                    {
+                        MutexLockGuard lock(robotInfoMutex_);
+                        robotInfo_.currentState = IS_FREE;
+                        stateMsgArray[7] = robotInfo_.currentPower;
+                        stateMsgArray[8] = 0x00;
+                    }
+                    write(stateMsgArray);
+                    {
+                        std::stringstream ss;
+                        for(auto i = 0; i < sizeof(stateMsgArray); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                        }
+                        std::string log = ss.str();
+                        LOG_INFO << "Send message:" << log;
+                    }
+                }
+                break;
+            }
+
+            case ALL_FINISH_TASK: {
+                ;/// 跑到休息区
+                response[7] = 0x00;
+                StringPiece responseMsg(response);
+                write(responseMsg);
+                {
+                    std::stringstream ss;
+                    for(auto i = 0; i < responseMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "Send message:" << log;
+                }
 
                 {
                     MutexLockGuard lock(robotInfoMutex_);
                     robotInfo_.currentState = IS_FREE;
+                    stateMsgArray[7] = robotInfo_.currentPower;
+                    stateMsgArray[8] = 0x00;
                 }
+                write(stateMsgArray);
+                {
+                    std::stringstream ss;
+                    for(auto i = 0; i < sizeof(stateMsgArray); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "Send message:" << log;
+                }
+
                 break;
             }
-            default:
+
+            default: {
                 break;
+            }
         }
     }
 }
@@ -297,6 +526,8 @@ void Robot::execTaskThread() {
 
 
 void Robot::onConnection(const TcpConnectionPtr& conn) {
+    u_char connectMsg_[8] = {0xA1, 0x00, 0x00, 0x00, 0x11, 0x00, 0x01 , 0xAA};
+
     LOG_INFO << conn->localAddress().toIpPort() << " -> "
              << conn->peerAddress().toIpPort() << " is "
              << (conn->connected() ? "UP" : "DOWN");
@@ -313,26 +544,43 @@ void Robot::onConnection(const TcpConnectionPtr& conn) {
     if(conn->connected()) {
         StringPiece message(connectMsg_);
         write(message);
+        {
+            std::stringstream ss;
+            for(auto i = 0; i < message.size(); i++) {
+                ss << std::hex << (unsigned int)(unsigned char)message[i] << ",";
+            }
+            std::string log = ss.str();
+            LOG_INFO << "Send message:" << log;
+        }
     }
 }
 
 void Robot::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                             const muduo::string& message,
                             Timestamp) {
+    LOG_INFO << "Receive message:" << message;
+
     const char *data = message.c_str();
     const u_char taskType = data[4];
-    LOG_INFO << message;
     switch(taskType) {
         //存档任务01
         case DEPOSIT_TASK: {
-            char responseData[8];
+            u_char responseData[8];
             for(auto i = 0; i < message.size(); i++) {
                 responseData[i] = data[i];
             }
             responseData[6] = 0x01;
             responseData[7] = 0xAA;
-            StringPiece responseMsg(responseData, sizeof(responseData));
+            StringPiece responseMsg(responseData);
             write(responseMsg);
+            {
+                std::stringstream ss;
+                for(auto i = 0; i < responseMsg.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                }
+                std::string log = ss.str();
+                LOG_INFO << "Send message:" << log;
+            }
             {
                 MutexLockGuard lock(taskMessageMutex_);
                 taskMessage_ = message;
@@ -342,14 +590,22 @@ void Robot::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
         }
         //取档任务02
         case WITHDRAW_TASK: {
-            char responseData[8];
+            u_char responseData[8];
             for(auto i = 0; i < message.size(); i++) {
                 responseData[i] = data[i];
             }
             responseData[6] = 0x01;
             responseData[7] = 0xAA;
-            StringPiece responseMsg(responseData, sizeof(responseData));
+            StringPiece responseMsg(responseData);
             write(responseMsg);
+            {
+                std::stringstream ss;
+                for(auto i = 0; i < responseMsg.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                }
+                std::string log = ss.str();
+                LOG_INFO << "Send message:" << log;
+            }
             {
                 MutexLockGuard lock(taskMessageMutex_);
                 taskMessage_ = message;
@@ -359,14 +615,22 @@ void Robot::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
         }
         //充电任务03
         case CHARGE_TASK: {
-            char responseData[8];
+            u_char responseData[8];
             for(auto i = 0; i < message.size(); i++) {
                 responseData[i] = data[i];
             }
             responseData[6] = 0x01;
             responseData[7] = 0xAA;
-            StringPiece responseMsg(responseData, sizeof(responseData));
+            StringPiece responseMsg(responseData);
             write(responseMsg);
+            {
+                std::stringstream ss;
+                for(auto i = 0; i < responseMsg.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                }
+                std::string log = ss.str();
+                LOG_INFO << "Send message:" << log;
+            }
             {
                 MutexLockGuard lock(taskMessageMutex_);
                 taskMessage_ = message;
@@ -377,16 +641,24 @@ void Robot::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
         //外部发送查询指令04
         case INQUIRE: {
             //回复收到
-            char responseData1[8];
+            u_char responseData1[8];
             for(auto i = 0; i < message.size(); i++) {
                 responseData1[i] = data[i];
             }
             responseData1[6] = 0x01;
             responseData1[7] = 0xAA;
-            StringPiece responseMsg1(responseData1, sizeof(responseData1));
+            StringPiece responseMsg1(responseData1);
             write(responseMsg1);
+            {
+                std::stringstream ss;
+                for(auto i = 0; i < responseMsg1.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg1[i] << ",";
+                }
+                std::string log = ss.str();
+                LOG_INFO << "Send message:" << log;
+            }
             //回复机器人状态
-            char responseData2[9];
+            u_char responseData2[9];
             for(auto i = 0; i < message.size(); i++) {
                 responseData2[i] = data[i];
             }
@@ -396,20 +668,36 @@ void Robot::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                 responseData2[7] = robotInfo_.currentState;
                 responseData2[8] = robotInfo_.currentPower;
             }
-            StringPiece responseMsg2(responseData2, sizeof(responseData2));
+            StringPiece responseMsg2(responseData2);
             write(responseMsg2);
+            {
+                std::stringstream ss;
+                for(auto i = 0; i < responseMsg2.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg2[i] << ",";
+                }
+                std::string log = ss.str();
+                LOG_INFO << "Send message:" << log;
+            }
             break;
         }
         //外部发送校验的RFID消息05
         case RFID_INFO: {
-            char responseData[8];
+            u_char responseData[8];
             for(auto i = 0; i < message.size(); i++) {
                 responseData[i] = data[i];
             }
             responseData[6] = 0x01;
             responseData[7] = 0xAA;
-            StringPiece responseMsg(responseData, sizeof(responseData));
+            StringPiece responseMsg(responseData);
             write(responseMsg);
+            {
+                std::stringstream ss;
+                for(auto i = 0; i < responseMsg.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                }
+                std::string log = ss.str();
+                LOG_INFO << "Send message:" << log;
+            }
             {
                 MutexLockGuard lock(externalInfoMutex_);
                 externalInfo_.actualRFID = message;
@@ -419,14 +707,22 @@ void Robot::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
         }
         //单次动作完成外部接收完成06
         case SINGLE_ARCHIVE_FINISH: {
-            char responseData[8];
+            u_char responseData[8];
             for(auto i = 0; i < message.size(); i++) {
                 responseData[i] = data[i];
             }
             responseData[6] = 0x01;
             responseData[7] = 0xAA;
-            StringPiece responseMsg(responseData, sizeof(responseData));
+            StringPiece responseMsg(responseData);
             write(responseMsg);
+            {
+                std::stringstream ss;
+                for(auto i = 0; i < responseMsg.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                }
+                std::string log = ss.str();
+                LOG_INFO << "Send message:" << log;
+            }
             {
                 MutexLockGuard lock(externalInfoMutex_);
                 externalInfo_.singleArchiveFinshed = true;
@@ -436,14 +732,22 @@ void Robot::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
         }
         //外部发送档案柜就绪状态07
         case CAB_READY: {
-            char responseData[8];
+            u_char responseData[8];
             for(auto i = 0; i < message.size(); i++) {
                 responseData[i] = data[i];
             }
             responseData[6] = 0x01;
             responseData[7] = 0xAA;
-            StringPiece responseMsg(responseData, sizeof(responseData));
+            StringPiece responseMsg(responseData);
             write(responseMsg);
+            {
+                std::stringstream ss;
+                for(auto i = 0; i < responseMsg.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                }
+                std::string log = ss.str();
+                LOG_INFO << "Send message:" << log;
+            }
             {
                 MutexLockGuard lock(externalInfoMutex_);
                 externalInfo_.readyCab.insert(data[7]);
@@ -452,15 +756,23 @@ void Robot::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             break;
         }
         //结束任务08
-        case ALL_FINISH: {
-            char responseData[8];
+        case ALL_FINISH_TASK: {
+            u_char responseData[8];
             for(auto i = 0; i < message.size(); i++) {
                 responseData[i] = data[i];
             }
             responseData[6] = 0x01;
             responseData[7] = 0xAA;
-            StringPiece responseMsg(responseData, sizeof(responseData));
+            StringPiece responseMsg(responseData);
             write(responseMsg);
+            {
+                std::stringstream ss;
+                for(auto i = 0; i < responseMsg.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                }
+                std::string log = ss.str();
+                LOG_INFO << "Send message:" << log;
+            }
             {
                 MutexLockGuard lock(taskMessageMutex_);
                 taskMessage_ = message;

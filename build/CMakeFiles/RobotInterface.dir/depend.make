@@ -417,6 +417,7 @@ CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../datetime/
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../datetime/Types.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../datetime/copyable.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../datetime/noncopyable.h
+CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../logging/LogFile.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../logging/LogStream.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../logging/Logging.h
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: ../logging/StringPiece.h
