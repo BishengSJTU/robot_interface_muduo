@@ -434,9 +434,22 @@ CMakeFiles/TcpClient_test.dir/net/TimerQueue.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TcpClient_test.dir/net/TimerQueue.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/TimerQueue.cc -o CMakeFiles/TcpClient_test.dir/net/TimerQueue.cc.s
 
+CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
+CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o: ../plc/my_plc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o -c /home/bisheng/robot_interface_muduo/plc/my_plc.cc
+
+CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/plc/my_plc.cc > CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.i
+
+CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/plc/my_plc.cc -o CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.s
+
 CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
 CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o: ../thread/Condition.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o -c /home/bisheng/robot_interface_muduo/thread/Condition.cc
 
 CMakeFiles/TcpClient_test.dir/thread/Condition.cc.i: cmake_force
@@ -449,7 +462,7 @@ CMakeFiles/TcpClient_test.dir/thread/Condition.cc.s: cmake_force
 
 CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
 CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o: ../thread/CountDownLatch.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o -c /home/bisheng/robot_interface_muduo/thread/CountDownLatch.cc
 
 CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.i: cmake_force
@@ -462,7 +475,7 @@ CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.s: cmake_force
 
 CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
 CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.o: ../thread/CurrentThread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.o -c /home/bisheng/robot_interface_muduo/thread/CurrentThread.cc
 
 CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.i: cmake_force
@@ -475,7 +488,7 @@ CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.s: cmake_force
 
 CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
 CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o: ../thread/Exception.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o -c /home/bisheng/robot_interface_muduo/thread/Exception.cc
 
 CMakeFiles/TcpClient_test.dir/thread/Exception.cc.i: cmake_force
@@ -488,7 +501,7 @@ CMakeFiles/TcpClient_test.dir/thread/Exception.cc.s: cmake_force
 
 CMakeFiles/TcpClient_test.dir/thread/Thread.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
 CMakeFiles/TcpClient_test.dir/thread/Thread.cc.o: ../thread/Thread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/TcpClient_test.dir/thread/Thread.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/TcpClient_test.dir/thread/Thread.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/thread/Thread.cc.o -c /home/bisheng/robot_interface_muduo/thread/Thread.cc
 
 CMakeFiles/TcpClient_test.dir/thread/Thread.cc.i: cmake_force
@@ -501,7 +514,7 @@ CMakeFiles/TcpClient_test.dir/thread/Thread.cc.s: cmake_force
 
 CMakeFiles/TcpClient_test.dir/thread/ThreadPool.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
 CMakeFiles/TcpClient_test.dir/thread/ThreadPool.cc.o: ../thread/ThreadPool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/TcpClient_test.dir/thread/ThreadPool.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/TcpClient_test.dir/thread/ThreadPool.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/thread/ThreadPool.cc.o -c /home/bisheng/robot_interface_muduo/thread/ThreadPool.cc
 
 CMakeFiles/TcpClient_test.dir/thread/ThreadPool.cc.i: cmake_force
@@ -543,6 +556,7 @@ TcpClient_test_OBJECTS = \
 "CMakeFiles/TcpClient_test.dir/net/TcpServer.cc.o" \
 "CMakeFiles/TcpClient_test.dir/net/Timer.cc.o" \
 "CMakeFiles/TcpClient_test.dir/net/TimerQueue.cc.o" \
+"CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o" \
 "CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o" \
 "CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o" \
 "CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.o" \
@@ -582,6 +596,7 @@ TcpClient_test: CMakeFiles/TcpClient_test.dir/net/TcpConnection.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/net/TcpServer.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/net/Timer.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/net/TimerQueue.cc.o
+TcpClient_test: CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.o
@@ -590,7 +605,7 @@ TcpClient_test: CMakeFiles/TcpClient_test.dir/thread/Thread.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/thread/ThreadPool.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/build.make
 TcpClient_test: CMakeFiles/TcpClient_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Linking CXX executable TcpClient_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Linking CXX executable TcpClient_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TcpClient_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

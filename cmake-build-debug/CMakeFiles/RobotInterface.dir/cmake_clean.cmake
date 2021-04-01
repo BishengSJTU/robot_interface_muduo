@@ -29,6 +29,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RobotInterface.dir/net/TcpServer.cc.o"
   "CMakeFiles/RobotInterface.dir/net/Timer.cc.o"
   "CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.o"
+  "CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o"
   "CMakeFiles/RobotInterface.dir/thread/Condition.cc.o"
   "CMakeFiles/RobotInterface.dir/thread/CountDownLatch.cc.o"
   "CMakeFiles/RobotInterface.dir/thread/CurrentThread.cc.o"

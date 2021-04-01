@@ -28,6 +28,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/LogFile_test.dir/net/TcpServer.cc.o"
   "CMakeFiles/LogFile_test.dir/net/Timer.cc.o"
   "CMakeFiles/LogFile_test.dir/net/TimerQueue.cc.o"
+  "CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o"
   "CMakeFiles/LogFile_test.dir/thread/Condition.cc.o"
   "CMakeFiles/LogFile_test.dir/thread/CountDownLatch.cc.o"
   "CMakeFiles/LogFile_test.dir/thread/CurrentThread.cc.o"

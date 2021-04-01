@@ -5,9 +5,9 @@ set(CMAKE_CXX_STANDARD 11)
 
 find_package(Boost REQUIRED filesystem program_options regex timer chrono)
 
-FILE (GLOB ALL_SOURCES "datetime/*.cc" "logging/*.cc" "net/*.cc" "thread/*.cc")
+FILE (GLOB ALL_SOURCES "datetime/*.cc" "logging/*.cc" "net/*.cc" "thread/*.cc" "plc/*.cc")
 
-include_directories(datetime logging net thread robot_interface)
+include_directories(datetime logging net thread robot_interface plc)
 
 #add_executable(Channel_test
 #        test/Channel_test.cc

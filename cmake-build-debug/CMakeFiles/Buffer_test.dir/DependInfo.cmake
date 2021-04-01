@@ -32,6 +32,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/bisheng/robot_interface_muduo/net/TcpServer.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/Buffer_test.dir/net/TcpServer.cc.o"
   "/home/bisheng/robot_interface_muduo/net/Timer.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/Buffer_test.dir/net/Timer.cc.o"
   "/home/bisheng/robot_interface_muduo/net/TimerQueue.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/Buffer_test.dir/net/TimerQueue.cc.o"
+  "/home/bisheng/robot_interface_muduo/plc/my_plc.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/Buffer_test.dir/plc/my_plc.cc.o"
   "/home/bisheng/robot_interface_muduo/test/Buffer_test.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/Buffer_test.dir/test/Buffer_test.cc.o"
   "/home/bisheng/robot_interface_muduo/thread/Condition.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/Buffer_test.dir/thread/Condition.cc.o"
   "/home/bisheng/robot_interface_muduo/thread/CountDownLatch.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/Buffer_test.dir/thread/CountDownLatch.cc.o"
@@ -49,6 +50,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../net"
   "../thread"
   "../robot_interface"
+  "../plc"
   )
 
 # Targets to which this target links.

@@ -1267,6 +1267,45 @@ net/TimerQueue.cc.s:
 	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/TimerQueue.cc.s
 .PHONY : net/TimerQueue.cc.s
 
+plc/my_plc.o: plc/my_plc.cc.o
+
+.PHONY : plc/my_plc.o
+
+# target to build an object file
+plc/my_plc.cc.o:
+	$(MAKE) -f CMakeFiles/LogFile_test.dir/build.make CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o
+	$(MAKE) -f CMakeFiles/Buffer_test.dir/build.make CMakeFiles/Buffer_test.dir/plc/my_plc.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o
+.PHONY : plc/my_plc.cc.o
+
+plc/my_plc.i: plc/my_plc.cc.i
+
+.PHONY : plc/my_plc.i
+
+# target to preprocess a source file
+plc/my_plc.cc.i:
+	$(MAKE) -f CMakeFiles/LogFile_test.dir/build.make CMakeFiles/LogFile_test.dir/plc/my_plc.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.i
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/plc/my_plc.cc.i
+	$(MAKE) -f CMakeFiles/Buffer_test.dir/build.make CMakeFiles/Buffer_test.dir/plc/my_plc.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.i
+.PHONY : plc/my_plc.cc.i
+
+plc/my_plc.s: plc/my_plc.cc.s
+
+.PHONY : plc/my_plc.s
+
+# target to generate assembly for a file
+plc/my_plc.cc.s:
+	$(MAKE) -f CMakeFiles/LogFile_test.dir/build.make CMakeFiles/LogFile_test.dir/plc/my_plc.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.s
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/plc/my_plc.cc.s
+	$(MAKE) -f CMakeFiles/Buffer_test.dir/build.make CMakeFiles/Buffer_test.dir/plc/my_plc.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.s
+.PHONY : plc/my_plc.cc.s
+
 robot_interface/robot.o: robot_interface/robot.cc.o
 
 .PHONY : robot_interface/robot.o
@@ -1760,6 +1799,9 @@ help:
 	@echo "... net/TimerQueue.o"
 	@echo "... net/TimerQueue.i"
 	@echo "... net/TimerQueue.s"
+	@echo "... plc/my_plc.o"
+	@echo "... plc/my_plc.i"
+	@echo "... plc/my_plc.s"
 	@echo "... robot_interface/robot.o"
 	@echo "... robot_interface/robot.i"
 	@echo "... robot_interface/robot.s"
