@@ -486,18 +486,18 @@ CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/TimerQueue.cc -o CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.s
 
-CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o: CMakeFiles/RobotInterface.dir/flags.make
-CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o: ../pick_and_place/pick_and_place_position.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o -c /home/bisheng/robot_interface_muduo/pick_and_place/pick_and_place_position.cc
+CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: CMakeFiles/RobotInterface.dir/flags.make
+CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../pick_and_place/jaka_pick_and_place.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o -c /home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc
 
-CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/pick_and_place/pick_and_place_position.cc > CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.i
+CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc > CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i
 
-CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/pick_and_place/pick_and_place_position.cc -o CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.s
+CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc -o CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s
 
 CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o: ../plc/my_plc.cc
@@ -651,7 +651,7 @@ RobotInterface_OBJECTS = \
 "CMakeFiles/RobotInterface.dir/net/TcpServer.cc.o" \
 "CMakeFiles/RobotInterface.dir/net/Timer.cc.o" \
 "CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.o" \
-"CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o" \
+"CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o" \
 "CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o" \
 "CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o" \
 "CMakeFiles/RobotInterface.dir/thread/Condition.cc.o" \
@@ -698,7 +698,7 @@ RobotInterface: CMakeFiles/RobotInterface.dir/net/TcpConnection.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/net/TcpServer.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/net/Timer.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.o
-RobotInterface: CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o
+RobotInterface: CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/thread/Condition.cc.o

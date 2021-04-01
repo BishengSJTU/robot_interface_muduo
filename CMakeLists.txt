@@ -44,6 +44,7 @@ include_directories(
         motion_list
         pick_and_place
         vision_detection
+        mapping_table
 )
 include_directories(${JSON_DIR} ${ZBAR_DIR} ${OpenCV_INCLUDE_DIRS} ${HV_DIR} ${APRILTAG_DIR})
 link_directories(${LIB_HV_DIR} ${LIB_APRILTAG_DIR})

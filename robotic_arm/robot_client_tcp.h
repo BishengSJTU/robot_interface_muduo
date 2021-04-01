@@ -22,8 +22,15 @@
 #include <sstream>
 #include "Logging.h"
 #include "LogFile.h"
+
 #define JAKAEXITNO 3
 #define JAKATCPWAITTIME 1e5
+#define JAKAX 0
+#define JAKAY 1
+#define JAKAZ 2
+#define JAKARX 3
+#define JAKARY 4
+#define JAKARZ 5
 
 class RobotClient {
 public:

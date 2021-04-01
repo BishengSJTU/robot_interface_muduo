@@ -1,5 +1,5 @@
-#ifndef PICK_AND_PLACE_H
-#define PICK_AND_PLACE_H
+#ifndef JAKA_PICK_AND_PLACE_H
+#define JAKA_PICK_AND_PLACE_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,6 +15,7 @@
 #include "vision_detection_position.h"
 #include "Logging.h"
 #include "LogFile.h"
+#include "mapping_table.h"
 
 
 #include <thread>
@@ -22,14 +23,21 @@
 #include <eigen3/Eigen/QR>
 #include <sstream>
 
-class PickAndPlace
+#define CODEING_ID 0 // 0号位姿估计码
+#define CAB_SPACE 44.2 // 档案柜中档案间隙
+#define WINDOW_SPACE 42.8 // 窗口中档案间隙
+
+class JAKAPickAndPlace
 {
 private:
     // 机器人调整时速度
-    float adjust_move_speed;
+    float adjust_joint_speed;
 
     // 机器人移动到指定路点速度
     float fixed_joint_speed;
+
+    // 机器人移动到指定路点速度
+    float fixed_linear_speed;
 
     // 最大调整次数
     int max_count_adjust;
@@ -52,9 +60,6 @@ private:
     // JAKA机器人
     RobotClient robot_client_;
 
-    // 动作列表
-    MotionList motion_list_;
-
     // PLC动作
     MyPLC plc_;
 
@@ -63,29 +68,29 @@ private:
 
 
 public:
-    PickAndPlace(const std::string &config_file_name, const std::string &motion_list_name);
-    ~PickAndPlace();
-    void InitializePickAndPlace();
+    JAKAPickAndPlace(const std::string &config_file_name);
+    ~JAKAPickAndPlace();
+    void JAKAInitializePickAndPlace();
     //　从档案盒中取
-    bool PickCab(int cab_id, int position, bool& mechanical_error);
+    bool JAKAPickCab(int cab_id, int position, bool& mechanical_error);
     //　放到档案盒中
-    bool PlaceCab(int cab_id, int position, bool& mechanical_error);
+    bool JAKAPlaceCab(int cab_id, int position, bool& mechanical_error);
     //　从窗口中取
-    bool PickWindow(int position, bool& mechanical_error);
+    bool JAKAPickWindow(int position, bool& mechanical_error);
     //　向窗口中放
-    bool PlaceWindow(int position,  bool& mechanical_error);
+    bool JAKAPlaceWindow(int position,  bool& mechanical_error);
     //　从暂存架中取
-    bool PickStorage(int position, bool& mechanical_error);
+    bool JAKAPickStorage(int position, bool& mechanical_error);
     //　向暂存架中放
-    bool PlaceStorage(int position,  bool& mechanical_error);
+    bool JAKAPlaceStorage(int position,  bool& mechanical_error);
     // 机器人收起
-    void Contraction();
+    void JAKAContraction();
     // 机器人伸展开
-    void Stretch();
+    void JAKAStretch();
     // PLC动作
-    bool PLCAction(int command);
+    bool JAKAPLCAction(int command);
     // 查询PLC状态
-    void PLCState();
+    void JAKAPLCState();
 };
 
 #endif

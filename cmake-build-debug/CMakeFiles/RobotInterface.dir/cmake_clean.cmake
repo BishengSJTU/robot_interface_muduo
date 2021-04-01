@@ -32,7 +32,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RobotInterface.dir/net/TcpServer.cc.o"
   "CMakeFiles/RobotInterface.dir/net/Timer.cc.o"
   "CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.o"
-  "CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o"
+  "CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o"
   "CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o"
   "CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o"
   "CMakeFiles/RobotInterface.dir/thread/Condition.cc.o"

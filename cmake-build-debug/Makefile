@@ -960,32 +960,32 @@ net/TimerQueue.cc.s:
 	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.s
 .PHONY : net/TimerQueue.cc.s
 
-pick_and_place/pick_and_place_position.o: pick_and_place/pick_and_place_position.cc.o
+pick_and_place/jaka_pick_and_place.o: pick_and_place/jaka_pick_and_place.cc.o
 
-.PHONY : pick_and_place/pick_and_place_position.o
+.PHONY : pick_and_place/jaka_pick_and_place.o
 
 # target to build an object file
-pick_and_place/pick_and_place_position.cc.o:
-	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o
-.PHONY : pick_and_place/pick_and_place_position.cc.o
+pick_and_place/jaka_pick_and_place.cc.o:
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o
+.PHONY : pick_and_place/jaka_pick_and_place.cc.o
 
-pick_and_place/pick_and_place_position.i: pick_and_place/pick_and_place_position.cc.i
+pick_and_place/jaka_pick_and_place.i: pick_and_place/jaka_pick_and_place.cc.i
 
-.PHONY : pick_and_place/pick_and_place_position.i
+.PHONY : pick_and_place/jaka_pick_and_place.i
 
 # target to preprocess a source file
-pick_and_place/pick_and_place_position.cc.i:
-	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.i
-.PHONY : pick_and_place/pick_and_place_position.cc.i
+pick_and_place/jaka_pick_and_place.cc.i:
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i
+.PHONY : pick_and_place/jaka_pick_and_place.cc.i
 
-pick_and_place/pick_and_place_position.s: pick_and_place/pick_and_place_position.cc.s
+pick_and_place/jaka_pick_and_place.s: pick_and_place/jaka_pick_and_place.cc.s
 
-.PHONY : pick_and_place/pick_and_place_position.s
+.PHONY : pick_and_place/jaka_pick_and_place.s
 
 # target to generate assembly for a file
-pick_and_place/pick_and_place_position.cc.s:
-	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.s
-.PHONY : pick_and_place/pick_and_place_position.cc.s
+pick_and_place/jaka_pick_and_place.cc.s:
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s
+.PHONY : pick_and_place/jaka_pick_and_place.cc.s
 
 plc/my_plc.o: plc/my_plc.cc.o
 
@@ -1386,9 +1386,9 @@ help:
 	@echo "... net/TimerQueue.o"
 	@echo "... net/TimerQueue.i"
 	@echo "... net/TimerQueue.s"
-	@echo "... pick_and_place/pick_and_place_position.o"
-	@echo "... pick_and_place/pick_and_place_position.i"
-	@echo "... pick_and_place/pick_and_place_position.s"
+	@echo "... pick_and_place/jaka_pick_and_place.o"
+	@echo "... pick_and_place/jaka_pick_and_place.i"
+	@echo "... pick_and_place/jaka_pick_and_place.s"
 	@echo "... plc/my_plc.o"
 	@echo "... plc/my_plc.i"
 	@echo "... plc/my_plc.s"

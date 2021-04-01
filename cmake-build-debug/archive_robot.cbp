@@ -46,6 +46,7 @@
 					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/motion_list"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
 					<Add directory="/usr/include/jsoncpp"/>
 					<Add directory="/usr/include/zbar"/>
 					<Add directory="/usr/local/include/hv"/>
@@ -86,6 +87,7 @@
 					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/motion_list"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
 					<Add directory="/usr/include/jsoncpp"/>
 					<Add directory="/usr/include/zbar"/>
 					<Add directory="/usr/local/include/hv"/>
@@ -301,10 +303,10 @@
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/TimerQueue.h">
 			<Option target="RobotInterface"/>
 		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/pick_and_place/pick_and_place_position.cc">
+		<Unit filename="/home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc">
 			<Option target="RobotInterface"/>
 		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/pick_and_place/pick_and_place_position.h">
+		<Unit filename="/home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.h">
 			<Option target="RobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/plc/my_plc.cc">

@@ -14,95 +14,17 @@
     <list default="true" id="ea00259e-2efd-419c-bb95-908181337d76" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Buffer_test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Buffer_test.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/LogFile_test.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/LogFile_test.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/LogFile_test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/LogFile_test.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/LogFile_test.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/LogFile_test.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/LogFile_test.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/LogFile_test.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/LogFile_test.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/LogFile_test.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/LogFile_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/LogFile_test.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/RobotInterface" beforeDir="false" afterPath="$PROJECT_DIR$/build/RobotInterface" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Buffer_test.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LogFile_test.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LogFile_test.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LogFile_test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LogFile_test.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LogFile_test.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LogFile_test.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LogFile_test.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LogFile_test.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LogFile_test.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LogFile_test.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LogFile_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/LogFile_test.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/MOTION_LIST_POSITION.YML" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/PARAMETER_POSITION.YML" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/DependInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/build.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/cmake_clean.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/flags.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/RobotInterface.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpClient_test.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TcpServer_test.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/archive_robot.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/archive_robot.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plc/my_plc.cc" beforeDir="false" afterPath="$PROJECT_DIR$/plc/my_plc.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plc/my_plc.h" beforeDir="false" afterPath="$PROJECT_DIR$/plc/my_plc.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot_interface/robot.cc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot_interface/robot.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot_interface/robot_interface.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/robot_interface.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robotic_arm/robot_client_tcp.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robotic_arm/robot_client_tcp.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pick_and_place/pick_and_place_position.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pick_and_place/pick_and_place_position.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/robotic_arm/robot_client_tcp.h" beforeDir="false" afterPath="$PROJECT_DIR$/robotic_arm/robot_client_tcp.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -134,47 +56,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/motion_list/motion_list.cc">
+        <entry file="file://$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-252">
-              <caret line="88" column="59" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build/MOTION_LIST_POSITION.YML">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-270" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pick_and_place/pick_and_place_position.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-715">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-              <folding>
-                <element signature="e#51#69#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="36">
+              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pick_and_place/pick_and_place_position.cc">
+        <entry file="file://$PROJECT_DIR$/robot_interface/robot_interface.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+            <state relative-caret-position="14076">
+              <caret line="782" column="18" selection-start-line="782" selection-start-column="18" selection-end-line="782" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plc/my_plc.cc">
+        <entry file="file://$PROJECT_DIR$/robot_interface/robot_interface.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="160" column="14" selection-start-line="160" selection-start-column="7" selection-end-line="160" selection-end-column="14" />
+            <state relative-caret-position="270">
+              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="504">
+              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -183,8 +104,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ALL_FINISH_TASK</find>
-      <find>Channel::handle_event() POLLHUP</find>
       <find>stdout</find>
       <find>g_file</find>
       <find>g_logFile</find>
@@ -213,6 +132,8 @@
       <find>log_e</find>
       <find>command</find>
       <find>ControlPLC</find>
+      <find>需要更改</find>
+      <find>JOg</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -221,9 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/reactor/EventLoop.h" />
-        <option value="$PROJECT_DIR$/reactor/EventLoopThread.h" />
-        <option value="$PROJECT_DIR$/reactor/InetAddress.h" />
         <option value="$PROJECT_DIR$/reactor/Poller.cc" />
         <option value="$PROJECT_DIR$/reactor/Poller.h" />
         <option value="$PROJECT_DIR$/reactor/SocketsOps.cc" />
@@ -258,28 +176,31 @@
         <option value="$PROJECT_DIR$/net/Channel.cc" />
         <option value="$PROJECT_DIR$/robot_interface/robot.h" />
         <option value="$PROJECT_DIR$/robot_interface/robot.cc" />
-        <option value="$PROJECT_DIR$/build/PARAMETER_POSITION.YML" />
         <option value="$PROJECT_DIR$/robot_interface/robot_interface.cc" />
         <option value="$PROJECT_DIR$/robot_interface/main.cc" />
         <option value="$PROJECT_DIR$/robotic_arm/robot_client_tcp.cc" />
         <option value="$PROJECT_DIR$/vision_detection/vision_detection_position.cc" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/motion_list/motion_list.cc" />
-        <option value="$PROJECT_DIR$/robotic_arm/robot_client_tcp.h" />
         <option value="$PROJECT_DIR$/robot_interface/robot_interface.h" />
         <option value="$PROJECT_DIR$/vision_detection/vision_detection_position.h" />
-        <option value="$PROJECT_DIR$/pick_and_place/pick_and_place_position.h" />
         <option value="$PROJECT_DIR$/plc/my_plc.h" />
         <option value="$PROJECT_DIR$/plc/my_plc.cc" />
+        <option value="$PROJECT_DIR$/mapping_table/mapping_table.h" />
+        <option value="$PROJECT_DIR$/build/PARAMETER_POSITION.YML" />
+        <option value="$PROJECT_DIR$/robotic_arm/robot_client_tcp.h" />
         <option value="$PROJECT_DIR$/pick_and_place/pick_and_place_position.cc" />
+        <option value="$PROJECT_DIR$/pick_and_place/pick_and_place_position.h" />
+        <option value="$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.h" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-188" />
-    <option name="y" value="75" />
-    <option name="width" value="1000" />
-    <option name="height" value="665" />
+    <option name="x" value="-241" />
+    <option name="y" value="30" />
+    <option name="width" value="1086" />
+    <option name="height" value="693" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -298,32 +219,12 @@
             <path>
               <item name="archive_robot" type="b2602c69:ProjectViewProjectNode" />
               <item name="robot_interface_muduo" type="462c0819:PsiDirectoryNode" />
-              <item name="agv" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="archive_robot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="robot_interface_muduo" type="462c0819:PsiDirectoryNode" />
-              <item name="plc" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="archive_robot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="robot_interface_muduo" type="462c0819:PsiDirectoryNode" />
               <item name="robot_interface" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="archive_robot" type="b2602c69:ProjectViewProjectNode" />
               <item name="robot_interface_muduo" type="462c0819:PsiDirectoryNode" />
               <item name="robotic_arm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="archive_robot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="robot_interface_muduo" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="archive_robot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="robot_interface_muduo" type="462c0819:PsiDirectoryNode" />
-              <item name="vision_detection" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -334,7 +235,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../robot_interface2.1.20210331" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -392,12 +293,13 @@
       <workItem from="1617085557725" duration="6779000" />
       <workItem from="1617203317670" duration="4194000" />
       <workItem from="1617208156022" duration="1192000" />
-      <workItem from="1617236725545" duration="18538000" />
+      <workItem from="1617236725545" duration="23062000" />
+      <workItem from="1617275176642" duration="8238000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="203287000" />
+    <option name="totallyTimeSpent" value="216049000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -412,7 +314,7 @@
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22788845" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1936255" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -460,28 +362,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test/TcpClient_test.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="44" selection-start-line="15" selection-end-line="16" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/Endian.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="50" column="16" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/net/Buffer.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-121" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/Buffer_test.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -648,37 +528,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot_interface/robot.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="49" column="13" selection-start-line="49" selection-start-column="13" selection-end-line="49" selection-end-column="13" />
-          <folding>
-            <element signature="e#33#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_interface/robot.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="27" column="14" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_interface/robot_interface.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="782" column="18" selection-start-line="782" selection-start-column="18" selection-end-line="782" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robotic_arm/robot_client_tcp.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="374" column="28" selection-start-line="374" selection-start-column="28" selection-end-line="374" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_interface/robot.h" />
+    <entry file="file://$PROJECT_DIR$/robot_interface/robot.cc" />
     <entry file="file://$PROJECT_DIR$/robot_interface/main.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
@@ -722,20 +573,6 @@
     <entry file="file://$PROJECT_DIR$/kinematics/pose_transform.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/PARAMETER_POSITION.YML">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="606">
-          <caret line="107" column="60" selection-start-line="107" selection-start-column="60" selection-end-line="107" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/motion_list/motion_list.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -745,23 +582,6 @@
           <caret selection-end-line="1" selection-end-column="20" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_interface/robot_interface.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robotic_arm/robot_client_tcp.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="23" column="20" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
-          <folding>
-            <element signature="e#93#110#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -784,20 +604,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/motion_list/motion_list.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-252">
-          <caret line="88" column="59" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plc/my_plc.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="160" column="14" selection-start-line="160" selection-start-column="7" selection-end-line="160" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plc/my_plc.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -808,28 +614,110 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/agv/agv.cc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mapping_table/mapping_table.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="63" column="32" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plc/my_plc.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2880">
+          <caret line="160" column="14" selection-start-line="160" selection-start-column="7" selection-end-line="160" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/PARAMETER_POSITION.YML">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="77" column="77" selection-start-line="77" selection-start-column="77" selection-end-line="77" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/motion_list/motion_list.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="88" column="59" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build/MOTION_LIST_POSITION.YML">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-270" />
+        <state relative-caret-position="419">
+          <caret line="40" column="3" selection-start-line="40" selection-start-column="3" selection-end-line="42" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robotic_arm/robot_client_tcp.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <folding>
+            <element signature="e#93#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robotic_arm/robot_client_tcp.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="374" column="28" selection-start-line="374" selection-start-column="28" selection-end-line="374" selection-end-column="28" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pick_and_place/pick_and_place_position.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-715">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="617">
+          <caret line="92" column="13" selection-start-line="92" selection-start-column="13" selection-end-line="92" selection-end-column="13" />
           <folding>
             <element signature="e#51#69#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agv/agv.cc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/pick_and_place/pick_and_place_position.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="54" column="47" selection-start-line="54" selection-start-column="47" selection-end-line="54" selection-end-column="47" />
+        <state>
+          <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_interface/robot_interface.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_interface/robot_interface.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14076">
+          <caret line="782" column="18" selection-start-line="782" selection-start-column="18" selection-end-line="782" selection-end-column="18" />
         </state>
       </provider>
     </entry>
