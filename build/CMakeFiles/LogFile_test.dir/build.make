@@ -897,6 +897,102 @@ CMakeFiles/LogFile_test.dir/thread/Exception.cc.o.provides: CMakeFiles/LogFile_t
 CMakeFiles/LogFile_test.dir/thread/Exception.cc.o.provides.build: CMakeFiles/LogFile_test.dir/thread/Exception.cc.o
 
 
+CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o: CMakeFiles/LogFile_test.dir/flags.make
+CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o: ../plc/my_plc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o -c /home/bisheng/robot_interface_muduo/plc/my_plc.cc
+
+CMakeFiles/LogFile_test.dir/plc/my_plc.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LogFile_test.dir/plc/my_plc.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/plc/my_plc.cc > CMakeFiles/LogFile_test.dir/plc/my_plc.cc.i
+
+CMakeFiles/LogFile_test.dir/plc/my_plc.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LogFile_test.dir/plc/my_plc.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/plc/my_plc.cc -o CMakeFiles/LogFile_test.dir/plc/my_plc.cc.s
+
+CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o.requires:
+
+.PHONY : CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o.requires
+
+CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o.provides: CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o.requires
+	$(MAKE) -f CMakeFiles/LogFile_test.dir/build.make CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o.provides.build
+.PHONY : CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o.provides
+
+CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o.provides.build: CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o
+
+
+CMakeFiles/LogFile_test.dir/config/config.cc.o: CMakeFiles/LogFile_test.dir/flags.make
+CMakeFiles/LogFile_test.dir/config/config.cc.o: ../config/config.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/LogFile_test.dir/config/config.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LogFile_test.dir/config/config.cc.o -c /home/bisheng/robot_interface_muduo/config/config.cc
+
+CMakeFiles/LogFile_test.dir/config/config.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LogFile_test.dir/config/config.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/config/config.cc > CMakeFiles/LogFile_test.dir/config/config.cc.i
+
+CMakeFiles/LogFile_test.dir/config/config.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LogFile_test.dir/config/config.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/config/config.cc -o CMakeFiles/LogFile_test.dir/config/config.cc.s
+
+CMakeFiles/LogFile_test.dir/config/config.cc.o.requires:
+
+.PHONY : CMakeFiles/LogFile_test.dir/config/config.cc.o.requires
+
+CMakeFiles/LogFile_test.dir/config/config.cc.o.provides: CMakeFiles/LogFile_test.dir/config/config.cc.o.requires
+	$(MAKE) -f CMakeFiles/LogFile_test.dir/build.make CMakeFiles/LogFile_test.dir/config/config.cc.o.provides.build
+.PHONY : CMakeFiles/LogFile_test.dir/config/config.cc.o.provides
+
+CMakeFiles/LogFile_test.dir/config/config.cc.o.provides.build: CMakeFiles/LogFile_test.dir/config/config.cc.o
+
+
+CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o: CMakeFiles/LogFile_test.dir/flags.make
+CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o: ../vision_detection/vision_detection_position.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o -c /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc
+
+CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc > CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.i
+
+CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc -o CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.s
+
+CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o.requires:
+
+.PHONY : CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o.requires
+
+CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o.provides: CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o.requires
+	$(MAKE) -f CMakeFiles/LogFile_test.dir/build.make CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o.provides.build
+.PHONY : CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o.provides
+
+CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o.provides.build: CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o
+
+
+CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o: CMakeFiles/LogFile_test.dir/flags.make
+CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o: ../robotic_arm/robot_client_tcp.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o -c /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc
+
+CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc > CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.i
+
+CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc -o CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.s
+
+CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o.requires:
+
+.PHONY : CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o.requires
+
+CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o.provides: CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o.requires
+	$(MAKE) -f CMakeFiles/LogFile_test.dir/build.make CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o.provides.build
+.PHONY : CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o.provides
+
+CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o.provides.build: CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o
+
+
 # Object files for target LogFile_test
 LogFile_test_OBJECTS = \
 "CMakeFiles/LogFile_test.dir/test/LogFile_test.cc.o" \
@@ -933,7 +1029,11 @@ LogFile_test_OBJECTS = \
 "CMakeFiles/LogFile_test.dir/thread/ThreadPool.cc.o" \
 "CMakeFiles/LogFile_test.dir/thread/CountDownLatch.cc.o" \
 "CMakeFiles/LogFile_test.dir/thread/Condition.cc.o" \
-"CMakeFiles/LogFile_test.dir/thread/Exception.cc.o"
+"CMakeFiles/LogFile_test.dir/thread/Exception.cc.o" \
+"CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o" \
+"CMakeFiles/LogFile_test.dir/config/config.cc.o" \
+"CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o" \
+"CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o"
 
 # External object files for target LogFile_test
 LogFile_test_EXTERNAL_OBJECTS =
@@ -973,9 +1073,13 @@ LogFile_test: CMakeFiles/LogFile_test.dir/thread/ThreadPool.cc.o
 LogFile_test: CMakeFiles/LogFile_test.dir/thread/CountDownLatch.cc.o
 LogFile_test: CMakeFiles/LogFile_test.dir/thread/Condition.cc.o
 LogFile_test: CMakeFiles/LogFile_test.dir/thread/Exception.cc.o
+LogFile_test: CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o
+LogFile_test: CMakeFiles/LogFile_test.dir/config/config.cc.o
+LogFile_test: CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o
+LogFile_test: CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o
 LogFile_test: CMakeFiles/LogFile_test.dir/build.make
 LogFile_test: CMakeFiles/LogFile_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Linking CXX executable LogFile_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Linking CXX executable LogFile_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LogFile_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1018,6 +1122,10 @@ CMakeFiles/LogFile_test.dir/requires: CMakeFiles/LogFile_test.dir/thread/ThreadP
 CMakeFiles/LogFile_test.dir/requires: CMakeFiles/LogFile_test.dir/thread/CountDownLatch.cc.o.requires
 CMakeFiles/LogFile_test.dir/requires: CMakeFiles/LogFile_test.dir/thread/Condition.cc.o.requires
 CMakeFiles/LogFile_test.dir/requires: CMakeFiles/LogFile_test.dir/thread/Exception.cc.o.requires
+CMakeFiles/LogFile_test.dir/requires: CMakeFiles/LogFile_test.dir/plc/my_plc.cc.o.requires
+CMakeFiles/LogFile_test.dir/requires: CMakeFiles/LogFile_test.dir/config/config.cc.o.requires
+CMakeFiles/LogFile_test.dir/requires: CMakeFiles/LogFile_test.dir/vision_detection/vision_detection_position.cc.o.requires
+CMakeFiles/LogFile_test.dir/requires: CMakeFiles/LogFile_test.dir/robotic_arm/robot_client_tcp.cc.o.requires
 
 .PHONY : CMakeFiles/LogFile_test.dir/requires
 

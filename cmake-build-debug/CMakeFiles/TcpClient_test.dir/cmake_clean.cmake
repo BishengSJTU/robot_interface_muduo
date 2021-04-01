@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TcpClient_test.dir/test/TcpClient_test.cc.o"
+  "CMakeFiles/TcpClient_test.dir/config/config.cc.o"
   "CMakeFiles/TcpClient_test.dir/datetime/Date.cc.o"
   "CMakeFiles/TcpClient_test.dir/datetime/TimeZone.cc.o"
   "CMakeFiles/TcpClient_test.dir/datetime/Timestamp.cc.o"
@@ -29,12 +30,14 @@ file(REMOVE_RECURSE
   "CMakeFiles/TcpClient_test.dir/net/Timer.cc.o"
   "CMakeFiles/TcpClient_test.dir/net/TimerQueue.cc.o"
   "CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o"
+  "CMakeFiles/TcpClient_test.dir/robotic_arm/robot_client_tcp.cc.o"
   "CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o"
   "CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o"
   "CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.o"
   "CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o"
   "CMakeFiles/TcpClient_test.dir/thread/Thread.cc.o"
   "CMakeFiles/TcpClient_test.dir/thread/ThreadPool.cc.o"
+  "CMakeFiles/TcpClient_test.dir/vision_detection/vision_detection_position.cc.o"
   "TcpClient_test.pdb"
   "TcpClient_test"
 )

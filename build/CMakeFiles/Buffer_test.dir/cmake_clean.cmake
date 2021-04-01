@@ -34,6 +34,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/Buffer_test.dir/thread/CountDownLatch.cc.o"
   "CMakeFiles/Buffer_test.dir/thread/Condition.cc.o"
   "CMakeFiles/Buffer_test.dir/thread/Exception.cc.o"
+  "CMakeFiles/Buffer_test.dir/plc/my_plc.cc.o"
+  "CMakeFiles/Buffer_test.dir/config/config.cc.o"
+  "CMakeFiles/Buffer_test.dir/vision_detection/vision_detection_position.cc.o"
+  "CMakeFiles/Buffer_test.dir/robotic_arm/robot_client_tcp.cc.o"
   "Buffer_test.pdb"
   "Buffer_test"
 )

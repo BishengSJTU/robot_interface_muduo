@@ -34,6 +34,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o"
   "CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o"
   "CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o"
+  "CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o"
+  "CMakeFiles/TcpClient_test.dir/config/config.cc.o"
+  "CMakeFiles/TcpClient_test.dir/vision_detection/vision_detection_position.cc.o"
+  "CMakeFiles/TcpClient_test.dir/robotic_arm/robot_client_tcp.cc.o"
   "TcpClient_test.pdb"
   "TcpClient_test"
 )

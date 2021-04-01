@@ -897,6 +897,102 @@ CMakeFiles/TcpServer_test.dir/thread/Exception.cc.o.provides: CMakeFiles/TcpServ
 CMakeFiles/TcpServer_test.dir/thread/Exception.cc.o.provides.build: CMakeFiles/TcpServer_test.dir/thread/Exception.cc.o
 
 
+CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o: CMakeFiles/TcpServer_test.dir/flags.make
+CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o: ../plc/my_plc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o -c /home/bisheng/robot_interface_muduo/plc/my_plc.cc
+
+CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/plc/my_plc.cc > CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.i
+
+CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/plc/my_plc.cc -o CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.s
+
+CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o.requires:
+
+.PHONY : CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o.requires
+
+CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o.provides: CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o.requires
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o.provides.build
+.PHONY : CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o.provides
+
+CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o.provides.build: CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o
+
+
+CMakeFiles/TcpServer_test.dir/config/config.cc.o: CMakeFiles/TcpServer_test.dir/flags.make
+CMakeFiles/TcpServer_test.dir/config/config.cc.o: ../config/config.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/TcpServer_test.dir/config/config.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpServer_test.dir/config/config.cc.o -c /home/bisheng/robot_interface_muduo/config/config.cc
+
+CMakeFiles/TcpServer_test.dir/config/config.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TcpServer_test.dir/config/config.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/config/config.cc > CMakeFiles/TcpServer_test.dir/config/config.cc.i
+
+CMakeFiles/TcpServer_test.dir/config/config.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TcpServer_test.dir/config/config.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/config/config.cc -o CMakeFiles/TcpServer_test.dir/config/config.cc.s
+
+CMakeFiles/TcpServer_test.dir/config/config.cc.o.requires:
+
+.PHONY : CMakeFiles/TcpServer_test.dir/config/config.cc.o.requires
+
+CMakeFiles/TcpServer_test.dir/config/config.cc.o.provides: CMakeFiles/TcpServer_test.dir/config/config.cc.o.requires
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/config/config.cc.o.provides.build
+.PHONY : CMakeFiles/TcpServer_test.dir/config/config.cc.o.provides
+
+CMakeFiles/TcpServer_test.dir/config/config.cc.o.provides.build: CMakeFiles/TcpServer_test.dir/config/config.cc.o
+
+
+CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o: CMakeFiles/TcpServer_test.dir/flags.make
+CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o: ../vision_detection/vision_detection_position.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o -c /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc
+
+CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc > CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.i
+
+CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc -o CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.s
+
+CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o.requires:
+
+.PHONY : CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o.requires
+
+CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o.provides: CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o.requires
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o.provides.build
+.PHONY : CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o.provides
+
+CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o.provides.build: CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o
+
+
+CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o: CMakeFiles/TcpServer_test.dir/flags.make
+CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o: ../robotic_arm/robot_client_tcp.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o -c /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc
+
+CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc > CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.i
+
+CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc -o CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.s
+
+CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o.requires:
+
+.PHONY : CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o.requires
+
+CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o.provides: CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o.requires
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o.provides.build
+.PHONY : CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o.provides
+
+CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o.provides.build: CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o
+
+
 # Object files for target TcpServer_test
 TcpServer_test_OBJECTS = \
 "CMakeFiles/TcpServer_test.dir/test/TcpServer_test.cc.o" \
@@ -933,7 +1029,11 @@ TcpServer_test_OBJECTS = \
 "CMakeFiles/TcpServer_test.dir/thread/ThreadPool.cc.o" \
 "CMakeFiles/TcpServer_test.dir/thread/CountDownLatch.cc.o" \
 "CMakeFiles/TcpServer_test.dir/thread/Condition.cc.o" \
-"CMakeFiles/TcpServer_test.dir/thread/Exception.cc.o"
+"CMakeFiles/TcpServer_test.dir/thread/Exception.cc.o" \
+"CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o" \
+"CMakeFiles/TcpServer_test.dir/config/config.cc.o" \
+"CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o" \
+"CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o"
 
 # External object files for target TcpServer_test
 TcpServer_test_EXTERNAL_OBJECTS =
@@ -973,9 +1073,13 @@ TcpServer_test: CMakeFiles/TcpServer_test.dir/thread/ThreadPool.cc.o
 TcpServer_test: CMakeFiles/TcpServer_test.dir/thread/CountDownLatch.cc.o
 TcpServer_test: CMakeFiles/TcpServer_test.dir/thread/Condition.cc.o
 TcpServer_test: CMakeFiles/TcpServer_test.dir/thread/Exception.cc.o
+TcpServer_test: CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o
+TcpServer_test: CMakeFiles/TcpServer_test.dir/config/config.cc.o
+TcpServer_test: CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o
+TcpServer_test: CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o
 TcpServer_test: CMakeFiles/TcpServer_test.dir/build.make
 TcpServer_test: CMakeFiles/TcpServer_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Linking CXX executable TcpServer_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Linking CXX executable TcpServer_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TcpServer_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1018,6 +1122,10 @@ CMakeFiles/TcpServer_test.dir/requires: CMakeFiles/TcpServer_test.dir/thread/Thr
 CMakeFiles/TcpServer_test.dir/requires: CMakeFiles/TcpServer_test.dir/thread/CountDownLatch.cc.o.requires
 CMakeFiles/TcpServer_test.dir/requires: CMakeFiles/TcpServer_test.dir/thread/Condition.cc.o.requires
 CMakeFiles/TcpServer_test.dir/requires: CMakeFiles/TcpServer_test.dir/thread/Exception.cc.o.requires
+CMakeFiles/TcpServer_test.dir/requires: CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o.requires
+CMakeFiles/TcpServer_test.dir/requires: CMakeFiles/TcpServer_test.dir/config/config.cc.o.requires
+CMakeFiles/TcpServer_test.dir/requires: CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o.requires
+CMakeFiles/TcpServer_test.dir/requires: CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o.requires
 
 .PHONY : CMakeFiles/TcpServer_test.dir/requires
 

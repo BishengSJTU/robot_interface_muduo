@@ -4,15 +4,18 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/bisheng/robot_interface_muduo/config/config.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/config/config.cc.o"
   "/home/bisheng/robot_interface_muduo/datetime/Date.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/datetime/Date.cc.o"
   "/home/bisheng/robot_interface_muduo/datetime/TimeZone.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/datetime/TimeZone.cc.o"
   "/home/bisheng/robot_interface_muduo/datetime/Timestamp.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/datetime/Timestamp.cc.o"
+  "/home/bisheng/robot_interface_muduo/kinematics/kinematics.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o"
   "/home/bisheng/robot_interface_muduo/logging/AsyncLogging.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/logging/AsyncLogging.cc.o"
   "/home/bisheng/robot_interface_muduo/logging/FileUtil.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/logging/FileUtil.cc.o"
   "/home/bisheng/robot_interface_muduo/logging/LogFile.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/logging/LogFile.cc.o"
   "/home/bisheng/robot_interface_muduo/logging/LogStream.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/logging/LogStream.cc.o"
   "/home/bisheng/robot_interface_muduo/logging/Logging.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/logging/Logging.cc.o"
   "/home/bisheng/robot_interface_muduo/logging/ProcessInfo.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/logging/ProcessInfo.cc.o"
+  "/home/bisheng/robot_interface_muduo/motion_list/motion_list.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o"
   "/home/bisheng/robot_interface_muduo/net/Acceptor.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/net/Acceptor.cc.o"
   "/home/bisheng/robot_interface_muduo/net/Buffer.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/net/Buffer.cc.o"
   "/home/bisheng/robot_interface_muduo/net/Channel.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/net/Channel.cc.o"
@@ -32,14 +35,18 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/bisheng/robot_interface_muduo/net/TcpServer.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/net/TcpServer.cc.o"
   "/home/bisheng/robot_interface_muduo/net/Timer.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/net/Timer.cc.o"
   "/home/bisheng/robot_interface_muduo/net/TimerQueue.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.o"
-  "/home/bisheng/robot_interface_muduo/robot_interface/robot.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o"
+  "/home/bisheng/robot_interface_muduo/pick_and_place/pick_and_place_position.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o"
+  "/home/bisheng/robot_interface_muduo/plc/my_plc.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o"
+  "/home/bisheng/robot_interface_muduo/robot_interface/main.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o"
   "/home/bisheng/robot_interface_muduo/robot_interface/robot_interface.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o"
+  "/home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o"
   "/home/bisheng/robot_interface_muduo/thread/Condition.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/thread/Condition.cc.o"
   "/home/bisheng/robot_interface_muduo/thread/CountDownLatch.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/thread/CountDownLatch.cc.o"
   "/home/bisheng/robot_interface_muduo/thread/CurrentThread.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/thread/CurrentThread.cc.o"
   "/home/bisheng/robot_interface_muduo/thread/Exception.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/thread/Exception.cc.o"
   "/home/bisheng/robot_interface_muduo/thread/Thread.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/thread/Thread.cc.o"
   "/home/bisheng/robot_interface_muduo/thread/ThreadPool.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/thread/ThreadPool.cc.o"
+  "/home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -50,6 +57,19 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../net"
   "../thread"
   "../robot_interface"
+  "../plc"
+  "../config"
+  "../vision_detection"
+  "../robotic_arm"
+  "../kinematics"
+  "../motion_list"
+  "../pick_and_place"
+  "/usr/include/jsoncpp"
+  "/usr/include/zbar"
+  "/opt/ros/kinetic/include/opencv-3.3.1-dev"
+  "/opt/ros/kinetic/include/opencv-3.3.1-dev/opencv"
+  "/usr/local/include/hv"
+  "/usr/local/include/apriltag"
   )
 
 # Targets to which this target links.

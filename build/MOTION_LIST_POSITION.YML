@@ -1,0 +1,45 @@
+%YAML:1.0
+
+---
+Date: "Mon Nov  4 15:00:08 2019\n"
+
+###########################从档案柜中取档案机器人预定动作#############################
+PickCabMotionList1:
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Z, Speed:50, Dist:36}
+   - { Device:PLC, IoType:AirPump, IoValue:1}
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Y, Speed:50, Dist:-93}
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Z, Speed:50, Dist:-16}
+
+###########################向档案柜中放档案机器人预定动作#############################
+PlaceCabMotionList:
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Z, Speed:50, Dist:20}
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Y, Speed:50, Dist:-92}
+
+###########################从窗口中取档案机器人预定动作#############################
+PickWindowMotionList:
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Z, Speed:50, Dist:36}
+   - { Device:PLC, IoType:AirPump, IoValue:1}
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Y, Speed:50, Dist:-88}
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Z, Speed:50, Dist:-20}
+
+###########################向窗口中放档案机器人预定动作#############################
+PlaceWindowMotionList:
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Z, Speed:50, Dist:30}
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Y, Speed:50, Dist:-86}
+
+###########################从暂存架中取档案机器人预定动作#############################
+PickStorageMotionList:
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Z, Speed:50, Dist:6}
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Y, Speed:50, Dist:-21}
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:X, Speed:50, Dist:-10}
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:RX, Speed:50, Dist:-1}
+   - { Device:PLC, IoType:AirPump, IoValue:1}
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Z, Speed:50, Dist:-30}
+
+###########################向暂存架中放档案机器人预定动作#############################
+PlaceStorageMotionList:
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:X, Speed:50, Dist:-10}
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Y, Speed:50, Dist:-23}
+   - { Device:Robot,  Mode:Inc, Coord:Tool, Aixs:Z, Speed:50, Dist:-12}
+
+

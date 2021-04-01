@@ -57,28 +57,28 @@ include CMakeFiles/RobotInterface.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/RobotInterface.dir/flags.make
 
-CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: CMakeFiles/RobotInterface.dir/flags.make
-CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o: ../robot_interface/robot.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface/robot.cc
+CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o: CMakeFiles/RobotInterface.dir/flags.make
+CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o: ../robot_interface/main.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface/main.cc
 
-CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface/robot.cc > CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.i
+CMakeFiles/RobotInterface.dir/robot_interface/main.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RobotInterface.dir/robot_interface/main.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface/main.cc > CMakeFiles/RobotInterface.dir/robot_interface/main.cc.i
 
-CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface/robot.cc -o CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.s
+CMakeFiles/RobotInterface.dir/robot_interface/main.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/robot_interface/main.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface/main.cc -o CMakeFiles/RobotInterface.dir/robot_interface/main.cc.s
 
-CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o.requires:
+CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o.requires:
 
-.PHONY : CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o.requires
+.PHONY : CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o.requires
 
-CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o.provides: CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o.requires
-	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o.provides.build
-.PHONY : CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o.provides
+CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o.provides: CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o.requires
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o.provides.build
+.PHONY : CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o.provides
 
-CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o.provides.build: CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o
+CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o.provides.build: CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o
 
 
 CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o: CMakeFiles/RobotInterface.dir/flags.make
@@ -921,9 +921,177 @@ CMakeFiles/RobotInterface.dir/thread/Exception.cc.o.provides: CMakeFiles/RobotIn
 CMakeFiles/RobotInterface.dir/thread/Exception.cc.o.provides.build: CMakeFiles/RobotInterface.dir/thread/Exception.cc.o
 
 
+CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o: CMakeFiles/RobotInterface.dir/flags.make
+CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o: ../plc/my_plc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o -c /home/bisheng/robot_interface_muduo/plc/my_plc.cc
+
+CMakeFiles/RobotInterface.dir/plc/my_plc.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RobotInterface.dir/plc/my_plc.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/plc/my_plc.cc > CMakeFiles/RobotInterface.dir/plc/my_plc.cc.i
+
+CMakeFiles/RobotInterface.dir/plc/my_plc.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/plc/my_plc.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/plc/my_plc.cc -o CMakeFiles/RobotInterface.dir/plc/my_plc.cc.s
+
+CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o.requires:
+
+.PHONY : CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o.requires
+
+CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o.provides: CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o.requires
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o.provides.build
+.PHONY : CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o.provides
+
+CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o.provides.build: CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o
+
+
+CMakeFiles/RobotInterface.dir/config/config.cc.o: CMakeFiles/RobotInterface.dir/flags.make
+CMakeFiles/RobotInterface.dir/config/config.cc.o: ../config/config.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/RobotInterface.dir/config/config.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/config/config.cc.o -c /home/bisheng/robot_interface_muduo/config/config.cc
+
+CMakeFiles/RobotInterface.dir/config/config.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RobotInterface.dir/config/config.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/config/config.cc > CMakeFiles/RobotInterface.dir/config/config.cc.i
+
+CMakeFiles/RobotInterface.dir/config/config.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/config/config.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/config/config.cc -o CMakeFiles/RobotInterface.dir/config/config.cc.s
+
+CMakeFiles/RobotInterface.dir/config/config.cc.o.requires:
+
+.PHONY : CMakeFiles/RobotInterface.dir/config/config.cc.o.requires
+
+CMakeFiles/RobotInterface.dir/config/config.cc.o.provides: CMakeFiles/RobotInterface.dir/config/config.cc.o.requires
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/config/config.cc.o.provides.build
+.PHONY : CMakeFiles/RobotInterface.dir/config/config.cc.o.provides
+
+CMakeFiles/RobotInterface.dir/config/config.cc.o.provides.build: CMakeFiles/RobotInterface.dir/config/config.cc.o
+
+
+CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o: CMakeFiles/RobotInterface.dir/flags.make
+CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o: ../vision_detection/vision_detection_position.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o -c /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc
+
+CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc > CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.i
+
+CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc -o CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.s
+
+CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o.requires:
+
+.PHONY : CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o.requires
+
+CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o.provides: CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o.requires
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o.provides.build
+.PHONY : CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o.provides
+
+CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o.provides.build: CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o
+
+
+CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o: CMakeFiles/RobotInterface.dir/flags.make
+CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o: ../robotic_arm/robot_client_tcp.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o -c /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc
+
+CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc > CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.i
+
+CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc -o CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.s
+
+CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.requires:
+
+.PHONY : CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.requires
+
+CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.provides: CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.requires
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.provides.build
+.PHONY : CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.provides
+
+CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.provides.build: CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o
+
+
+CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o: CMakeFiles/RobotInterface.dir/flags.make
+CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o: ../kinematics/kinematics.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o -c /home/bisheng/robot_interface_muduo/kinematics/kinematics.cc
+
+CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/kinematics/kinematics.cc > CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.i
+
+CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/kinematics/kinematics.cc -o CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.s
+
+CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o.requires:
+
+.PHONY : CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o.requires
+
+CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o.provides: CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o.requires
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o.provides.build
+.PHONY : CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o.provides
+
+CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o.provides.build: CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o
+
+
+CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o: CMakeFiles/RobotInterface.dir/flags.make
+CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o: ../motion_list/motion_list.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o -c /home/bisheng/robot_interface_muduo/motion_list/motion_list.cc
+
+CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/motion_list/motion_list.cc > CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.i
+
+CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/motion_list/motion_list.cc -o CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.s
+
+CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o.requires:
+
+.PHONY : CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o.requires
+
+CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o.provides: CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o.requires
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o.provides.build
+.PHONY : CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o.provides
+
+CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o.provides.build: CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o
+
+
+CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o: CMakeFiles/RobotInterface.dir/flags.make
+CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o: ../pick_and_place/pick_and_place_position.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o -c /home/bisheng/robot_interface_muduo/pick_and_place/pick_and_place_position.cc
+
+CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/pick_and_place/pick_and_place_position.cc > CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.i
+
+CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/pick_and_place/pick_and_place_position.cc -o CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.s
+
+CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o.requires:
+
+.PHONY : CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o.requires
+
+CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o.provides: CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o.requires
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o.provides.build
+.PHONY : CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o.provides
+
+CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o.provides.build: CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o
+
+
 # Object files for target RobotInterface
 RobotInterface_OBJECTS = \
-"CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o" \
+"CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o" \
 "CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o" \
 "CMakeFiles/RobotInterface.dir/datetime/TimeZone.cc.o" \
 "CMakeFiles/RobotInterface.dir/datetime/Date.cc.o" \
@@ -958,12 +1126,19 @@ RobotInterface_OBJECTS = \
 "CMakeFiles/RobotInterface.dir/thread/ThreadPool.cc.o" \
 "CMakeFiles/RobotInterface.dir/thread/CountDownLatch.cc.o" \
 "CMakeFiles/RobotInterface.dir/thread/Condition.cc.o" \
-"CMakeFiles/RobotInterface.dir/thread/Exception.cc.o"
+"CMakeFiles/RobotInterface.dir/thread/Exception.cc.o" \
+"CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o" \
+"CMakeFiles/RobotInterface.dir/config/config.cc.o" \
+"CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o" \
+"CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o" \
+"CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o" \
+"CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o" \
+"CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o"
 
 # External object files for target RobotInterface
 RobotInterface_EXTERNAL_OBJECTS =
 
-RobotInterface: CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o
+RobotInterface: CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/datetime/TimeZone.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/datetime/Date.cc.o
@@ -999,9 +1174,61 @@ RobotInterface: CMakeFiles/RobotInterface.dir/thread/ThreadPool.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/thread/CountDownLatch.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/thread/Condition.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/thread/Exception.cc.o
+RobotInterface: CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o
+RobotInterface: CMakeFiles/RobotInterface.dir/config/config.cc.o
+RobotInterface: CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o
+RobotInterface: CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o
+RobotInterface: CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o
+RobotInterface: CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o
+RobotInterface: CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/build.make
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_stitching3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_superres3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_videostab3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_aruco3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_bgsegm3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_bioinspired3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ccalib3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_cvv3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_dpm3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_face3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_fuzzy3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_hdf3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_img_hash3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_line_descriptor3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_optflow3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_reg3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_rgbd3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_saliency3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_stereo3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_structured_light3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_surface_matching3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_tracking3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xfeatures2d3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ximgproc3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xobjdetect3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xphoto3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_shape3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_photo3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_datasets3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_plot3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_text3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_dnn3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ml3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_video3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_calib3d3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_features2d3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_highgui3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_videoio3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_viz3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_phase_unwrapping3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_flann3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_objdetect3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
+RobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
 RobotInterface: CMakeFiles/RobotInterface.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Linking CXX executable RobotInterface"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Linking CXX executable RobotInterface"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RobotInterface.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1009,7 +1236,7 @@ CMakeFiles/RobotInterface.dir/build: RobotInterface
 
 .PHONY : CMakeFiles/RobotInterface.dir/build
 
-CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o.requires
+CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o.requires
 CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o.requires
 CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/datetime/TimeZone.cc.o.requires
 CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/datetime/Date.cc.o.requires
@@ -1045,6 +1272,13 @@ CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/thread/Thr
 CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/thread/CountDownLatch.cc.o.requires
 CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/thread/Condition.cc.o.requires
 CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/thread/Exception.cc.o.requires
+CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o.requires
+CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/config/config.cc.o.requires
+CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o.requires
+CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.requires
+CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o.requires
+CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o.requires
+CMakeFiles/RobotInterface.dir/requires: CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o.requires
 
 .PHONY : CMakeFiles/RobotInterface.dir/requires
 

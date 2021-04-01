@@ -2,7 +2,7 @@
 
 MyPLC::MyPLC()
 {
-    LOG_INFO << "MyPLC::MyPLC构造";
+    LOG_INFO << "MyPLC构造";
 }
 
 void MyPLC::InitializePLC(std::string address, int port)
@@ -16,7 +16,7 @@ void MyPLC::InitializePLC(std::string address, int port)
     //创建socketrqt
     if ((clientSocket_ = socket(AF_INET, SOCK_STREAM, 0)) < 0) {
         LOG_ERROR << "PLC创建客户端端口失败" << strerror(errno) << "（错误号：" << errno << "）";
-        exit(EXITNUM);
+        exit(PLCEXITNUM);
     }
 
     memset(&clientAddr_, 0, sizeof(clientAddr_));
@@ -27,7 +27,7 @@ void MyPLC::InitializePLC(std::string address, int port)
     //IP地址转换函数
     if (inet_pton(AF_INET, address_ptr, &clientAddr_.sin_addr) <= 0) {
         LOG_ERROR << "PLC地址转换函数出错 " << address_ptr;
-        exit(EXITNUM);
+        exit(PLCEXITNUM);
     }
 
     while(1) {
@@ -61,16 +61,16 @@ bool MyPLC::ControlPLC(int command) {
 
     //针对指令类型发送命令
     switch (command) {
-        case 1:
+        case MoveF:
             plcAction[9] = 0x01;
             break;
-        case 2:
+        case MoveB:
             plcAction[9] = 0x00;
             break;
-        case 7:
+        case AirpumpO:
             plcAction[9] = 0x02;
             break;
-        case 8:
+        case AirpumpC:
             plcAction[9] = 0x02;
             plcAction[10] = 0x00;
             break;
@@ -86,9 +86,10 @@ bool MyPLC::ControlPLC(int command) {
             close(clientSocket_);
             InitializePLC(address_, port_);
             LOG_ERROR << "PLC客户端发送数据错误，尝试重新建立连接";
-
         }
+        usleep(PLCTCPWAITTIME);
         int recvLen = recv(clientSocket_, actualPLCAction, sizeof(actualPLCAction), 0);
+        usleep(PLCTCPWAITTIME);
 
         std::stringstream io;
         std::string log;
@@ -110,18 +111,19 @@ bool MyPLC::ControlPLC(int command) {
             break;
         sleep(1);
     }
-    if(command == 7 || command == 8)
+    if(command == AirpumpO || command == AirpumpC)
         return true;
     //　电机前移
-    if(command == 1) {
+    if(command == MoveF) {
         while(1) {
             quit = true;
             if (send(clientSocket_, getPLCState, sizeof(getPLCState), 0) < 0) {
                 LOG_ERROR << "PLC客户端发送数据错误，异常退出！";
-                exit(EXITNUM);
+                exit(PLCEXITNUM);
             }
-
+            usleep(PLCTCPWAITTIME);
             int recvLen = recv(clientSocket_, actualPLCState, sizeof(actualPLCState), 0);
+            usleep(PLCTCPWAITTIME);
 
             std::stringstream io;
             std::string log;
@@ -156,21 +158,22 @@ bool MyPLC::ControlPLC(int command) {
     }
 
     // 电机缩回
-    if(command == 2) {
+    if(command == MoveB) {
         while(1) {
             quit = true;
             if (send(clientSocket_, getPLCState, sizeof(getPLCState), 0) < 0) {
                 LOG_ERROR << "PLC客户端发送数据错误，异常退出！";
-                exit(EXITNUM);
+                exit(PLCEXITNUM);
             }
+            usleep(PLCTCPWAITTIME);
             int recvLen = recv(clientSocket_, actualPLCState, sizeof(actualPLCState), 0);
+            usleep(PLCTCPWAITTIME);
 
             std::stringstream io;
             std::string log;
-            io << "2.从PLC服务器接收:";
+            io << "Step2: 发送读取状态指令　从PLC服务器接收:";
             for (std::size_t i = 0; i < recvLen; i++)
                 io << std::hex << (unsigned int) (unsigned char) actualPLCState[i] << ",";
-            io << "等待动作完成...";
             io >> log;
             LOG_INFO << log;
 
@@ -205,9 +208,11 @@ bool MyPLC::ArchiveInHand() {
     unsigned char actualArchiveState[STATE_NUM];
     if (send(clientSocket_, getArchiveState, sizeof(getArchiveState), 0) < 0) {
         LOG_ERROR << "PLC客户端发送数据错误，异常退出！";
-        exit(EXITNUM);
+        exit(PLCEXITNUM);
     }
+    usleep(PLCTCPWAITTIME);
     int recvLen = recv(clientSocket_, actualArchiveState, sizeof(actualArchiveState), 0);
+    usleep(PLCTCPWAITTIME);
 
     std::stringstream io;
     std::string log;
@@ -231,9 +236,11 @@ void MyPLC::InquireState() {
     unsigned char actualPLCState[STATE_NUM];
     if (send(clientSocket_, getPLCState, sizeof(getPLCState), 0) < 0) {
         LOG_ERROR << "PLC客户端发送数据错误，异常退出！";
-        exit(EXITNUM);
+        exit(PLCEXITNUM);
     }
+    usleep(PLCTCPWAITTIME);
     int recvLen = recv(clientSocket_, actualPLCState, sizeof(actualPLCState), 0);
+    usleep(PLCTCPWAITTIME);
 }
 
 void MyPLC::MovePlatform(int x_delta, int y_delta) {
@@ -277,8 +284,9 @@ void MyPLC::MovePlatform(int x_delta, int y_delta) {
     for(int i = 0; i < sizeof(set_x); i++)
         std::cout <<  std::hex << (unsigned int)(unsigned char)set_x[i] << ",";
     std::cout << std::endl;
-
+    usleep(PLCTCPWAITTIME);
     int rec_len = recv(clientSocket_, set_x_feedback, sizeof(set_x_feedback), 0);
+    usleep(PLCTCPWAITTIME);
     assert(rec_len == sizeof(set_x_feedback));
     usleep(100000);
 
@@ -293,8 +301,9 @@ void MyPLC::MovePlatform(int x_delta, int y_delta) {
     for(int i = 0; i < sizeof(set_y); i++)
         std::cout <<  std::hex << (unsigned int)(unsigned char)set_y[i] << ",";
     std::cout << std::endl;
-
+    usleep(PLCTCPWAITTIME);
     rec_len = recv(clientSocket_, set_y_feedback, sizeof(set_y_feedback), 0);
+    usleep(PLCTCPWAITTIME);
     assert(rec_len == sizeof(set_y_feedback));
     usleep(100000);
 
@@ -302,7 +311,9 @@ void MyPLC::MovePlatform(int x_delta, int y_delta) {
     unsigned char set_direction_feedback[12];
     set_direction[9] = (x_move > 0) ? 0x0D : 0x0E;
     send(clientSocket_, set_direction, sizeof(set_direction), 0);
+    usleep(PLCTCPWAITTIME);
     rec_len = recv(clientSocket_, set_direction_feedback, sizeof(set_direction_feedback), 0);
+    usleep(PLCTCPWAITTIME);
     assert(rec_len == sizeof(set_direction_feedback));
     usleep(100000);
     std::cout << "send set_direction:";
@@ -312,7 +323,9 @@ void MyPLC::MovePlatform(int x_delta, int y_delta) {
 
     set_direction[9] = (y_move > 0) ? 0x00 : 0x01;
     send(clientSocket_, set_direction, sizeof(set_direction), 0);
+    usleep(PLCTCPWAITTIME);
     rec_len = recv(clientSocket_, set_direction_feedback, sizeof(set_direction_feedback), 0);
+    usleep(PLCTCPWAITTIME);
     assert(rec_len == sizeof(set_direction_feedback));
     usleep(100000);
     std::cout << "send set_direction:";
@@ -345,7 +358,9 @@ void MyPLC::ManipulateArchive(int arm_position, int mode)
     set_position[14] = (unsigned char)arm_position;
     unsigned char set_position_feedback[12];
     send(clientSocket_, set_position, sizeof(set_position), 0);
+    usleep(PLCTCPWAITTIME);
     int rec_len = recv(clientSocket_, set_position_feedback, sizeof(set_position_feedback), 0);
+    usleep(PLCTCPWAITTIME);
     assert(rec_len == sizeof(set_position_feedback));
     usleep(100000);
 
@@ -353,9 +368,10 @@ void MyPLC::ManipulateArchive(int arm_position, int mode)
     unsigned char set_mode_feedback[12];
     set_mode[9] = (mode == 1) ? 0x28 : 0x32;
     send(clientSocket_, set_mode, sizeof(set_mode), 0);
+    usleep(PLCTCPWAITTIME);
     rec_len = recv(clientSocket_, set_mode_feedback, sizeof(set_mode_feedback), 0);
+    usleep(PLCTCPWAITTIME);
     assert(rec_len == sizeof(set_mode_feedback));
-    usleep(100000);
 
     int manipulation_finished = (mode == 1) ? 0x02 : 0x04;
 
@@ -379,16 +395,15 @@ void MyPLC::ResetPlatform()
     for(int i = 0; i < sizeof(reset); i++)
         std::cout <<  std::hex << (unsigned int)(unsigned char)reset[i] << ",";
     std::cout << std::endl;
-
+    usleep(PLCTCPWAITTIME);
     int rec_len = recv(clientSocket_, reset_feedback, sizeof(reset_feedback), 0);
-
+    usleep(PLCTCPWAITTIME);
     std::cout << "receive:";
     for(int i = 0; i < sizeof(reset_feedback); i++)
         std::cout  << std::hex << (unsigned int)(unsigned char)reset_feedback[i] << ",";
     std::cout << std::endl;
-
     assert(rec_len == sizeof(reset_feedback));
-    usleep(100000);
+
 
     int x, y, reset_state, archive, sensor;
     while(1) {
@@ -403,8 +418,9 @@ void MyPLC::GetPlatformState(int &x_current, int &y_current, int &reset_state, i
     unsigned char buff_get_state[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0x01, 0x03, 0x00, 0x0A, 0x00, 0x08};
     unsigned char buff_state[25];
     send(clientSocket_, buff_get_state, sizeof(buff_get_state), 0);
+    usleep(PLCTCPWAITTIME);
     int rec_len = recv(clientSocket_, buff_state, sizeof(buff_state), 0);
-
+    usleep(PLCTCPWAITTIME);
     std::cout << "receive rec_len " << (int)rec_len << ":";
     for(int i = 0; i < rec_len; i++)
         std::cout << std::hex << (unsigned int)(unsigned char)buff_state[i] << ",";
@@ -426,7 +442,7 @@ void MyPLC::GetPlatformState(int &x_current, int &y_current, int &reset_state, i
     reset_state = (unsigned int)buff_state[10];
     archive_state = (unsigned int)buff_state[12];
     sensor = (unsigned int)buff_state[24];
-    usleep(100000);
+    usleep(PLCTCPWAITTIME);
 }
 
 

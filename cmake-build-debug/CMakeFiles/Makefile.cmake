@@ -27,6 +27,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/Compiler/GNU-CXX.cmake"
   "/opt/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/Compiler/GNU.cmake"
   "/opt/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/FindBoost.cmake"
+  "/opt/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/FindPackageHandleStandardArgs.cmake"
+  "/opt/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/FindPackageMessage.cmake"
   "/opt/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/Internal/CMakeCheckCompilerFlag.cmake"
   "/opt/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/Platform/Linux-GNU-C.cmake"
   "/opt/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/Platform/Linux-GNU-CXX.cmake"
@@ -34,6 +36,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/Platform/Linux.cmake"
   "/opt/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/Platform/UnixPaths.cmake"
   "/opt/clion-2019.1.4/bin/cmake/linux/share/cmake-3.14/Modules/ProcessorCount.cmake"
+  "/usr/local/share/OpenCV/OpenCVConfig-version.cmake"
+  "/usr/local/share/OpenCV/OpenCVConfig.cmake"
+  "/usr/local/share/OpenCV/OpenCVModules-release.cmake"
+  "/usr/local/share/OpenCV/OpenCVModules.cmake"
   )
 
 # The corresponding makefile is:
@@ -49,9 +55,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/LogFile_test.dir/DependInfo.cmake"
-  "CMakeFiles/TcpClient_test.dir/DependInfo.cmake"
   "CMakeFiles/RobotInterface.dir/DependInfo.cmake"
-  "CMakeFiles/Buffer_test.dir/DependInfo.cmake"
-  "CMakeFiles/TcpServer_test.dir/DependInfo.cmake"
   )

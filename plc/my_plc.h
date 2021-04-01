@@ -21,9 +21,14 @@
 #include <sstream>
 #include <assert.h>
 #include "Logging.h"
-#include "Logging.h"
+#include "LogFile.h"
 
-#define EXITNUM -1
+#define PLCEXITNUM 1
+#define PLCTCPWAITTIME 1e5
+#define MoveF 1
+#define MoveB 2
+#define AirpumpO 7
+#define AirpumpC 8
 
 class MyPLC {
 private:

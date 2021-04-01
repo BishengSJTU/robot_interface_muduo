@@ -13,13 +13,13 @@
 #include "Thread.h"
 #include "Buffer.h"
 #include "Logging.h"
-#include "Logging.h"
+#include "LogFile.h"
 #include "codec.h"
 
 using namespace muduo;
 using namespace muduo::net;
 
-class Robot : muduo::noncopyable
+class RobotInterface : muduo::noncopyable
 {
 public:
     //机器人自身信息
@@ -64,7 +64,7 @@ public:
         CAB_READY = 0x07,
         ALL_FINISH_TASK = 0X08
     };
-    Robot();
+    RobotInterface();
     void eventLoopThread(); //收发消息及定时器函数线程
     void execTaskThread(); //执行任务函数线程
     void write(const StringPiece& message); //往Buffer里写数据

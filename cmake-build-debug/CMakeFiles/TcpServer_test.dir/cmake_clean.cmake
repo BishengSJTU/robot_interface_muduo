@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TcpServer_test.dir/test/TcpServer_test.cc.o"
+  "CMakeFiles/TcpServer_test.dir/config/config.cc.o"
   "CMakeFiles/TcpServer_test.dir/datetime/Date.cc.o"
   "CMakeFiles/TcpServer_test.dir/datetime/TimeZone.cc.o"
   "CMakeFiles/TcpServer_test.dir/datetime/Timestamp.cc.o"
@@ -29,12 +30,14 @@ file(REMOVE_RECURSE
   "CMakeFiles/TcpServer_test.dir/net/Timer.cc.o"
   "CMakeFiles/TcpServer_test.dir/net/TimerQueue.cc.o"
   "CMakeFiles/TcpServer_test.dir/plc/my_plc.cc.o"
+  "CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o"
   "CMakeFiles/TcpServer_test.dir/thread/Condition.cc.o"
   "CMakeFiles/TcpServer_test.dir/thread/CountDownLatch.cc.o"
   "CMakeFiles/TcpServer_test.dir/thread/CurrentThread.cc.o"
   "CMakeFiles/TcpServer_test.dir/thread/Exception.cc.o"
   "CMakeFiles/TcpServer_test.dir/thread/Thread.cc.o"
   "CMakeFiles/TcpServer_test.dir/thread/ThreadPool.cc.o"
+  "CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o"
   "TcpServer_test.pdb"
   "TcpServer_test"
 )

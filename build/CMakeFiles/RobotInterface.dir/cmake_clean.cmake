@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/RobotInterface.dir/robot_interface/robot.cc.o"
+  "CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o"
   "CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o"
   "CMakeFiles/RobotInterface.dir/datetime/TimeZone.cc.o"
   "CMakeFiles/RobotInterface.dir/datetime/Date.cc.o"
@@ -35,6 +35,13 @@ file(REMOVE_RECURSE
   "CMakeFiles/RobotInterface.dir/thread/CountDownLatch.cc.o"
   "CMakeFiles/RobotInterface.dir/thread/Condition.cc.o"
   "CMakeFiles/RobotInterface.dir/thread/Exception.cc.o"
+  "CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o"
+  "CMakeFiles/RobotInterface.dir/config/config.cc.o"
+  "CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o"
+  "CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o"
+  "CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o"
+  "CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o"
+  "CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o"
   "RobotInterface.pdb"
   "RobotInterface"
 )
