@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/RobotInterface.dir/robot_interface/main.cc.o"
   "CMakeFiles/RobotInterface.dir/robot_interface/robot_interface.cc.o"
+  "CMakeFiles/RobotInterface.dir/agv/agv.cc.o"
+  "CMakeFiles/RobotInterface.dir/agv_wait_action_finish/action_finish.cc.o"
   "CMakeFiles/RobotInterface.dir/config/config.cc.o"
   "CMakeFiles/RobotInterface.dir/datetime/Date.cc.o"
   "CMakeFiles/RobotInterface.dir/datetime/TimeZone.cc.o"
@@ -12,7 +14,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/RobotInterface.dir/logging/LogStream.cc.o"
   "CMakeFiles/RobotInterface.dir/logging/Logging.cc.o"
   "CMakeFiles/RobotInterface.dir/logging/ProcessInfo.cc.o"
-  "CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o"
   "CMakeFiles/RobotInterface.dir/net/Acceptor.cc.o"
   "CMakeFiles/RobotInterface.dir/net/Buffer.cc.o"
   "CMakeFiles/RobotInterface.dir/net/Channel.cc.o"

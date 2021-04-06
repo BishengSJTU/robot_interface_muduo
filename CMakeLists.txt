@@ -25,9 +25,10 @@ FILE (
         "vision_detection/*.cc"
         "robotic_arm/*.cc"
         "kinematics/*.cc"
-        "motion_list/*.cc"
         "pick_and_place/*.cc"
         "vision_detection/*.cc"
+        "agv_wait_action_finish/*.cc"
+        "agv/*.cc"
 )
 
 include_directories(
@@ -41,10 +42,12 @@ include_directories(
         vision_detection
         robotic_arm
         kinematics
-        motion_list
         pick_and_place
         vision_detection
         mapping_table
+        agv_wait_action_finish
+        agv
+        websocket
 )
 include_directories(${JSON_DIR} ${ZBAR_DIR} ${OpenCV_INCLUDE_DIRS} ${HV_DIR} ${APRILTAG_DIR})
 link_directories(${LIB_HV_DIR} ${LIB_APRILTAG_DIR})

@@ -1,7 +1,8 @@
 #include "robot_client_tcp.h"
 
-RobotClient::RobotClient()
+RobotClient::RobotClient(std::string address, int port)
 {
+    InitializeRobot(address, port);
 }
 
 RobotClient::~RobotClient()

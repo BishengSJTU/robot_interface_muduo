@@ -54,8 +54,8 @@ bool VisionDetection::GetPose(const int &index, cv::Mat &pose, int times) {
         cv::VideoCapture cap_;
         cap_ = cap_source_;
         if (!cap_.isOpened()) {
-            std::cerr << "Error : Cannot open the camera" << std::endl;
-            LOG_ERROR << "Error : Cannot open the camera";
+            std::cerr << "无法打开相机" << std::endl;
+            LOG_ERROR << "无法打开相机";
             return false;
         }
         cap_.set(CV_CAP_PROP_FRAME_WIDTH, image_width_);
@@ -173,8 +173,6 @@ bool VisionDetection::GetPose(const int &index, cv::Mat &pose, int times) {
         target_rvec[0][1] = (rotation_vector.axis() * rotation_vector.angle())[1];
         target_rvec[0][2] = (rotation_vector.axis() * rotation_vector.angle())[2];
         cv::aruco::drawAxis(dst_image1, intrinsics_, distortion_, target_rvec[0], target_tvec[0], 20.0);
-
-//        cv::imwrite("/home/xunjie/robot_interface1.1/log/aruco_" + std::to_string(i) + ".jpg", dst_image1);
         result = true;
     }
 
@@ -235,7 +233,7 @@ std::vector<int> VisionDetection::QRCodeInPicture() {
     scanner.set_config(zbar::ZBAR_NONE, zbar::ZBAR_CFG_ENABLE, 1);
     {
         cv::VideoCapture cap_;
-        cap_ = 0;
+        cap_ = cap_source_;
         if (!cap_.isOpened()) {
             std::cerr << "Error : Cannot open the camera" << std::endl;
             return results;

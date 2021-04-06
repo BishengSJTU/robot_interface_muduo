@@ -123,6 +123,60 @@ RobotInterface/fast:
 	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/build
 .PHONY : RobotInterface/fast
 
+agv/agv.o: agv/agv.cc.o
+
+.PHONY : agv/agv.o
+
+# target to build an object file
+agv/agv.cc.o:
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/agv/agv.cc.o
+.PHONY : agv/agv.cc.o
+
+agv/agv.i: agv/agv.cc.i
+
+.PHONY : agv/agv.i
+
+# target to preprocess a source file
+agv/agv.cc.i:
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/agv/agv.cc.i
+.PHONY : agv/agv.cc.i
+
+agv/agv.s: agv/agv.cc.s
+
+.PHONY : agv/agv.s
+
+# target to generate assembly for a file
+agv/agv.cc.s:
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/agv/agv.cc.s
+.PHONY : agv/agv.cc.s
+
+agv_wait_action_finish/action_finish.o: agv_wait_action_finish/action_finish.cc.o
+
+.PHONY : agv_wait_action_finish/action_finish.o
+
+# target to build an object file
+agv_wait_action_finish/action_finish.cc.o:
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/agv_wait_action_finish/action_finish.cc.o
+.PHONY : agv_wait_action_finish/action_finish.cc.o
+
+agv_wait_action_finish/action_finish.i: agv_wait_action_finish/action_finish.cc.i
+
+.PHONY : agv_wait_action_finish/action_finish.i
+
+# target to preprocess a source file
+agv_wait_action_finish/action_finish.cc.i:
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/agv_wait_action_finish/action_finish.cc.i
+.PHONY : agv_wait_action_finish/action_finish.cc.i
+
+agv_wait_action_finish/action_finish.s: agv_wait_action_finish/action_finish.cc.s
+
+.PHONY : agv_wait_action_finish/action_finish.s
+
+# target to generate assembly for a file
+agv_wait_action_finish/action_finish.cc.s:
+	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/agv_wait_action_finish/action_finish.cc.s
+.PHONY : agv_wait_action_finish/action_finish.cc.s
+
 config/config.o: config/config.cc.o
 
 .PHONY : config/config.o
@@ -419,33 +473,6 @@ logging/ProcessInfo.s: logging/ProcessInfo.cc.s
 logging/ProcessInfo.cc.s:
 	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/logging/ProcessInfo.cc.s
 .PHONY : logging/ProcessInfo.cc.s
-
-motion_list/motion_list.o: motion_list/motion_list.cc.o
-
-.PHONY : motion_list/motion_list.o
-
-# target to build an object file
-motion_list/motion_list.cc.o:
-	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o
-.PHONY : motion_list/motion_list.cc.o
-
-motion_list/motion_list.i: motion_list/motion_list.cc.i
-
-.PHONY : motion_list/motion_list.i
-
-# target to preprocess a source file
-motion_list/motion_list.cc.i:
-	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.i
-.PHONY : motion_list/motion_list.cc.i
-
-motion_list/motion_list.s: motion_list/motion_list.cc.s
-
-.PHONY : motion_list/motion_list.s
-
-# target to generate assembly for a file
-motion_list/motion_list.cc.s:
-	$(MAKE) -f CMakeFiles/RobotInterface.dir/build.make CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.s
-.PHONY : motion_list/motion_list.cc.s
 
 net/Acceptor.o: net/Acceptor.cc.o
 
@@ -1293,6 +1320,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... RobotInterface"
 	@echo "... edit_cache"
+	@echo "... agv/agv.o"
+	@echo "... agv/agv.i"
+	@echo "... agv/agv.s"
+	@echo "... agv_wait_action_finish/action_finish.o"
+	@echo "... agv_wait_action_finish/action_finish.i"
+	@echo "... agv_wait_action_finish/action_finish.s"
 	@echo "... config/config.o"
 	@echo "... config/config.i"
 	@echo "... config/config.s"
@@ -1326,9 +1359,6 @@ help:
 	@echo "... logging/ProcessInfo.o"
 	@echo "... logging/ProcessInfo.i"
 	@echo "... logging/ProcessInfo.s"
-	@echo "... motion_list/motion_list.o"
-	@echo "... motion_list/motion_list.i"
-	@echo "... motion_list/motion_list.s"
 	@echo "... net/Acceptor.o"
 	@echo "... net/Acceptor.i"
 	@echo "... net/Acceptor.s"

@@ -1,21 +1,24 @@
 #include "jaka_pick_and_place.h"
 
 
-JAKAPickAndPlace::JAKAPickAndPlace(const std::string &config_file_name):
-config_(config_file_name),
-vision_detection_(config_)
+JAKAPickAndPlace::JAKAPickAndPlace(const std::string &config_file_path):
+fixed_config_(config_file_path + "/FixedConfig.YML"),
+flexible_config_(config_file_path + "/FlexibleConfig .YML"),
+vision_detection_(fixed_config_),
+robot_client_(fixed_config_.get<std::string>("JAKA_ROBOT_IP"), fixed_config_.get<int>("JAKA_ROBOT_PORT")),
+plc_(fixed_config_.get<std::string>("PLC_IP"), fixed_config_.get<int>("PLC_PORT"))
 {
-    adjust_joint_speed = config_.get<float>("adjust_joint_speed");
-    fixed_joint_speed = config_.get<float>("fixed_joint_speed");
-    fixed_linear_speed = config_.get<float>("fixed_linear_speed");
-    pick_place_offset_x = config_.get<float>("pick_place_offset_x");
-    pick_place_offset_y = config_.get<float>("pick_place_offset_y");
-    pick_place_offset_z = config_.get<float>("pick_place_offset_z");
-    pick_place_roll = config_.get<float>("pick_place_roll");
-    pick_place_pitch = config_.get<float>("pick_place_pitch");
-    pick_place_yaw = config_.get<float>("pick_place_yaw");
-    max_count_adjust = config_.get<int>("max_count_adjust");
-    eye_hand = config_.get<std::vector<double> >("eye_hand");
+    adjust_joint_speed = fixed_config_.get<float>("adjust_joint_speed");
+    fixed_joint_speed = fixed_config_.get<float>("fixed_joint_speed");
+    fixed_linear_speed = fixed_config_.get<float>("fixed_linear_speed");
+    pick_place_offset_x = fixed_config_.get<float>("pick_place_offset_x");
+    pick_place_offset_y = fixed_config_.get<float>("pick_place_offset_y");
+    pick_place_offset_z = fixed_config_.get<float>("pick_place_offset_z");
+    pick_place_roll = fixed_config_.get<float>("pick_place_roll");
+    pick_place_pitch = fixed_config_.get<float>("pick_place_pitch");
+    pick_place_yaw = fixed_config_.get<float>("pick_place_yaw");
+    max_count_adjust = fixed_config_.get<int>("max_count_adjust");
+    eye_hand = fixed_config_.get<std::vector<double> >("eye_hand");
 
     eye_hand_matrix.resize(4, 4);
     for(int i = 0; i < 4; i++) {
@@ -23,11 +26,6 @@ vision_detection_(config_)
             eye_hand_matrix(i, j) = eye_hand[i * 4 + j];
         }
     }
-}
-
-void JAKAPickAndPlace::JAKAInitializePickAndPlace(){
-    robot_client_.InitializeRobot(config_.get<std::string>("JAKA_ROBOT_IP"), config_.get<int>("JAKA_ROBOT_PORT"));
-    plc_.InitializePLC(config_.get<std::string>("PLC_IP"), config_.get<int>("PLC_PORT"));
     JAKAPLCAction(MoveB);
     JAKAPLCAction(AirpumpC);
 }
@@ -42,9 +40,9 @@ bool JAKAPickAndPlace::JAKAPickCab(int cab_id, int position, bool& mechanical_er
     mechanical_error = false;
     bool pick_result = true;
     // 移动至中间过渡点
-    int all_position_num = config_.get<int>("cab" + std::to_string(cab_id) + "_all_position_num");
+    int all_position_num = flexible_config_.get<int>("cab" + std::to_string(cab_id) + "_all_position_num");
 
-    std::vector<float> transition_point = config_.get<std::vector<float> >("transition_point");
+    std::vector<float> transition_point = flexible_config_.get<std::vector<float> >("transition_point");
     robot_client_.MoveJ(transition_point, fixed_joint_speed);
     std::cout << "移动至transition point" << std::endl;
 
@@ -67,7 +65,7 @@ bool JAKAPickAndPlace::JAKAPickCab(int cab_id, int position, bool& mechanical_er
     MappingTable(all_position_num, position, root, benchmark_position);
 
     std::vector<float> watch_points;
-    watch_points = config_.get<std::vector<float> >("watch_cab" + std::to_string(cab_id) + "_" + std::to_string(root));
+    watch_points = flexible_config_.get<std::vector<float> >("watch_cab" + std::to_string(cab_id) + "_" + std::to_string(root));
     robot_client_.MoveJ(watch_points, fixed_joint_speed);
     std::cout << "移动至watch point" << std::endl;
 
@@ -156,9 +154,9 @@ bool JAKAPickAndPlace::JAKAPlaceCab(int cab_id, int position,  bool& mechanical_
     mechanical_error = false;
     bool place_result = true;
     // 移动至中间过渡点
-    int all_position_num = config_.get<int>("cab" + std::to_string(cab_id) + "_all_position_num");
+    int all_position_num = flexible_config_.get<int>("cab" + std::to_string(cab_id) + "_all_position_num");
 
-    std::vector<float> transition_point = config_.get<std::vector<float> >(
+    std::vector<float> transition_point = flexible_config_.get<std::vector<float> >(
             "transition_point");
     robot_client_.MoveJ(transition_point, fixed_joint_speed);
     std::cout << "移动至transition point" << std::endl;
@@ -169,7 +167,7 @@ bool JAKAPickAndPlace::JAKAPlaceCab(int cab_id, int position,  bool& mechanical_
     MappingTable(all_position_num, position, root, benchmark_position);
 
     std::vector<float> watch_points;
-    watch_points = config_.get<std::vector<float> >("watch_cab" + std::to_string(cab_id) + "_" + std::to_string(root));
+    watch_points = flexible_config_.get<std::vector<float> >("watch_cab" + std::to_string(cab_id) + "_" + std::to_string(root));
     robot_client_.MoveJ(watch_points, fixed_joint_speed);
     std::cout << "移动至watch point" << std::endl;
 
@@ -265,13 +263,13 @@ bool JAKAPickAndPlace::JAKAPickWindow(int position, bool& mechanical_error) {
     // 基准位置
     int benchmark_position = 3;
 
-    std::vector<float> transition_point = config_.get<std::vector<float> >(
+    std::vector<float> transition_point = flexible_config_.get<std::vector<float> >(
             "transition_point");
     robot_client_.MoveJ(transition_point, fixed_joint_speed);
     std::cout << "移动至transition point" << std::endl;
 
     std::vector<float> watch_points;
-    watch_points = config_.get<std::vector<float> >("watch_cab0_1");
+    watch_points = flexible_config_.get<std::vector<float> >("watch_cab0_1");
     robot_client_.MoveJ(watch_points, fixed_joint_speed);
     std::cout << "移动至watch point" << std::endl;
 
@@ -369,13 +367,13 @@ bool JAKAPickAndPlace::JAKAPlaceWindow(int position, bool &mechanical_error) {
     // 基准位置
     int benchmark_position = 3;
 
-    std::vector<float> transition_point = config_.get<std::vector<float> >(
+    std::vector<float> transition_point = flexible_config_.get<std::vector<float> >(
             "transition_point");
     robot_client_.MoveJ(transition_point, fixed_joint_speed);
     std::cout << "移动至transition point" << std::endl;
 
     std::vector<float> watch_points;
-    watch_points = config_.get<std::vector<float> >("watch_cab0_1");
+    watch_points = flexible_config_.get<std::vector<float> >("watch_cab0_1");
     robot_client_.MoveJ(watch_points, fixed_joint_speed);
     std::cout << "移动至watch point" << std::endl;
 
@@ -473,12 +471,12 @@ bool JAKAPickAndPlace::JAKAPickStorage(int position, bool &mechanical_error) {
     };
     std::thread t1(plc_fun);
 
-    std::vector<float> storage_transition_point = config_.get<std::vector<float> >(
+    std::vector<float> storage_transition_point = flexible_config_.get<std::vector<float> >(
             "storage_transition_point");
     robot_client_.MoveJ(storage_transition_point, fixed_joint_speed);
     std::cout << "移动至storage_transition_point" << std::endl;
 
-    std::vector<float> storage_point = config_.get<std::vector<float> >(
+    std::vector<float> storage_point = flexible_config_.get<std::vector<float> >(
             "storage_point_" + std::to_string(position));
     robot_client_.MoveJ(storage_point, fixed_joint_speed);
     std::cout << "移动至storage_point" << std::endl;
@@ -523,12 +521,12 @@ bool JAKAPickAndPlace::JAKAPlaceStorage(int position, bool &mechanical_error) {
 
     mechanical_error = false;
 
-    std::vector<float> storage_transition_point = config_.get<std::vector<float> >(
+    std::vector<float> storage_transition_point = flexible_config_.get<std::vector<float> >(
             "storage_transition_point");
     robot_client_.MoveJ(storage_transition_point, fixed_joint_speed);
     std::cout << "移动至storage_transition_point" << std::endl;
 
-    std::vector<float> storage_point = config_.get<std::vector<float> >(
+    std::vector<float> storage_point = flexible_config_.get<std::vector<float> >(
             "storage_point_" + std::to_string(position));
     robot_client_.MoveJ(storage_point, fixed_joint_speed);
     std::cout << "移动至storage_point" << std::endl;
@@ -567,24 +565,24 @@ bool JAKAPickAndPlace::JAKAPlaceStorage(int position, bool &mechanical_error) {
 }
 
 void JAKAPickAndPlace::JAKAContraction() {
-    std::vector<float> contraction_point_1 = config_.get<std::vector<float> >(
+    std::vector<float> contraction_point_1 = flexible_config_.get<std::vector<float> >(
             "contraction_point_1");
     robot_client_.MoveJ(contraction_point_1, fixed_joint_speed);
     std::cout << "移动至contraction_point_1" << std::endl;
 
-    std::vector<float> contraction_point_2 = config_.get<std::vector<float> >(
+    std::vector<float> contraction_point_2 = flexible_config_.get<std::vector<float> >(
             "contraction_point_2");
     robot_client_.MoveJ(contraction_point_2, fixed_joint_speed);
     std::cout << "移动至contraction_point_2" << std::endl;
 }
 
 void JAKAPickAndPlace::JAKAStretch() {
-    std::vector<float> contraction_point_2 = config_.get<std::vector<float> >(
+    std::vector<float> contraction_point_2 = flexible_config_.get<std::vector<float> >(
             "contraction_point_2");
     robot_client_.MoveJ(contraction_point_2, fixed_joint_speed);
     std::cout << "移动至contraction_point_2" << std::endl;
 
-    std::vector<float> contraction_point_1 = config_.get<std::vector<float> >(
+    std::vector<float> contraction_point_1 = flexible_config_.get<std::vector<float> >(
             "contraction_point_1");
     robot_client_.MoveJ(contraction_point_1, fixed_joint_speed);
     std::cout << "移动至contraction_point_1" << std::endl;

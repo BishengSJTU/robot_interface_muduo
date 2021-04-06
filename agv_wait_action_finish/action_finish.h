@@ -1,6 +1,8 @@
 #ifndef ACTION_FINISH_H
 #define ACTION_FINISH_H
 
+#define MODBUSEXITNO 4
+
 #include<netinet/in.h>
 #include<sys/types.h>
 #include<sys/socket.h>
@@ -16,6 +18,8 @@
 #include <unistd.h>
 #include <thread>
 #include <mutex>
+#include "Logging.h"
+#include "LogFile.h"
 
 // 注意：使用该类时需要定义局部作用域，离开作用域时程序会自动析构，释放文件描述符，保证下次能再次连接
 class ActionFinish

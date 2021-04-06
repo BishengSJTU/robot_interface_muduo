@@ -6,7 +6,6 @@
 
 std::unique_ptr<muduo::LogFile> g_logFile;
 std::unique_ptr<muduo::LogFile> g_logStdout;
-char name[256] = { '\0' };
 
 void outputFunc(const char* msg, int len)
 {
@@ -15,26 +14,9 @@ void outputFunc(const char* msg, int len)
 }
 
 int main(int argc, char* argv[]) {
-    RobotClient robotClient;
-    robotClient.InitializeRobot("10.5.5.100", 10001);
-    std::vector<float> jointA = {80,92,100,165,170,-183};
-    std::vector<float> jointB = {53,60,123,172,144,-184};
-    std::vector<float> jointC = {-27,85,106,167,63,-181};
-    while(1) {
-        robotClient.MoveJ(jointA, 20);
-        std::cout << "1" << std::endl;
-        robotClient.MoveJ(jointB, 20);
-        std::cout << "2" << std::endl;
-        robotClient.MoveJ(jointC, 20);
-        std::cout << "3" << std::endl;
-        robotClient.Jog(0, 20, 20);
-        std::cout << "4" << std::endl;
-        robotClient.Jog(0, 20, -20);
-        std::cout << "5" << std::endl;
-    }
-
-    strncpy(name, argv[0], sizeof name - 1);
-    g_logFile.reset(new muduo::LogFile(::basename(name), 600*1000));
+    char log_name[256] = { '\0' };
+    strncpy(log_name, argv[0], sizeof log_name - 1);
+    g_logFile.reset(new muduo::LogFile(::basename(log_name), 600*1000));
     muduo::Logger::setOutput(outputFunc);
 
     RobotInterface robotInterface;

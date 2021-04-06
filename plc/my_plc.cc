@@ -1,7 +1,8 @@
 #include "my_plc.h"
 
-MyPLC::MyPLC()
+MyPLC::MyPLC(std::string address, int port)
 {
+    InitializePLC(address, port);
     LOG_INFO << "MyPLC构造";
 }
 

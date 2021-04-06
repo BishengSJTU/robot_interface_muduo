@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/bisheng/robot_interface_muduo/agv/agv.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/RobotInterface.dir/agv/agv.cc.o"
+  "/home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/RobotInterface.dir/agv_wait_action_finish/action_finish.cc.o"
   "/home/bisheng/robot_interface_muduo/config/config.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/RobotInterface.dir/config/config.cc.o"
   "/home/bisheng/robot_interface_muduo/datetime/Date.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/RobotInterface.dir/datetime/Date.cc.o"
   "/home/bisheng/robot_interface_muduo/datetime/TimeZone.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/RobotInterface.dir/datetime/TimeZone.cc.o"
@@ -15,7 +17,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/bisheng/robot_interface_muduo/logging/LogStream.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/RobotInterface.dir/logging/LogStream.cc.o"
   "/home/bisheng/robot_interface_muduo/logging/Logging.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/RobotInterface.dir/logging/Logging.cc.o"
   "/home/bisheng/robot_interface_muduo/logging/ProcessInfo.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/RobotInterface.dir/logging/ProcessInfo.cc.o"
-  "/home/bisheng/robot_interface_muduo/motion_list/motion_list.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o"
   "/home/bisheng/robot_interface_muduo/net/Acceptor.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/RobotInterface.dir/net/Acceptor.cc.o"
   "/home/bisheng/robot_interface_muduo/net/Buffer.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/RobotInterface.dir/net/Buffer.cc.o"
   "/home/bisheng/robot_interface_muduo/net/Channel.cc" "/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/RobotInterface.dir/net/Channel.cc.o"
@@ -62,9 +63,11 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../vision_detection"
   "../robotic_arm"
   "../kinematics"
-  "../motion_list"
   "../pick_and_place"
   "../mapping_table"
+  "../agv_wait_action_finish"
+  "../agv"
+  "../websocket"
   "/usr/include/jsoncpp"
   "/usr/include/zbar"
   "/usr/local/include/hv"

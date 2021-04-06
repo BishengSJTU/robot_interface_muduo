@@ -10,7 +10,6 @@
 #include "robot_client_tcp.h"
 #include "pose_transform.h"
 #include "kinematics.h"
-#include "motion_list.h"
 #include "my_plc.h"
 #include "vision_detection_position.h"
 #include "Logging.h"
@@ -55,7 +54,8 @@ private:
     Eigen::MatrixXd eye_hand_matrix;
 
     // 配置文件
-    const Config config_;
+    const Config fixed_config_;
+    const Config flexible_config_;
 
     // JAKA机器人
     RobotClient robot_client_;
@@ -68,9 +68,8 @@ private:
 
 
 public:
-    JAKAPickAndPlace(const std::string &config_file_name);
+    JAKAPickAndPlace(const std::string &config_file_path);
     ~JAKAPickAndPlace();
-    void JAKAInitializePickAndPlace();
     //　从档案盒中取
     bool JAKAPickCab(int cab_id, int position, bool& mechanical_error);
     //　放到档案盒中

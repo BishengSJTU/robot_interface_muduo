@@ -36,10 +36,10 @@ private:
     struct sockaddr_in clientAddr_;
     std::string address_;
     int port_;
-public:
-    MyPLC();
-    ~MyPLC();
     void InitializePLC(std::string address, int port = 502);
+public:
+    MyPLC(std::string address, int port = 502);
+    ~MyPLC();
     bool ControlPLC(int command);
     void InquireState();
     bool ArchiveInHand();

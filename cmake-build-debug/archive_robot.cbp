@@ -44,9 +44,11 @@
 					<Add directory="/home/bisheng/robot_interface_muduo/vision_detection"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/robotic_arm"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/motion_list"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv_wait_action_finish"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/websocket"/>
 					<Add directory="/usr/include/jsoncpp"/>
 					<Add directory="/usr/include/zbar"/>
 					<Add directory="/usr/local/include/hv"/>
@@ -85,9 +87,11 @@
 					<Add directory="/home/bisheng/robot_interface_muduo/vision_detection"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/robotic_arm"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/motion_list"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv_wait_action_finish"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/websocket"/>
 					<Add directory="/usr/include/jsoncpp"/>
 					<Add directory="/usr/include/zbar"/>
 					<Add directory="/usr/local/include/hv"/>
@@ -120,6 +124,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/bisheng/robot_interface_muduo/agv/agv.cc">
+			<Option target="RobotInterface"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/agv/agv.h">
+			<Option target="RobotInterface"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.cc">
+			<Option target="RobotInterface"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.h">
+			<Option target="RobotInterface"/>
+		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/config/config.cc">
 			<Option target="RobotInterface"/>
 		</Unit>
@@ -184,12 +200,6 @@
 			<Option target="RobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/logging/ProcessInfo.h">
-			<Option target="RobotInterface"/>
-		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/motion_list/motion_list.cc">
-			<Option target="RobotInterface"/>
-		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/motion_list/motion_list.h">
 			<Option target="RobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Acceptor.cc">

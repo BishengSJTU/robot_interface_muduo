@@ -34,11 +34,9 @@
 
 class RobotClient {
 public:
-    RobotClient();
+    RobotClient(std::string address, int port = 10001);
 
     ~RobotClient();
-
-    void InitializeRobot(std::string address, int port = 10001);
 
     //获取机器人关节姿态和末端姿态
     void GetRobotPose(std::vector<float> &jnt, std::vector<float> &cart);
@@ -66,6 +64,8 @@ private:
     std::string string_tmp;
     std::string address_;
     int port_;
+
+    void InitializeRobot(std::string address, int port = 10001);
 };
 
 #endif

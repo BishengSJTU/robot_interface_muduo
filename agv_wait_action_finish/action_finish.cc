@@ -11,8 +11,9 @@ ActionFinish::ActionFinish(int port, int queue_len)
 
     if(listen_fd_ < 0)
     {
+        LOG_ERROR << "MODBUS创建端口失败";
         std::cout << "Create Socket Failed!";
-        exit(1);
+        exit(MODBUSEXITNO);
     }
     std::cout << "Create Socket Successfully" << std::endl;
     int opt = 1;
@@ -20,15 +21,15 @@ ActionFinish::ActionFinish(int port, int queue_len)
 
     if(bind(listen_fd_, (struct sockaddr*)&server_addr_, sizeof(server_addr_)) < 0)
     {
-        std::cout << "Server Bind Failed!";
-        exit(1);
+        LOG_ERROR << "MODBUS绑定失败";
+        exit(MODBUSEXITNO);
     }
     std::cout << "Bind Successfully.\n";
 
     if(listen(listen_fd_, queue_len_) < 0)
     {
-        std::cout << "Server Listen Failed!";
-        exit(1);
+        LOG_ERROR << "MODBUS监听失败";
+        exit(MODBUSEXITNO);
     }
     std::cout << "Listen Successfully.\n";
 
@@ -38,8 +39,8 @@ ActionFinish::ActionFinish(int port, int queue_len)
     link_fd_ = accept(listen_fd_, (struct sockaddr*)&client_addr, &client_addr_len);
     if(link_fd_ < 0)
     {
-        std::cout << "Server Accept Failed!";
-        exit(1);
+        LOG_ERROR << "MODBUS接受连接失败";
+        exit(MODBUSEXITNO);
     }
 
     std::string ip(inet_ntoa(client_addr.sin_addr));    // 获取客户端IP
@@ -66,8 +67,8 @@ bool ActionFinish::AgvIsReached()
 
             if(listen_fd_ < 0)
             {
-                std::cout << "Create Socket Failed!";
-                exit(1);
+                LOG_ERROR << "MODBUS创建端口失败";
+                exit(MODBUSEXITNO);
             }
             std::cout << "Create Socket Successfully" << std::endl;
             int opt = 1;
@@ -75,15 +76,15 @@ bool ActionFinish::AgvIsReached()
 
             if(bind(listen_fd_, (struct sockaddr*)&server_addr_, sizeof(server_addr_)) < 0)
             {
-                std::cout << "Server Bind Failed!";
-                exit(1);
+                LOG_ERROR << "MODBUS绑定失败";
+                exit(MODBUSEXITNO);
             }
             std::cout << "Bind Successfully.\n";
 
             if(listen(listen_fd_, queue_len_) < 0)
             {
-                std::cout << "Server Listen Failed!";
-                exit(1);
+                LOG_ERROR << "MODBUS监听失败";
+                exit(MODBUSEXITNO);
             }
             std::cout << "Listen Successfully.\n";
 
@@ -93,8 +94,8 @@ bool ActionFinish::AgvIsReached()
             link_fd_ = accept(listen_fd_, (struct sockaddr*)&client_addr, &client_addr_len);
             if(link_fd_ < 0)
             {
-                std::cout << "Server Accept Failed!";
-                exit(1);
+                LOG_ERROR << "MODBUS接受连接失败";
+                exit(MODBUSEXITNO);
             }
 
             std::string ip(inet_ntoa(client_addr.sin_addr));    // 获取客户端IP
@@ -163,8 +164,8 @@ bool ActionFinish::ArmFinishAction()
             listen_fd_ = socket(PF_INET, SOCK_STREAM, 0);
             if(listen_fd_ <= 0)
             {
-                std::cout << "Create Socket Failed!";
-                exit(1);
+                LOG_ERROR << "MODBUS创建端口失败";
+                exit(MODBUSEXITNO);
             }
             std::cout << "Create Socket Successfully" << std::endl;
             int opt = 1;
@@ -172,15 +173,15 @@ bool ActionFinish::ArmFinishAction()
 
             if(bind(listen_fd_, (struct sockaddr*)&server_addr_, sizeof(server_addr_)) < 0)
             {
-                std::cout << "Server Bind Failed!";
-                exit(1);
+                LOG_ERROR << "MODBUS绑定失败";
+                exit(MODBUSEXITNO);
             }
             std::cout << "Bind Successfully.\n";
 
             if(listen(listen_fd_, queue_len_) < 0)
             {
-                std::cout << "Server Listen Failed!";
-                exit(1);
+                LOG_ERROR << "MODBUS监听失败";
+                exit(MODBUSEXITNO);
             }
             std::cout << "Listen Successfully.\n";
 
@@ -190,8 +191,8 @@ bool ActionFinish::ArmFinishAction()
             link_fd_ = accept(listen_fd_, (struct sockaddr*)&client_addr, &client_addr_len);
             if(link_fd_ < 0)
             {
-                std::cout << "Server Accept Failed!";
-                exit(1);
+                LOG_ERROR << "MODBUS接受连接失败";
+                exit(MODBUSEXITNO);
             }
             std::string ip(inet_ntoa(client_addr.sin_addr));    // 获取客户端IP
             std::cout << ip << " new connection was accepted.\n";
