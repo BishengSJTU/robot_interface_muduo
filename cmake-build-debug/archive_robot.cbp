@@ -27,92 +27,6 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="RobotInterface">
-				<Option output="/home/bisheng/robot_interface_muduo/cmake-build-debug/RobotInterface" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/bisheng/robot_interface_muduo/datetime"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/logging"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/net"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/thread"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/plc"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/config"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/vision_detection"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/robotic_arm"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/agv_wait_action_finish"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/agv"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/websocket"/>
-					<Add directory="/usr/include/jsoncpp"/>
-					<Add directory="/usr/include/zbar"/>
-					<Add directory="/usr/local/include/hv"/>
-					<Add directory="/usr/local/include/apriltag"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 RobotInterface"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="RobotInterface/fast">
-				<Option output="/home/bisheng/robot_interface_muduo/cmake-build-debug/RobotInterface" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/bisheng/robot_interface_muduo/datetime"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/logging"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/net"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/thread"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/plc"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/config"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/vision_detection"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/robotic_arm"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/agv_wait_action_finish"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/agv"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/websocket"/>
-					<Add directory="/usr/include/jsoncpp"/>
-					<Add directory="/usr/include/zbar"/>
-					<Add directory="/usr/local/include/hv"/>
-					<Add directory="/usr/local/include/apriltag"/>
-					<Add directory="/usr/local/include/opencv"/>
-					<Add directory="/usr/include/c++/5"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
-					<Add directory="/usr/include/c++/5/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 RobotInterface/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
 				<Option type="4"/>
@@ -123,267 +37,536 @@
 					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
+			<Target title="JakaRobotInterface">
+				<Option output="/home/bisheng/robot_interface_muduo/cmake-build-debug/JakaRobotInterface" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bisheng/robot_interface_muduo/datetime"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/logging"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/net"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/thread"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/plc"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/config"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/vision_detection"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/robotic_arm"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv_wait_action_finish"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/websocket"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/zbar"/>
+					<Add directory="/usr/local/include/hv"/>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 JakaRobotInterface"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="JakaRobotInterface/fast">
+				<Option output="/home/bisheng/robot_interface_muduo/cmake-build-debug/JakaRobotInterface" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bisheng/robot_interface_muduo/datetime"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/logging"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/net"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/thread"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/plc"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/config"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/vision_detection"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/robotic_arm"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv_wait_action_finish"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/websocket"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/zbar"/>
+					<Add directory="/usr/local/include/hv"/>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 JakaRobotInterface/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PlatformRobotInterface">
+				<Option output="/home/bisheng/robot_interface_muduo/cmake-build-debug/PlatformRobotInterface" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bisheng/robot_interface_muduo/datetime"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/logging"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/net"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/thread"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/plc"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/config"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/vision_detection"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/robotic_arm"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv_wait_action_finish"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/websocket"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/zbar"/>
+					<Add directory="/usr/local/include/hv"/>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 PlatformRobotInterface"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PlatformRobotInterface/fast">
+				<Option output="/home/bisheng/robot_interface_muduo/cmake-build-debug/PlatformRobotInterface" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bisheng/robot_interface_muduo/datetime"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/logging"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/net"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/thread"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/plc"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/config"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/vision_detection"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/robotic_arm"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv_wait_action_finish"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/websocket"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/zbar"/>
+					<Add directory="/usr/local/include/hv"/>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 PlatformRobotInterface/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
 		</Build>
 		<Unit filename="/home/bisheng/robot_interface_muduo/agv/agv.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/agv/agv.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/config/config.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/config/config.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/datetime/Date.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/datetime/Date.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/datetime/TimeZone.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/datetime/TimeZone.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/datetime/Timestamp.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/datetime/Timestamp.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/kinematics/kinematics.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/kinematics/kinematics.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/logging/AsyncLogging.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/logging/AsyncLogging.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/logging/FileUtil.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/logging/FileUtil.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/logging/LogFile.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/logging/LogFile.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/logging/LogStream.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/logging/LogStream.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/logging/Logging.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/logging/Logging.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/logging/ProcessInfo.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/logging/ProcessInfo.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/mapping_table/mapping_table.cc">
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/mapping_table/mapping_table.h">
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Acceptor.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Acceptor.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Buffer.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Buffer.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Channel.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Channel.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Connector.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Connector.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/DefaultPoller.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/EPollPoller.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/EPollPoller.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/EventLoop.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/EventLoop.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/EventLoopThread.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/EventLoopThread.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/EventLoopThreadPool.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/EventLoopThreadPool.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/InetAddress.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/InetAddress.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/PollPoller.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/PollPoller.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Poller.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Poller.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Socket.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Socket.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/SocketsOps.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/SocketsOps.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/TcpClient.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/TcpClient.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/TcpConnection.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/TcpConnection.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/TcpServer.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/TcpServer.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Timer.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/Timer.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/TimerQueue.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/net/TimerQueue.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/plc/my_plc.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/plc/my_plc.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/codec.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/main.cc">
-			<Option target="RobotInterface"/>
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/jaka.cc">
+			<Option target="JakaRobotInterface"/>
 		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/robot_interface.cc">
-			<Option target="RobotInterface"/>
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/jaka_robot_interface.cc">
+			<Option target="JakaRobotInterface"/>
 		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/robot_interface.h">
-			<Option target="RobotInterface"/>
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/jaka_robot_interface.h">
+			<Option target="JakaRobotInterface"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/platform.cc">
+			<Option target="PlatformRobotInterface"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/platform_robot_interface.cc">
+			<Option target="PlatformRobotInterface"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/platform_robot_interface.h">
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/thread/Condition.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/thread/Condition.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/thread/CountDownLatch.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/thread/CountDownLatch.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/thread/CurrentThread.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/thread/CurrentThread.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/thread/Exception.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/thread/Exception.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/thread/Thread.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/thread/Thread.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/thread/ThreadPool.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/thread/ThreadPool.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.h">
-			<Option target="RobotInterface"/>
+			<Option target="JakaRobotInterface"/>
+			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>

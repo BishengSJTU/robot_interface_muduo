@@ -24,7 +24,7 @@ public:
             const char *data = buf->peek();
             const int32_t len = data[5] * 256 + data[6];
             if (len > 65536 || len < 0) {
-                LOG_ERROR << "Invalid length " << len;
+                LOG_ERROR << "不合法长度" << len;
                 conn->shutdown();
                 break;
             } else if (buf->readableBytes() >= len + kHeaderLen) {

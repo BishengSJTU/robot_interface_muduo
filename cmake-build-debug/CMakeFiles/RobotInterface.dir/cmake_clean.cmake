@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/RobotInterface.dir/logging/LogStream.cc.o"
   "CMakeFiles/RobotInterface.dir/logging/Logging.cc.o"
   "CMakeFiles/RobotInterface.dir/logging/ProcessInfo.cc.o"
+  "CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.o"
   "CMakeFiles/RobotInterface.dir/net/Acceptor.cc.o"
   "CMakeFiles/RobotInterface.dir/net/Buffer.cc.o"
   "CMakeFiles/RobotInterface.dir/net/Channel.cc.o"

@@ -252,9 +252,22 @@ CMakeFiles/RobotInterface.dir/logging/ProcessInfo.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/logging/ProcessInfo.cc.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/logging/ProcessInfo.cc -o CMakeFiles/RobotInterface.dir/logging/ProcessInfo.cc.s
 
+CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.o: CMakeFiles/RobotInterface.dir/flags.make
+CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.o: ../mapping_table/mapping_table.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.o -c /home/bisheng/robot_interface_muduo/mapping_table/mapping_table.cc
+
+CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/mapping_table/mapping_table.cc > CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.i
+
+CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/mapping_table/mapping_table.cc -o CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.s
+
 CMakeFiles/RobotInterface.dir/net/Acceptor.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/Acceptor.cc.o: ../net/Acceptor.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/RobotInterface.dir/net/Acceptor.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/RobotInterface.dir/net/Acceptor.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/Acceptor.cc.o -c /home/bisheng/robot_interface_muduo/net/Acceptor.cc
 
 CMakeFiles/RobotInterface.dir/net/Acceptor.cc.i: cmake_force
@@ -267,7 +280,7 @@ CMakeFiles/RobotInterface.dir/net/Acceptor.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/Buffer.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/Buffer.cc.o: ../net/Buffer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/RobotInterface.dir/net/Buffer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/RobotInterface.dir/net/Buffer.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/Buffer.cc.o -c /home/bisheng/robot_interface_muduo/net/Buffer.cc
 
 CMakeFiles/RobotInterface.dir/net/Buffer.cc.i: cmake_force
@@ -280,7 +293,7 @@ CMakeFiles/RobotInterface.dir/net/Buffer.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/Channel.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/Channel.cc.o: ../net/Channel.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/RobotInterface.dir/net/Channel.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/RobotInterface.dir/net/Channel.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/Channel.cc.o -c /home/bisheng/robot_interface_muduo/net/Channel.cc
 
 CMakeFiles/RobotInterface.dir/net/Channel.cc.i: cmake_force
@@ -293,7 +306,7 @@ CMakeFiles/RobotInterface.dir/net/Channel.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/Connector.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/Connector.cc.o: ../net/Connector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/RobotInterface.dir/net/Connector.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/RobotInterface.dir/net/Connector.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/Connector.cc.o -c /home/bisheng/robot_interface_muduo/net/Connector.cc
 
 CMakeFiles/RobotInterface.dir/net/Connector.cc.i: cmake_force
@@ -306,7 +319,7 @@ CMakeFiles/RobotInterface.dir/net/Connector.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/DefaultPoller.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/DefaultPoller.cc.o: ../net/DefaultPoller.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/RobotInterface.dir/net/DefaultPoller.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/RobotInterface.dir/net/DefaultPoller.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/DefaultPoller.cc.o -c /home/bisheng/robot_interface_muduo/net/DefaultPoller.cc
 
 CMakeFiles/RobotInterface.dir/net/DefaultPoller.cc.i: cmake_force
@@ -319,7 +332,7 @@ CMakeFiles/RobotInterface.dir/net/DefaultPoller.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/EPollPoller.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/EPollPoller.cc.o: ../net/EPollPoller.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/RobotInterface.dir/net/EPollPoller.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/RobotInterface.dir/net/EPollPoller.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/EPollPoller.cc.o -c /home/bisheng/robot_interface_muduo/net/EPollPoller.cc
 
 CMakeFiles/RobotInterface.dir/net/EPollPoller.cc.i: cmake_force
@@ -332,7 +345,7 @@ CMakeFiles/RobotInterface.dir/net/EPollPoller.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/EventLoop.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/EventLoop.cc.o: ../net/EventLoop.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/RobotInterface.dir/net/EventLoop.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/RobotInterface.dir/net/EventLoop.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/EventLoop.cc.o -c /home/bisheng/robot_interface_muduo/net/EventLoop.cc
 
 CMakeFiles/RobotInterface.dir/net/EventLoop.cc.i: cmake_force
@@ -345,7 +358,7 @@ CMakeFiles/RobotInterface.dir/net/EventLoop.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/EventLoopThread.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/EventLoopThread.cc.o: ../net/EventLoopThread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/RobotInterface.dir/net/EventLoopThread.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/RobotInterface.dir/net/EventLoopThread.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/EventLoopThread.cc.o -c /home/bisheng/robot_interface_muduo/net/EventLoopThread.cc
 
 CMakeFiles/RobotInterface.dir/net/EventLoopThread.cc.i: cmake_force
@@ -358,7 +371,7 @@ CMakeFiles/RobotInterface.dir/net/EventLoopThread.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/EventLoopThreadPool.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/EventLoopThreadPool.cc.o: ../net/EventLoopThreadPool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/RobotInterface.dir/net/EventLoopThreadPool.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/RobotInterface.dir/net/EventLoopThreadPool.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/EventLoopThreadPool.cc.o -c /home/bisheng/robot_interface_muduo/net/EventLoopThreadPool.cc
 
 CMakeFiles/RobotInterface.dir/net/EventLoopThreadPool.cc.i: cmake_force
@@ -371,7 +384,7 @@ CMakeFiles/RobotInterface.dir/net/EventLoopThreadPool.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/InetAddress.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/InetAddress.cc.o: ../net/InetAddress.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/RobotInterface.dir/net/InetAddress.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/RobotInterface.dir/net/InetAddress.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/InetAddress.cc.o -c /home/bisheng/robot_interface_muduo/net/InetAddress.cc
 
 CMakeFiles/RobotInterface.dir/net/InetAddress.cc.i: cmake_force
@@ -384,7 +397,7 @@ CMakeFiles/RobotInterface.dir/net/InetAddress.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/PollPoller.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/PollPoller.cc.o: ../net/PollPoller.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/RobotInterface.dir/net/PollPoller.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/RobotInterface.dir/net/PollPoller.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/PollPoller.cc.o -c /home/bisheng/robot_interface_muduo/net/PollPoller.cc
 
 CMakeFiles/RobotInterface.dir/net/PollPoller.cc.i: cmake_force
@@ -397,7 +410,7 @@ CMakeFiles/RobotInterface.dir/net/PollPoller.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/Poller.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/Poller.cc.o: ../net/Poller.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/RobotInterface.dir/net/Poller.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/RobotInterface.dir/net/Poller.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/Poller.cc.o -c /home/bisheng/robot_interface_muduo/net/Poller.cc
 
 CMakeFiles/RobotInterface.dir/net/Poller.cc.i: cmake_force
@@ -410,7 +423,7 @@ CMakeFiles/RobotInterface.dir/net/Poller.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/Socket.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/Socket.cc.o: ../net/Socket.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/RobotInterface.dir/net/Socket.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/RobotInterface.dir/net/Socket.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/Socket.cc.o -c /home/bisheng/robot_interface_muduo/net/Socket.cc
 
 CMakeFiles/RobotInterface.dir/net/Socket.cc.i: cmake_force
@@ -423,7 +436,7 @@ CMakeFiles/RobotInterface.dir/net/Socket.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/SocketsOps.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/SocketsOps.cc.o: ../net/SocketsOps.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/RobotInterface.dir/net/SocketsOps.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/RobotInterface.dir/net/SocketsOps.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/SocketsOps.cc.o -c /home/bisheng/robot_interface_muduo/net/SocketsOps.cc
 
 CMakeFiles/RobotInterface.dir/net/SocketsOps.cc.i: cmake_force
@@ -436,7 +449,7 @@ CMakeFiles/RobotInterface.dir/net/SocketsOps.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/TcpClient.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/TcpClient.cc.o: ../net/TcpClient.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/RobotInterface.dir/net/TcpClient.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/RobotInterface.dir/net/TcpClient.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/TcpClient.cc.o -c /home/bisheng/robot_interface_muduo/net/TcpClient.cc
 
 CMakeFiles/RobotInterface.dir/net/TcpClient.cc.i: cmake_force
@@ -449,7 +462,7 @@ CMakeFiles/RobotInterface.dir/net/TcpClient.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/TcpConnection.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/TcpConnection.cc.o: ../net/TcpConnection.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/RobotInterface.dir/net/TcpConnection.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/RobotInterface.dir/net/TcpConnection.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/TcpConnection.cc.o -c /home/bisheng/robot_interface_muduo/net/TcpConnection.cc
 
 CMakeFiles/RobotInterface.dir/net/TcpConnection.cc.i: cmake_force
@@ -462,7 +475,7 @@ CMakeFiles/RobotInterface.dir/net/TcpConnection.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/TcpServer.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/TcpServer.cc.o: ../net/TcpServer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/RobotInterface.dir/net/TcpServer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/RobotInterface.dir/net/TcpServer.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/TcpServer.cc.o -c /home/bisheng/robot_interface_muduo/net/TcpServer.cc
 
 CMakeFiles/RobotInterface.dir/net/TcpServer.cc.i: cmake_force
@@ -475,7 +488,7 @@ CMakeFiles/RobotInterface.dir/net/TcpServer.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/Timer.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/Timer.cc.o: ../net/Timer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/RobotInterface.dir/net/Timer.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/RobotInterface.dir/net/Timer.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/Timer.cc.o -c /home/bisheng/robot_interface_muduo/net/Timer.cc
 
 CMakeFiles/RobotInterface.dir/net/Timer.cc.i: cmake_force
@@ -488,7 +501,7 @@ CMakeFiles/RobotInterface.dir/net/Timer.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.o: ../net/TimerQueue.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.o -c /home/bisheng/robot_interface_muduo/net/TimerQueue.cc
 
 CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.i: cmake_force
@@ -501,7 +514,7 @@ CMakeFiles/RobotInterface.dir/net/TimerQueue.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../pick_and_place/jaka_pick_and_place.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o -c /home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc
 
 CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i: cmake_force
@@ -514,7 +527,7 @@ CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s: cmake_for
 
 CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o: ../plc/my_plc.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/plc/my_plc.cc.o -c /home/bisheng/robot_interface_muduo/plc/my_plc.cc
 
 CMakeFiles/RobotInterface.dir/plc/my_plc.cc.i: cmake_force
@@ -527,7 +540,7 @@ CMakeFiles/RobotInterface.dir/plc/my_plc.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o: ../robotic_arm/robot_client_tcp.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o -c /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc
 
 CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.i: cmake_force
@@ -540,7 +553,7 @@ CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/thread/Condition.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/thread/Condition.cc.o: ../thread/Condition.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/RobotInterface.dir/thread/Condition.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/RobotInterface.dir/thread/Condition.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/thread/Condition.cc.o -c /home/bisheng/robot_interface_muduo/thread/Condition.cc
 
 CMakeFiles/RobotInterface.dir/thread/Condition.cc.i: cmake_force
@@ -553,7 +566,7 @@ CMakeFiles/RobotInterface.dir/thread/Condition.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/thread/CountDownLatch.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/thread/CountDownLatch.cc.o: ../thread/CountDownLatch.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/RobotInterface.dir/thread/CountDownLatch.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/RobotInterface.dir/thread/CountDownLatch.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/thread/CountDownLatch.cc.o -c /home/bisheng/robot_interface_muduo/thread/CountDownLatch.cc
 
 CMakeFiles/RobotInterface.dir/thread/CountDownLatch.cc.i: cmake_force
@@ -566,7 +579,7 @@ CMakeFiles/RobotInterface.dir/thread/CountDownLatch.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/thread/CurrentThread.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/thread/CurrentThread.cc.o: ../thread/CurrentThread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/RobotInterface.dir/thread/CurrentThread.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/RobotInterface.dir/thread/CurrentThread.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/thread/CurrentThread.cc.o -c /home/bisheng/robot_interface_muduo/thread/CurrentThread.cc
 
 CMakeFiles/RobotInterface.dir/thread/CurrentThread.cc.i: cmake_force
@@ -579,7 +592,7 @@ CMakeFiles/RobotInterface.dir/thread/CurrentThread.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/thread/Exception.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/thread/Exception.cc.o: ../thread/Exception.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/RobotInterface.dir/thread/Exception.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/RobotInterface.dir/thread/Exception.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/thread/Exception.cc.o -c /home/bisheng/robot_interface_muduo/thread/Exception.cc
 
 CMakeFiles/RobotInterface.dir/thread/Exception.cc.i: cmake_force
@@ -592,7 +605,7 @@ CMakeFiles/RobotInterface.dir/thread/Exception.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/thread/Thread.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/thread/Thread.cc.o: ../thread/Thread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/RobotInterface.dir/thread/Thread.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/RobotInterface.dir/thread/Thread.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/thread/Thread.cc.o -c /home/bisheng/robot_interface_muduo/thread/Thread.cc
 
 CMakeFiles/RobotInterface.dir/thread/Thread.cc.i: cmake_force
@@ -605,7 +618,7 @@ CMakeFiles/RobotInterface.dir/thread/Thread.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/thread/ThreadPool.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/thread/ThreadPool.cc.o: ../thread/ThreadPool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/RobotInterface.dir/thread/ThreadPool.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/RobotInterface.dir/thread/ThreadPool.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/thread/ThreadPool.cc.o -c /home/bisheng/robot_interface_muduo/thread/ThreadPool.cc
 
 CMakeFiles/RobotInterface.dir/thread/ThreadPool.cc.i: cmake_force
@@ -618,7 +631,7 @@ CMakeFiles/RobotInterface.dir/thread/ThreadPool.cc.s: cmake_force
 
 CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o: CMakeFiles/RobotInterface.dir/flags.make
 CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o: ../vision_detection/vision_detection_position.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o -c /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc
 
 CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.i: cmake_force
@@ -646,6 +659,7 @@ RobotInterface_OBJECTS = \
 "CMakeFiles/RobotInterface.dir/logging/LogStream.cc.o" \
 "CMakeFiles/RobotInterface.dir/logging/Logging.cc.o" \
 "CMakeFiles/RobotInterface.dir/logging/ProcessInfo.cc.o" \
+"CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.o" \
 "CMakeFiles/RobotInterface.dir/net/Acceptor.cc.o" \
 "CMakeFiles/RobotInterface.dir/net/Buffer.cc.o" \
 "CMakeFiles/RobotInterface.dir/net/Channel.cc.o" \
@@ -694,6 +708,7 @@ RobotInterface: CMakeFiles/RobotInterface.dir/logging/LogFile.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/logging/LogStream.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/logging/Logging.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/logging/ProcessInfo.cc.o
+RobotInterface: CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/net/Acceptor.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/net/Buffer.cc.o
 RobotInterface: CMakeFiles/RobotInterface.dir/net/Channel.cc.o
@@ -771,7 +786,7 @@ RobotInterface: /usr/local/lib/libopencv_imgcodecs.so.3.4.8
 RobotInterface: /usr/local/lib/libopencv_imgproc.so.3.4.8
 RobotInterface: /usr/local/lib/libopencv_core.so.3.4.8
 RobotInterface: CMakeFiles/RobotInterface.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking CXX executable RobotInterface"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Linking CXX executable RobotInterface"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/RobotInterface.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

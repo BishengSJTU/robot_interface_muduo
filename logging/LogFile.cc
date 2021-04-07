@@ -116,7 +116,11 @@ string LogFile::getLogFileName(const string& basename, time_t* now)
   char timebuf[32];
   struct tm tm;
   *now = time(NULL);
-  gmtime_r(now, &tm); // FIXME: localtime_r ?
+  Timestamp time(Timestamp::now());
+  int64_t microSecondsSinceEpoch = time.microSecondsSinceEpoch();
+  time_t seconds = static_cast<time_t>(microSecondsSinceEpoch / Timestamp::kMicroSecondsPerSecond  + 8 * 60 * 60);
+
+  gmtime_r(&seconds, &tm); // FIXME: localtime_r ?
   strftime(timebuf, sizeof timebuf, ".%Y%m%d-%H%M%S.", &tm);
   filename += timebuf;
 

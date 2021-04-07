@@ -40,8 +40,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/RobotInterface.dir/vision_detection/vision_detection_position.cc.o"
   "CMakeFiles/RobotInterface.dir/robotic_arm/robot_client_tcp.cc.o"
   "CMakeFiles/RobotInterface.dir/kinematics/kinematics.cc.o"
-  "CMakeFiles/RobotInterface.dir/motion_list/motion_list.cc.o"
-  "CMakeFiles/RobotInterface.dir/pick_and_place/pick_and_place_position.cc.o"
+  "CMakeFiles/RobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o"
+  "CMakeFiles/RobotInterface.dir/mapping_table/mapping_table.cc.o"
+  "CMakeFiles/RobotInterface.dir/agv_wait_action_finish/action_finish.cc.o"
+  "CMakeFiles/RobotInterface.dir/agv/agv.cc.o"
   "RobotInterface.pdb"
   "RobotInterface"
 )

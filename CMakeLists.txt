@@ -27,6 +27,7 @@ FILE (
         "kinematics/*.cc"
         "pick_and_place/*.cc"
         "vision_detection/*.cc"
+        "mapping_table/*.cc"
         "agv_wait_action_finish/*.cc"
         "agv/*.cc"
 )
@@ -36,7 +37,6 @@ include_directories(
         logging
         net
         thread
-        robot_interface
         plc
         config
         vision_detection
@@ -51,6 +51,23 @@ include_directories(
 )
 include_directories(${JSON_DIR} ${ZBAR_DIR} ${OpenCV_INCLUDE_DIRS} ${HV_DIR} ${APRILTAG_DIR})
 link_directories(${LIB_HV_DIR} ${LIB_APRILTAG_DIR})
+
+add_executable(JakaRobotInterface
+        robot_interface/jaka.cc
+        robot_interface/jaka_robot_interface.cc
+        robot_interface/jaka_robot_interface.h
+        robot_interface/codec.h
+        ${ALL_SOURCES})
+target_link_libraries(JakaRobotInterface pthread ${OpenCV_LIBS} libhv.so zbar pthread boost_system libapriltag.so.3)
+
+add_executable(PlatformRobotInterface
+        robot_interface/platform.cc
+        robot_interface/platform_robot_interface.cc
+        robot_interface/platform_robot_interface.h
+        robot_interface/codec.h
+        ${ALL_SOURCES})
+target_link_libraries(PlatformRobotInterface pthread ${OpenCV_LIBS} libhv.so zbar pthread boost_system libapriltag.so.3)
+
 
 #add_executable(Channel_test
 #        test/Channel_test.cc
@@ -106,14 +123,6 @@ link_directories(${LIB_HV_DIR} ${LIB_APRILTAG_DIR})
 #        test/TcpClient_test.cc
 #        ${ALL_SOURCES})
 #target_link_libraries(TcpClient_test pthread)
-
-add_executable(RobotInterface
-        robot_interface/main.cc
-        robot_interface/robot_interface.cc
-        robot_interface/codec.h
-        ${ALL_SOURCES})
-target_link_libraries(RobotInterface pthread ${OpenCV_LIBS} libhv.so zbar pthread boost_system libapriltag.so.3)
-
 
 #add_executable(Buffer_test
 #        test/Buffer_test.cc
