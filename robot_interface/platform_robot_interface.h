@@ -51,7 +51,7 @@ public:
     {
         muduo::string actualRFID; //读卡器传来的RFID
         std::set<int64_t> readyCab; //准备就绪的档案柜
-        bool singleArchiveFinshed; //单次动作完成被成功接收
+        bool singleArchiveFinishedReceived; //单次动作完成被成功接收
     };
     // 任务类型
     enum TASK_TYPE {

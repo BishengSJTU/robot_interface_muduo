@@ -49,19 +49,21 @@ public:
     //外部设备信息
     struct ExternalInfo
     {
-        muduo::string actualRFID; //读卡器传来的RFID
         std::set<int64_t> readyCab; //准备就绪的档案柜
-        bool singleArchiveFinshed; //单次动作完成被成功接收
+        bool singleArchiveFinishedReceived; //单次动作完成被成功接收
+        bool withdrawCheckReceived; //取档校验外部接收
+        bool withrdrawCheckResult; //取档校验外部结果
     };
     // 任务类型
     enum TASK_TYPE {
+        HEAR_BEAT = 0x33,
         DEPOSIT_TASK = 0x01,
         WITHDRAW_TASK = 0x02,
         CHARGE_TASK = 0x03,
         DEPOSIT_CHECK = 0x04,
         INQUIRE = 0x05,
         WITHDRAW_CHECK = 0x06,
-        DEPOSIT_PREPARE = 0x07,
+        DEPOSIT_PREPARE_TASK = 0x07,
         SINGLE_ARCHIVE_FINISH = 0x08,
         CANCEL_TASK = 0x09,
         CAB_STATE = 0x0A
@@ -96,8 +98,7 @@ private:
 
     static const char powerLowerLimit = 0x1c; //电量下限28
     static const char powerHighLimit = 0x60; //电量上限96
-    static const std::size_t turntablePositionTotalNum = 12; //转盘总位置数
-    static const std::size_t cabPositionTotalNum = 12; //抽屉式档案柜平台位置数
+    static const std::size_t temPositionTotalNum = 5; //背篓总位置数
 };
 
 #endif
