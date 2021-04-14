@@ -25,12 +25,16 @@ namespace muyi {
         int port_;
         std::string url_pre_;
         std::string map_name_;
-        const Config config_;
+
+        // 配置文件
+        const Config fixed_config_;
+        const Config flexible_config_;
+
         websocket_endpoint endpoint_;
         void InitializeAGV();
 
     public:
-        AGV(const std::string config_file_name);
+        AGV(const std::string config_file_path);
 
         bool AgvGo(const int &cab_id, const int &position, int &mission_id);
 
@@ -51,12 +55,15 @@ namespace jiazhi {
         int port_;
         std::string url_pre_;
         std::string map_name_;
-        const Config config_;
+
+        // 配置文件
+        const Config fixed_config_;
+        const Config flexible_config_;
 
         void InitializeAGV();
 
     public:
-        AGV(const std::string config_file_name);
+        AGV(const std::string config_file_path);
 
         bool AgvGo(const int &cab_id, const int &position, int &mission_id);
 

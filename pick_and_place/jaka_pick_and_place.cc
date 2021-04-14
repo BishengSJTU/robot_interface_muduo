@@ -3,7 +3,7 @@
 
 JAKAPickAndPlace::JAKAPickAndPlace(const std::string &config_file_path):
 fixed_config_(config_file_path + "/FixedConfig.YML"),
-flexible_config_(config_file_path + "/FlexibleConfig .YML"),
+flexible_config_(config_file_path + "/FlexibleConfig.YML"),
 vision_detection_(fixed_config_),
 robot_client_(fixed_config_.get<std::string>("JAKA_ROBOT_IP"), fixed_config_.get<int>("JAKA_ROBOT_PORT")),
 plc_(fixed_config_.get<std::string>("PLC_IP"), fixed_config_.get<int>("PLC_PORT"))

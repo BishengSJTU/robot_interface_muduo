@@ -15,7 +15,11 @@
 #include "Logging.h"
 #include "LogFile.h"
 #include "codec.h"
+#include "config.h"
+#include "jaka_pick_and_place.h"
+#include "agv.h"
 
+using namespace jiazhi;
 using namespace muduo;
 using namespace muduo::net;
 
@@ -68,7 +72,7 @@ public:
         CANCEL_TASK = 0x09,
         CAB_STATE = 0x0A
     };
-    RobotInterface();
+    RobotInterface(std::string path);
     void eventLoopThread(); //收发消息及定时器函数线程
     void execTaskThread(); //执行任务函数线程
     void write(const StringPiece& message); //往Buffer里写数据
@@ -78,6 +82,10 @@ public:
     void onConnection(const TcpConnectionPtr& conn); //连接回调
 
 private:
+    const Config config_;
+    JAKAPickAndPlace pickAndPlace_;
+    AGV agv_;
+
     string taskServerIP_;
     uint16_t taskServerPort_;
 

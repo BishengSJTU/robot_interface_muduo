@@ -1,16 +1,19 @@
 #include "agv.h"
 
 namespace muyi {
-    AGV::AGV(const std::string config_file_name) : config_(config_file_name) {
-        agv_ip_ = config_.get<std::string>("AGV_IP");
-        port_ = config_.get<int>("AGV_PORT");
+    AGV::AGV(const std::string config_file_path) :
+    fixed_config_(config_file_path + "/FixedConfig.YML"),
+    flexible_config_(config_file_path + "/FlexibleConfig.YML")
+    {
+        agv_ip_ = fixed_config_.get<std::string>("AGV_IP");
+        port_ = fixed_config_.get<int>("AGV_PORT");
         url_pre_ = "ws://" + agv_ip_ + ":" + std::to_string(port_);
-        map_name_ = config_.get<std::string>("map_name");
+        map_name_ = flexible_config_.get<std::string>("map_name");
         InitializeAGV();
     }
 
     bool AGV::AgvGo(const int &cab_id, const int &position, int &mission_id) {
-        int all_position_num = config_.get<int>("cab" + std::to_string(cab_id) + "_all_position_num");
+        int all_position_num = flexible_config_.get<int>("cab" + std::to_string(cab_id) + "_all_position_num");
         int index;
         int benchmark_position;
 
@@ -22,7 +25,7 @@ namespace muyi {
 
 
         std::vector<float> map_position_info =
-                config_.get<std::vector<float>>(
+                flexible_config_.get<std::vector<float>>(
                         "map_position_cab" + std::to_string(cab_id) + "_" + std::to_string(index));
 
         double x, y, z, w;
@@ -174,16 +177,19 @@ namespace muyi {
 }
 
 namespace jiazhi {
-    AGV::AGV(const std::string config_file_name) : config_(config_file_name) {
-        agv_ip_ = config_.get<std::string>("AGV_IP");
-        port_ = config_.get<int>("AGV_PORT");
+    AGV::AGV(const std::string config_file_path) :
+    fixed_config_(config_file_path + "/FixedConfig.YML"),
+    flexible_config_(config_file_path + "/FlexibleConfig.YML")
+    {
+        agv_ip_ = fixed_config_.get<std::string>("AGV_IP");
+        port_ = fixed_config_.get<int>("AGV_PORT");
         url_pre_ = "http://" + agv_ip_ + ":" + std::to_string(port_);
-        map_name_ = config_.get<std::string>("map_name");
+        map_name_ = flexible_config_.get<std::string>("map_name");
         InitializeAGV();
     }
 
     bool AGV::AgvGo(const int &cab_id, const int &position, int &mission_id) {
-        int all_position_num = config_.get<int>("cab" + std::to_string(cab_id) + "_all_position_num");
+        int all_position_num = flexible_config_.get<int>("cab" + std::to_string(cab_id) + "_all_position_num");
         int index;
         int benchmark_position;
 
@@ -195,7 +201,7 @@ namespace jiazhi {
 
 
         std::vector<std::string> map_position_info =
-                config_.get<std::vector<std::string>>(
+                flexible_config_.get<std::vector<std::string>>(
                         "map_position_cab" + std::to_string(cab_id) + "_" + std::to_string(index));
         std::string target_code = map_position_info[0];
         std::string action = map_position_info[1];
