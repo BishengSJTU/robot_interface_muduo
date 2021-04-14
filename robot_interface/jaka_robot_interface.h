@@ -83,7 +83,7 @@ public:
 
 private:
     const Config config_;
-    JAKAPickAndPlace pickAndPlace_;
+    JAKAPickAndPlace jakaPickAndPlace_;
     AGV agv_;
 
     string taskServerIP_;
