@@ -1329,7 +1329,6 @@ void RobotInterface::initialize()
 }
 
 void RobotInterface::inquireRobotStateThread() {
-    bool mechanicalError;
 
     while (1) {
         {
@@ -1375,7 +1374,7 @@ void RobotInterface::inquireRobotStateThread() {
                 robotInfo_.currentState = agvState;
                 robotInfo_.currentPower = agvPower;
             }
-            if (agvState != IS_WITHDRAWING && agvState != IS_DEPOSITING) {
+            if ((agvState != IS_WITHDRAWING) && (agvState != IS_DEPOSITING)) {
                 if(ROBOT_INLINE) {
                     jakaPickAndPlace_.JAKAPLCState(); //PLC保活
                 }
