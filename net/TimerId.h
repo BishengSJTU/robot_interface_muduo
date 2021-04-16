@@ -32,7 +32,7 @@ class TimerId : public muduo::copyable
   {
   }
 
-  TimerId(Timer* timer, int64_t seq)
+  TimerId(Timer* timer, int seq)
     : timer_(timer),
       sequence_(seq)
   {
@@ -44,7 +44,7 @@ class TimerId : public muduo::copyable
 
  private:
   Timer* timer_;
-  int64_t sequence_;
+  int sequence_;
 };
 
 }  // namespace net

@@ -99,7 +99,7 @@ template class FixedBuffer<kLargeBuffer>;
  [1.00P, 999P]
  [1.00E, inf)
 */
-std::string formatSI(int64_t s)
+std::string formatSI(int s)
 {
   double n = static_cast<double>(s);
   char buf[64];
@@ -147,7 +147,7 @@ std::string formatSI(int64_t s)
  [ 100Ki, 1023Ki]
  [1.00Mi, 9.99Mi]
 */
-std::string formatIEC(int64_t s)
+std::string formatIEC(int s)
 {
   double n = static_cast<double>(s);
   char buf[64];

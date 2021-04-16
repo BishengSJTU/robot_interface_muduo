@@ -37,7 +37,7 @@ class Timestamp : public muduo::copyable,
   /// Constucts a Timestamp at specific time
   ///
   /// @param microSecondsSinceEpoch
-  explicit Timestamp(int64_t microSecondsSinceEpochArg)
+  explicit Timestamp(int microSecondsSinceEpochArg)
     : microSecondsSinceEpoch_(microSecondsSinceEpochArg)
   {
   }
@@ -55,7 +55,7 @@ class Timestamp : public muduo::copyable,
   bool valid() const { return microSecondsSinceEpoch_ > 0; }
 
   // for internal usage.
-  int64_t microSecondsSinceEpoch() const { return microSecondsSinceEpoch_; }
+  int microSecondsSinceEpoch() const { return microSecondsSinceEpoch_; }
   time_t secondsSinceEpoch() const
   { return static_cast<time_t>(microSecondsSinceEpoch_ / kMicroSecondsPerSecond); }
 
@@ -75,13 +75,13 @@ class Timestamp : public muduo::copyable,
 
   static Timestamp fromUnixTime(time_t t, int microseconds)
   {
-    return Timestamp(static_cast<int64_t>(t) * kMicroSecondsPerSecond + microseconds);
+    return Timestamp(static_cast<int>(t) * kMicroSecondsPerSecond + microseconds);
   }
 
   static const int kMicroSecondsPerSecond = 1000 * 1000;
 
  private:
-  int64_t microSecondsSinceEpoch_;
+  int microSecondsSinceEpoch_;
 };
 
 inline bool operator<(Timestamp lhs, Timestamp rhs)
@@ -103,7 +103,7 @@ inline bool operator==(Timestamp lhs, Timestamp rhs)
 /// resolution for next 100 years.
 inline double timeDifference(Timestamp high, Timestamp low)
 {
-  int64_t diff = high.microSecondsSinceEpoch() - low.microSecondsSinceEpoch();
+  int diff = high.microSecondsSinceEpoch() - low.microSecondsSinceEpoch();
   return static_cast<double>(diff) / Timestamp::kMicroSecondsPerSecond;
 }
 
@@ -114,7 +114,7 @@ inline double timeDifference(Timestamp high, Timestamp low)
 ///
 inline Timestamp addTime(Timestamp timestamp, double seconds)
 {
-  int64_t delta = static_cast<int64_t>(seconds * Timestamp::kMicroSecondsPerSecond);
+  int delta = static_cast<int>(seconds * Timestamp::kMicroSecondsPerSecond);
   return Timestamp(timestamp.microSecondsSinceEpoch() + delta);
 }
 

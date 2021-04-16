@@ -54,7 +54,7 @@ void RobotInterface::execTaskThread() {
         // 判断此时机器人状态是否空闲或者在充电中，若不属于上述两种状态，直接忽略该任务
         if ((state != IS_CHARGING) && (state != IS_FREE)) {
             if (taskType == DEPOSIT_TASK || taskType == WITHDRAW_TASK) {
-                for (int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                for (int i = 0; i < turntablePositionTotalNum; i++) {
                     if (data[7 + 2 * i] == 0xA1)
                         response[7 + 2 * i] = 0x00;
                 }
@@ -65,7 +65,7 @@ void RobotInterface::execTaskThread() {
             write(responseMsg);
             {
                 std::stringstream ss;
-                for(int64_t i = 0; i < responseMsg.size(); i++) {
+                for(int i = 0; i < responseMsg.size(); i++) {
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
@@ -82,7 +82,7 @@ void RobotInterface::execTaskThread() {
                     write(responseMsg);
                     {
                         std::stringstream ss;
-                        for (int64_t i = 0; i < responseMsg.size(); i++) {
+                        for (int i = 0; i < responseMsg.size(); i++) {
                             ss << std::hex << (unsigned int) (unsigned char) responseMsg[i] << ",";
                         }
                         std::string log = ss.str();
@@ -105,7 +105,7 @@ void RobotInterface::execTaskThread() {
                     robotInfo_.currentState = IS_CHARGING;
                 }
             } else if (taskType == DEPOSIT_TASK || taskType == WITHDRAW_TASK) {
-                for (int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                for (int i = 0; i < turntablePositionTotalNum; i++) {
                     if (data[7 + 2 * i] == 0xA1)
                         response[7 + 2 * i] = 0x00;
                 }
@@ -116,7 +116,7 @@ void RobotInterface::execTaskThread() {
             write(responseMsg);
             {
                 std::stringstream ss;
-                for(int64_t i = 0; i < responseMsg.size(); i++) {
+                for(int i = 0; i < responseMsg.size(); i++) {
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
@@ -137,7 +137,7 @@ void RobotInterface::execTaskThread() {
                 write(stateMsgArray);
                 {
                     std::stringstream ss;
-                    for(int64_t i = 0; i < sizeof(stateMsgArray); i++) {
+                    for(int i = 0; i < sizeof(stateMsgArray); i++) {
                         ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
                     }
                     std::string log = ss.str();
@@ -157,14 +157,14 @@ void RobotInterface::execTaskThread() {
                 }
                 //根据RFID结果取出存取口的所有档案
                 const char *dataRFID = actualRFID.data();
-                int64_t turntablePosition = 0;
-                std::map<int64_t, std::vector<int64_t> > cabIDTurntablePositionsMap;
-                for (int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                int turntablePosition = 0;
+                std::map<int, std::vector<int> > cabIDTurntablePositionsMap;
+                for (int i = 0; i < turntablePositionTotalNum; i++) {
                     if (data[7 + 2 * i] == 0xA1) {
                         turntablePosition++;;//取出档案
-                        int64_t cabID = data[8 + 2 * i];
+                        int cabID = data[8 + 2 * i];
                         if (cabIDTurntablePositionsMap.find(cabID) == cabIDTurntablePositionsMap.end()) {
-                            std::vector<int64_t> turntablePositions;
+                            std::vector<int> turntablePositions;
                             turntablePositions.push_back(turntablePosition);
                             cabIDTurntablePositionsMap.insert(std::make_pair(cabID, turntablePositions));
                         } else {
@@ -174,8 +174,8 @@ void RobotInterface::execTaskThread() {
                 }
 
                 for (auto cabIDTurntablePositions : cabIDTurntablePositionsMap) {
-                    int64_t cabID = cabIDTurntablePositions.first;
-                    std::vector<int64_t> turntablePositions = cabIDTurntablePositions.second;; // 跑到对应柜子前
+                    int cabID = cabIDTurntablePositions.first;
+                    std::vector<int> turntablePositions = cabIDTurntablePositions.second;; // 跑到对应柜子前
                     //　等待档案柜就绪
                     {
                         MutexLockGuard lock(externalInfoMutex_);
@@ -186,16 +186,16 @@ void RobotInterface::execTaskThread() {
                     }
 
                     //此柜需要操作的总的档案数量
-                    int64_t operationArchiveNum = turntablePositions.size();
+                    int operationArchiveNum = turntablePositions.size();
 
                     // 额外等待档案柜就绪次数
-                    int64_t extraOperationTimes =
+                    int extraOperationTimes =
                             (operationArchiveNum % cabPositionTotalNum == 0)
                             ? (operationArchiveNum / cabPositionTotalNum - 1)
                             : (operationArchiveNum / cabPositionTotalNum);
 
 
-                    for (int64_t turntableNum = 1;
+                    for (int turntableNum = 1;
                          turntableNum <= operationArchiveNum; turntableNum++) {
                         ; /// 将档案从转盘中放入柜中
                         // 额外等待次数>0并且本轮操作结束，等待档案柜就绪
@@ -204,7 +204,7 @@ void RobotInterface::execTaskThread() {
                             write(singleFinishMsgArray);
                             {
                                 std::stringstream ss;
-                                for(int64_t i = 0; i < sizeof(singleFinishMsgArray); i++) {
+                                for(int i = 0; i < sizeof(singleFinishMsgArray); i++) {
                                     ss << std::hex << (unsigned int)(unsigned char)singleFinishMsgArray[i] << ",";
                                 }
                                 std::string log = ss.str();
@@ -232,7 +232,7 @@ void RobotInterface::execTaskThread() {
                     write(singleFinishMsgArray);
                     {
                         std::stringstream ss;
-                        for(int64_t i = 0; i < sizeof(singleFinishMsgArray); i++) {
+                        for(int i = 0; i < sizeof(singleFinishMsgArray); i++) {
                             ss << std::hex << (unsigned int)(unsigned char)singleFinishMsgArray[i] << ",";
                         }
                         std::string log = ss.str();
@@ -248,7 +248,7 @@ void RobotInterface::execTaskThread() {
                     }
                 }
 
-                for (int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                for (int i = 0; i < turntablePositionTotalNum; i++) {
                     if (data[7 + 2 * i] == 0xA1)
                         response[7 + 2 * i] = 0x01;
                 }
@@ -256,7 +256,7 @@ void RobotInterface::execTaskThread() {
                 write(responseMsg);
                 {
                     std::stringstream ss;
-                    for(int64_t i = 0; i < responseMsg.size(); i++) {
+                    for(int i = 0; i < responseMsg.size(); i++) {
                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                     }
                     std::string log = ss.str();
@@ -276,7 +276,7 @@ void RobotInterface::execTaskThread() {
                 write(stateMsgArray);
                 {
                     std::stringstream ss;
-                    for(int64_t i = 0; i < sizeof(stateMsgArray); i++) {
+                    for(int i = 0; i < sizeof(stateMsgArray); i++) {
                         ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
                     }
                     std::string log = ss.str();
@@ -284,14 +284,14 @@ void RobotInterface::execTaskThread() {
                 }
 
                 //根据任务清单将所有档案归类
-                int64_t turntablePosition = 0;
-                std::map<int64_t, std::vector<int64_t> > cabIDTurntablePositionsMap;
-                for (int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                int turntablePosition = 0;
+                std::map<int, std::vector<int> > cabIDTurntablePositionsMap;
+                for (int i = 0; i < turntablePositionTotalNum; i++) {
                     if (data[7 + 2 * i] == 0xA1) {
                         turntablePosition++;
-                        int64_t cabID = data[8 + 2 * i];
+                        int cabID = data[8 + 2 * i];
                         if (cabIDTurntablePositionsMap.find(cabID) == cabIDTurntablePositionsMap.end()) {
-                            std::vector<int64_t> turntablePositions;
+                            std::vector<int> turntablePositions;
                             turntablePositions.push_back(turntablePosition);
                             cabIDTurntablePositionsMap.insert(std::make_pair(cabID, turntablePositions));
                         } else {
@@ -301,8 +301,8 @@ void RobotInterface::execTaskThread() {
                 }
 
                 for (auto cabIDTurntablePositions : cabIDTurntablePositionsMap) {
-                    int64_t cabID = cabIDTurntablePositions.first;
-                    std::vector<int64_t> turntablePositions = cabIDTurntablePositions.second;; // 跑到对应柜子前
+                    int cabID = cabIDTurntablePositions.first;
+                    std::vector<int> turntablePositions = cabIDTurntablePositions.second;; // 跑到对应柜子前
                     //　等待档案柜就绪
                     {
                         MutexLockGuard lock(externalInfoMutex_);
@@ -313,16 +313,16 @@ void RobotInterface::execTaskThread() {
                     }
 
                     //此柜需要操作的总的档案数量
-                    int64_t operationArchiveNum = turntablePositions.size();
+                    int operationArchiveNum = turntablePositions.size();
 
                     // 额外等待档案柜就绪次数
-                    int64_t extraOperationTimes =
+                    int extraOperationTimes =
                             (operationArchiveNum % cabPositionTotalNum == 0)
                             ? (operationArchiveNum / cabPositionTotalNum - 1)
                             : (operationArchiveNum / cabPositionTotalNum);
 
 
-                    for (int64_t turntableNum = 1;
+                    for (int turntableNum = 1;
                          turntableNum <= operationArchiveNum; turntableNum++) { ; //将档案从柜中放入转盘中
                         // 额外等待次数>0并且本轮操作结束，等待档案柜就绪
                         if (extraOperationTimes > 0 && (turntableNum % cabPositionTotalNum == 0)) {
@@ -330,7 +330,7 @@ void RobotInterface::execTaskThread() {
                             write(singleFinishMsgArray);
                             {
                                 std::stringstream ss;
-                                for(int64_t i = 0; i < sizeof(singleFinishMsgArray); i++) {
+                                for(int i = 0; i < sizeof(singleFinishMsgArray); i++) {
                                     ss << std::hex << (unsigned int)(unsigned char)singleFinishMsgArray[i] << ",";
                                 }
                                 std::string log = ss.str();
@@ -358,7 +358,7 @@ void RobotInterface::execTaskThread() {
                     write(singleFinishMsgArray);
                     {
                         std::stringstream ss;
-                        for(int64_t i = 0; i < sizeof(singleFinishMsgArray); i++) {
+                        for(int i = 0; i < sizeof(singleFinishMsgArray); i++) {
                             ss << std::hex << (unsigned int)(unsigned char)singleFinishMsgArray[i] << ",";
                         }
                         std::string log = ss.str();
@@ -375,7 +375,7 @@ void RobotInterface::execTaskThread() {
 
                 ; /// 跑到存取口前，将档案放入
 
-                for (int64_t i = 0; i < turntablePositionTotalNum; i++) {
+                for (int i = 0; i < turntablePositionTotalNum; i++) {
                     if (data[7 + 2 * i] == 0xA1)
                         response[7 + 2 * i] = 0x01;
                 }
@@ -383,7 +383,7 @@ void RobotInterface::execTaskThread() {
                 write(responseMsg);
                 {
                     std::stringstream ss;
-                    for(int64_t i = 0; i < responseMsg.size(); i++) {
+                    for(int i = 0; i < responseMsg.size(); i++) {
                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                     }
                     std::string log = ss.str();
@@ -403,7 +403,7 @@ void RobotInterface::execTaskThread() {
                     write(stateMsgArray);
                     {
                         std::stringstream ss;
-                        for(int64_t i = 0; i < sizeof(stateMsgArray); i++) {
+                        for(int i = 0; i < sizeof(stateMsgArray); i++) {
                             ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
                         }
                         std::string log = ss.str();
@@ -416,7 +416,7 @@ void RobotInterface::execTaskThread() {
                     write(responseMsg);
                     {
                         std::stringstream ss;
-                        for(int64_t i = 0; i < responseMsg.size(); i++) {
+                        for(int i = 0; i < responseMsg.size(); i++) {
                             ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                         }
                         std::string log = ss.str();
@@ -431,7 +431,7 @@ void RobotInterface::execTaskThread() {
                     write(stateMsgArray);
                     {
                         std::stringstream ss;
-                        for(int64_t i = 0; i < sizeof(stateMsgArray); i++) {
+                        for(int i = 0; i < sizeof(stateMsgArray); i++) {
                             ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
                         }
                         std::string log = ss.str();
@@ -448,7 +448,7 @@ void RobotInterface::execTaskThread() {
                     write(stateMsgArray);
                     {
                         std::stringstream ss;
-                        for(int64_t i = 0; i < sizeof(stateMsgArray); i++) {
+                        for(int i = 0; i < sizeof(stateMsgArray); i++) {
                             ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
                         }
                         std::string log = ss.str();
@@ -461,7 +461,7 @@ void RobotInterface::execTaskThread() {
                     write(responseMsg);
                     {
                         std::stringstream ss;
-                        for(int64_t i = 0; i < responseMsg.size(); i++) {
+                        for(int i = 0; i < responseMsg.size(); i++) {
                             ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                         }
                         std::string log = ss.str();
@@ -476,7 +476,7 @@ void RobotInterface::execTaskThread() {
                     write(stateMsgArray);
                     {
                         std::stringstream ss;
-                        for(int64_t i = 0; i < sizeof(stateMsgArray); i++) {
+                        for(int i = 0; i < sizeof(stateMsgArray); i++) {
                             ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
                         }
                         std::string log = ss.str();
@@ -493,7 +493,7 @@ void RobotInterface::execTaskThread() {
                 write(responseMsg);
                 {
                     std::stringstream ss;
-                    for(int64_t i = 0; i < responseMsg.size(); i++) {
+                    for(int i = 0; i < responseMsg.size(); i++) {
                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                     }
                     std::string log = ss.str();
@@ -509,7 +509,7 @@ void RobotInterface::execTaskThread() {
                 write(stateMsgArray);
                 {
                     std::stringstream ss;
-                    for(int64_t i = 0; i < sizeof(stateMsgArray); i++) {
+                    for(int i = 0; i < sizeof(stateMsgArray); i++) {
                         ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
                     }
                     std::string log = ss.str();
@@ -549,7 +549,7 @@ void RobotInterface::onConnection(const TcpConnectionPtr& conn) {
         write(message);
         {
             std::stringstream ss;
-            for(int64_t i = 0; i < message.size(); i++) {
+            for(int i = 0; i < message.size(); i++) {
                 ss << std::hex << (unsigned int)(unsigned char)message[i] << ",";
             }
             std::string log = ss.str();
@@ -563,7 +563,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                             Timestamp) {
     {
         std::stringstream ss;
-        for(int64_t i = 0; i < message.size(); i++) {
+        for(int i = 0; i < message.size(); i++) {
             ss << std::hex << (unsigned int)(unsigned char)message[i] << ",";
         }
         std::string log = ss.str();
@@ -577,7 +577,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
         case DEPOSIT_TASK: {
             assert(message.size() == 31);
             u_char responseData[8];
-            for(int64_t i = 0; i < sizeof(responseData); i++) {
+            for(int i = 0; i < sizeof(responseData); i++) {
                 responseData[i] = data[i];
             }
             responseData[6] = 0x01;
@@ -586,7 +586,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             write(responseMsg);
             {
                 std::stringstream ss;
-                for(int64_t i = 0; i < responseMsg.size(); i++) {
+                for(int i = 0; i < responseMsg.size(); i++) {
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
@@ -603,7 +603,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
         case WITHDRAW_TASK: {
             assert(message.size() == 31);
             u_char responseData[8];
-            for(int64_t i = 0; i < sizeof(responseData); i++) {
+            for(int i = 0; i < sizeof(responseData); i++) {
                 responseData[i] = data[i];
             }
             responseData[6] = 0x01;
@@ -612,7 +612,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             write(responseMsg);
             {
                 std::stringstream ss;
-                for(int64_t i = 0; i < responseMsg.size(); i++) {
+                for(int i = 0; i < responseMsg.size(); i++) {
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
@@ -629,7 +629,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
         case CHARGE_TASK: {
             assert(message.size() == 8);
             u_char responseData[8];
-            for(int64_t i = 0; i < sizeof(responseData); i++) {
+            for(int i = 0; i < sizeof(responseData); i++) {
                 responseData[i] = data[i];
             }
             responseData[6] = 0x01;
@@ -638,7 +638,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             write(responseMsg);
             {
                 std::stringstream ss;
-                for(int64_t i = 0; i < responseMsg.size(); i++) {
+                for(int i = 0; i < responseMsg.size(); i++) {
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
@@ -656,7 +656,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             assert(message.size() == 8);
             //回复收到
             u_char responseData1[8];
-            for(int64_t i = 0; i < sizeof(responseData1); i++) {
+            for(int i = 0; i < sizeof(responseData1); i++) {
                 responseData1[i] = data[i];
             }
             responseData1[6] = 0x01;
@@ -665,7 +665,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             write(responseMsg1);
             {
                 std::stringstream ss;
-                for(int64_t i = 0; i < responseMsg1.size(); i++) {
+                for(int i = 0; i < responseMsg1.size(); i++) {
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg1[i] << ",";
                 }
                 std::string log = ss.str();
@@ -673,7 +673,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             }
             //回复机器人状态
             u_char responseData2[9];
-            for(int64_t i = 0; i < sizeof(responseData2); i++) {
+            for(int i = 0; i < sizeof(responseData2); i++) {
                 responseData2[i] = data[i];
             }
             responseData2[6] = 0x02;
@@ -686,7 +686,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             write(responseMsg2);
             {
                 std::stringstream ss;
-                for(int64_t i = 0; i < responseMsg2.size(); i++) {
+                for(int i = 0; i < responseMsg2.size(); i++) {
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg2[i] << ",";
                 }
                 std::string log = ss.str();
@@ -698,7 +698,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
         case RFID_INFO: {
             assert(message.size() == 31);
             u_char responseData[8];
-            for(int64_t i = 0; i < sizeof(responseData); i++) {
+            for(int i = 0; i < sizeof(responseData); i++) {
                 responseData[i] = data[i];
             }
             responseData[6] = 0x01;
@@ -707,7 +707,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             write(responseMsg);
             {
                 std::stringstream ss;
-                for(int64_t i = 0; i < responseMsg.size(); i++) {
+                for(int i = 0; i < responseMsg.size(); i++) {
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
@@ -734,7 +734,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
         case CAB_READY: {
             assert(message.size() == 8);
             u_char responseData[8];
-            for(int64_t i = 0; i < sizeof(responseData); i++) {
+            for(int i = 0; i < sizeof(responseData); i++) {
                 responseData[i] = data[i];
             }
             responseData[6] = 0x01;
@@ -743,7 +743,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             write(responseMsg);
             {
                 std::stringstream ss;
-                for(int64_t i = 0; i < responseMsg.size(); i++) {
+                for(int i = 0; i < responseMsg.size(); i++) {
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
@@ -760,7 +760,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
         case ALL_FINISH_TASK: {
             assert(message.size() == 8);
             u_char responseData[8];
-            for(int64_t i = 0; i < sizeof(responseData); i++) {
+            for(int i = 0; i < sizeof(responseData); i++) {
                 responseData[i] = data[i];
             }
             responseData[6] = 0x01;
@@ -769,7 +769,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             write(responseMsg);
             {
                 std::stringstream ss;
-                for(int64_t i = 0; i < responseMsg.size(); i++) {
+                for(int i = 0; i < responseMsg.size(); i++) {
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();

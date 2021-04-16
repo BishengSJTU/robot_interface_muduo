@@ -26,7 +26,7 @@ namespace sockets
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wconversion"
 #pragma GCC diagnostic ignored "-Wold-style-cast"
-inline uint64_t hostToNetwork64(uint64_t host64)
+inline uint hostToNetwork64(uint host64)
 {
   return htobe64(host64);
 }
@@ -41,7 +41,7 @@ inline uint16_t hostToNetwork16(uint16_t host16)
   return htobe16(host16);
 }
 
-inline uint64_t networkToHost64(uint64_t net64)
+inline uint networkToHost64(uint net64)
 {
   return be64toh(net64);
 }

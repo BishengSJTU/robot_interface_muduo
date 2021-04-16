@@ -129,7 +129,7 @@ bool CurrentThread::isMainThread()
   return tid() == ::getpid();
 }
 
-void CurrentThread::sleepUsec(int64_t usec)
+void CurrentThread::sleepUsec(int usec)
 {
   struct timespec ts = { 0, 0 };
   ts.tv_sec = static_cast<time_t>(usec / Timestamp::kMicroSecondsPerSecond);

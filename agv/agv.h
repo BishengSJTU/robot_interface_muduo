@@ -13,6 +13,7 @@
 #include "Logging.h"
 #include "LogFile.h"
 
+#define AGV_MT 0 //维护
 #define AGV_READY 1
 #define AGV_BUSY 2
 #define AGV_CHARGING 3

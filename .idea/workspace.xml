@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="archive_robot" targetName="JakaRobotInterface" />
       <config projectName="archive_robot" targetName="PlatformRobotInterface" />
+      <config projectName="archive_robot" targetName="JakaRobotInterface" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -13,9 +13,101 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea00259e-2efd-419c-bb95-908181337d76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agv/agv.cc" beforeDir="false" afterPath="$PROJECT_DIR$/agv/agv.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/agv/agv.h" beforeDir="false" afterPath="$PROJECT_DIR$/agv/agv.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/agv/agv.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/agv/agv.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/datetime/Timestamp.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/datetime/Timestamp.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/kinematics/kinematics.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/kinematics/kinematics.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/logging/AsyncLogging.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/logging/AsyncLogging.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/logging/FileUtil.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/logging/FileUtil.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/logging/LogFile.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/logging/LogFile.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/logging/LogStream.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/logging/LogStream.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/logging/Logging.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/logging/Logging.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/logging/ProcessInfo.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/logging/ProcessInfo.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Acceptor.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Acceptor.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Channel.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Channel.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Connector.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Connector.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/EPollPoller.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/EPollPoller.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/EventLoop.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/EventLoop.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/EventLoopThread.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/EventLoopThread.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/EventLoopThreadPool.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/EventLoopThreadPool.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/PollPoller.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/PollPoller.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Poller.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Poller.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/TcpClient.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/TcpClient.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/TcpConnection.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/TcpConnection.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/TcpServer.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/TcpServer.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Timer.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Timer.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/TimerQueue.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/TimerQueue.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/thread/Condition.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/thread/Condition.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/thread/Thread.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/thread/Thread.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface" beforeDir="false" afterPath="$PROJECT_DIR$/build/JakaRobotInterface" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/PlatformRobotInterface" beforeDir="false" afterPath="$PROJECT_DIR$/build/PlatformRobotInterface" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datetime/Timestamp.cc" beforeDir="false" afterPath="$PROJECT_DIR$/datetime/Timestamp.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datetime/Timestamp.h" beforeDir="false" afterPath="$PROJECT_DIR$/datetime/Timestamp.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logging/FileUtil.cc" beforeDir="false" afterPath="$PROJECT_DIR$/logging/FileUtil.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logging/FileUtil.h" beforeDir="false" afterPath="$PROJECT_DIR$/logging/FileUtil.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logging/LogFile.cc" beforeDir="false" afterPath="$PROJECT_DIR$/logging/LogFile.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logging/LogStream.cc" beforeDir="false" afterPath="$PROJECT_DIR$/logging/LogStream.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logging/LogStream.h" beforeDir="false" afterPath="$PROJECT_DIR$/logging/LogStream.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logging/Logging.cc" beforeDir="false" afterPath="$PROJECT_DIR$/logging/Logging.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/Buffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/net/Buffer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/Endian.h" beforeDir="false" afterPath="$PROJECT_DIR$/net/Endian.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/EventLoop.cc" beforeDir="false" afterPath="$PROJECT_DIR$/net/EventLoop.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/EventLoop.h" beforeDir="false" afterPath="$PROJECT_DIR$/net/EventLoop.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/Timer.h" beforeDir="false" afterPath="$PROJECT_DIR$/net/Timer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/TimerId.h" beforeDir="false" afterPath="$PROJECT_DIR$/net/TimerId.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/TimerQueue.cc" beforeDir="false" afterPath="$PROJECT_DIR$/net/TimerQueue.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/net/TimerQueue.h" beforeDir="false" afterPath="$PROJECT_DIR$/net/TimerQueue.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot_interface/jaka.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/jaka.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/robot_interface/jaka_robot_interface.h" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/jaka_robot_interface.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/robot_interface/platform_robot_interface.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/platform_robot_interface.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot_interface/platform_robot_interface.h" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/platform_robot_interface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thread/Atomic.h" beforeDir="false" afterPath="$PROJECT_DIR$/thread/Atomic.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thread/Condition.cc" beforeDir="false" afterPath="$PROJECT_DIR$/thread/Condition.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thread/CurrentThread.h" beforeDir="false" afterPath="$PROJECT_DIR$/thread/CurrentThread.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thread/Thread.cc" beforeDir="false" afterPath="$PROJECT_DIR$/thread/Thread.cc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -57,26 +149,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robot_interface/jaka.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="97" column="17" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
+            <state relative-caret-position="612">
+              <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/robot_interface/platform_robot_interface.cc">
+        <entry file="file://$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="302" column="25" selection-start-line="302" selection-start-column="21" selection-end-line="302" selection-end-column="25" />
+            <state relative-caret-position="195">
+              <caret line="176" column="31" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -84,8 +170,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/robot_interface/jaka_robot_interface.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="84" column="25" lean-forward="true" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+            <state relative-caret-position="419">
+              <caret line="113" column="37" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="37" />
               <folding>
                 <element signature="e#33#52#0" expanded="true" />
               </folding>
@@ -94,10 +180,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/agv/agv.cc">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-345">
+              <caret line="259" column="46" selection-start-line="259" selection-start-column="46" selection-end-line="259" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/agv/agv.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="141">
+              <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+              <folding>
+                <element signature="e#50#74#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build/FlexibleConfig .YML">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+            <state relative-caret-position="-378">
+              <caret line="21" column="35" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -106,37 +213,40 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>g_logTimeZone</find>
-      <find>time_</find>
-      <find>now</find>
-      <find>robot_interface</find>
-      <find>SINGLE</find>
-      <find>onCompleteMessage</find>
-      <find>DEPOSIT_TASK</find>
-      <find>WITHDRAW_TASK</find>
-      <find>SINGLE_ARCHIVE_FINISH</find>
-      <find>singleFinishMsgArray</find>
-      <find>single</find>
-      <find>INQUIRE</find>
-      <find>withdrawCheckReceived</find>
-      <find>message</find>
-      <find>ready</find>
-      <find>exte</find>
-      <find>state</find>
-      <find>INQUI</find>
-      <find>conne</find>
-      <find>DEPOSIT_PREPARE</find>
-      <find>DEPOSIT_PREPARE_TASK</find>
-      <find>stateMsgArray</find>
-      <find>archive</find>
-      <find>IS_DEPOSITING</find>
-      <find>AA</find>
-      <find>pickwin</find>
-      <find>curr</find>
+      <find>JAKAPickCab</find>
+      <find>更新状态</find>
+      <find>完成任务</find>
       <find>write</find>
-      <find>response</find>
-      <find>auto</find>
+      <find>发送</find>
+      <find>exter</find>
+      <find>externalInfo_</find>
+      <find>withrdrawCheckResult</find>
+      <find>withdrawCheckResult</find>
+      <find>withdrawCheckReceived</find>
+      <find>single</find>
+      <find>wind</find>
+      <find>cabR</find>
+      <find>storagePositionTotalNum</find>
+      <find>storageMechanicalError</find>
+      <find>isConnecting</find>
+      <find>jakaPickAndPlace_</find>
+      <find>AGV_FAILURE</find>
+      <find>CHARGE_PREPARE</find>
+      <find>///</find>
+      <find>taskMessage_</find>
+      <find>connectionMutex_</find>
+      <find>wait</find>
+      <find>noti</find>
+      <find>robotINfo</find>
+      <find>pick</find>
+      <find>jakapick</find>
+      <find>AGV_</find>
+      <find>JAKA</find>
+      <find>JAKAPICKAND</find>
     </findStrings>
+    <replaceStrings>
+      <replace>int</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -187,22 +297,22 @@
         <option value="$PROJECT_DIR$/robot_interface/platform.cc" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/robot_interface/codec.h" />
-        <option value="$PROJECT_DIR$/robot_interface/platform_robot_interface.h" />
-        <option value="$PROJECT_DIR$/robot_interface/jaka.cc" />
         <option value="$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc" />
+        <option value="$PROJECT_DIR$/robot_interface/platform_robot_interface.cc" />
+        <option value="$PROJECT_DIR$/robot_interface/platform_robot_interface.h" />
         <option value="$PROJECT_DIR$/agv/agv.h" />
         <option value="$PROJECT_DIR$/agv/agv.cc" />
         <option value="$PROJECT_DIR$/robot_interface/jaka_robot_interface.h" />
+        <option value="$PROJECT_DIR$/robot_interface/jaka.cc" />
         <option value="$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc" />
-        <option value="$PROJECT_DIR$/robot_interface/platform_robot_interface.cc" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-247" />
-    <option name="y" value="16" />
-    <option name="width" value="988" />
-    <option name="height" value="876" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1301" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -247,6 +357,11 @@
               <item name="archive_robot" type="b2602c69:ProjectViewProjectNode" />
               <item name="robot_interface_muduo" type="462c0819:PsiDirectoryNode" />
               <item name="robotic_arm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="archive_robot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robot_interface_muduo" type="462c0819:PsiDirectoryNode" />
+              <item name="vision_detection" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="archive_robot" type="b2602c69:ProjectViewProjectNode" />
@@ -339,12 +454,13 @@
       <workItem from="1617698911180" duration="10569000" />
       <workItem from="1617775661106" duration="14319000" />
       <workItem from="1618414062759" duration="1713000" />
-      <workItem from="1618391100906" duration="3464000" />
+      <workItem from="1618391100906" duration="9108000" />
+      <workItem from="1618448863582" duration="28852000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267754000" />
+    <option name="totallyTimeSpent" value="302250000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -359,11 +475,11 @@
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20717132" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20239043" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32884902" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32935917" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -374,7 +490,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.29596412" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32884902" />
-      <window_info anchor="bottom" id="CMake" order="12" visible="true" weight="0.27503738" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.264574" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -437,34 +553,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vision_detection/vision_detection_position.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="57" column="26" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/plc/my_plc.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="22" selection-start-line="22" selection-end-line="23" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agv_wait_action_finish/action_finish.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3474">
-          <caret line="193" column="44" selection-start-line="193" selection-start-column="44" selection-end-line="193" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agv_wait_action_finish/action_finish.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding>
-            <element signature="e#73#95#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -629,40 +721,6 @@
     <entry file="file://$PROJECT_DIR$/robot_interface/robot_interface.h" />
     <entry file="file://$PROJECT_DIR$/robot_interface/robot_interface.cc" />
     <entry file="file://$PROJECT_DIR$/robot_interface/main.cc" />
-    <entry file="file://$PROJECT_DIR$/robot_interface/platform.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_interface/codec.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_interface/platform_robot_interface.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="58" column="21" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="21" />
-          <folding>
-            <element signature="e#33#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plc/my_plc.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="972">
@@ -673,32 +731,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/agv/agv.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-355">
-          <caret line="36" column="46" selection-start-line="36" selection-start-column="46" selection-end-line="36" selection-end-column="46" />
-          <folding>
-            <element signature="e#50#74#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/agv/agv.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3654">
-          <caret line="203" column="32" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/build/FixedConfig.YML">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robotic_arm/robot_client_tcp.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-576">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="11" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -707,31 +741,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot_interface/jaka.cc">
+    <entry file="file://$PROJECT_DIR$/robot_interface/platform_robot_interface.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="38" selection-start-line="23" selection-start-column="38" selection-end-line="23" selection-end-column="38" />
+        <state relative-caret-position="208">
+          <caret line="312" column="21" lean-forward="true" selection-start-line="305" selection-start-column="20" selection-end-line="312" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/FlexibleConfig .YML">
+    <entry file="file://$PROJECT_DIR$/agv_wait_action_finish/action_finish.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="55" column="49" selection-start-line="55" selection-start-column="49" selection-end-line="55" selection-end-column="49" />
+        <state relative-caret-position="136">
+          <caret line="203" column="16" selection-start-line="203" selection-start-column="16" selection-end-line="203" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agv_wait_action_finish/action_finish.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <element signature="e#73#95#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plc/my_plc.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="51" column="26" selection-start-line="51" selection-start-column="26" selection-end-line="51" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_interface/codec.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="26" column="44" lean-forward="true" selection-start-line="26" selection-start-column="44" selection-end-line="26" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_interface/platform.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="21" column="12" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_interface/platform_robot_interface.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
+          <folding>
+            <element signature="e#33#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vision_detection/vision_detection_position.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="57" column="34" lean-forward="true" selection-start-line="57" selection-start-column="34" selection-end-line="57" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robotic_arm/robot_client_tcp.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="42" column="58" selection-start-line="42" selection-start-column="58" selection-end-line="42" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1648">
-          <caret line="246" column="34" selection-start-line="246" selection-start-column="27" selection-end-line="246" selection-end-column="34" />
+        <state relative-caret-position="954">
+          <caret line="53" column="33" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/FlexibleConfig .YML">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-378">
+          <caret line="21" column="35" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agv/agv.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="141">
+          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+          <folding>
+            <element signature="e#50#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/agv/agv.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345">
+          <caret line="259" column="46" selection-start-line="259" selection-start-column="46" selection-end-line="259" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_interface/jaka.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="25" selection-start-line="34" selection-start-column="25" selection-end-line="34" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/robot_interface/jaka_robot_interface.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="84" column="25" lean-forward="true" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+        <state relative-caret-position="419">
+          <caret line="113" column="37" selection-start-line="113" selection-start-column="22" selection-end-line="113" selection-end-column="37" />
           <folding>
             <element signature="e#33#52#0" expanded="true" />
           </folding>
@@ -740,15 +866,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="97" column="17" selection-start-line="97" selection-start-column="17" selection-end-line="97" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/robot_interface/platform_robot_interface.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="302" column="25" selection-start-line="302" selection-start-column="21" selection-end-line="302" selection-end-column="25" />
+        <state relative-caret-position="195">
+          <caret line="176" column="31" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="31" />
         </state>
       </provider>
     </entry>

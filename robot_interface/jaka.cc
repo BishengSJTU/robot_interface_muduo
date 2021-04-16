@@ -22,14 +22,17 @@ int main(int argc, char* argv[]) {
     muduo::Logger::setOutput(outputFunc);
 
     RobotInterface robotInterface(path);
-    muduo::Thread receive_task(std::bind(&RobotInterface::eventLoopThread, &robotInterface));
-    muduo::Thread execute_task(std::bind(&RobotInterface::execTaskThread, &robotInterface));
+    muduo::Thread loopThread(std::bind(&RobotInterface::eventLoopThread, &robotInterface));
+    muduo::Thread executeThread(std::bind(&RobotInterface::execTaskThread, &robotInterface));
+    muduo::Thread inquireThread(std::bind(&RobotInterface::inquireRobotStateThread, &robotInterface));
 
-    receive_task.start();
-    execute_task.start();
+    loopThread.start();
+    executeThread.start();
+    inquireThread.start();
 
-    receive_task.join();
-    execute_task.join();
+    loopThread.join();
+    executeThread.join();
+    inquireThread.join();
 
     return 0;
 }

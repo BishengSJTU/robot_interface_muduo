@@ -45,7 +45,7 @@ namespace CurrentThread
 
   bool isMainThread();
 
-  void sleepUsec(int64_t usec);  // for testing
+  void sleepUsec(int usec);  // for testing
 
   string stackTrace(bool demangle);
 }  // namespace CurrentThread

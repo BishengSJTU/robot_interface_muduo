@@ -233,7 +233,7 @@ void EventLoop::abortNotInLoopThread()
 
 void EventLoop::wakeup()
 {
-  uint64_t one = 1;
+  uint one = 1;
   ssize_t n = sockets::write(wakeupFd_, &one, sizeof one);
   if (n != sizeof one)
   {
@@ -243,7 +243,7 @@ void EventLoop::wakeup()
 
 void EventLoop::handleRead()
 {
-  uint64_t one = 1;
+  uint one = 1;
   ssize_t n = sockets::read(wakeupFd_, &one, sizeof one);
   if (n != sizeof one)
   {

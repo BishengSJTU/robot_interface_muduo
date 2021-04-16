@@ -257,7 +257,7 @@ namespace jiazhi {
                     int run_state = js[0]["run_state"];
                     std::cout << "run_state:" << run_state << std::endl;
                     // 就绪中、充电中
-                    if (run_state == AGV_READY || run_state == AGV_BUSY || run_state == AGV_CHARGING || run_state == AGV_FAILURE) {
+                    if (run_state == AGV_READY) {
                         return;
                     } else {
                         LOG_INFO << "Jiazhi初始化中... 状态仍在初始化中";

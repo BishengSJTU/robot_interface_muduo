@@ -40,7 +40,7 @@ int createTimerfd()
 
 struct timespec howMuchTimeFromNow(Timestamp when)
 {
-  int64_t microseconds = when.microSecondsSinceEpoch()
+  int microseconds = when.microSecondsSinceEpoch()
                          - Timestamp::now().microSecondsSinceEpoch();
   if (microseconds < 100)
   {
@@ -56,7 +56,7 @@ struct timespec howMuchTimeFromNow(Timestamp when)
 
 void readTimerfd(int timerfd, Timestamp now)
 {
-  uint64_t howmany;
+  uint howmany;
   ssize_t n = ::read(timerfd, &howmany, sizeof howmany);
   LOG_TRACE << "TimerQueue::handleRead() " << howmany << " at " << now.toString();
   if (n != sizeof howmany)

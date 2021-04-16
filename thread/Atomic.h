@@ -90,7 +90,7 @@ class AtomicIntegerT : noncopyable
 }  // namespace detail
 
 typedef detail::AtomicIntegerT<int32_t> AtomicInt32;
-typedef detail::AtomicIntegerT<int64_t> AtomicInt64;
+typedef detail::AtomicIntegerT<int> AtomicInt64;
 
 }  // namespace muduo
 

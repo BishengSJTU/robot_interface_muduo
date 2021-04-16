@@ -19,6 +19,8 @@
 #include "jaka_pick_and_place.h"
 #include "agv.h"
 
+#define ROBOT_INLINE true
+
 using namespace jiazhi;
 using namespace muduo;
 using namespace muduo::net;
@@ -53,10 +55,11 @@ public:
     //外部设备信息
     struct ExternalInfo
     {
-        std::set<int64_t> readyCab; //准备就绪的档案柜
+        std::set<int> readyCab; //准备就绪的档案柜
         bool singleArchiveFinishedReceived; //单次动作完成被成功接收
         bool withdrawCheckReceived; //取档校验外部接收
-        bool withrdrawCheckResult; //取档校验外部结果
+        bool withdrawCheckResultGiven; // 外部给出取档校验结果
+        bool withdrawCheckResult; //取档校验外部结果
     };
     // 任务类型
     enum TASK_TYPE {
@@ -75,11 +78,13 @@ public:
     RobotInterface(std::string path);
     void eventLoopThread(); //收发消息及定时器函数线程
     void execTaskThread(); //执行任务函数线程
+    void inquireRobotStateThread(); //查询机器人状态线程
     void write(const StringPiece& message); //往Buffer里写数据
     void onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                          const muduo::string& message,
                          Timestamp); //收到完整指令回调，并执行对应任务
     void onConnection(const TcpConnectionPtr& conn); //连接回调
+    void initialize(); // 初始化
 
 private:
     const Config config_;
@@ -90,8 +95,10 @@ private:
     uint16_t taskServerPort_;
 
     LengthHeaderCodec codec_;
+
     MutexLock connectionMutex_;
     TcpConnectionPtr connection_ GUARDED_BY(connectionMutex_);
+    Condition connectionCondition_ GUARDED_BY(connectionMutex_);
 
     MutexLock taskMessageMutex_;
     StringPiece taskMessage_ GUARDED_BY(taskMessageMutex_);
@@ -106,7 +113,7 @@ private:
 
     static const char powerLowerLimit = 0x1c; //电量下限28
     static const char powerHighLimit = 0x60; //电量上限96
-    static const std::size_t temPositionTotalNum = 5; //背篓总位置数
+    static const int storagePositionTotalNum = 5; //背篓总位置数
 };
 
 #endif

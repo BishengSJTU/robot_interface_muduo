@@ -16,14 +16,14 @@
 
 using namespace muduo;
 
-static_assert(sizeof(Timestamp) == sizeof(int64_t),
-              "Timestamp should be same size as int64_t");
+static_assert(sizeof(Timestamp) == sizeof(int),
+              "Timestamp should be same size as int");
 
 string Timestamp::toString() const
 {
   char buf[32] = {0};
-  int64_t seconds = microSecondsSinceEpoch_ / kMicroSecondsPerSecond;
-  int64_t microseconds = microSecondsSinceEpoch_ % kMicroSecondsPerSecond;
+  int seconds = microSecondsSinceEpoch_ / kMicroSecondsPerSecond;
+  int microseconds = microSecondsSinceEpoch_ % kMicroSecondsPerSecond;
   snprintf(buf, sizeof(buf), "%" PRId64 ".%06" PRId64 "", seconds, microseconds);
   return buf;
 }
@@ -56,7 +56,7 @@ Timestamp Timestamp::now()
 {
   struct timeval tv;
   gettimeofday(&tv, NULL);
-  int64_t seconds = tv.tv_sec;
+  int seconds = tv.tv_sec;
   return Timestamp(seconds * kMicroSecondsPerSecond + tv.tv_usec);
 }
 

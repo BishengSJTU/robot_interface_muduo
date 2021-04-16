@@ -28,9 +28,9 @@ class ReadSmallFile : noncopyable
   template<typename String>
   int readToString(int maxSize,
                    String* content,
-                   int64_t* fileSize,
-                   int64_t* modifyTime,
-                   int64_t* createTime);
+                   int* fileSize,
+                   int* modifyTime,
+                   int* createTime);
 
   /// Read at maxium kBufferSize into buf_
   // return errno
@@ -51,9 +51,9 @@ template<typename String>
 int readFile(StringArg filename,
              int maxSize,
              String* content,
-             int64_t* fileSize = NULL,
-             int64_t* modifyTime = NULL,
-             int64_t* createTime = NULL)
+             int* fileSize = NULL,
+             int* modifyTime = NULL,
+             int* createTime = NULL)
 {
   ReadSmallFile file(filename);
   return file.readToString(maxSize, content, fileSize, modifyTime, createTime);

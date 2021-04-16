@@ -62,7 +62,7 @@ class EventLoop : noncopyable
   ///
   Timestamp pollReturnTime() const { return pollReturnTime_; }
 
-  int64_t iteration() const { return iteration_; }
+  int iteration() const { return iteration_; }
 
   /// Runs callback immediately in the loop thread.
   /// It wakes up the loop, and run the cb.
@@ -141,7 +141,7 @@ class EventLoop : noncopyable
   std::atomic<bool> quit_;
   bool eventHandling_; /* atomic */
   bool callingPendingFunctors_; /* atomic */
-  int64_t iteration_;
+  int iteration_;
   const pid_t threadId_;
   Timestamp pollReturnTime_;
   std::unique_ptr<Poller> poller_;

@@ -86,9 +86,9 @@ FileUtil::ReadSmallFile::~ReadSmallFile()
 template<typename String>
 int FileUtil::ReadSmallFile::readToString(int maxSize,
                                           String* content,
-                                          int64_t* fileSize,
-                                          int64_t* modifyTime,
-                                          int64_t* createTime)
+                                          int* fileSize,
+                                          int* modifyTime,
+                                          int* createTime)
 {
   static_assert(sizeof(off_t) == 8, "_FILE_OFFSET_BITS = 64");
   assert(content != NULL);
@@ -105,7 +105,7 @@ int FileUtil::ReadSmallFile::readToString(int maxSize,
         if (S_ISREG(statbuf.st_mode))
         {
           *fileSize = statbuf.st_size;
-          content->reserve(static_cast<int>(std::min(implicit_cast<int64_t>(maxSize), *fileSize)));
+          content->reserve(static_cast<int>(std::min(implicit_cast<int>(maxSize), *fileSize)));
         }
         else if (S_ISDIR(statbuf.st_mode))
         {
@@ -172,10 +172,10 @@ int FileUtil::ReadSmallFile::readToBuffer(int* size)
 template int FileUtil::readFile(StringArg filename,
                                 int maxSize,
                                 string* content,
-                                int64_t*, int64_t*, int64_t*);
+                                int*, int*, int*);
 
 template int FileUtil::ReadSmallFile::readToString(
     int maxSize,
     string* content,
-    int64_t*, int64_t*, int64_t*);
+    int*, int*, int*);
 
