@@ -921,28 +921,28 @@ CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o.provides: CMakeFiles
 CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o.provides.build: CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o
 
 
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: ../plc/my_plc.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o -c /home/bisheng/robot_interface_muduo/plc/my_plc.cc
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../plc/jaka_plc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o -c /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc
 
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/plc/my_plc.cc > CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.i
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc > CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.i
 
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/plc/my_plc.cc -o CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.s
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc -o CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.s
 
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o.requires:
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o.requires:
 
-.PHONY : CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o.requires
+.PHONY : CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o.requires
 
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o.provides: CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o.requires
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o.provides.build
-.PHONY : CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o.provides
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o.provides: CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o.requires
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o.provides.build
+.PHONY : CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o.provides
 
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o.provides.build: CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o.provides.build: CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o
 
 
 CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
@@ -1175,7 +1175,7 @@ PlatformRobotInterface_OBJECTS = \
 "CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.o" \
 "CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o" \
 "CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o" \
-"CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o" \
+"CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o" \
 "CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o" \
 "CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o" \
 "CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o" \
@@ -1224,7 +1224,7 @@ PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.o
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o
-PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o
+PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o
@@ -1324,7 +1324,7 @@ CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterfac
 CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.o.requires
 CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o.requires
 CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o.requires
-CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o.requires
+CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o.requires
 CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o.requires
 CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o.requires
 CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.requires

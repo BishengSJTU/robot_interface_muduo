@@ -35,7 +35,7 @@ namespace muyi {
         void InitializeAGV();
 
     public:
-        AGV(const std::string config_file_path);
+        AGV(const std::string config_file_path, bool isInline = true);
 
         bool AgvGo(const int &cab_id, const int &position, int &mission_id);
 
@@ -64,7 +64,7 @@ namespace jiazhi {
         void InitializeAGV();
 
     public:
-        AGV(const std::string config_file_path);
+        AGV(const std::string config_file_path, bool isInline = true);
 
         bool AgvGo(const int &cab_id, const int &position, int &mission_id);
 

@@ -60,8 +60,10 @@ private:
 public:
     VisionDetection(const Config &config);
     ~VisionDetection();
-    // 获取目标Aruco码的姿态，并对停层位置进行判断
+    // 获取目标二维码的6D姿态，机械臂使用
     bool GetPose(const int &index, cv::Mat &pose, int times);
+    // 获取目标二维码的3D姿态，平台使用
+    bool GetPose(const int &index, std::vector<double> &target_pose, int times);
     // Apriltag检测
     void Apriltag_Detection(cv::Mat &input_image, std::vector<std::vector<cv::Point2f>> &corners, std::vector<int> &ids);
     // 判断目标QR码是否在视野中

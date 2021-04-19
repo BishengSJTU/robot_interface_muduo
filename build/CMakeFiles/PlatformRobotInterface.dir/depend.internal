@@ -850,7 +850,7 @@ CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o
  ../logging/Logging.h
  ../logging/StringPiece.h
  ../mapping_table/mapping_table.h
- ../plc/my_plc.h
+ ../plc/jaka_plc.h
  ../robotic_arm/robot_client_tcp.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
@@ -1010,7 +1010,7 @@ CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o
  /usr/local/include/apriltag/tagStandard41h12.h
  /usr/local/include/apriltag/tagStandard52h13.h
  /usr/local/include/hv/json.hpp
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
  ../datetime/copyable.h
@@ -1021,8 +1021,8 @@ CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o
  ../logging/StringPiece.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/plc/my_plc.cc
- /home/bisheng/robot_interface_muduo/plc/my_plc.h
+ /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc
+ /home/bisheng/robot_interface_muduo/plc/jaka_plc.h
 CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h

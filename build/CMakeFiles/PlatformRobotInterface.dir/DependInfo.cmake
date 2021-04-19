@@ -38,7 +38,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/bisheng/robot_interface_muduo/net/Timer.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.o"
   "/home/bisheng/robot_interface_muduo/net/TimerQueue.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.o"
   "/home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o"
-  "/home/bisheng/robot_interface_muduo/plc/my_plc.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o"
+  "/home/bisheng/robot_interface_muduo/plc/jaka_plc.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o"
   "/home/bisheng/robot_interface_muduo/robot_interface/platform.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o"
   "/home/bisheng/robot_interface_muduo/robot_interface/platform_robot_interface.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.o"
   "/home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc" "/home/bisheng/robot_interface_muduo/build/CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o"

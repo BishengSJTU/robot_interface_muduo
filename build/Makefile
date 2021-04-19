@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named JakaRobotInterface
+
+# Build rule for target.
+JakaRobotInterface: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 JakaRobotInterface
+.PHONY : JakaRobotInterface
+
+# fast build rule for target.
+JakaRobotInterface/fast:
+	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/build
+.PHONY : JakaRobotInterface/fast
+
+#=============================================================================
 # Target rules for targets named PlatformRobotInterface
 
 # Build rule for target.
@@ -124,17 +137,30 @@ PlatformRobotInterface/fast:
 .PHONY : PlatformRobotInterface/fast
 
 #=============================================================================
-# Target rules for targets named JakaRobotInterface
+# Target rules for targets named TcpServer_test
 
 # Build rule for target.
-JakaRobotInterface: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 JakaRobotInterface
-.PHONY : JakaRobotInterface
+TcpServer_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TcpServer_test
+.PHONY : TcpServer_test
 
 # fast build rule for target.
-JakaRobotInterface/fast:
-	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/build
-.PHONY : JakaRobotInterface/fast
+TcpServer_test/fast:
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/build
+.PHONY : TcpServer_test/fast
+
+#=============================================================================
+# Target rules for targets named TcpClient_test
+
+# Build rule for target.
+TcpClient_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 TcpClient_test
+.PHONY : TcpClient_test
+
+# fast build rule for target.
+TcpClient_test/fast:
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/build
+.PHONY : TcpClient_test/fast
 
 agv/agv.o: agv/agv.cc.o
 
@@ -142,8 +168,10 @@ agv/agv.o: agv/agv.cc.o
 
 # target to build an object file
 agv/agv.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/agv/agv.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/agv/agv.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/agv/agv.cc.o
 .PHONY : agv/agv.cc.o
 
 agv/agv.i: agv/agv.cc.i
@@ -152,8 +180,10 @@ agv/agv.i: agv/agv.cc.i
 
 # target to preprocess a source file
 agv/agv.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/agv/agv.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/agv/agv.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/agv/agv.cc.i
 .PHONY : agv/agv.cc.i
 
 agv/agv.s: agv/agv.cc.s
@@ -162,8 +192,10 @@ agv/agv.s: agv/agv.cc.s
 
 # target to generate assembly for a file
 agv/agv.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/agv/agv.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/agv/agv.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/agv/agv.cc.s
 .PHONY : agv/agv.cc.s
 
 agv_wait_action_finish/action_finish.o: agv_wait_action_finish/action_finish.cc.o
@@ -172,8 +204,10 @@ agv_wait_action_finish/action_finish.o: agv_wait_action_finish/action_finish.cc.
 
 # target to build an object file
 agv_wait_action_finish/action_finish.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/agv_wait_action_finish/action_finish.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o
 .PHONY : agv_wait_action_finish/action_finish.cc.o
 
 agv_wait_action_finish/action_finish.i: agv_wait_action_finish/action_finish.cc.i
@@ -182,8 +216,10 @@ agv_wait_action_finish/action_finish.i: agv_wait_action_finish/action_finish.cc.
 
 # target to preprocess a source file
 agv_wait_action_finish/action_finish.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/agv_wait_action_finish/action_finish.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/agv_wait_action_finish/action_finish.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.i
 .PHONY : agv_wait_action_finish/action_finish.cc.i
 
 agv_wait_action_finish/action_finish.s: agv_wait_action_finish/action_finish.cc.s
@@ -192,8 +228,10 @@ agv_wait_action_finish/action_finish.s: agv_wait_action_finish/action_finish.cc.
 
 # target to generate assembly for a file
 agv_wait_action_finish/action_finish.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/agv_wait_action_finish/action_finish.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/agv_wait_action_finish/action_finish.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.s
 .PHONY : agv_wait_action_finish/action_finish.cc.s
 
 config/config.o: config/config.cc.o
@@ -202,8 +240,10 @@ config/config.o: config/config.cc.o
 
 # target to build an object file
 config/config.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/config/config.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/config/config.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/config/config.cc.o
 .PHONY : config/config.cc.o
 
 config/config.i: config/config.cc.i
@@ -212,8 +252,10 @@ config/config.i: config/config.cc.i
 
 # target to preprocess a source file
 config/config.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/config/config.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/config/config.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/config/config.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/config/config.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/config/config.cc.i
 .PHONY : config/config.cc.i
 
 config/config.s: config/config.cc.s
@@ -222,8 +264,10 @@ config/config.s: config/config.cc.s
 
 # target to generate assembly for a file
 config/config.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/config/config.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/config/config.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/config/config.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/config/config.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/config/config.cc.s
 .PHONY : config/config.cc.s
 
 datetime/Date.o: datetime/Date.cc.o
@@ -232,8 +276,10 @@ datetime/Date.o: datetime/Date.cc.o
 
 # target to build an object file
 datetime/Date.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/datetime/Date.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/datetime/Date.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/datetime/Date.cc.o
 .PHONY : datetime/Date.cc.o
 
 datetime/Date.i: datetime/Date.cc.i
@@ -242,8 +288,10 @@ datetime/Date.i: datetime/Date.cc.i
 
 # target to preprocess a source file
 datetime/Date.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/datetime/Date.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/datetime/Date.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/datetime/Date.cc.i
 .PHONY : datetime/Date.cc.i
 
 datetime/Date.s: datetime/Date.cc.s
@@ -252,8 +300,10 @@ datetime/Date.s: datetime/Date.cc.s
 
 # target to generate assembly for a file
 datetime/Date.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/datetime/Date.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/datetime/Date.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/datetime/Date.cc.s
 .PHONY : datetime/Date.cc.s
 
 datetime/TimeZone.o: datetime/TimeZone.cc.o
@@ -262,8 +312,10 @@ datetime/TimeZone.o: datetime/TimeZone.cc.o
 
 # target to build an object file
 datetime/TimeZone.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/datetime/TimeZone.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/datetime/TimeZone.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/datetime/TimeZone.cc.o
 .PHONY : datetime/TimeZone.cc.o
 
 datetime/TimeZone.i: datetime/TimeZone.cc.i
@@ -272,8 +324,10 @@ datetime/TimeZone.i: datetime/TimeZone.cc.i
 
 # target to preprocess a source file
 datetime/TimeZone.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/datetime/TimeZone.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/datetime/TimeZone.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/datetime/TimeZone.cc.i
 .PHONY : datetime/TimeZone.cc.i
 
 datetime/TimeZone.s: datetime/TimeZone.cc.s
@@ -282,8 +336,10 @@ datetime/TimeZone.s: datetime/TimeZone.cc.s
 
 # target to generate assembly for a file
 datetime/TimeZone.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/datetime/TimeZone.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/datetime/TimeZone.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/datetime/TimeZone.cc.s
 .PHONY : datetime/TimeZone.cc.s
 
 datetime/Timestamp.o: datetime/Timestamp.cc.o
@@ -292,8 +348,10 @@ datetime/Timestamp.o: datetime/Timestamp.cc.o
 
 # target to build an object file
 datetime/Timestamp.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/datetime/Timestamp.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/datetime/Timestamp.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/datetime/Timestamp.cc.o
 .PHONY : datetime/Timestamp.cc.o
 
 datetime/Timestamp.i: datetime/Timestamp.cc.i
@@ -302,8 +360,10 @@ datetime/Timestamp.i: datetime/Timestamp.cc.i
 
 # target to preprocess a source file
 datetime/Timestamp.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/datetime/Timestamp.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/datetime/Timestamp.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/datetime/Timestamp.cc.i
 .PHONY : datetime/Timestamp.cc.i
 
 datetime/Timestamp.s: datetime/Timestamp.cc.s
@@ -312,8 +372,10 @@ datetime/Timestamp.s: datetime/Timestamp.cc.s
 
 # target to generate assembly for a file
 datetime/Timestamp.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/datetime/Timestamp.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/datetime/Timestamp.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/datetime/Timestamp.cc.s
 .PHONY : datetime/Timestamp.cc.s
 
 kinematics/kinematics.o: kinematics/kinematics.cc.o
@@ -322,8 +384,10 @@ kinematics/kinematics.o: kinematics/kinematics.cc.o
 
 # target to build an object file
 kinematics/kinematics.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/kinematics/kinematics.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/kinematics/kinematics.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o
 .PHONY : kinematics/kinematics.cc.o
 
 kinematics/kinematics.i: kinematics/kinematics.cc.i
@@ -332,8 +396,10 @@ kinematics/kinematics.i: kinematics/kinematics.cc.i
 
 # target to preprocess a source file
 kinematics/kinematics.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/kinematics/kinematics.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/kinematics/kinematics.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.i
 .PHONY : kinematics/kinematics.cc.i
 
 kinematics/kinematics.s: kinematics/kinematics.cc.s
@@ -342,8 +408,10 @@ kinematics/kinematics.s: kinematics/kinematics.cc.s
 
 # target to generate assembly for a file
 kinematics/kinematics.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/kinematics/kinematics.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/kinematics/kinematics.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.s
 .PHONY : kinematics/kinematics.cc.s
 
 logging/AsyncLogging.o: logging/AsyncLogging.cc.o
@@ -352,8 +420,10 @@ logging/AsyncLogging.o: logging/AsyncLogging.cc.o
 
 # target to build an object file
 logging/AsyncLogging.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/AsyncLogging.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/AsyncLogging.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/AsyncLogging.cc.o
 .PHONY : logging/AsyncLogging.cc.o
 
 logging/AsyncLogging.i: logging/AsyncLogging.cc.i
@@ -362,8 +432,10 @@ logging/AsyncLogging.i: logging/AsyncLogging.cc.i
 
 # target to preprocess a source file
 logging/AsyncLogging.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/AsyncLogging.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/AsyncLogging.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/AsyncLogging.cc.i
 .PHONY : logging/AsyncLogging.cc.i
 
 logging/AsyncLogging.s: logging/AsyncLogging.cc.s
@@ -372,8 +444,10 @@ logging/AsyncLogging.s: logging/AsyncLogging.cc.s
 
 # target to generate assembly for a file
 logging/AsyncLogging.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/AsyncLogging.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/AsyncLogging.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/AsyncLogging.cc.s
 .PHONY : logging/AsyncLogging.cc.s
 
 logging/FileUtil.o: logging/FileUtil.cc.o
@@ -382,8 +456,10 @@ logging/FileUtil.o: logging/FileUtil.cc.o
 
 # target to build an object file
 logging/FileUtil.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/FileUtil.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/FileUtil.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/FileUtil.cc.o
 .PHONY : logging/FileUtil.cc.o
 
 logging/FileUtil.i: logging/FileUtil.cc.i
@@ -392,8 +468,10 @@ logging/FileUtil.i: logging/FileUtil.cc.i
 
 # target to preprocess a source file
 logging/FileUtil.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/FileUtil.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/FileUtil.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/FileUtil.cc.i
 .PHONY : logging/FileUtil.cc.i
 
 logging/FileUtil.s: logging/FileUtil.cc.s
@@ -402,8 +480,10 @@ logging/FileUtil.s: logging/FileUtil.cc.s
 
 # target to generate assembly for a file
 logging/FileUtil.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/FileUtil.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/FileUtil.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/FileUtil.cc.s
 .PHONY : logging/FileUtil.cc.s
 
 logging/LogFile.o: logging/LogFile.cc.o
@@ -412,8 +492,10 @@ logging/LogFile.o: logging/LogFile.cc.o
 
 # target to build an object file
 logging/LogFile.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/LogFile.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/LogFile.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/LogFile.cc.o
 .PHONY : logging/LogFile.cc.o
 
 logging/LogFile.i: logging/LogFile.cc.i
@@ -422,8 +504,10 @@ logging/LogFile.i: logging/LogFile.cc.i
 
 # target to preprocess a source file
 logging/LogFile.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/LogFile.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/LogFile.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/LogFile.cc.i
 .PHONY : logging/LogFile.cc.i
 
 logging/LogFile.s: logging/LogFile.cc.s
@@ -432,8 +516,10 @@ logging/LogFile.s: logging/LogFile.cc.s
 
 # target to generate assembly for a file
 logging/LogFile.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/LogFile.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/LogFile.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/LogFile.cc.s
 .PHONY : logging/LogFile.cc.s
 
 logging/LogStream.o: logging/LogStream.cc.o
@@ -442,8 +528,10 @@ logging/LogStream.o: logging/LogStream.cc.o
 
 # target to build an object file
 logging/LogStream.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/LogStream.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/LogStream.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/LogStream.cc.o
 .PHONY : logging/LogStream.cc.o
 
 logging/LogStream.i: logging/LogStream.cc.i
@@ -452,8 +540,10 @@ logging/LogStream.i: logging/LogStream.cc.i
 
 # target to preprocess a source file
 logging/LogStream.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/LogStream.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/LogStream.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/LogStream.cc.i
 .PHONY : logging/LogStream.cc.i
 
 logging/LogStream.s: logging/LogStream.cc.s
@@ -462,8 +552,10 @@ logging/LogStream.s: logging/LogStream.cc.s
 
 # target to generate assembly for a file
 logging/LogStream.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/LogStream.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/LogStream.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/LogStream.cc.s
 .PHONY : logging/LogStream.cc.s
 
 logging/Logging.o: logging/Logging.cc.o
@@ -472,8 +564,10 @@ logging/Logging.o: logging/Logging.cc.o
 
 # target to build an object file
 logging/Logging.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/Logging.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/Logging.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/Logging.cc.o
 .PHONY : logging/Logging.cc.o
 
 logging/Logging.i: logging/Logging.cc.i
@@ -482,8 +576,10 @@ logging/Logging.i: logging/Logging.cc.i
 
 # target to preprocess a source file
 logging/Logging.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/Logging.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/Logging.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/Logging.cc.i
 .PHONY : logging/Logging.cc.i
 
 logging/Logging.s: logging/Logging.cc.s
@@ -492,8 +588,10 @@ logging/Logging.s: logging/Logging.cc.s
 
 # target to generate assembly for a file
 logging/Logging.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/Logging.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/Logging.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/Logging.cc.s
 .PHONY : logging/Logging.cc.s
 
 logging/ProcessInfo.o: logging/ProcessInfo.cc.o
@@ -502,8 +600,10 @@ logging/ProcessInfo.o: logging/ProcessInfo.cc.o
 
 # target to build an object file
 logging/ProcessInfo.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/ProcessInfo.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/ProcessInfo.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/ProcessInfo.cc.o
 .PHONY : logging/ProcessInfo.cc.o
 
 logging/ProcessInfo.i: logging/ProcessInfo.cc.i
@@ -512,8 +612,10 @@ logging/ProcessInfo.i: logging/ProcessInfo.cc.i
 
 # target to preprocess a source file
 logging/ProcessInfo.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/ProcessInfo.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/ProcessInfo.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/ProcessInfo.cc.i
 .PHONY : logging/ProcessInfo.cc.i
 
 logging/ProcessInfo.s: logging/ProcessInfo.cc.s
@@ -522,8 +624,10 @@ logging/ProcessInfo.s: logging/ProcessInfo.cc.s
 
 # target to generate assembly for a file
 logging/ProcessInfo.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/logging/ProcessInfo.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/logging/ProcessInfo.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/logging/ProcessInfo.cc.s
 .PHONY : logging/ProcessInfo.cc.s
 
 mapping_table/mapping_table.o: mapping_table/mapping_table.cc.o
@@ -532,8 +636,10 @@ mapping_table/mapping_table.o: mapping_table/mapping_table.cc.o
 
 # target to build an object file
 mapping_table/mapping_table.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/mapping_table/mapping_table.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/mapping_table/mapping_table.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o
 .PHONY : mapping_table/mapping_table.cc.o
 
 mapping_table/mapping_table.i: mapping_table/mapping_table.cc.i
@@ -542,8 +648,10 @@ mapping_table/mapping_table.i: mapping_table/mapping_table.cc.i
 
 # target to preprocess a source file
 mapping_table/mapping_table.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/mapping_table/mapping_table.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/mapping_table/mapping_table.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.i
 .PHONY : mapping_table/mapping_table.cc.i
 
 mapping_table/mapping_table.s: mapping_table/mapping_table.cc.s
@@ -552,8 +660,10 @@ mapping_table/mapping_table.s: mapping_table/mapping_table.cc.s
 
 # target to generate assembly for a file
 mapping_table/mapping_table.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/mapping_table/mapping_table.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/mapping_table/mapping_table.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.s
 .PHONY : mapping_table/mapping_table.cc.s
 
 net/Acceptor.o: net/Acceptor.cc.o
@@ -562,8 +672,10 @@ net/Acceptor.o: net/Acceptor.cc.o
 
 # target to build an object file
 net/Acceptor.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Acceptor.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Acceptor.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Acceptor.cc.o
 .PHONY : net/Acceptor.cc.o
 
 net/Acceptor.i: net/Acceptor.cc.i
@@ -572,8 +684,10 @@ net/Acceptor.i: net/Acceptor.cc.i
 
 # target to preprocess a source file
 net/Acceptor.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Acceptor.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Acceptor.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Acceptor.cc.i
 .PHONY : net/Acceptor.cc.i
 
 net/Acceptor.s: net/Acceptor.cc.s
@@ -582,8 +696,10 @@ net/Acceptor.s: net/Acceptor.cc.s
 
 # target to generate assembly for a file
 net/Acceptor.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Acceptor.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Acceptor.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Acceptor.cc.s
 .PHONY : net/Acceptor.cc.s
 
 net/Buffer.o: net/Buffer.cc.o
@@ -592,8 +708,10 @@ net/Buffer.o: net/Buffer.cc.o
 
 # target to build an object file
 net/Buffer.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Buffer.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Buffer.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Buffer.cc.o
 .PHONY : net/Buffer.cc.o
 
 net/Buffer.i: net/Buffer.cc.i
@@ -602,8 +720,10 @@ net/Buffer.i: net/Buffer.cc.i
 
 # target to preprocess a source file
 net/Buffer.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Buffer.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Buffer.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Buffer.cc.i
 .PHONY : net/Buffer.cc.i
 
 net/Buffer.s: net/Buffer.cc.s
@@ -612,8 +732,10 @@ net/Buffer.s: net/Buffer.cc.s
 
 # target to generate assembly for a file
 net/Buffer.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Buffer.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Buffer.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Buffer.cc.s
 .PHONY : net/Buffer.cc.s
 
 net/Channel.o: net/Channel.cc.o
@@ -622,8 +744,10 @@ net/Channel.o: net/Channel.cc.o
 
 # target to build an object file
 net/Channel.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Channel.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Channel.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Channel.cc.o
 .PHONY : net/Channel.cc.o
 
 net/Channel.i: net/Channel.cc.i
@@ -632,8 +756,10 @@ net/Channel.i: net/Channel.cc.i
 
 # target to preprocess a source file
 net/Channel.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Channel.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Channel.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Channel.cc.i
 .PHONY : net/Channel.cc.i
 
 net/Channel.s: net/Channel.cc.s
@@ -642,8 +768,10 @@ net/Channel.s: net/Channel.cc.s
 
 # target to generate assembly for a file
 net/Channel.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Channel.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Channel.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Channel.cc.s
 .PHONY : net/Channel.cc.s
 
 net/Connector.o: net/Connector.cc.o
@@ -652,8 +780,10 @@ net/Connector.o: net/Connector.cc.o
 
 # target to build an object file
 net/Connector.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Connector.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Connector.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Connector.cc.o
 .PHONY : net/Connector.cc.o
 
 net/Connector.i: net/Connector.cc.i
@@ -662,8 +792,10 @@ net/Connector.i: net/Connector.cc.i
 
 # target to preprocess a source file
 net/Connector.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Connector.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Connector.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Connector.cc.i
 .PHONY : net/Connector.cc.i
 
 net/Connector.s: net/Connector.cc.s
@@ -672,8 +804,10 @@ net/Connector.s: net/Connector.cc.s
 
 # target to generate assembly for a file
 net/Connector.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Connector.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Connector.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Connector.cc.s
 .PHONY : net/Connector.cc.s
 
 net/DefaultPoller.o: net/DefaultPoller.cc.o
@@ -682,8 +816,10 @@ net/DefaultPoller.o: net/DefaultPoller.cc.o
 
 # target to build an object file
 net/DefaultPoller.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/DefaultPoller.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/DefaultPoller.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/DefaultPoller.cc.o
 .PHONY : net/DefaultPoller.cc.o
 
 net/DefaultPoller.i: net/DefaultPoller.cc.i
@@ -692,8 +828,10 @@ net/DefaultPoller.i: net/DefaultPoller.cc.i
 
 # target to preprocess a source file
 net/DefaultPoller.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/DefaultPoller.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/DefaultPoller.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/DefaultPoller.cc.i
 .PHONY : net/DefaultPoller.cc.i
 
 net/DefaultPoller.s: net/DefaultPoller.cc.s
@@ -702,8 +840,10 @@ net/DefaultPoller.s: net/DefaultPoller.cc.s
 
 # target to generate assembly for a file
 net/DefaultPoller.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/DefaultPoller.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/DefaultPoller.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/DefaultPoller.cc.s
 .PHONY : net/DefaultPoller.cc.s
 
 net/EPollPoller.o: net/EPollPoller.cc.o
@@ -712,8 +852,10 @@ net/EPollPoller.o: net/EPollPoller.cc.o
 
 # target to build an object file
 net/EPollPoller.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/EPollPoller.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/EPollPoller.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/EPollPoller.cc.o
 .PHONY : net/EPollPoller.cc.o
 
 net/EPollPoller.i: net/EPollPoller.cc.i
@@ -722,8 +864,10 @@ net/EPollPoller.i: net/EPollPoller.cc.i
 
 # target to preprocess a source file
 net/EPollPoller.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/EPollPoller.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/EPollPoller.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/EPollPoller.cc.i
 .PHONY : net/EPollPoller.cc.i
 
 net/EPollPoller.s: net/EPollPoller.cc.s
@@ -732,8 +876,10 @@ net/EPollPoller.s: net/EPollPoller.cc.s
 
 # target to generate assembly for a file
 net/EPollPoller.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/EPollPoller.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/EPollPoller.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/EPollPoller.cc.s
 .PHONY : net/EPollPoller.cc.s
 
 net/EventLoop.o: net/EventLoop.cc.o
@@ -742,8 +888,10 @@ net/EventLoop.o: net/EventLoop.cc.o
 
 # target to build an object file
 net/EventLoop.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/EventLoop.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/EventLoop.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/EventLoop.cc.o
 .PHONY : net/EventLoop.cc.o
 
 net/EventLoop.i: net/EventLoop.cc.i
@@ -752,8 +900,10 @@ net/EventLoop.i: net/EventLoop.cc.i
 
 # target to preprocess a source file
 net/EventLoop.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/EventLoop.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/EventLoop.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/EventLoop.cc.i
 .PHONY : net/EventLoop.cc.i
 
 net/EventLoop.s: net/EventLoop.cc.s
@@ -762,8 +912,10 @@ net/EventLoop.s: net/EventLoop.cc.s
 
 # target to generate assembly for a file
 net/EventLoop.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/EventLoop.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/EventLoop.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/EventLoop.cc.s
 .PHONY : net/EventLoop.cc.s
 
 net/EventLoopThread.o: net/EventLoopThread.cc.o
@@ -772,8 +924,10 @@ net/EventLoopThread.o: net/EventLoopThread.cc.o
 
 # target to build an object file
 net/EventLoopThread.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/EventLoopThread.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/EventLoopThread.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/EventLoopThread.cc.o
 .PHONY : net/EventLoopThread.cc.o
 
 net/EventLoopThread.i: net/EventLoopThread.cc.i
@@ -782,8 +936,10 @@ net/EventLoopThread.i: net/EventLoopThread.cc.i
 
 # target to preprocess a source file
 net/EventLoopThread.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/EventLoopThread.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/EventLoopThread.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/EventLoopThread.cc.i
 .PHONY : net/EventLoopThread.cc.i
 
 net/EventLoopThread.s: net/EventLoopThread.cc.s
@@ -792,8 +948,10 @@ net/EventLoopThread.s: net/EventLoopThread.cc.s
 
 # target to generate assembly for a file
 net/EventLoopThread.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/EventLoopThread.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/EventLoopThread.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/EventLoopThread.cc.s
 .PHONY : net/EventLoopThread.cc.s
 
 net/EventLoopThreadPool.o: net/EventLoopThreadPool.cc.o
@@ -802,8 +960,10 @@ net/EventLoopThreadPool.o: net/EventLoopThreadPool.cc.o
 
 # target to build an object file
 net/EventLoopThreadPool.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/EventLoopThreadPool.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/EventLoopThreadPool.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/EventLoopThreadPool.cc.o
 .PHONY : net/EventLoopThreadPool.cc.o
 
 net/EventLoopThreadPool.i: net/EventLoopThreadPool.cc.i
@@ -812,8 +972,10 @@ net/EventLoopThreadPool.i: net/EventLoopThreadPool.cc.i
 
 # target to preprocess a source file
 net/EventLoopThreadPool.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/EventLoopThreadPool.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/EventLoopThreadPool.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/EventLoopThreadPool.cc.i
 .PHONY : net/EventLoopThreadPool.cc.i
 
 net/EventLoopThreadPool.s: net/EventLoopThreadPool.cc.s
@@ -822,8 +984,10 @@ net/EventLoopThreadPool.s: net/EventLoopThreadPool.cc.s
 
 # target to generate assembly for a file
 net/EventLoopThreadPool.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/EventLoopThreadPool.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/EventLoopThreadPool.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/EventLoopThreadPool.cc.s
 .PHONY : net/EventLoopThreadPool.cc.s
 
 net/InetAddress.o: net/InetAddress.cc.o
@@ -832,8 +996,10 @@ net/InetAddress.o: net/InetAddress.cc.o
 
 # target to build an object file
 net/InetAddress.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/InetAddress.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/InetAddress.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/InetAddress.cc.o
 .PHONY : net/InetAddress.cc.o
 
 net/InetAddress.i: net/InetAddress.cc.i
@@ -842,8 +1008,10 @@ net/InetAddress.i: net/InetAddress.cc.i
 
 # target to preprocess a source file
 net/InetAddress.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/InetAddress.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/InetAddress.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/InetAddress.cc.i
 .PHONY : net/InetAddress.cc.i
 
 net/InetAddress.s: net/InetAddress.cc.s
@@ -852,8 +1020,10 @@ net/InetAddress.s: net/InetAddress.cc.s
 
 # target to generate assembly for a file
 net/InetAddress.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/InetAddress.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/InetAddress.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/InetAddress.cc.s
 .PHONY : net/InetAddress.cc.s
 
 net/PollPoller.o: net/PollPoller.cc.o
@@ -862,8 +1032,10 @@ net/PollPoller.o: net/PollPoller.cc.o
 
 # target to build an object file
 net/PollPoller.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/PollPoller.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/PollPoller.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/PollPoller.cc.o
 .PHONY : net/PollPoller.cc.o
 
 net/PollPoller.i: net/PollPoller.cc.i
@@ -872,8 +1044,10 @@ net/PollPoller.i: net/PollPoller.cc.i
 
 # target to preprocess a source file
 net/PollPoller.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/PollPoller.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/PollPoller.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/PollPoller.cc.i
 .PHONY : net/PollPoller.cc.i
 
 net/PollPoller.s: net/PollPoller.cc.s
@@ -882,8 +1056,10 @@ net/PollPoller.s: net/PollPoller.cc.s
 
 # target to generate assembly for a file
 net/PollPoller.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/PollPoller.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/PollPoller.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/PollPoller.cc.s
 .PHONY : net/PollPoller.cc.s
 
 net/Poller.o: net/Poller.cc.o
@@ -892,8 +1068,10 @@ net/Poller.o: net/Poller.cc.o
 
 # target to build an object file
 net/Poller.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Poller.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Poller.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Poller.cc.o
 .PHONY : net/Poller.cc.o
 
 net/Poller.i: net/Poller.cc.i
@@ -902,8 +1080,10 @@ net/Poller.i: net/Poller.cc.i
 
 # target to preprocess a source file
 net/Poller.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Poller.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Poller.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Poller.cc.i
 .PHONY : net/Poller.cc.i
 
 net/Poller.s: net/Poller.cc.s
@@ -912,8 +1092,10 @@ net/Poller.s: net/Poller.cc.s
 
 # target to generate assembly for a file
 net/Poller.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Poller.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Poller.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Poller.cc.s
 .PHONY : net/Poller.cc.s
 
 net/Socket.o: net/Socket.cc.o
@@ -922,8 +1104,10 @@ net/Socket.o: net/Socket.cc.o
 
 # target to build an object file
 net/Socket.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Socket.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Socket.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Socket.cc.o
 .PHONY : net/Socket.cc.o
 
 net/Socket.i: net/Socket.cc.i
@@ -932,8 +1116,10 @@ net/Socket.i: net/Socket.cc.i
 
 # target to preprocess a source file
 net/Socket.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Socket.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Socket.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Socket.cc.i
 .PHONY : net/Socket.cc.i
 
 net/Socket.s: net/Socket.cc.s
@@ -942,8 +1128,10 @@ net/Socket.s: net/Socket.cc.s
 
 # target to generate assembly for a file
 net/Socket.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Socket.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Socket.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Socket.cc.s
 .PHONY : net/Socket.cc.s
 
 net/SocketsOps.o: net/SocketsOps.cc.o
@@ -952,8 +1140,10 @@ net/SocketsOps.o: net/SocketsOps.cc.o
 
 # target to build an object file
 net/SocketsOps.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/SocketsOps.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/SocketsOps.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/SocketsOps.cc.o
 .PHONY : net/SocketsOps.cc.o
 
 net/SocketsOps.i: net/SocketsOps.cc.i
@@ -962,8 +1152,10 @@ net/SocketsOps.i: net/SocketsOps.cc.i
 
 # target to preprocess a source file
 net/SocketsOps.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/SocketsOps.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/SocketsOps.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/SocketsOps.cc.i
 .PHONY : net/SocketsOps.cc.i
 
 net/SocketsOps.s: net/SocketsOps.cc.s
@@ -972,8 +1164,10 @@ net/SocketsOps.s: net/SocketsOps.cc.s
 
 # target to generate assembly for a file
 net/SocketsOps.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/SocketsOps.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/SocketsOps.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/SocketsOps.cc.s
 .PHONY : net/SocketsOps.cc.s
 
 net/TcpClient.o: net/TcpClient.cc.o
@@ -982,8 +1176,10 @@ net/TcpClient.o: net/TcpClient.cc.o
 
 # target to build an object file
 net/TcpClient.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/TcpClient.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/TcpClient.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/TcpClient.cc.o
 .PHONY : net/TcpClient.cc.o
 
 net/TcpClient.i: net/TcpClient.cc.i
@@ -992,8 +1188,10 @@ net/TcpClient.i: net/TcpClient.cc.i
 
 # target to preprocess a source file
 net/TcpClient.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/TcpClient.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/TcpClient.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/TcpClient.cc.i
 .PHONY : net/TcpClient.cc.i
 
 net/TcpClient.s: net/TcpClient.cc.s
@@ -1002,8 +1200,10 @@ net/TcpClient.s: net/TcpClient.cc.s
 
 # target to generate assembly for a file
 net/TcpClient.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/TcpClient.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/TcpClient.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/TcpClient.cc.s
 .PHONY : net/TcpClient.cc.s
 
 net/TcpConnection.o: net/TcpConnection.cc.o
@@ -1012,8 +1212,10 @@ net/TcpConnection.o: net/TcpConnection.cc.o
 
 # target to build an object file
 net/TcpConnection.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/TcpConnection.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/TcpConnection.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/TcpConnection.cc.o
 .PHONY : net/TcpConnection.cc.o
 
 net/TcpConnection.i: net/TcpConnection.cc.i
@@ -1022,8 +1224,10 @@ net/TcpConnection.i: net/TcpConnection.cc.i
 
 # target to preprocess a source file
 net/TcpConnection.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/TcpConnection.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/TcpConnection.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/TcpConnection.cc.i
 .PHONY : net/TcpConnection.cc.i
 
 net/TcpConnection.s: net/TcpConnection.cc.s
@@ -1032,8 +1236,10 @@ net/TcpConnection.s: net/TcpConnection.cc.s
 
 # target to generate assembly for a file
 net/TcpConnection.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/TcpConnection.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/TcpConnection.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/TcpConnection.cc.s
 .PHONY : net/TcpConnection.cc.s
 
 net/TcpServer.o: net/TcpServer.cc.o
@@ -1042,8 +1248,10 @@ net/TcpServer.o: net/TcpServer.cc.o
 
 # target to build an object file
 net/TcpServer.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/TcpServer.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/TcpServer.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/TcpServer.cc.o
 .PHONY : net/TcpServer.cc.o
 
 net/TcpServer.i: net/TcpServer.cc.i
@@ -1052,8 +1260,10 @@ net/TcpServer.i: net/TcpServer.cc.i
 
 # target to preprocess a source file
 net/TcpServer.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/TcpServer.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/TcpServer.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/TcpServer.cc.i
 .PHONY : net/TcpServer.cc.i
 
 net/TcpServer.s: net/TcpServer.cc.s
@@ -1062,8 +1272,10 @@ net/TcpServer.s: net/TcpServer.cc.s
 
 # target to generate assembly for a file
 net/TcpServer.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/TcpServer.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/TcpServer.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/TcpServer.cc.s
 .PHONY : net/TcpServer.cc.s
 
 net/Timer.o: net/Timer.cc.o
@@ -1072,8 +1284,10 @@ net/Timer.o: net/Timer.cc.o
 
 # target to build an object file
 net/Timer.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Timer.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Timer.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Timer.cc.o
 .PHONY : net/Timer.cc.o
 
 net/Timer.i: net/Timer.cc.i
@@ -1082,8 +1296,10 @@ net/Timer.i: net/Timer.cc.i
 
 # target to preprocess a source file
 net/Timer.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Timer.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Timer.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Timer.cc.i
 .PHONY : net/Timer.cc.i
 
 net/Timer.s: net/Timer.cc.s
@@ -1092,8 +1308,10 @@ net/Timer.s: net/Timer.cc.s
 
 # target to generate assembly for a file
 net/Timer.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/Timer.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/Timer.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/Timer.cc.s
 .PHONY : net/Timer.cc.s
 
 net/TimerQueue.o: net/TimerQueue.cc.o
@@ -1102,8 +1320,10 @@ net/TimerQueue.o: net/TimerQueue.cc.o
 
 # target to build an object file
 net/TimerQueue.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/TimerQueue.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/TimerQueue.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/TimerQueue.cc.o
 .PHONY : net/TimerQueue.cc.o
 
 net/TimerQueue.i: net/TimerQueue.cc.i
@@ -1112,8 +1332,10 @@ net/TimerQueue.i: net/TimerQueue.cc.i
 
 # target to preprocess a source file
 net/TimerQueue.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/TimerQueue.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/TimerQueue.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/TimerQueue.cc.i
 .PHONY : net/TimerQueue.cc.i
 
 net/TimerQueue.s: net/TimerQueue.cc.s
@@ -1122,8 +1344,10 @@ net/TimerQueue.s: net/TimerQueue.cc.s
 
 # target to generate assembly for a file
 net/TimerQueue.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/net/TimerQueue.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/net/TimerQueue.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/net/TimerQueue.cc.s
 .PHONY : net/TimerQueue.cc.s
 
 pick_and_place/jaka_pick_and_place.o: pick_and_place/jaka_pick_and_place.cc.o
@@ -1132,8 +1356,10 @@ pick_and_place/jaka_pick_and_place.o: pick_and_place/jaka_pick_and_place.cc.o
 
 # target to build an object file
 pick_and_place/jaka_pick_and_place.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/pick_and_place/jaka_pick_and_place.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o
 .PHONY : pick_and_place/jaka_pick_and_place.cc.o
 
 pick_and_place/jaka_pick_and_place.i: pick_and_place/jaka_pick_and_place.cc.i
@@ -1142,8 +1368,10 @@ pick_and_place/jaka_pick_and_place.i: pick_and_place/jaka_pick_and_place.cc.i
 
 # target to preprocess a source file
 pick_and_place/jaka_pick_and_place.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/pick_and_place/jaka_pick_and_place.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.i
 .PHONY : pick_and_place/jaka_pick_and_place.cc.i
 
 pick_and_place/jaka_pick_and_place.s: pick_and_place/jaka_pick_and_place.cc.s
@@ -1152,39 +1380,47 @@ pick_and_place/jaka_pick_and_place.s: pick_and_place/jaka_pick_and_place.cc.s
 
 # target to generate assembly for a file
 pick_and_place/jaka_pick_and_place.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/pick_and_place/jaka_pick_and_place.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.s
 .PHONY : pick_and_place/jaka_pick_and_place.cc.s
 
-plc/my_plc.o: plc/my_plc.cc.o
+plc/jaka_plc.o: plc/jaka_plc.cc.o
 
-.PHONY : plc/my_plc.o
+.PHONY : plc/jaka_plc.o
 
 # target to build an object file
-plc/my_plc.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o
-	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o
-.PHONY : plc/my_plc.cc.o
+plc/jaka_plc.cc.o:
+	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/plc/jaka_plc.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o
+.PHONY : plc/jaka_plc.cc.o
 
-plc/my_plc.i: plc/my_plc.cc.i
+plc/jaka_plc.i: plc/jaka_plc.cc.i
 
-.PHONY : plc/my_plc.i
+.PHONY : plc/jaka_plc.i
 
 # target to preprocess a source file
-plc/my_plc.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.i
-	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.i
-.PHONY : plc/my_plc.cc.i
+plc/jaka_plc.cc.i:
+	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/plc/jaka_plc.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.i
+.PHONY : plc/jaka_plc.cc.i
 
-plc/my_plc.s: plc/my_plc.cc.s
+plc/jaka_plc.s: plc/jaka_plc.cc.s
 
-.PHONY : plc/my_plc.s
+.PHONY : plc/jaka_plc.s
 
 # target to generate assembly for a file
-plc/my_plc.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.s
-	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.s
-.PHONY : plc/my_plc.cc.s
+plc/jaka_plc.cc.s:
+	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/plc/jaka_plc.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.s
+.PHONY : plc/jaka_plc.cc.s
 
 robot_interface/jaka.o: robot_interface/jaka.cc.o
 
@@ -1300,8 +1536,10 @@ robotic_arm/robot_client_tcp.o: robotic_arm/robot_client_tcp.cc.o
 
 # target to build an object file
 robotic_arm/robot_client_tcp.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/robotic_arm/robot_client_tcp.cc.o
 .PHONY : robotic_arm/robot_client_tcp.cc.o
 
 robotic_arm/robot_client_tcp.i: robotic_arm/robot_client_tcp.cc.i
@@ -1310,8 +1548,10 @@ robotic_arm/robot_client_tcp.i: robotic_arm/robot_client_tcp.cc.i
 
 # target to preprocess a source file
 robotic_arm/robot_client_tcp.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/robotic_arm/robot_client_tcp.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/robotic_arm/robot_client_tcp.cc.i
 .PHONY : robotic_arm/robot_client_tcp.cc.i
 
 robotic_arm/robot_client_tcp.s: robotic_arm/robot_client_tcp.cc.s
@@ -1320,9 +1560,65 @@ robotic_arm/robot_client_tcp.s: robotic_arm/robot_client_tcp.cc.s
 
 # target to generate assembly for a file
 robotic_arm/robot_client_tcp.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/robotic_arm/robot_client_tcp.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/robotic_arm/robot_client_tcp.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/robotic_arm/robot_client_tcp.cc.s
 .PHONY : robotic_arm/robot_client_tcp.cc.s
+
+test/TcpClient_test.o: test/TcpClient_test.cc.o
+
+.PHONY : test/TcpClient_test.o
+
+# target to build an object file
+test/TcpClient_test.cc.o:
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/test/TcpClient_test.cc.o
+.PHONY : test/TcpClient_test.cc.o
+
+test/TcpClient_test.i: test/TcpClient_test.cc.i
+
+.PHONY : test/TcpClient_test.i
+
+# target to preprocess a source file
+test/TcpClient_test.cc.i:
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/test/TcpClient_test.cc.i
+.PHONY : test/TcpClient_test.cc.i
+
+test/TcpClient_test.s: test/TcpClient_test.cc.s
+
+.PHONY : test/TcpClient_test.s
+
+# target to generate assembly for a file
+test/TcpClient_test.cc.s:
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/test/TcpClient_test.cc.s
+.PHONY : test/TcpClient_test.cc.s
+
+test/TcpServer_test.o: test/TcpServer_test.cc.o
+
+.PHONY : test/TcpServer_test.o
+
+# target to build an object file
+test/TcpServer_test.cc.o:
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/test/TcpServer_test.cc.o
+.PHONY : test/TcpServer_test.cc.o
+
+test/TcpServer_test.i: test/TcpServer_test.cc.i
+
+.PHONY : test/TcpServer_test.i
+
+# target to preprocess a source file
+test/TcpServer_test.cc.i:
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/test/TcpServer_test.cc.i
+.PHONY : test/TcpServer_test.cc.i
+
+test/TcpServer_test.s: test/TcpServer_test.cc.s
+
+.PHONY : test/TcpServer_test.s
+
+# target to generate assembly for a file
+test/TcpServer_test.cc.s:
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/test/TcpServer_test.cc.s
+.PHONY : test/TcpServer_test.cc.s
 
 thread/Condition.o: thread/Condition.cc.o
 
@@ -1330,8 +1626,10 @@ thread/Condition.o: thread/Condition.cc.o
 
 # target to build an object file
 thread/Condition.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/Condition.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/Condition.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o
 .PHONY : thread/Condition.cc.o
 
 thread/Condition.i: thread/Condition.cc.i
@@ -1340,8 +1638,10 @@ thread/Condition.i: thread/Condition.cc.i
 
 # target to preprocess a source file
 thread/Condition.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/Condition.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/Condition.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/Condition.cc.i
 .PHONY : thread/Condition.cc.i
 
 thread/Condition.s: thread/Condition.cc.s
@@ -1350,8 +1650,10 @@ thread/Condition.s: thread/Condition.cc.s
 
 # target to generate assembly for a file
 thread/Condition.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/Condition.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/Condition.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/Condition.cc.s
 .PHONY : thread/Condition.cc.s
 
 thread/CountDownLatch.o: thread/CountDownLatch.cc.o
@@ -1360,8 +1662,10 @@ thread/CountDownLatch.o: thread/CountDownLatch.cc.o
 
 # target to build an object file
 thread/CountDownLatch.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/CountDownLatch.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/CountDownLatch.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o
 .PHONY : thread/CountDownLatch.cc.o
 
 thread/CountDownLatch.i: thread/CountDownLatch.cc.i
@@ -1370,8 +1674,10 @@ thread/CountDownLatch.i: thread/CountDownLatch.cc.i
 
 # target to preprocess a source file
 thread/CountDownLatch.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/CountDownLatch.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/CountDownLatch.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.i
 .PHONY : thread/CountDownLatch.cc.i
 
 thread/CountDownLatch.s: thread/CountDownLatch.cc.s
@@ -1380,8 +1686,10 @@ thread/CountDownLatch.s: thread/CountDownLatch.cc.s
 
 # target to generate assembly for a file
 thread/CountDownLatch.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/CountDownLatch.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/CountDownLatch.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.s
 .PHONY : thread/CountDownLatch.cc.s
 
 thread/CurrentThread.o: thread/CurrentThread.cc.o
@@ -1390,8 +1698,10 @@ thread/CurrentThread.o: thread/CurrentThread.cc.o
 
 # target to build an object file
 thread/CurrentThread.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/CurrentThread.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/CurrentThread.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.o
 .PHONY : thread/CurrentThread.cc.o
 
 thread/CurrentThread.i: thread/CurrentThread.cc.i
@@ -1400,8 +1710,10 @@ thread/CurrentThread.i: thread/CurrentThread.cc.i
 
 # target to preprocess a source file
 thread/CurrentThread.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/CurrentThread.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/CurrentThread.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.i
 .PHONY : thread/CurrentThread.cc.i
 
 thread/CurrentThread.s: thread/CurrentThread.cc.s
@@ -1410,8 +1722,10 @@ thread/CurrentThread.s: thread/CurrentThread.cc.s
 
 # target to generate assembly for a file
 thread/CurrentThread.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/CurrentThread.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/CurrentThread.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.s
 .PHONY : thread/CurrentThread.cc.s
 
 thread/Exception.o: thread/Exception.cc.o
@@ -1420,8 +1734,10 @@ thread/Exception.o: thread/Exception.cc.o
 
 # target to build an object file
 thread/Exception.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/Exception.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/Exception.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o
 .PHONY : thread/Exception.cc.o
 
 thread/Exception.i: thread/Exception.cc.i
@@ -1430,8 +1746,10 @@ thread/Exception.i: thread/Exception.cc.i
 
 # target to preprocess a source file
 thread/Exception.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/Exception.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/Exception.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/Exception.cc.i
 .PHONY : thread/Exception.cc.i
 
 thread/Exception.s: thread/Exception.cc.s
@@ -1440,8 +1758,10 @@ thread/Exception.s: thread/Exception.cc.s
 
 # target to generate assembly for a file
 thread/Exception.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/Exception.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/Exception.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/Exception.cc.s
 .PHONY : thread/Exception.cc.s
 
 thread/Thread.o: thread/Thread.cc.o
@@ -1450,8 +1770,10 @@ thread/Thread.o: thread/Thread.cc.o
 
 # target to build an object file
 thread/Thread.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/Thread.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/Thread.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/Thread.cc.o
 .PHONY : thread/Thread.cc.o
 
 thread/Thread.i: thread/Thread.cc.i
@@ -1460,8 +1782,10 @@ thread/Thread.i: thread/Thread.cc.i
 
 # target to preprocess a source file
 thread/Thread.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/Thread.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/Thread.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/Thread.cc.i
 .PHONY : thread/Thread.cc.i
 
 thread/Thread.s: thread/Thread.cc.s
@@ -1470,8 +1794,10 @@ thread/Thread.s: thread/Thread.cc.s
 
 # target to generate assembly for a file
 thread/Thread.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/Thread.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/Thread.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/Thread.cc.s
 .PHONY : thread/Thread.cc.s
 
 thread/ThreadPool.o: thread/ThreadPool.cc.o
@@ -1480,8 +1806,10 @@ thread/ThreadPool.o: thread/ThreadPool.cc.o
 
 # target to build an object file
 thread/ThreadPool.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/ThreadPool.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/ThreadPool.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/ThreadPool.cc.o
 .PHONY : thread/ThreadPool.cc.o
 
 thread/ThreadPool.i: thread/ThreadPool.cc.i
@@ -1490,8 +1818,10 @@ thread/ThreadPool.i: thread/ThreadPool.cc.i
 
 # target to preprocess a source file
 thread/ThreadPool.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/ThreadPool.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/ThreadPool.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/ThreadPool.cc.i
 .PHONY : thread/ThreadPool.cc.i
 
 thread/ThreadPool.s: thread/ThreadPool.cc.s
@@ -1500,8 +1830,10 @@ thread/ThreadPool.s: thread/ThreadPool.cc.s
 
 # target to generate assembly for a file
 thread/ThreadPool.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/thread/ThreadPool.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/thread/ThreadPool.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/thread/ThreadPool.cc.s
 .PHONY : thread/ThreadPool.cc.s
 
 vision_detection/vision_detection_position.o: vision_detection/vision_detection_position.cc.o
@@ -1510,8 +1842,10 @@ vision_detection/vision_detection_position.o: vision_detection/vision_detection_
 
 # target to build an object file
 vision_detection/vision_detection_position.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/vision_detection/vision_detection_position.cc.o
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.o
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/vision_detection/vision_detection_position.cc.o
 .PHONY : vision_detection/vision_detection_position.cc.o
 
 vision_detection/vision_detection_position.i: vision_detection/vision_detection_position.cc.i
@@ -1520,8 +1854,10 @@ vision_detection/vision_detection_position.i: vision_detection/vision_detection_
 
 # target to preprocess a source file
 vision_detection/vision_detection_position.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.i
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/vision_detection/vision_detection_position.cc.i
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.i
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.i
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/vision_detection/vision_detection_position.cc.i
 .PHONY : vision_detection/vision_detection_position.cc.i
 
 vision_detection/vision_detection_position.s: vision_detection/vision_detection_position.cc.s
@@ -1530,8 +1866,10 @@ vision_detection/vision_detection_position.s: vision_detection/vision_detection_
 
 # target to generate assembly for a file
 vision_detection/vision_detection_position.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.s
 	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/vision_detection/vision_detection_position.cc.s
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.s
+	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/vision_detection/vision_detection_position.cc.s
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/vision_detection/vision_detection_position.cc.s
 .PHONY : vision_detection/vision_detection_position.cc.s
 
 # Help Target
@@ -1542,8 +1880,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... PlatformRobotInterface"
 	@echo "... JakaRobotInterface"
+	@echo "... PlatformRobotInterface"
+	@echo "... TcpServer_test"
+	@echo "... TcpClient_test"
 	@echo "... agv/agv.o"
 	@echo "... agv/agv.i"
 	@echo "... agv/agv.s"
@@ -1646,9 +1986,9 @@ help:
 	@echo "... pick_and_place/jaka_pick_and_place.o"
 	@echo "... pick_and_place/jaka_pick_and_place.i"
 	@echo "... pick_and_place/jaka_pick_and_place.s"
-	@echo "... plc/my_plc.o"
-	@echo "... plc/my_plc.i"
-	@echo "... plc/my_plc.s"
+	@echo "... plc/jaka_plc.o"
+	@echo "... plc/jaka_plc.i"
+	@echo "... plc/jaka_plc.s"
 	@echo "... robot_interface/jaka.o"
 	@echo "... robot_interface/jaka.i"
 	@echo "... robot_interface/jaka.s"
@@ -1664,6 +2004,12 @@ help:
 	@echo "... robotic_arm/robot_client_tcp.o"
 	@echo "... robotic_arm/robot_client_tcp.i"
 	@echo "... robotic_arm/robot_client_tcp.s"
+	@echo "... test/TcpClient_test.o"
+	@echo "... test/TcpClient_test.i"
+	@echo "... test/TcpClient_test.s"
+	@echo "... test/TcpServer_test.o"
+	@echo "... test/TcpServer_test.i"
+	@echo "... test/TcpServer_test.s"
 	@echo "... thread/Condition.o"
 	@echo "... thread/Condition.i"
 	@echo "... thread/Condition.s"

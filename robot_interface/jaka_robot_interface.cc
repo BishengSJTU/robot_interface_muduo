@@ -6,8 +6,8 @@ taskCondition_(taskMessageMutex_),
 externalCondition_(externalInfoMutex_),
 connectionCondition_(connectionMutex_),
 config_(path + "/FixedConfig.YML"),
-jakaPickAndPlace_(path),
-agv_(path)
+jakaPickAndPlace_(path, ROBOT_INLINE),
+agv_(path, ROBOT_INLINE)
 {
     taskServerIP_ = config_.get<std::string>("MIDDLE_LAYER_IP");
     taskServerPort_ = config_.get<int>("MIDDLE_LAYER_PORT");
@@ -148,11 +148,14 @@ void RobotInterface::execTaskThread() {
                     stateMsgArray[7] = robotInfo_.currentPower;
                     stateMsgArray[8] = IS_DEPOSITING;
                 }
-                write(stateMsgArray);
+                string stateMsg(sizeof(stateMsgArray), '0');
+                for(int i = 0; i < stateMsg.size(); i++)
+                    stateMsg[i] = stateMsgArray[i];
+                write(stateMsg);
                 {
                     std::stringstream ss;
-                    for(int i = 0; i < sizeof(stateMsgArray); i++) {
-                        ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                    for(int i = 0; i < stateMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                     }
                     std::string log = ss.str();
                     LOG_INFO << "更新状态：机器人正在存档中" << log;
@@ -360,7 +363,9 @@ void RobotInterface::execTaskThread() {
                         for(int i = 0; i < 2; i++) {
                             singleFinishData[i + 20] = data[22 + 18 * archive + i];
                         }
-                        StringPiece singleFinishMsg(singleFinishData);
+                        string singleFinishMsg(sizeof(singleFinishData), '0');
+                        for(int i = 0; i < singleFinishMsg.size(); i++)
+                            singleFinishMsg[i] = singleFinishData[i];
                         write(singleFinishMsg);
                         {
                             std::stringstream ss;
@@ -418,11 +423,13 @@ void RobotInterface::execTaskThread() {
                     stateMsgArray[7] = robotInfo_.currentPower;
                     stateMsgArray[8] = IS_FREE;
                 }
-                write(stateMsgArray);
+                for(int i = 0; i < stateMsg.size(); i++)
+                    stateMsg[i] = stateMsgArray[i];
+                write(stateMsg);
                 {
                     std::stringstream ss;
-                    for(int i = 0; i < sizeof(stateMsgArray); i++) {
-                        ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                    for(int i = 0; i < stateMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                     }
                     std::string log = ss.str();
                     LOG_INFO << "更新状态：机器人空闲" << log;
@@ -438,11 +445,14 @@ void RobotInterface::execTaskThread() {
                     stateMsgArray[7] = robotInfo_.currentPower;
                     stateMsgArray[8] = IS_WITHDRAWING;
                 }
-                write(stateMsgArray);
+                string stateMsg(sizeof(stateMsgArray), '0');
+                for(int i = 0; i < stateMsg.size(); i++)
+                    stateMsg[i] = stateMsgArray[i];
+                write(stateMsg);
                 {
                     std::stringstream ss;
-                    for(int i = 0; i < sizeof(stateMsgArray); i++) {
-                        ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                    for(int i = 0; i < stateMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                     }
                     std::string log = ss.str();
                     LOG_INFO << "更新状态：机器人正在取档中" << log;
@@ -542,8 +552,9 @@ void RobotInterface::execTaskThread() {
                             for (int i = 0; i < 2; i++) {
                                 withdrawCheckData[19 + i] = data[22 + 18 * archive];
                             }
-
-                            StringPiece withdrawCheckMsg(withdrawCheckData);
+                            string withdrawCheckMsg(sizeof(withdrawCheckData), '0');
+                            for(int i = 0; i < withdrawCheckMsg.size(); i++)
+                                withdrawCheckMsg[i] = withdrawCheckData[i];
                             write(withdrawCheckMsg);
                             {
                                 std::stringstream ss;
@@ -600,8 +611,9 @@ void RobotInterface::execTaskThread() {
                             for (int i = 0; i < 2; i++) {
                                 withdrawCheckData[19 + i] = 0x00;
                             }
-
-                            StringPiece withdrawCheckMsg(withdrawCheckData);
+                            string withdrawCheckMsg(sizeof(withdrawCheckData), '0');
+                            for(int i = 0; i < withdrawCheckMsg.size(); i++)
+                                withdrawCheckMsg[i] = withdrawCheckData[i];
                             write(withdrawCheckMsg);
                             {
                                 std::stringstream ss;
@@ -643,7 +655,10 @@ void RobotInterface::execTaskThread() {
                         for(int i = 0; i < 2; i++) {
                             singleFinishData[i + 20] = data[22 + 18 * archive + i];
                         }
-                        StringPiece singleFinishMsg(singleFinishData);
+
+                        string singleFinishMsg(sizeof(singleFinishData), '0');
+                        for(int i = 0; i < singleFinishMsg.size(); i++)
+                            singleFinishMsg[i] = singleFinishData[i];
                         write(singleFinishMsg);
                         {
                             std::stringstream ss;
@@ -803,11 +818,13 @@ void RobotInterface::execTaskThread() {
                     stateMsgArray[7] = robotInfo_.currentPower;
                     stateMsgArray[8] = IS_FREE;
                 }
-                write(stateMsgArray);
+                for(int i = 0; i < stateMsg.size(); i++)
+                    stateMsg[i] = stateMsgArray[i];
+                write(stateMsg);
                 {
                     std::stringstream ss;
-                    for(int i = 0; i < sizeof(stateMsgArray); i++) {
-                        ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                    for(int i = 0; i < stateMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                     }
                     std::string log = ss.str();
                     LOG_INFO << "更新状态：机器人空闲" << log;
@@ -824,11 +841,14 @@ void RobotInterface::execTaskThread() {
                         stateMsgArray[7] = robotInfo_.currentPower;
                         stateMsgArray[8] = CHARGE_PREPARE;
                     }
-                    write(stateMsgArray);
+                    string stateMsg(sizeof(stateMsgArray), '0');
+                    for(int i = 0; i < stateMsg.size(); i++)
+                        stateMsg[i] = stateMsgArray[i];
+                    write(stateMsg);
                     {
                         std::stringstream ss;
-                        for(int i = 0; i < sizeof(stateMsgArray); i++) {
-                            ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                        for(int i = 0; i < stateMsg.size(); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                         }
                         std::string log = ss.str();
                         LOG_INFO << "更新状态：机器人准备充电中" << log;
@@ -854,13 +874,16 @@ void RobotInterface::execTaskThread() {
                         MutexLockGuard lock(robotInfoMutex_);
                         robotInfo_.currentState = IS_CHARGING;
                         stateMsgArray[7] = robotInfo_.currentPower;
-                        stateMsgArray[8] = 0x03;
+                        stateMsgArray[8] = IS_CHARGING;
                     }
-                    write(stateMsgArray);
+
+                    for(int i = 0; i < stateMsg.size(); i++)
+                        stateMsg[i] = stateMsgArray[i];
+                    write(stateMsg);
                     {
                         std::stringstream ss;
-                        for(int i = 0; i < sizeof(stateMsgArray); i++) {
-                            ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                        for(int i = 0; i < stateMsg.size(); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                         }
                         std::string log = ss.str();
                         LOG_INFO << "更新状态：机器人正在充电中" << log;
@@ -871,13 +894,17 @@ void RobotInterface::execTaskThread() {
                         MutexLockGuard lock(robotInfoMutex_);
                         robotInfo_.currentState = CHARGE_FINISHED;
                         stateMsgArray[7] = robotInfo_.currentPower;
-                        stateMsgArray[8] = 0x08;
+                        stateMsgArray[8] = CHARGE_FINISHED;
                     }
-                    write(stateMsgArray);
+
+                    string stateMsg(sizeof(stateMsgArray), '0');
+                    for(int i = 0; i < stateMsg.size(); i++)
+                        stateMsg[i] = stateMsgArray[i];
+                    write(stateMsg);
                     {
                         std::stringstream ss;
-                        for(int i = 0; i < sizeof(stateMsgArray); i++) {
-                            ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                        for(int i = 0; i < stateMsg.size(); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                         }
                         std::string log = ss.str();
                         LOG_INFO << "更新状态：机器人充电完成" << log;
@@ -905,11 +932,14 @@ void RobotInterface::execTaskThread() {
                         stateMsgArray[7] = robotInfo_.currentPower;
                         stateMsgArray[8] = 0x00;
                     }
-                    write(stateMsgArray);
+
+                    for(int i = 0; i < stateMsg.size(); i++)
+                        stateMsg[i] = stateMsgArray[i];
+                    write(stateMsg);
                     {
                         std::stringstream ss;
-                        for(int i = 0; i < sizeof(stateMsgArray); i++) {
-                            ss << std::hex << (unsigned int)(unsigned char)stateMsgArray[i] << ",";
+                        for(int i = 0; i < stateMsg.size(); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                         }
                         std::string log = ss.str();
                         LOG_INFO << "更新状态：机器人空闲中" << log;
@@ -947,7 +977,10 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             for(int i = 0; i < sizeof(responseData); i++) {
                 responseData[i] = data[i];
             }
-            StringPiece responseMsg(responseData);
+
+            string responseMsg(sizeof(responseData), '0');
+            for(int i = 0; i < responseMsg.size(); i++)
+                responseMsg[i] = responseData[i];
             write(responseMsg);
             {
                 std::stringstream ss;
@@ -967,7 +1000,10 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             }
             responseData[6] = 0x01;
             responseData[7] = 0xAA;
-            StringPiece responseMsg(responseData);
+
+            string responseMsg(sizeof(responseData), '0');
+            for(int i = 0; i < responseMsg.size(); i++)
+                responseMsg[i] = responseData[i];
             write(responseMsg);
             {
                 std::stringstream ss;
@@ -993,7 +1029,10 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             }
             responseData[6] = 0x01;
             responseData[7] = 0xAA;
-            StringPiece responseMsg(responseData);
+
+            string responseMsg(sizeof(responseData), '0');
+            for(int i = 0; i < responseMsg.size(); i++)
+                responseMsg[i] = responseData[i];
             write(responseMsg);
             {
                 std::stringstream ss;
@@ -1019,7 +1058,10 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             }
             responseData[6] = 0x01;
             responseData[7] = 0xAA;
-            StringPiece responseMsg(responseData);
+
+            string responseMsg(sizeof(responseData), '0');
+            for(int i = 0; i < responseMsg.size(); i++)
+                responseMsg[i] = responseData[i];
             write(responseMsg);
             {
                 std::stringstream ss;
@@ -1046,7 +1088,10 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             }
             responseData1[6] = 0x01;
             responseData1[7] = 0xAA;
-            StringPiece responseMsg1(responseData1);
+
+            string responseMsg1(sizeof(responseData1), '0');
+            for(int i = 0; i < responseMsg1.size(); i++)
+                responseMsg1[i] = responseData1[i];
             write(responseMsg1);
             {
                 std::stringstream ss;
@@ -1066,7 +1111,10 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     responseData2[7 + 15 * archive] = 0x01;
                 }
             }
-            StringPiece responseMsg2(responseData2);
+
+            string responseMsg2(sizeof(responseData2), '0');
+            for(int i = 0; i < responseMsg2.size(); i++)
+                responseMsg2[i] = responseData2[i];
             write(responseMsg2);
             {
                 std::stringstream ss;
@@ -1088,7 +1136,10 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             }
             responseData1[6] = 0x01;
             responseData1[7] = 0xAA;
-            StringPiece responseMsg1(responseData1);
+
+            string responseMsg1(sizeof(responseData1), '0');
+            for(int i = 0; i < responseMsg1.size(); i++)
+                responseMsg1[i] = responseData1[i];
             write(responseMsg1);
             {
                 std::stringstream ss;
@@ -1109,7 +1160,10 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                 responseData2[7] = robotInfo_.currentState;
                 responseData2[8] = robotInfo_.currentPower;
             }
-            StringPiece responseMsg2(responseData2);
+
+            string responseMsg2(sizeof(responseData2), '0');
+            for(int i = 0; i < responseMsg2.size(); i++)
+                responseMsg2[i] = responseData2[i];
             write(responseMsg2);
             {
                 std::stringstream ss;
@@ -1151,7 +1205,10 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             }
             responseData[6] = 0x01;
             responseData[7] = 0xAA;
-            StringPiece responseMsg(responseData);
+
+            string responseMsg(sizeof(responseData), '0');
+            for(int i = 0; i < responseMsg.size(); i++)
+                responseMsg[i] = responseData[i];
             write(responseMsg);
             {
                 std::stringstream ss;
@@ -1187,12 +1244,15 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             }
             responseData1[6] = 0x01;
             responseData1[7] = 0xAA;
-            StringPiece responseMsg1(responseData1);
+
+            string responseMsg1(sizeof(responseData1), '0');
+            for(int i = 0; i < responseMsg1.size(); i++)
+                responseMsg1[i] = responseData1[i];
             write(responseMsg1);
             {
                 std::stringstream ss;
-                for (int i = 0; i < responseMsg1.size(); i++) {
-                    ss << std::hex << (unsigned int) (unsigned char) responseMsg1[i] << ",";
+                for(int i = 0; i < responseMsg1.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg1[i] << ",";
                 }
                 std::string log = ss.str();
                 LOG_INFO << "发送消息：收到取消操作任务" << log;
@@ -1204,12 +1264,15 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             }
             responseData2[6] = 0x01;
             responseData2[7] = 0x01;
-            StringPiece responseMsg2(responseData2);
+
+            string responseMsg2(sizeof(responseData2), '0');
+            for(int i = 0; i < responseMsg2.size(); i++)
+                responseMsg2[i] = responseData2[i];
             write(responseMsg2);
             {
                 std::stringstream ss;
-                for (int i = 0; i < responseMsg2.size(); i++) {
-                    ss << std::hex << (unsigned int) (unsigned char) responseMsg2[i] << ",";
+                for(int i = 0; i < responseMsg2.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg2[i] << ",";
                 }
                 std::string log = ss.str();
                 LOG_INFO << "完成任务：取消操作" << log;
@@ -1224,12 +1287,15 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             }
             responseData[6] = 0x01;
             responseData[7] = 0xAA;
-            StringPiece responseMsg(responseData);
+
+            string responseMsg(sizeof(responseData), '0');
+            for(int i = 0; i < responseMsg.size(); i++)
+                responseMsg[i] = responseData[i];
             write(responseMsg);
             {
                 std::stringstream ss;
-                for (int i = 0; i < responseMsg.size(); i++) {
-                    ss << std::hex << (unsigned int) (unsigned char) responseMsg[i] << ",";
+                for(int i = 0; i < responseMsg.size(); i++) {
+                    ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
                 LOG_INFO << "发送消息：收到档案柜状态" << log;
@@ -1258,7 +1324,10 @@ void RobotInterface::write(const StringPiece& message)
 }
 
 void RobotInterface::onConnection(const TcpConnectionPtr& conn) {
-    u_char connectMsg[8] = {0xA1, 0x00, 0x00, 0x00, 0x11, 0x00, 0x01 , 0xAA};
+    u_char connectData[8] = {0xA1, 0x00, 0x00, 0x00, 0x11, 0x00, 0x01 , 0xAA};
+    string connectMsg(sizeof(connectData), '0');
+    for(int i = 0; i < connectMsg.size(); i++)
+        connectMsg[i] = connectData[i];
 
     LOG_INFO << conn->localAddress().toIpPort() << " -> "
              << conn->peerAddress().toIpPort() << " is "
@@ -1276,12 +1345,11 @@ void RobotInterface::onConnection(const TcpConnectionPtr& conn) {
     }
 
     if(conn->connected()) {
-        StringPiece message(connectMsg);
-        write(message);
+        write(connectMsg);
         {
             std::stringstream ss;
-            for(int i = 0; i < message.size(); i++) {
-                ss << std::hex << (unsigned int)(unsigned char)message[i] << ",";
+            for(int i = 0; i < connectMsg.size(); i++) {
+                ss << std::hex << (unsigned int)(unsigned char)connectMsg[i] << ",";
             }
             std::string log = ss.str();
             LOG_INFO << "发送状态：连接" << log;
@@ -1331,6 +1399,10 @@ void RobotInterface::initialize()
 void RobotInterface::inquireRobotStateThread() {
 
     while (1) {
+        if(!ROBOT_INLINE) {
+            sleep(5);
+            continue;
+        }
         {
             MutexLockGuard lock(taskMessageMutex_);
             while (connection_ == nullptr) {

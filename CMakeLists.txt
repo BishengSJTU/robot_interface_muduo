@@ -114,15 +114,15 @@ target_link_libraries(PlatformRobotInterface pthread ${OpenCV_LIBS} libhv.so zba
 #        ${ALL_SOURCES})
 #target_link_libraries(Logging_test pthread)
 
-#add_executable(TcpServer_test
-#        test/TcpServer_test.cc
-#        ${ALL_SOURCES})
-#target_link_libraries(TcpServer_test pthread)
+add_executable(TcpServer_test
+        test/TcpServer_test.cc
+        ${ALL_SOURCES})
+target_link_libraries(TcpServer_test pthread ${OpenCV_LIBS} libhv.so zbar pthread boost_system libapriltag.so.3)
 #
-#add_executable(TcpClient_test
-#        test/TcpClient_test.cc
-#        ${ALL_SOURCES})
-#target_link_libraries(TcpClient_test pthread)
+add_executable(TcpClient_test
+        test/TcpClient_test.cc
+        ${ALL_SOURCES})
+target_link_libraries(TcpClient_test pthread ${OpenCV_LIBS} libhv.so zbar pthread boost_system libapriltag.so.3)
 
 #add_executable(Buffer_test
 #        test/Buffer_test.cc

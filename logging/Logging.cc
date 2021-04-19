@@ -132,40 +132,46 @@ Logger::Impl::Impl(LogLevel level, int savedErrno, const SourceFile& file, int l
 
 void Logger::Impl::formatTime()
 {
-  int microSecondsSinceEpoch = time_.microSecondsSinceEpoch();
-  time_t seconds = static_cast<time_t>(microSecondsSinceEpoch / Timestamp::kMicroSecondsPerSecond  + 8 * 60 * 60);
-  int microseconds = static_cast<int>(microSecondsSinceEpoch % Timestamp::kMicroSecondsPerSecond);
-  if (seconds != t_lastSecond)
-  {
-    t_lastSecond = seconds;
-    struct tm tm_time;
-    if (g_logTimeZone.valid())
-    {
-      tm_time = g_logTimeZone.toLocalTime(seconds);
-    }
-    else
-    {
-      ::gmtime_r(&seconds, &tm_time); // FIXME TimeZone::fromUtcTime
-    }
+    char timebuf[32];
+    struct tm* tm;
+    time_t* now;
+    *now = time(NULL);
+    tm = localtime(now);
+    strftime(timebuf, sizeof timebuf, "%Y%m%d-%X  ", tm);
 
-    int len = snprintf(t_time, sizeof(t_time), "%4d%02d%02d %02d:%02d:%02d",
-        tm_time.tm_year + 1900, tm_time.tm_mon + 1, tm_time.tm_mday,
-        tm_time.tm_hour, tm_time.tm_min, tm_time.tm_sec);
-    assert(len == 17); (void)len;
-  }
-
-  if (g_logTimeZone.valid())
-  {
-    Fmt us(".%06d ", microseconds);
-    assert(us.length() == 8);
-    stream_ << T(t_time, 17) << T(us.data(), 8);
-  }
-  else
-  {
-    Fmt us(".%06dZ ", microseconds);
-    assert(us.length() == 9);
-    stream_ << T(t_time, 17) << T(us.data(), 9);
-  }
+//  int microSecondsSinceEpoch = time_.microSecondsSinceEpoch();
+//  time_t seconds = static_cast<time_t>(microSecondsSinceEpoch / Timestamp::kMicroSecondsPerSecond  + 8 * 60 * 60);
+//  int microseconds = static_cast<int>(microSecondsSinceEpoch % Timestamp::kMicroSecondsPerSecond);
+//  if (seconds != t_lastSecond)
+//  {
+//    t_lastSecond = seconds;
+//    struct tm tm_time;
+//    if (g_logTimeZone.valid())
+//    {
+//      tm_time = g_logTimeZone.toLocalTime(seconds);
+//    }
+//    else
+//    {
+//      ::gmtime_r(&seconds, &tm_time); // FIXME TimeZone::fromUtcTime
+//    }
+//
+//    int len = snprintf(t_time, sizeof(t_time), "%4d%02d%02d %02d:%02d:%02d",
+//        tm_time.tm_year + 1900, tm_time.tm_mon + 1, tm_time.tm_mday,
+//        tm_time.tm_hour, tm_time.tm_min, tm_time.tm_sec);
+//    assert(len == 17); (void)len;
+//  }
+//
+//  if (g_logTimeZone.valid())
+//  {
+//    Fmt us(".%06d ", microseconds);
+//    stream_ << T(t_time, 17) << T(us.data(), us.length());
+//  }
+//  else
+//  {
+//    Fmt us(".%06dZ ", microseconds);
+//    stream_ << T(t_time, 17) << T(us.data(), us.length());
+//  }
+    stream_ << timebuf;
 }
 
 void Logger::Impl::finish()

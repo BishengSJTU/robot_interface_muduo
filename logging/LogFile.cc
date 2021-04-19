@@ -114,14 +114,16 @@ string LogFile::getLogFileName(const string& basename, time_t* now)
   filename = basename;
 
   char timebuf[32];
-  struct tm tm;
+  struct tm* tm;
   *now = time(NULL);
-  Timestamp time(Timestamp::now());
-  int microSecondsSinceEpoch = time.microSecondsSinceEpoch();
-  time_t seconds = static_cast<time_t>(microSecondsSinceEpoch / Timestamp::kMicroSecondsPerSecond  + 8 * 60 * 60);
 
-  gmtime_r(&seconds, &tm); // FIXME: localtime_r ?
-  strftime(timebuf, sizeof timebuf, ".%Y%m%d-%H%M%S.", &tm);
+//  Timestamp time(Timestamp::now());
+//  int microSecondsSinceEpoch = time.microSecondsSinceEpoch();
+//  time_t seconds = static_cast<time_t>(microSecondsSinceEpoch / Timestamp::kMicroSecondsPerSecond  + 8 * 60 * 60);
+//  gmtime_r(&seconds, &tm); // FIXME: localtime_r ?
+
+  tm = localtime(now);
+  strftime(timebuf, sizeof timebuf, ".%Y%m%d-%H%M%S.", tm);
   filename += timebuf;
 
   filename += ProcessInfo::hostname();

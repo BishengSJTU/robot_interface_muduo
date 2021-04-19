@@ -1,4 +1,0 @@
-/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/JakaRobotInterface.dir
-/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/PlatformRobotInterface.dir

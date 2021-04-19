@@ -1,7 +1,9 @@
 #include "robot_client_tcp.h"
 
-RobotClient::RobotClient(std::string address, int port)
+RobotClient::RobotClient(std::string address, int port, bool isInline)
 {
+    if(!isInline)
+        return;
     InitializeRobot(address, port);
 }
 

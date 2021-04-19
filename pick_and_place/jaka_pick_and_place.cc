@@ -1,13 +1,15 @@
 #include "jaka_pick_and_place.h"
 
 
-JAKAPickAndPlace::JAKAPickAndPlace(const std::string &config_file_path):
+JAKAPickAndPlace::JAKAPickAndPlace(const std::string &config_file_path, bool isInline):
 fixed_config_(config_file_path + "/FixedConfig.YML"),
 flexible_config_(config_file_path + "/FlexibleConfig.YML"),
 vision_detection_(fixed_config_),
-robot_client_(fixed_config_.get<std::string>("JAKA_ROBOT_IP"), fixed_config_.get<int>("JAKA_ROBOT_PORT")),
-plc_(fixed_config_.get<std::string>("PLC_IP"), fixed_config_.get<int>("PLC_PORT"))
+robot_client_(fixed_config_.get<std::string>("JAKA_ROBOT_IP"), fixed_config_.get<int>("JAKA_ROBOT_PORT"), isInline),
+plc_(fixed_config_.get<std::string>("PLC_IP"), fixed_config_.get<int>("PLC_PORT"), isInline)
 {
+    if(!isInline)
+        return;
     adjust_joint_speed = fixed_config_.get<float>("adjust_joint_speed");
     fixed_joint_speed = fixed_config_.get<float>("fixed_joint_speed");
     fixed_linear_speed = fixed_config_.get<float>("fixed_linear_speed");
@@ -216,16 +218,24 @@ bool JAKAPickAndPlace::JAKAPlaceCab(int cab_id, int position,  bool& mechanical_
         robot_client_.Jog(JAKAY, fixed_linear_speed, -92);
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        if(plc_.ControlPLC(MoveF) == false) {
-            robot_client_.Jog(JAKAY, fixed_linear_speed, 15);
-            // 不可修复的故障
+        if(plc_.ControlPLC(MoveMF) == false) {
+            mechanical_error = true;
+            LOG_ERROR << "PlaceCab不可修复的机械故障，原地保护性停止！";
+            return false;
+        } else {
+            robot_client_.Jog(JAKAY, fixed_linear_speed, 5);
             if(plc_.ControlPLC(MoveF) == false) {
-                mechanical_error = true;
-                LOG_ERROR << "PlaceCab不可修复的机械故障，原地保护性停止！";
-                return false;
-            } else {
-                robot_client_.Jog(JAKAY, fixed_linear_speed, -15);
+                robot_client_.Jog(JAKAY, fixed_linear_speed, 10);
+                // 不可修复的故障
+                if (plc_.ControlPLC(MoveF) == false) {
+                    mechanical_error = true;
+                    LOG_ERROR << "PlaceCab不可修复的机械故障，原地保护性停止！";
+                    return false;
+                } else {
+                    robot_client_.Jog(JAKAY, fixed_linear_speed, -10);
+                }
             }
+            robot_client_.Jog(JAKAY, fixed_linear_speed, -5);
         }
 
     }
@@ -426,18 +436,24 @@ bool JAKAPickAndPlace::JAKAPlaceWindow(int position, bool &mechanical_error) {
         robot_client_.Jog(JAKAY, fixed_linear_speed, -86);
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-        if(plc_.ControlPLC(MoveF) == false) {
-            robot_client_.Jog(JAKAY, fixed_linear_speed, 15);
-            // 不可修复的故障
-            if(!plc_.ControlPLC(MoveF)) {
-                if(!plc_.ControlPLC(MoveF)) {
+        if(plc_.ControlPLC(MoveMF) == false) {
+            mechanical_error = true;
+            LOG_ERROR << "PlaceCab不可修复的机械故障，原地保护性停止！";
+            return false;
+        } else {
+            robot_client_.Jog(JAKAY, fixed_linear_speed, 5);
+            if(plc_.ControlPLC(MoveF) == false) {
+                robot_client_.Jog(JAKAY, fixed_linear_speed, 10);
+                // 不可修复的故障
+                if (plc_.ControlPLC(MoveF) == false) {
                     mechanical_error = true;
-                    LOG_ERROR << "PlaceWindow不可修复的机械故障，原地保护性停止！";
+                    LOG_ERROR << "PlaceCab不可修复的机械故障，原地保护性停止！";
                     return false;
+                } else {
+                    robot_client_.Jog(JAKAY, fixed_linear_speed, -10);
                 }
-            } else {
-                robot_client_.Jog(JAKAY, fixed_linear_speed, -15);
             }
+            robot_client_.Jog(JAKAY, fixed_linear_speed, -5);
         }
     }
     robot_client_.Jog(JAKAZ, fixed_linear_speed, 5);
@@ -537,19 +553,24 @@ bool JAKAPickAndPlace::JAKAPlaceStorage(int position, bool &mechanical_error) {
     robot_client_.Jog(JAKAZ, fixed_linear_speed, -12);
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-    if(!plc_.ControlPLC(MoveF)) {
-        robot_client_.Jog(JAKAY, fixed_linear_speed, 15);
-        // 不可修复的故障
-        if(!plc_.ControlPLC(MoveF)) {
-            if(!plc_.ControlPLC(MoveF)) {
+    if(plc_.ControlPLC(MoveMF) == false) {
+        mechanical_error = true;
+        LOG_ERROR << "PlaceCab不可修复的机械故障，原地保护性停止！";
+        return false;
+    } else {
+        robot_client_.Jog(JAKAY, fixed_linear_speed, 5);
+        if(plc_.ControlPLC(MoveF) == false) {
+            robot_client_.Jog(JAKAY, fixed_linear_speed, 10);
+            // 不可修复的故障
+            if (plc_.ControlPLC(MoveF) == false) {
                 mechanical_error = true;
-                LOG_ERROR << "PlaceWindow不可修复的机械故障，原地保护性停止！";
+                LOG_ERROR << "PlaceCab不可修复的机械故障，原地保护性停止！";
                 return false;
-
+            } else {
+                robot_client_.Jog(JAKAY, fixed_linear_speed, -10);
             }
-        } else {
-            robot_client_.Jog(JAKAY, fixed_linear_speed, -15);
         }
+        robot_client_.Jog(JAKAY, fixed_linear_speed, -5);
     }
 
     robot_client_.Jog(JAKAZ, fixed_linear_speed, 20);

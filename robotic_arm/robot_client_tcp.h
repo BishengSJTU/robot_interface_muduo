@@ -34,7 +34,7 @@
 
 class RobotClient {
 public:
-    RobotClient(std::string address, int port = 10001);
+    RobotClient(std::string address, int port = 10001, bool isInline = true);
 
     ~RobotClient();
 

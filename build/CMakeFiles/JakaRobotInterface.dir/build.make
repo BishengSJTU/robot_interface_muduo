@@ -921,28 +921,28 @@ CMakeFiles/JakaRobotInterface.dir/thread/Exception.cc.o.provides: CMakeFiles/Jak
 CMakeFiles/JakaRobotInterface.dir/thread/Exception.cc.o.provides.build: CMakeFiles/JakaRobotInterface.dir/thread/Exception.cc.o
 
 
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: CMakeFiles/JakaRobotInterface.dir/flags.make
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: ../plc/my_plc.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o -c /home/bisheng/robot_interface_muduo/plc/my_plc.cc
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: CMakeFiles/JakaRobotInterface.dir/flags.make
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: ../plc/jaka_plc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o -c /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc
 
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/plc/my_plc.cc > CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.i
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc > CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.i
 
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/plc/my_plc.cc -o CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.s
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc -o CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.s
 
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o.requires:
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o.requires:
 
-.PHONY : CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o.requires
+.PHONY : CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o.requires
 
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o.provides: CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o.requires
-	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o.provides.build
-.PHONY : CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o.provides
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o.provides: CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o.requires
+	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o.provides.build
+.PHONY : CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o.provides
 
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o.provides.build: CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o.provides.build: CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o
 
 
 CMakeFiles/JakaRobotInterface.dir/config/config.cc.o: CMakeFiles/JakaRobotInterface.dir/flags.make
@@ -1175,7 +1175,7 @@ JakaRobotInterface_OBJECTS = \
 "CMakeFiles/JakaRobotInterface.dir/thread/CountDownLatch.cc.o" \
 "CMakeFiles/JakaRobotInterface.dir/thread/Condition.cc.o" \
 "CMakeFiles/JakaRobotInterface.dir/thread/Exception.cc.o" \
-"CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o" \
+"CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o" \
 "CMakeFiles/JakaRobotInterface.dir/config/config.cc.o" \
 "CMakeFiles/JakaRobotInterface.dir/vision_detection/vision_detection_position.cc.o" \
 "CMakeFiles/JakaRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o" \
@@ -1224,7 +1224,7 @@ JakaRobotInterface: CMakeFiles/JakaRobotInterface.dir/thread/ThreadPool.cc.o
 JakaRobotInterface: CMakeFiles/JakaRobotInterface.dir/thread/CountDownLatch.cc.o
 JakaRobotInterface: CMakeFiles/JakaRobotInterface.dir/thread/Condition.cc.o
 JakaRobotInterface: CMakeFiles/JakaRobotInterface.dir/thread/Exception.cc.o
-JakaRobotInterface: CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o
+JakaRobotInterface: CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o
 JakaRobotInterface: CMakeFiles/JakaRobotInterface.dir/config/config.cc.o
 JakaRobotInterface: CMakeFiles/JakaRobotInterface.dir/vision_detection/vision_detection_position.cc.o
 JakaRobotInterface: CMakeFiles/JakaRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o
@@ -1324,7 +1324,7 @@ CMakeFiles/JakaRobotInterface.dir/requires: CMakeFiles/JakaRobotInterface.dir/th
 CMakeFiles/JakaRobotInterface.dir/requires: CMakeFiles/JakaRobotInterface.dir/thread/CountDownLatch.cc.o.requires
 CMakeFiles/JakaRobotInterface.dir/requires: CMakeFiles/JakaRobotInterface.dir/thread/Condition.cc.o.requires
 CMakeFiles/JakaRobotInterface.dir/requires: CMakeFiles/JakaRobotInterface.dir/thread/Exception.cc.o.requires
-CMakeFiles/JakaRobotInterface.dir/requires: CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o.requires
+CMakeFiles/JakaRobotInterface.dir/requires: CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o.requires
 CMakeFiles/JakaRobotInterface.dir/requires: CMakeFiles/JakaRobotInterface.dir/config/config.cc.o.requires
 CMakeFiles/JakaRobotInterface.dir/requires: CMakeFiles/JakaRobotInterface.dir/vision_detection/vision_detection_position.cc.o.requires
 CMakeFiles/JakaRobotInterface.dir/requires: CMakeFiles/JakaRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.requires

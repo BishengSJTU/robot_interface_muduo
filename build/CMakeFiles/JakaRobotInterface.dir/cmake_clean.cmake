@@ -35,7 +35,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/JakaRobotInterface.dir/thread/CountDownLatch.cc.o"
   "CMakeFiles/JakaRobotInterface.dir/thread/Condition.cc.o"
   "CMakeFiles/JakaRobotInterface.dir/thread/Exception.cc.o"
-  "CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o"
+  "CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o"
   "CMakeFiles/JakaRobotInterface.dir/config/config.cc.o"
   "CMakeFiles/JakaRobotInterface.dir/vision_detection/vision_detection_position.cc.o"
   "CMakeFiles/JakaRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o"

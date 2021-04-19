@@ -179,6 +179,33 @@ bool VisionDetection::GetPose(const int &index, cv::Mat &pose, int times) {
     return result;
 }
 
+bool VisionDetection::GetPose(const int &index, std::vector<double> &target_pose, int times) {
+    cv::Mat pose;
+    bool result = GetPose(index, pose, times);
+    if(result == false)
+        return false;
+    assert(pose.rows== 4 && pose.cols == 4);
+    double x = pose.at<double>(0, 3);
+    double z = pose.at<double>(2, 3);
+
+    Eigen::Matrix3d rotation_matrix;
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            rotation_matrix(i, j) = pose.at<double>(i, j);
+        }
+    }
+
+    Eigen::Vector3d rpy = rotation_matrix.eulerAngles(0, 1, 2);
+
+    double theta = rpy[1];
+
+    target_pose.push_back(-x);
+    target_pose.push_back(-z);
+    target_pose.push_back(theta);
+
+    return true;
+}
+
 // Apriltag检测
 void VisionDetection::Apriltag_Detection(cv::Mat &input_image, std::vector<std::vector<cv::Point2f>> &corners, std::vector<int> &ids) {
     //apriltag 检测

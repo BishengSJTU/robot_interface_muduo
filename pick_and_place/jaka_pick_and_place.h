@@ -10,7 +10,7 @@
 #include "robot_client_tcp.h"
 #include "pose_transform.h"
 #include "kinematics.h"
-#include "my_plc.h"
+#include "jaka_plc.h"
 #include "vision_detection_position.h"
 #include "Logging.h"
 #include "LogFile.h"
@@ -61,14 +61,14 @@ private:
     RobotClient robot_client_;
 
     // PLC动作
-    MyPLC plc_;
+    JAKAPLC plc_;
 
     // 二维码
     VisionDetection vision_detection_;
 
 
 public:
-    JAKAPickAndPlace(const std::string &config_file_path);
+    JAKAPickAndPlace(const std::string &config_file_path, bool isInline = true);
     ~JAKAPickAndPlace();
     //　从档案盒中取
     bool JAKAPickCab(int cab_id, int position, bool& mechanical_error);

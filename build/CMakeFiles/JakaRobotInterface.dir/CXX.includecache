@@ -257,8 +257,8 @@ pose_transform.h
 ../pick_and_place/pose_transform.h
 kinematics.h
 ../pick_and_place/kinematics.h
-my_plc.h
-../pick_and_place/my_plc.h
+jaka_plc.h
+../pick_and_place/jaka_plc.h
 vision_detection_position.h
 ../pick_and_place/vision_detection_position.h
 Logging.h
@@ -276,7 +276,7 @@ eigen3/Eigen/QR
 sstream
 -
 
-../plc/my_plc.h
+../plc/jaka_plc.h
 string
 -
 vector
@@ -1355,8 +1355,8 @@ pose_transform.h
 /home/bisheng/robot_interface_muduo/pick_and_place/pose_transform.h
 kinematics.h
 /home/bisheng/robot_interface_muduo/pick_and_place/kinematics.h
-my_plc.h
-/home/bisheng/robot_interface_muduo/pick_and_place/my_plc.h
+jaka_plc.h
+/home/bisheng/robot_interface_muduo/pick_and_place/jaka_plc.h
 vision_detection_position.h
 /home/bisheng/robot_interface_muduo/pick_and_place/vision_detection_position.h
 Logging.h
@@ -1374,11 +1374,11 @@ eigen3/Eigen/QR
 sstream
 -
 
-/home/bisheng/robot_interface_muduo/plc/my_plc.cc
-my_plc.h
-/home/bisheng/robot_interface_muduo/plc/my_plc.h
+/home/bisheng/robot_interface_muduo/plc/jaka_plc.cc
+jaka_plc.h
+/home/bisheng/robot_interface_muduo/plc/jaka_plc.h
 
-/home/bisheng/robot_interface_muduo/plc/my_plc.h
+/home/bisheng/robot_interface_muduo/plc/jaka_plc.h
 string
 -
 vector

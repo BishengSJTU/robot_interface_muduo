@@ -1,10 +1,12 @@
 #include "agv.h"
 
 namespace muyi {
-    AGV::AGV(const std::string config_file_path) :
+    AGV::AGV(const std::string config_file_path, bool isInline) :
     fixed_config_(config_file_path + "/FixedConfig.YML"),
     flexible_config_(config_file_path + "/FlexibleConfig.YML")
     {
+        if(!isInline)
+            return;
         agv_ip_ = fixed_config_.get<std::string>("AGV_IP");
         port_ = fixed_config_.get<int>("AGV_PORT");
         url_pre_ = "ws://" + agv_ip_ + ":" + std::to_string(port_);
@@ -177,10 +179,12 @@ namespace muyi {
 }
 
 namespace jiazhi {
-    AGV::AGV(const std::string config_file_path) :
+    AGV::AGV(const std::string config_file_path, bool isInline) :
     fixed_config_(config_file_path + "/FixedConfig.YML"),
     flexible_config_(config_file_path + "/FlexibleConfig.YML")
     {
+        if(!isInline)
+            return;
         agv_ip_ = fixed_config_.get<std::string>("AGV_IP");
         port_ = fixed_config_.get<int>("AGV_PORT");
         url_pre_ = "http://" + agv_ip_ + ":" + std::to_string(port_);
@@ -255,7 +259,6 @@ namespace jiazhi {
                 try {
                     auto js = Json::parse(result);
                     int run_state = js[0]["run_state"];
-                    std::cout << "run_state:" << run_state << std::endl;
                     // 就绪中、充电中
                     if (run_state == AGV_READY) {
                         return;

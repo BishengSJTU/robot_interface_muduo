@@ -849,7 +849,7 @@ CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: .
 CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../logging/Logging.h
 CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../logging/StringPiece.h
 CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../mapping_table/mapping_table.h
-CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../plc/my_plc.h
+CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../plc/jaka_plc.h
 CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../robotic_arm/robot_client_tcp.h
 CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../thread/CurrentThread.h
 CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../thread/Mutex.h
@@ -1010,18 +1010,18 @@ CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: /
 CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: /usr/local/include/apriltag/tagStandard52h13.h
 CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: /usr/local/include/hv/json.hpp
 
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: ../datetime/Timestamp.h
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: ../datetime/Types.h
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: ../datetime/copyable.h
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: ../datetime/noncopyable.h
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: ../logging/LogFile.h
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: ../logging/LogStream.h
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: ../logging/Logging.h
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: ../logging/StringPiece.h
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: ../thread/CurrentThread.h
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: ../thread/Mutex.h
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: ../plc/my_plc.cc
-CMakeFiles/PlatformRobotInterface.dir/plc/my_plc.cc.o: ../plc/my_plc.h
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../datetime/Timestamp.h
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../datetime/Types.h
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../datetime/copyable.h
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../datetime/noncopyable.h
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../logging/LogFile.h
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../logging/LogStream.h
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../logging/Logging.h
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../logging/StringPiece.h
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../thread/CurrentThread.h
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../thread/Mutex.h
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../plc/jaka_plc.cc
+CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../plc/jaka_plc.h
 
 CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o: ../datetime/Timestamp.h
 CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o: ../datetime/Types.h

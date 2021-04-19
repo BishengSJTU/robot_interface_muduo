@@ -849,7 +849,7 @@ CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../lo
 CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../logging/Logging.h
 CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../logging/StringPiece.h
 CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../mapping_table/mapping_table.h
-CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../plc/my_plc.h
+CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../plc/jaka_plc.h
 CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../robotic_arm/robot_client_tcp.h
 CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../thread/CurrentThread.h
 CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../thread/Mutex.h
@@ -1010,18 +1010,18 @@ CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: /usr/
 CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: /usr/local/include/apriltag/tagStandard52h13.h
 CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: /usr/local/include/hv/json.hpp
 
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: ../datetime/Timestamp.h
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: ../datetime/Types.h
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: ../datetime/copyable.h
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: ../datetime/noncopyable.h
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: ../logging/LogFile.h
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: ../logging/LogStream.h
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: ../logging/Logging.h
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: ../logging/StringPiece.h
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: ../thread/CurrentThread.h
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: ../thread/Mutex.h
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: ../plc/my_plc.cc
-CMakeFiles/JakaRobotInterface.dir/plc/my_plc.cc.o: ../plc/my_plc.h
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: ../datetime/Timestamp.h
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: ../datetime/Types.h
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: ../datetime/copyable.h
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: ../datetime/noncopyable.h
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: ../logging/LogFile.h
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: ../logging/LogStream.h
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: ../logging/Logging.h
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: ../logging/StringPiece.h
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: ../thread/CurrentThread.h
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: ../thread/Mutex.h
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: ../plc/jaka_plc.cc
+CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o: ../plc/jaka_plc.h
 
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o: ../agv/agv.h
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o: ../agv_wait_action_finish/action_finish.h
@@ -1046,7 +1046,7 @@ CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o: ../net/TcpClient.h
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o: ../net/TcpConnection.h
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o: ../net/TimerId.h
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o: ../pick_and_place/jaka_pick_and_place.h
-CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o: ../plc/my_plc.h
+CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o: ../plc/jaka_plc.h
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o: ../robotic_arm/robot_client_tcp.h
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o: ../thread/Atomic.h
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o: ../thread/Condition.h
@@ -1246,7 +1246,7 @@ CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o: ../
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o: ../net/TcpConnection.h
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o: ../net/TimerId.h
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o: ../pick_and_place/jaka_pick_and_place.h
-CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o: ../plc/my_plc.h
+CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o: ../plc/jaka_plc.h
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o: ../robotic_arm/robot_client_tcp.h
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o: ../thread/Atomic.h
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o: ../thread/Condition.h

@@ -24,15 +24,15 @@ int main(int argc, char* argv[]) {
     RobotInterface robotInterface(path);
     muduo::Thread loopThread(std::bind(&RobotInterface::eventLoopThread, &robotInterface));
     muduo::Thread executeThread(std::bind(&RobotInterface::execTaskThread, &robotInterface));
-    muduo::Thread inquireThread(std::bind(&RobotInterface::inquireRobotStateThread, &robotInterface));
+//    muduo::Thread inquireThread(std::bind(&RobotInterface::inquireRobotStateThread, &robotInterface));
 
     loopThread.start();
     executeThread.start();
-    inquireThread.start();
+//    inquireThread.start();
 
     loopThread.join();
     executeThread.join();
-    inquireThread.join();
+//    inquireThread.join();
 
     return 0;
 }

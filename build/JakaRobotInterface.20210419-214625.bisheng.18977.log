@@ -1,0 +1,66 @@
+20210419-21:46:25  18978 INFO  TcpClient::TcpClient[TcpClient] - connector 0x7FF268000CF0 - TcpClient.cc:69
+20210419-21:46:25  18978 INFO  TcpClient::connect[TcpClient] - connecting to 192.168.101.4:20001 - TcpClient.cc:107
+20210419-21:46:25  18978 INFO  192.168.101.4:34774 -> 192.168.101.4:20001 is UP - jaka_robot_interface.cc:1332
+20210419-21:46:25  18978 INFO  发送状态：连接a1,0,0,0,11,0,1,aa, - jaka_robot_interface.cc:1355
+20210419-21:46:43  18978 INFO  192.168.101.4:34774 -> 192.168.101.4:20001 is DOWN - jaka_robot_interface.cc:1332
+20210419-21:46:43  18978 INFO  TcpClient::connect[TcpClient] - Reconnecting to 192.168.101.4:20001 - TcpClient.cc:176
+20210419-21:46:43  18978 WARN  fd = 9 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:46:43  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:46:43  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 500 milliseconds.  - Connector.cc:215
+20210419-21:46:43  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:46:43  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:46:43  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 1000 milliseconds.  - Connector.cc:215
+20210419-21:46:44  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:46:44  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:46:44  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 2000 milliseconds.  - Connector.cc:215
+20210419-21:46:46  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:46:46  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:46:46  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 4000 milliseconds.  - Connector.cc:215
+20210419-21:46:50  18978 INFO  192.168.101.4:34788 -> 192.168.101.4:20001 is UP - jaka_robot_interface.cc:1332
+20210419-21:46:50  18978 INFO  发送状态：连接a1,0,0,0,11,0,1,aa, - jaka_robot_interface.cc:1355
+20210419-21:47:05  18978 INFO  192.168.101.4:34788 -> 192.168.101.4:20001 is DOWN - jaka_robot_interface.cc:1332
+20210419-21:47:05  18978 INFO  TcpClient::connect[TcpClient] - Reconnecting to 192.168.101.4:20001 - TcpClient.cc:176
+20210419-21:47:05  18978 WARN  fd = 9 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:47:05  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:47:05  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 500 milliseconds.  - Connector.cc:215
+20210419-21:47:06  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:47:06  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:47:06  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 1000 milliseconds.  - Connector.cc:215
+20210419-21:47:07  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:47:07  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:47:07  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 2000 milliseconds.  - Connector.cc:215
+20210419-21:47:09  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:47:09  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:47:09  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 4000 milliseconds.  - Connector.cc:215
+20210419-21:47:13  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:47:13  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:47:13  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 8000 milliseconds.  - Connector.cc:215
+20210419-21:47:21  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:47:21  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:47:21  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 16000 milliseconds.  - Connector.cc:215
+20210419-21:47:37  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:47:37  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:47:37  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 30000 milliseconds.  - Connector.cc:215
+20210419-21:48:07  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:48:07  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:48:07  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 30000 milliseconds.  - Connector.cc:215
+20210419-21:48:37  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:48:37  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:48:37  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 30000 milliseconds.  - Connector.cc:215
+20210419-21:49:07  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:49:07  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:49:07  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 30000 milliseconds.  - Connector.cc:215
+20210419-21:49:37  18978 INFO  192.168.101.4:34822 -> 192.168.101.4:20001 is UP - jaka_robot_interface.cc:1332
+20210419-21:49:37  18978 INFO  发送状态：连接a1,0,0,0,11,0,1,aa, - jaka_robot_interface.cc:1355
+20210419-21:49:37  18978 INFO  接收消息：a1,0,0,0,11,0,1,aa, - jaka_robot_interface.cc:967
+20210419-21:50:58  18978 INFO  192.168.101.4:34822 -> 192.168.101.4:20001 is DOWN - jaka_robot_interface.cc:1332
+20210419-21:50:58  18978 INFO  TcpClient::connect[TcpClient] - Reconnecting to 192.168.101.4:20001 - TcpClient.cc:176
+20210419-21:50:58  18978 WARN  fd = 9 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:50:58  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:50:58  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 500 milliseconds.  - Connector.cc:215
+20210419-21:50:59  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:50:59  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:50:59  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 1000 milliseconds.  - Connector.cc:215
+20210419-21:51:00  18978 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210419-21:51:00  18978 ERROR Connector::handleError state=1 - Connector.cc:199
+20210419-21:51:00  18978 INFO  Connector::retry - Retry connecting to 192.168.101.4:20001 in 2000 milliseconds.  - Connector.cc:215

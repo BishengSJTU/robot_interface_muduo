@@ -897,28 +897,28 @@ CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o.provides: CMakeFiles/TcpClie
 CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o.provides.build: CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o
 
 
-CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
-CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o: ../plc/my_plc.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o -c /home/bisheng/robot_interface_muduo/plc/my_plc.cc
+CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
+CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o: ../plc/jaka_plc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o -c /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc
 
-CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/plc/my_plc.cc > CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.i
+CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc > CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.i
 
-CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/plc/my_plc.cc -o CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.s
+CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc -o CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.s
 
-CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o.requires:
+CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o.requires:
 
-.PHONY : CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o.requires
+.PHONY : CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o.requires
 
-CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o.provides: CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o.requires
-	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o.provides.build
-.PHONY : CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o.provides
+CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o.provides: CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o.requires
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o.provides.build
+.PHONY : CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o.provides
 
-CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o.provides.build: CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o
+CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o.provides.build: CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o
 
 
 CMakeFiles/TcpClient_test.dir/config/config.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
@@ -993,6 +993,126 @@ CMakeFiles/TcpClient_test.dir/robotic_arm/robot_client_tcp.cc.o.provides: CMakeF
 CMakeFiles/TcpClient_test.dir/robotic_arm/robot_client_tcp.cc.o.provides.build: CMakeFiles/TcpClient_test.dir/robotic_arm/robot_client_tcp.cc.o
 
 
+CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
+CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o: ../kinematics/kinematics.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o -c /home/bisheng/robot_interface_muduo/kinematics/kinematics.cc
+
+CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/kinematics/kinematics.cc > CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.i
+
+CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/kinematics/kinematics.cc -o CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.s
+
+CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o.requires:
+
+.PHONY : CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o.requires
+
+CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o.provides: CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o.requires
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o.provides.build
+.PHONY : CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o.provides
+
+CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o.provides.build: CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o
+
+
+CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
+CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o: ../pick_and_place/jaka_pick_and_place.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o -c /home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc
+
+CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc > CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.i
+
+CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc -o CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.s
+
+CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o.requires:
+
+.PHONY : CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o.requires
+
+CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o.provides: CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o.requires
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o.provides.build
+.PHONY : CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o.provides
+
+CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o.provides.build: CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o
+
+
+CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
+CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o: ../mapping_table/mapping_table.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o -c /home/bisheng/robot_interface_muduo/mapping_table/mapping_table.cc
+
+CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/mapping_table/mapping_table.cc > CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.i
+
+CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/mapping_table/mapping_table.cc -o CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.s
+
+CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o.requires:
+
+.PHONY : CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o.requires
+
+CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o.provides: CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o.requires
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o.provides.build
+.PHONY : CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o.provides
+
+CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o.provides.build: CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o
+
+
+CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
+CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o: ../agv_wait_action_finish/action_finish.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o -c /home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.cc
+
+CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.cc > CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.i
+
+CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.cc -o CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.s
+
+CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o.requires:
+
+.PHONY : CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o.requires
+
+CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o.provides: CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o.requires
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o.provides.build
+.PHONY : CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o.provides
+
+CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o.provides.build: CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o
+
+
+CMakeFiles/TcpClient_test.dir/agv/agv.cc.o: CMakeFiles/TcpClient_test.dir/flags.make
+CMakeFiles/TcpClient_test.dir/agv/agv.cc.o: ../agv/agv.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/TcpClient_test.dir/agv/agv.cc.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/TcpClient_test.dir/agv/agv.cc.o -c /home/bisheng/robot_interface_muduo/agv/agv.cc
+
+CMakeFiles/TcpClient_test.dir/agv/agv.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TcpClient_test.dir/agv/agv.cc.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/agv/agv.cc > CMakeFiles/TcpClient_test.dir/agv/agv.cc.i
+
+CMakeFiles/TcpClient_test.dir/agv/agv.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TcpClient_test.dir/agv/agv.cc.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/agv/agv.cc -o CMakeFiles/TcpClient_test.dir/agv/agv.cc.s
+
+CMakeFiles/TcpClient_test.dir/agv/agv.cc.o.requires:
+
+.PHONY : CMakeFiles/TcpClient_test.dir/agv/agv.cc.o.requires
+
+CMakeFiles/TcpClient_test.dir/agv/agv.cc.o.provides: CMakeFiles/TcpClient_test.dir/agv/agv.cc.o.requires
+	$(MAKE) -f CMakeFiles/TcpClient_test.dir/build.make CMakeFiles/TcpClient_test.dir/agv/agv.cc.o.provides.build
+.PHONY : CMakeFiles/TcpClient_test.dir/agv/agv.cc.o.provides
+
+CMakeFiles/TcpClient_test.dir/agv/agv.cc.o.provides.build: CMakeFiles/TcpClient_test.dir/agv/agv.cc.o
+
+
 # Object files for target TcpClient_test
 TcpClient_test_OBJECTS = \
 "CMakeFiles/TcpClient_test.dir/test/TcpClient_test.cc.o" \
@@ -1030,10 +1150,15 @@ TcpClient_test_OBJECTS = \
 "CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o" \
 "CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o" \
 "CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o" \
-"CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o" \
+"CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o" \
 "CMakeFiles/TcpClient_test.dir/config/config.cc.o" \
 "CMakeFiles/TcpClient_test.dir/vision_detection/vision_detection_position.cc.o" \
-"CMakeFiles/TcpClient_test.dir/robotic_arm/robot_client_tcp.cc.o"
+"CMakeFiles/TcpClient_test.dir/robotic_arm/robot_client_tcp.cc.o" \
+"CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o" \
+"CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o" \
+"CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o" \
+"CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o" \
+"CMakeFiles/TcpClient_test.dir/agv/agv.cc.o"
 
 # External object files for target TcpClient_test
 TcpClient_test_EXTERNAL_OBJECTS =
@@ -1073,13 +1198,63 @@ TcpClient_test: CMakeFiles/TcpClient_test.dir/thread/ThreadPool.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o
-TcpClient_test: CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o
+TcpClient_test: CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/config/config.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/vision_detection/vision_detection_position.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/robotic_arm/robot_client_tcp.cc.o
+TcpClient_test: CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o
+TcpClient_test: CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o
+TcpClient_test: CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o
+TcpClient_test: CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o
+TcpClient_test: CMakeFiles/TcpClient_test.dir/agv/agv.cc.o
 TcpClient_test: CMakeFiles/TcpClient_test.dir/build.make
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_stitching3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_superres3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_videostab3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_aruco3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_bgsegm3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_bioinspired3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ccalib3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_cvv3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_dpm3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_face3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_fuzzy3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_hdf3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_img_hash3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_line_descriptor3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_optflow3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_reg3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_rgbd3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_saliency3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_stereo3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_structured_light3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_surface_matching3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_tracking3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xfeatures2d3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ximgproc3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xobjdetect3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_xphoto3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_shape3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_photo3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_datasets3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_plot3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_text3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_dnn3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_ml3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_video3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_calib3d3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_features2d3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_highgui3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_videoio3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_viz3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_phase_unwrapping3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_flann3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_objdetect3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
+TcpClient_test: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
 TcpClient_test: CMakeFiles/TcpClient_test.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Linking CXX executable TcpClient_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Linking CXX executable TcpClient_test"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/TcpClient_test.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1122,10 +1297,15 @@ CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/thread/Thr
 CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o.requires
 CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o.requires
 CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o.requires
-CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/plc/my_plc.cc.o.requires
+CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o.requires
 CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/config/config.cc.o.requires
 CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/vision_detection/vision_detection_position.cc.o.requires
 CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/robotic_arm/robot_client_tcp.cc.o.requires
+CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o.requires
+CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o.requires
+CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o.requires
+CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o.requires
+CMakeFiles/TcpClient_test.dir/requires: CMakeFiles/TcpClient_test.dir/agv/agv.cc.o.requires
 
 .PHONY : CMakeFiles/TcpClient_test.dir/requires
 
