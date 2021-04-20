@@ -1,0 +1,21 @@
+20210420-08:53:44  22483 INFO  TcpClient::TcpClient[TcpClient] - connector 0x7F7308000CF0 - TcpClient.cc:69
+20210420-08:53:44  22483 INFO  TcpClient::connect[TcpClient] - connecting to 192.168.1.110:20001 - TcpClient.cc:107
+20210420-08:53:44  22483 INFO  192.168.1.110:37808 -> 192.168.1.110:20001 is UP - jaka_robot_interface.cc:1356
+20210420-08:53:44  22483 INFO  发送状态：连接a1,0,0,0,11,0,1,aa, - jaka_robot_interface.cc:1379
+20210420-08:53:54  22483 INFO  接收消息：a1,0,0,0,3,0,1,a1, - jaka_robot_interface.cc:991
+20210420-08:53:54  22483 INFO  发送消息：收到充电任务a1,0,0,0,3,0,1,aa, - jaka_robot_interface.cc:1096
+20210420-08:53:54  22484 INFO  忽略任务：机器人处于低电量状态，只能执行充电任务a1,0,0,0,3,0,1,a1, - jaka_robot_interface.cc:110
+20210420-08:55:32  22483 INFO  192.168.1.110:37808 -> 192.168.1.110:20001 is DOWN - jaka_robot_interface.cc:1356
+20210420-08:55:32  22483 INFO  TcpClient::connect[TcpClient] - Reconnecting to 192.168.1.110:20001 - TcpClient.cc:176
+20210420-08:55:32  22483 WARN  fd = 9 Channel::handle_event() POLLHUP - Channel.cc:91
+20210420-08:55:32  22483 ERROR Connector::handleError state=1 - Connector.cc:199
+20210420-08:55:32  22483 INFO  Connector::retry - Retry connecting to 192.168.1.110:20001 in 500 milliseconds.  - Connector.cc:215
+20210420-08:55:32  22483 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210420-08:55:32  22483 ERROR Connector::handleError state=1 - Connector.cc:199
+20210420-08:55:32  22483 INFO  Connector::retry - Retry connecting to 192.168.1.110:20001 in 1000 milliseconds.  - Connector.cc:215
+20210420-08:55:33  22483 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210420-08:55:33  22483 ERROR Connector::handleError state=1 - Connector.cc:199
+20210420-08:55:33  22483 INFO  Connector::retry - Retry connecting to 192.168.1.110:20001 in 2000 milliseconds.  - Connector.cc:215
+20210420-08:55:35  22483 WARN  fd = 8 Channel::handle_event() POLLHUP - Channel.cc:91
+20210420-08:55:35  22483 ERROR Connector::handleError state=1 - Connector.cc:199
+20210420-08:55:35  22483 INFO  Connector::retry - Retry connecting to 192.168.1.110:20001 in 4000 milliseconds.  - Connector.cc:215

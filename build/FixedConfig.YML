@@ -1,6 +1,6 @@
 %YAML:1.0
 #####################IP配置######################
-MIDDLE_LAYER_IP: "192.168.101.4"
+MIDDLE_LAYER_IP: "192.168.1.110"
 MIDDLE_LAYER_PORT: 20001
 MIDDLE_LAYER_HEART_BEAT: 20
 #机器人IP

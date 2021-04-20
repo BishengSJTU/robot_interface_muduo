@@ -1,0 +1,6 @@
+20210420-08:57:12  25459 INFO  TcpClient::TcpClient[TcpClient] - connector 0x7F682C000CF0 - TcpClient.cc:69
+20210420-08:57:12  25459 INFO  TcpClient::connect[TcpClient] - connecting to 192.168.1.110:20001 - TcpClient.cc:107
+20210420-08:57:12  25459 INFO  192.168.1.110:37826 -> 192.168.1.110:20001 is UP - jaka_robot_interface.cc:1356
+20210420-08:57:12  25459 INFO  发送状态：连接a1,0,0,0,11,0,1,aa, - jaka_robot_interface.cc:1379
+20210420-08:57:22  25459 INFO  接收消息：a1,0,0,0,3,0,1,a1, - jaka_robot_interface.cc:991
+20210420-08:57:22  25459 INFO  发送消息：收到充电任务a1,0,0,0,3,0,1,aa, - jaka_robot_interface.cc:1096
