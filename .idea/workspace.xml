@@ -13,172 +13,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea00259e-2efd-419c-bb95-908181337d76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/agv/agv.cc" beforeDir="false" afterPath="$PROJECT_DIR$/agv/agv.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/agv/agv.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/agv/agv.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Channel.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Channel.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Connector.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/net/Connector.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/agv/agv.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/agv_wait_action_finish/action_finish.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/config/config.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/datetime/Date.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/datetime/TimeZone.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/datetime/Timestamp.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/kinematics/kinematics.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/logging/AsyncLogging.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/logging/FileUtil.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/logging/LogFile.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/logging/LogStream.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/logging/Logging.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/logging/ProcessInfo.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/mapping_table/mapping_table.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/Acceptor.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/Buffer.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/Channel.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/Connector.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/DefaultPoller.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/EPollPoller.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/EventLoop.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/EventLoopThread.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/EventLoopThreadPool.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/InetAddress.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/PollPoller.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/Poller.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/Socket.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/SocketsOps.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/TcpClient.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/TcpConnection.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/TcpServer.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/Timer.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/net/TimerQueue.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/pick_and_place/jaka_pick_and_place.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/plc/jaka_plc.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/robotic_arm/robot_client_tcp.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/test/TcpClient_test.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/thread/Condition.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/thread/CountDownLatch.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/thread/CurrentThread.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/thread/Exception.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/thread/Thread.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/thread/ThreadPool.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpClient_test.dir/vision_detection/vision_detection_position.cc.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/agv/agv.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/agv/agv.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/net/Channel.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/net/Channel.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/net/Connector.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/net/Connector.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/pick_and_place/jaka_pick_and_place.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/pick_and_place/jaka_pick_and_place.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/plc/jaka_plc.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/plc/jaka_plc.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/test/TcpServer_test.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/TcpServer_test.dir/test/TcpServer_test.cc.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/FixedConfig.YML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/FlexibleConfig.YML" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface" beforeDir="false" afterPath="$PROJECT_DIR$/build/JakaRobotInterface" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-085344.bisheng.22481.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-085712.bisheng.25458.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-090324.bisheng.28934.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-090634.bisheng.31624.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-090805.bisheng.662.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-090902.bisheng.1531.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-091014.bisheng.2508.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-091135.bisheng.4149.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-091157.bisheng.4444.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-091238.bisheng.4919.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-091702.bisheng.7344.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-091800.bisheng.8396.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-091837.bisheng.9200.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-092106.bisheng.10737.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-092141.bisheng.11753.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-092453.bisheng.14156.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-095920.bisheng.5024.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface.20210420-100009.bisheng.5517.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/PlatformRobotInterface" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/TcpClient_test" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/TcpServer_test" beforeDir="false" afterPath="$PROJECT_DIR$/build/TcpServer_test" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/Channel.cc" beforeDir="false" afterPath="$PROJECT_DIR$/net/Channel.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/Connector.cc" beforeDir="false" afterPath="$PROJECT_DIR$/net/Connector.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/Connector.h" beforeDir="false" afterPath="$PROJECT_DIR$/net/Connector.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/net/EventLoop.cc" beforeDir="false" afterPath="$PROJECT_DIR$/net/EventLoop.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc" beforeDir="false" afterPath="$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plc/jaka_plc.cc" beforeDir="false" afterPath="$PROJECT_DIR$/plc/jaka_plc.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot_interface/jaka.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/jaka.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot_interface/jaka_robot_interface.h" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/jaka_robot_interface.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/robot_interface/platform_robot_interface.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/platform_robot_interface.cc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/TcpServer_test.cc" beforeDir="false" afterPath="$PROJECT_DIR$/test/TcpServer_test.cc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -229,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="1408" column="34" selection-start-line="1408" selection-start-column="34" selection-end-line="1408" selection-end-column="34" />
+            <state relative-caret-position="12762">
+              <caret line="709" column="24" selection-start-line="709" selection-start-column="24" selection-end-line="709" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -238,8 +73,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/TcpServer_test.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="90">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
               <folding>
                 <element signature="e#0#22#0" expanded="true" />
               </folding>
@@ -251,9 +86,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>onconne</find>
-      <find>initial</find>
-      <find>singleFinishMsgArray</find>
       <find>stateMsg</find>
       <find>WRITE</find>
       <find>onconnec</find>
@@ -266,7 +98,6 @@
       <find>data</find>
       <find>std::c</find>
       <find>Jiazhi 任务发送失败</find>
-      <find>JAKAStretch</find>
       <find>pickw</find>
       <find>stre</find>
       <find>pickca</find>
@@ -281,6 +112,10 @@
       <find>20</find>
       <find>withdrawCheckResultGiven</find>
       <find>onconnection</find>
+      <find>readyCab</find>
+      <find>singleArchiveFinishedReceived</find>
+      <find>jakaPickAndPlace_</find>
+      <find>JAKAStretch</find>
     </findStrings>
     <replaceStrings>
       <replace>int</replace>
@@ -515,12 +350,12 @@
       <workItem from="1618899094754" duration="1482000" />
       <workItem from="1618903485844" duration="2035000" />
       <workItem from="1618994989598" duration="14260000" />
-      <workItem from="1619024985832" duration="5097000" />
+      <workItem from="1619024985832" duration="8523000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="363920000" />
+    <option name="totallyTimeSpent" value="367346000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -922,16 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/TcpServer_test.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#22#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robot_interface/jaka.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -939,10 +764,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test/TcpServer_test.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#22#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="1408" column="34" selection-start-line="1408" selection-start-column="34" selection-end-line="1408" selection-end-column="34" />
+        <state relative-caret-position="12762">
+          <caret line="709" column="24" selection-start-line="709" selection-start-column="24" selection-end-line="709" selection-end-column="24" />
         </state>
       </provider>
     </entry>

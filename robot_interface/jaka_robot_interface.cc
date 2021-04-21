@@ -108,7 +108,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "对方<---：忽略任务，机器人处于低电量状态，只能执行充电任务" << log;
+                        LOG_INFO << "对方<---：忽略停止充电任务，机器人处于低电量状态，只能执行充电任务" << log;
                     }
                     continue;
                 }
@@ -125,7 +125,7 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "对方<---：忽略任务，机器人处于低电量状态，只能执行充电任务" << log;
+                    LOG_INFO << "对方<---：忽略存取档任务，机器人处于低电量状态，只能执行充电任务" << log;
                 }
                 continue;
             } else if (taskType == DEPOSIT_PREPARE_TASK) {
@@ -138,7 +138,7 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "对方<---：忽略任务，机器人处于低电量状态，只能执行充电任务" << log;
+                    LOG_INFO << "对方<---：忽略存档准备任务，机器人处于低电量状态，只能执行充电任务" << log;
                 }
                 continue;
             }
@@ -274,7 +274,7 @@ void RobotInterface::execTaskThread() {
                                 continue;
                             }
                         }
-                        LOG_INFO  << "从窗口到暂存架中成功一次";
+                        LOG_INFO  << "从窗口到暂存架中结束一次";
                     }
                 }
                 if(windowMechanicalError || storageMechanicalError || !isConnecting)
@@ -321,7 +321,7 @@ void RobotInterface::execTaskThread() {
                                 while (externalInfo_.readyCab.find(cabId) == externalInfo_.readyCab.end()) {
                                     externalCondition_.wait();
                                 }
-                                externalInfo_.readyCab.erase(cabId);
+//                                externalInfo_.readyCab.erase(cabId);
                             }
                             if(ROBOT_INLINE) {
                                 jakaPickAndPlace_.JAKAPickStorage(archive + 1, storageMechanicalError);
@@ -402,6 +402,13 @@ void RobotInterface::execTaskThread() {
                             std::string log = ss.str();
                             LOG_INFO << "对方<---：发送状态，单本完成" << log;
                         }
+                        if(windowResults[archive]) {
+                            if (ROBOT_INLINE) {
+                                jakaPickAndPlace_.JAKAContraction();
+                                agv_.ActionFinishedAgvGo();
+                            }
+                        }
+
                         //　等待单本完成被接收
                         {
                             MutexLockGuard lock(externalInfoMutex_);
@@ -410,8 +417,8 @@ void RobotInterface::execTaskThread() {
                             }
                             externalInfo_.singleArchiveFinishedReceived = false;
                         }
+                        LOG_INFO  << "从暂存架到档案柜中结束一次";
                     }
-                    LOG_INFO  << "从暂存架到档案柜中成功一次";
                 }
 
                 if(cabMechanicalError || storageMechanicalError || !isConnecting)
@@ -531,7 +538,7 @@ void RobotInterface::execTaskThread() {
                             while (externalInfo_.readyCab.find(cabId) == externalInfo_.readyCab.end()) {
                                 externalCondition_.wait();
                             }
-                            externalInfo_.readyCab.erase(cabId);
+//                            externalInfo_.readyCab.erase(cabId);
                         }
 
                         if(ROBOT_INLINE) {
@@ -695,6 +702,12 @@ void RobotInterface::execTaskThread() {
                             std::string log = ss.str();
                             LOG_INFO << "对方<---：发送状态，单本完成" << log;
                         }
+
+                        if(ROBOT_INLINE) {
+                            jakaPickAndPlace_.JAKAContraction();
+                            agv_.ActionFinishedAgvGo();
+                        }
+
                         //　等待单本完成被接收
                         {
                             MutexLockGuard lock(externalInfoMutex_);
@@ -702,11 +715,6 @@ void RobotInterface::execTaskThread() {
                                 externalCondition_.wait();
                             }
                             externalInfo_.singleArchiveFinishedReceived = false;
-                        }
-
-                        if(ROBOT_INLINE) {
-                            jakaPickAndPlace_.JAKAContraction();
-                            agv_.ActionFinishedAgvGo();
                         }
                     }
                 }
