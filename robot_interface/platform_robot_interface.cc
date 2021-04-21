@@ -42,8 +42,12 @@ void RobotInterface::execTaskThread() {
         }
         string response(task.data(), task.size());
 
-        const char *data = task.data();
-        char taskType = data[4];
+        const char *data_ptr = task.data();
+        std::vector<u_char> data;
+        for(int i = 0; i < task.size(); i++)
+            data.push_back((unsigned int)(unsigned char)data_ptr[i]);
+
+        u_char taskType = data[4];
         u_char state;
         u_char power;
         {
@@ -95,34 +99,50 @@ void RobotInterface::execTaskThread() {
         // 电量小于最低电量，只接收充电任务
         if (power <= powerLowerLimit) {
             if (taskType == CHARGE_TASK) {
-                {
-                    MutexLockGuard lock(robotInfoMutex_);
-                    robotInfo_.currentState = CHARGE_PREPARE;
-                }
-                ; ///执行充电指令
-                {
-                    MutexLockGuard lock(robotInfoMutex_);
-                    robotInfo_.currentState = IS_CHARGING;
+                if(data[7] == 0xA0) {
+                    response[7] = 0x00;
+                    StringPiece responseMsg(response);
+                    write(responseMsg);
+                    {
+                        std::stringstream ss;
+                        for(int i = 0; i < responseMsg.size(); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                        }
+                        std::string log = ss.str();
+                        LOG_INFO << "忽略任务：机器人处于低电量状态，只能执行充电任务" << log;
+                    }
+                    continue;
                 }
             } else if (taskType == DEPOSIT_TASK || taskType == WITHDRAW_TASK) {
                 for (int i = 0; i < turntablePositionTotalNum; i++) {
                     if (data[7 + 2 * i] == 0xA1)
                         response[7 + 2 * i] = 0x00;
                 }
+                StringPiece responseMsg(response);
+                write(responseMsg);
+                {
+                    std::stringstream ss;
+                    for(int i = 0; i < responseMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "发送：" << log;
+                }
+                continue;
             } else if (taskType == ALL_FINISH_TASK) {
                 response[7] = 0x00;
-            }
-            StringPiece responseMsg(response);
-            write(responseMsg);
-            {
-                std::stringstream ss;
-                for(int i = 0; i < responseMsg.size(); i++) {
-                    ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                StringPiece responseMsg(response);
+                write(responseMsg);
+                {
+                    std::stringstream ss;
+                    for(int i = 0; i < responseMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "发送：" << log;
                 }
-                std::string log = ss.str();
-                LOG_INFO << "发送：" << log;
+                continue;
             }
-            continue;
         }
         // 可执行任务状态
         switch (taskType) {
@@ -609,7 +629,11 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
         LOG_INFO << "接收：" << log;
     }
 
-    const char *data = message.c_str();
+    const char *data_ptr = message.c_str();
+    std::vector<u_char > data;
+    for(int i = 0; i < message.size(); i++)
+        data.push_back((unsigned int)(unsigned char)data_ptr[i]);
+
     const u_char taskType = data[4];
     switch(taskType) {
         //存档任务01

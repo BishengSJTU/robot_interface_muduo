@@ -237,7 +237,7 @@ void EventLoop::wakeup()
   ssize_t n = sockets::write(wakeupFd_, &one, sizeof one);
   if (n != sizeof one)
   {
-    LOG_ERROR << "EventLoop::wakeup() writes " << n << " bytes instead of 8";
+//    LOG_ERROR << "EventLoop::wakeup() writes " << n << " bytes instead of 8";
   }
 }
 

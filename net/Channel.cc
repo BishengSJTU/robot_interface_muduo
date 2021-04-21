@@ -88,7 +88,7 @@ void Channel::handleEventWithGuard(Timestamp receiveTime)
   {
     if (logHup_)
     {
-      LOG_WARN << "fd = " << fd_ << " Channel::handle_event() POLLHUP";
+//      LOG_WARN << "fd = " << fd_ << " Channel::handle_event() POLLHUP";
     }
     if (closeCallback_) closeCallback_();
   }

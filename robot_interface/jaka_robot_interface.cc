@@ -41,8 +41,12 @@ void RobotInterface::execTaskThread() {
         }
         string response(task.data(), task.size());
 
-        const char *data = task.data();
-        char taskType = data[4];
+        const char *data_ptr = task.data();
+        std::vector<u_char > data;
+        for(int i = 0; i < task.size(); i++)
+            data.push_back((unsigned int)(unsigned char)data_ptr[i]);
+
+        u_char taskType = data[4];
         u_char state;
         u_char power;
         {
@@ -68,7 +72,7 @@ void RobotInterface::execTaskThread() {
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "忽略任务：机器人尚未处于可工作状态" << log;
+                LOG_INFO << "对方<---：忽略任务，机器人尚未处于可工作状态" << log;
             }
             continue;
         }
@@ -85,7 +89,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int) (unsigned char) responseMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "忽略任务：机器人正在充电中，再次收到充电任务" << log;
+                        LOG_INFO << "对方<---：忽略任务，机器人正在充电中，再次收到充电任务" << log;
                     }
                     continue;
                 }
@@ -96,26 +100,48 @@ void RobotInterface::execTaskThread() {
             if (taskType == CHARGE_TASK) {
                 if(data[7] == 0xA0) {
                     response[7] = 0x00;
+                    StringPiece responseMsg(response);
+                    write(responseMsg);
+                    {
+                        std::stringstream ss;
+                        for(int i = 0; i < responseMsg.size(); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                        }
+                        std::string log = ss.str();
+                        LOG_INFO << "对方<---：忽略任务，机器人处于低电量状态，只能执行充电任务" << log;
+                    }
+                    continue;
                 }
             } else if (taskType == DEPOSIT_TASK || taskType == WITHDRAW_TASK) {
                 for (int i = 0; i < storagePositionTotalNum; i++) {
                     if (data[7 + 18 * i] == 0xA1)
                         response[7 + 18 * i] = 0x00;
                 }
+                StringPiece responseMsg(response);
+                write(responseMsg);
+                {
+                    std::stringstream ss;
+                    for(int i = 0; i < responseMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "对方<---：忽略任务，机器人处于低电量状态，只能执行充电任务" << log;
+                }
+                continue;
             } else if (taskType == DEPOSIT_PREPARE_TASK) {
                 response[7] = 0x00;
-            }
-            StringPiece responseMsg(response);
-            write(responseMsg);
-            {
-                std::stringstream ss;
-                for(int i = 0; i < responseMsg.size(); i++) {
-                    ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                StringPiece responseMsg(response);
+                write(responseMsg);
+                {
+                    std::stringstream ss;
+                    for(int i = 0; i < responseMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "对方<---：忽略任务，机器人处于低电量状态，只能执行充电任务" << log;
                 }
-                std::string log = ss.str();
-                LOG_INFO << "忽略任务：机器人处于低电量状态，只能执行充电任务" << log;
+                continue;
             }
-            continue;
         }
         // 可执行任务状态
         switch (taskType) {
@@ -137,8 +163,9 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "完成任务：存档准备" << log;
+                    LOG_INFO << "对方<---：完成任务，存档准备" << log;
                 }
+                break;
             }
             //存档
             case DEPOSIT_TASK: {
@@ -158,7 +185,7 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "更新状态：机器人正在存档中" << log;
+                    LOG_INFO << "对方<---：更新状态，机器人正在存档中" << log;
                 }
 
                 //窗口和柜子每本取放结果是否成功
@@ -215,7 +242,7 @@ void RobotInterface::execTaskThread() {
                                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                                 }
                                 std::string log = ss.str();
-                                LOG_INFO << "结束任务：发生机械故障" << log;
+                                LOG_INFO << "对方<---：结束任务，发生机械故障" << log;
                             }
                             continue;
                         }
@@ -242,7 +269,7 @@ void RobotInterface::execTaskThread() {
                                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                                     }
                                     std::string log = ss.str();
-                                    LOG_INFO << "结束任务：发生机械故障" << log;
+                                    LOG_INFO << "对方<---：结束任务，发生机械故障" << log;
                                 }
                                 continue;
                             }
@@ -318,7 +345,7 @@ void RobotInterface::execTaskThread() {
                                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                                     }
                                     std::string log = ss.str();
-                                    LOG_INFO << "结束任务：发生机械故障" << log;
+                                    LOG_INFO << "对方<---：结束任务，发生机械故障" << log;
                                 }
                                 continue;
                             }
@@ -345,7 +372,7 @@ void RobotInterface::execTaskThread() {
                                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                                     }
                                     std::string log = ss.str();
-                                    LOG_INFO << "结束任务：发生机械故障" << log;
+                                    LOG_INFO << "对方<---：结束任务，发生机械故障" << log;
                                 }
                                 continue;
                             }
@@ -373,7 +400,7 @@ void RobotInterface::execTaskThread() {
                                 ss << std::hex << (unsigned int)(unsigned char)singleFinishMsg[i] << ",";
                             }
                             std::string log = ss.str();
-                            LOG_INFO << "发送状态：单本完成" << log;
+                            LOG_INFO << "对方<---：发送状态，单本完成" << log;
                         }
                         //　等待单本完成被接收
                         {
@@ -407,7 +434,7 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "完成任务：存档" << log;
+                    LOG_INFO << "对方<---：完成任务，存档" << log;
                 }
 
                 if(ROBOT_INLINE) {
@@ -432,7 +459,7 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "更新状态：机器人空闲" << log;
+                    LOG_INFO << "对方<---：更新状态，机器人空闲" << log;
                 }
                 break;
             }
@@ -455,7 +482,7 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "更新状态：机器人正在取档中" << log;
+                    LOG_INFO << "对方<---：更新状态，机器人正在取档中" << log;
                 }
 
                 //窗口和柜子每本取放结果是否成功
@@ -531,7 +558,7 @@ void RobotInterface::execTaskThread() {
                                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                                 }
                                 std::string log = ss.str();
-                                LOG_INFO << "结束任务：发生机械故障" << log;
+                                LOG_INFO << "对方<---：结束任务，发生机械故障" << log;
                             }
                             continue;
                         }
@@ -562,7 +589,7 @@ void RobotInterface::execTaskThread() {
                                     ss << std::hex << (unsigned int)(unsigned char)withdrawCheckMsg[i] << ",";
                                 }
                                 std::string log = ss.str();
-                                LOG_INFO << "发送任务：取档校验" << log;
+                                LOG_INFO << "对方<---：发送任务，取档校验" << log;
                             }
 
                             {
@@ -603,7 +630,7 @@ void RobotInterface::execTaskThread() {
                                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                                     }
                                     std::string log = ss.str();
-                                    LOG_INFO << "结束任务：发生机械故障" << log;
+                                    LOG_INFO << "对方<---：结束任务，发生机械故障" << log;
                                 }
                                 continue;
                             }
@@ -621,7 +648,7 @@ void RobotInterface::execTaskThread() {
                                     ss << std::hex << (unsigned int)(unsigned char)withdrawCheckMsg[i] << ",";
                                 }
                                 std::string log = ss.str();
-                                LOG_INFO << "取消任务：取档校验，未取档成功" << log;
+                                LOG_INFO << "对方<---：取消任务，取档校验，未取档成功" << log;
                             }
 
                             {
@@ -666,7 +693,7 @@ void RobotInterface::execTaskThread() {
                                 ss << std::hex << (unsigned int)(unsigned char)singleFinishMsg[i] << ",";
                             }
                             std::string log = ss.str();
-                            LOG_INFO << "发送状态：单本完成" << log;
+                            LOG_INFO << "对方<---：发送状态，单本完成" << log;
                         }
                         //　等待单本完成被接收
                         {
@@ -736,7 +763,7 @@ void RobotInterface::execTaskThread() {
                                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                                     }
                                     std::string log = ss.str();
-                                    LOG_INFO << "结束任务：发生机械故障" << log;
+                                    LOG_INFO << "对方<---：结束任务，发生机械故障" << log;
                                 }
                                 continue;
                             }
@@ -764,7 +791,7 @@ void RobotInterface::execTaskThread() {
                                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                                     }
                                     std::string log = ss.str();
-                                    LOG_INFO << "结束任务：发生机械故障" << log;
+                                    LOG_INFO << "对方<---：结束任务，发生机械故障" << log;
                                 }
                                 continue;
                             }
@@ -792,7 +819,7 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "完成任务：取档" << log;
+                    LOG_INFO << "对方<---：完成任务，取档" << log;
                 }
 
                 for(int archive = 0; archive < storagePositionTotalNum; archive++) {
@@ -827,12 +854,11 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "更新状态：机器人空闲" << log;
+                    LOG_INFO << "对方<---：更新状态，机器人空闲" << log;
                 }
 
                 break;
             }
-
             case CHARGE_TASK: {
                 if(data[7] == 0xA1) {
                     {
@@ -851,7 +877,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "更新状态：机器人准备充电中" << log;
+                        LOG_INFO << "对方<---：更新状态，机器人准备充电中" << log;
                     }
                     ///　跑到充电桩前，完成充电动作
                     if(ROBOT_INLINE) {
@@ -868,7 +894,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "完成任务：充电" << log;
+                        LOG_INFO << "对方<---：完成任务，充电" << log;
                     }
                     {
                         MutexLockGuard lock(robotInfoMutex_);
@@ -886,7 +912,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "更新状态：机器人正在充电中" << log;
+                        LOG_INFO << "对方<---：更新状态，机器人正在充电中" << log;
                     }
                 }
                 else if(data[7] == 0xA0) {
@@ -907,7 +933,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "更新状态：机器人充电完成" << log;
+                        LOG_INFO << "对方<---：更新状态，机器人充电完成" << log;
                     }
                     ///　跑到休息区
                     if(ROBOT_INLINE) {
@@ -924,7 +950,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "完成任务：取消充电" << log;
+                        LOG_INFO << "对方<---：完成任务，取消充电" << log;
                     }
                     {
                         MutexLockGuard lock(robotInfoMutex_);
@@ -942,7 +968,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "更新状态：机器人空闲中" << log;
+                        LOG_INFO << "对方<---：更新状态，机器人空闲中" << log;
                     }
                 }
                 break;
@@ -964,10 +990,14 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             ss << std::hex << (unsigned int)(unsigned char)message[i] << ",";
         }
         std::string log = ss.str();
-        LOG_INFO << "接收消息：" << log;
+        LOG_INFO << "对方--->：" << log;
     }
 
-    const char *data = message.c_str();
+    const char *data_ptr = message.c_str();
+    std::vector<u_char >data;
+    for(int i = 0; i < message.size(); i++)
+        data.push_back((unsigned int)(unsigned char)data_ptr[i]);
+
     const u_char taskType = data[4];
     switch(taskType) {
         //心跳33
@@ -988,8 +1018,9 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送消息：心跳" << log;
+                LOG_INFO << "对方<---：心跳" << log;
             }
+            break;
         }
         //存档任务01，需执行！
         case DEPOSIT_TASK: {
@@ -1011,7 +1042,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送消息：收到存档任务" << log;
+                LOG_INFO << "对方<---：收到存档任务" << log;
             }
             {
                 MutexLockGuard lock(taskMessageMutex_);
@@ -1040,7 +1071,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送消息：收到取档任务" << log;
+                LOG_INFO << "对方<---：收到取档任务" << log;
             }
             {
                 MutexLockGuard lock(taskMessageMutex_);
@@ -1069,7 +1100,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送消息：收到充电任务" << log;
+                LOG_INFO << "对方<---：收到充电任务" << log;
             }
             {
                 MutexLockGuard lock(taskMessageMutex_);
@@ -1099,7 +1130,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg1[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送消息：收到存档校验任务" << log;
+                LOG_INFO << "对方<---：收到存档校验任务" << log;
             }
             //直接回复存档校验结果
             u_char responseData2[82];
@@ -1122,7 +1153,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg2[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "完成任务：存档校验" << log;
+                LOG_INFO << "对方<---：完成存档校验" << log;
             }
             break;
         }
@@ -1147,7 +1178,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg1[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送消息：收到查询指令" << log;
+                LOG_INFO << "对方<---：收到查询指令" << log;
             }
             //回复机器人状态
             u_char responseData2[9];
@@ -1171,7 +1202,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg2[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送消息：机器人状态" << log;
+                LOG_INFO << "对方<---：机器人状态" << log;
             }
             break;
         }
@@ -1195,6 +1226,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                 externalInfo_.withdrawCheckResult = false;
                 externalCondition_.notifyAll();
             }
+            break;
         }
         // 存档准备任务07，需执行！
         case DEPOSIT_PREPARE_TASK: {
@@ -1216,7 +1248,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送消息：收到存档准备任务" << log;
+                LOG_INFO << "对方<---：收到存档准备任务" << log;
             }
             {
                 MutexLockGuard lock(taskMessageMutex_);
@@ -1255,7 +1287,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg1[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送消息：收到取消操作任务" << log;
+                LOG_INFO << "对方<---：收到取消操作任务" << log;
             }
 
             u_char responseData2[8];
@@ -1275,8 +1307,9 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg2[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "完成任务：取消操作" << log;
+                LOG_INFO << "对方<---：取消任务操作" << log;
             }
+            break;
         }
         // 档案柜就绪状态0A
         case CAB_STATE: {
@@ -1298,7 +1331,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送消息：收到档案柜状态" << log;
+                LOG_INFO << "对方<---：收到档案柜状态" << log;
             }
             if(data[8] == 0x01) {
                 MutexLockGuard lock(externalInfoMutex_);
@@ -1308,6 +1341,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                 MutexLockGuard lock(externalInfoMutex_);
                 externalInfo_.readyCab.erase(data[7]);
             }
+            break;
         }
         default:
             break;
@@ -1330,8 +1364,8 @@ void RobotInterface::onConnection(const TcpConnectionPtr& conn) {
         connectMsg[i] = connectData[i];
 
     LOG_INFO << conn->localAddress().toIpPort() << " -> "
-             << conn->peerAddress().toIpPort() << " is "
-             << (conn->connected() ? "UP" : "DOWN");
+             << conn->peerAddress().toIpPort() << " 已 "
+             << (conn->connected() ? "连接" : "断连");
 
     {
         MutexLockGuard lock(connectionMutex_);
@@ -1352,7 +1386,7 @@ void RobotInterface::onConnection(const TcpConnectionPtr& conn) {
                 ss << std::hex << (unsigned int)(unsigned char)connectMsg[i] << ",";
             }
             std::string log = ss.str();
-            LOG_INFO << "发送状态：连接" << log;
+            LOG_INFO << "对方<---：连接" << log;
         }
     }
 }
@@ -1402,53 +1436,54 @@ void RobotInterface::inquireRobotStateThread() {
         if(!ROBOT_INLINE) {
             sleep(5);
             continue;
-        }
-        {
-            MutexLockGuard lock(taskMessageMutex_);
-            while (connection_ == nullptr) {
-                connectionCondition_.wait();
-            }
-        }
-        sleep(5);
-        if (ROBOT_INLINE) {
-            int agvState;
-            int agvPower;
-            int currentAgvState = AGV_READY;
-            int currentAgvPower = powerLowerLimit;
+        } else {
             {
-                MutexLockGuard lock(robotInfoMutex_);
-                agvState = robotInfo_.currentState;
-                agvPower = robotInfo_.currentPower;
-            }
-
-            if(ROBOT_INLINE) {
-                agv_.GetAgvPowerAndState(currentAgvPower, currentAgvState);
-            }
-            // 没有机械故障
-            if (agvState != MECHANICAL_ERROR) {
-                if (currentAgvState == AGV_READY) {
-                    if (agvState == NEED_INITIALIZING
-                        || agvState == INITIALIZE_FINISH
-                        || agvState == IS_CHARGING
-                        || agvState == IS_INITIALIZING) {
-                        agvState = IS_FREE;
-                    }
-                } else if (currentAgvState == AGV_CHARGING) {
-                    agvState = IS_CHARGING;
-                } else if (currentAgvState == AGV_FAILURE || currentAgvState == AGV_MT) {
-                    agvState = NEED_INITIALIZING;
+                MutexLockGuard lock(taskMessageMutex_);
+                while (connection_ == nullptr) {
+                    connectionCondition_.wait();
                 }
-            } else {
-                agvState = MECHANICAL_ERROR;
             }
-            {
-                MutexLockGuard lock(robotInfoMutex_);
-                robotInfo_.currentState = agvState;
-                robotInfo_.currentPower = agvPower;
-            }
-            if ((agvState != IS_WITHDRAWING) && (agvState != IS_DEPOSITING)) {
-                if(ROBOT_INLINE) {
-                    jakaPickAndPlace_.JAKAPLCState(); //PLC保活
+            sleep(5);
+            if (ROBOT_INLINE) {
+                int agvState;
+                int agvPower;
+                int currentAgvState = AGV_READY;
+                int currentAgvPower = powerLowerLimit;
+                {
+                    MutexLockGuard lock(robotInfoMutex_);
+                    agvState = robotInfo_.currentState;
+                    agvPower = robotInfo_.currentPower;
+                }
+
+                if (ROBOT_INLINE) {
+                    agv_.GetAgvPowerAndState(currentAgvPower, currentAgvState);
+                }
+                // 没有机械故障
+                if (agvState != MECHANICAL_ERROR) {
+                    if (currentAgvState == AGV_READY) {
+                        if (agvState == NEED_INITIALIZING
+                            || agvState == INITIALIZE_FINISH
+                            || agvState == IS_CHARGING
+                            || agvState == IS_INITIALIZING) {
+                            agvState = IS_FREE;
+                        }
+                    } else if (currentAgvState == AGV_CHARGING) {
+                        agvState = IS_CHARGING;
+                    } else if (currentAgvState == AGV_FAILURE || currentAgvState == AGV_MT) {
+                        agvState = NEED_INITIALIZING;
+                    }
+                } else {
+                    agvState = MECHANICAL_ERROR;
+                }
+                {
+                    MutexLockGuard lock(robotInfoMutex_);
+                    robotInfo_.currentState = agvState;
+                    robotInfo_.currentPower = agvPower;
+                }
+                if ((agvState != IS_WITHDRAWING) && (agvState != IS_DEPOSITING)) {
+                    if (ROBOT_INLINE) {
+                        jakaPickAndPlace_.JAKAPLCState(); //PLC保活
+                    }
                 }
             }
         }

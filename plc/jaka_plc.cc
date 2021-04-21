@@ -73,6 +73,7 @@ bool JAKAPLC::ControlPLC(int command) {
             break;
         case MoveMF:
             plcAction[9] = 0x03;
+            break;
         case AirpumpO:
             plcAction[9] = 0x02;
             break;

@@ -19,7 +19,7 @@
 #include "jaka_pick_and_place.h"
 #include "agv.h"
 
-#define ROBOT_INLINE true
+#define ROBOT_INLINE false
 
 using namespace jiazhi;
 using namespace muduo;

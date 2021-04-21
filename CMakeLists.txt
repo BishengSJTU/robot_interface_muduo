@@ -60,13 +60,13 @@ add_executable(JakaRobotInterface
         ${ALL_SOURCES})
 target_link_libraries(JakaRobotInterface pthread ${OpenCV_LIBS} libhv.so zbar pthread boost_system libapriltag.so.3)
 
-add_executable(PlatformRobotInterface
-        robot_interface/platform.cc
-        robot_interface/platform_robot_interface.cc
-        robot_interface/platform_robot_interface.h
-        robot_interface/codec.h
-        ${ALL_SOURCES})
-target_link_libraries(PlatformRobotInterface pthread ${OpenCV_LIBS} libhv.so zbar pthread boost_system libapriltag.so.3)
+#add_executable(PlatformRobotInterface
+#        robot_interface/platform.cc
+#        robot_interface/platform_robot_interface.cc
+#        robot_interface/platform_robot_interface.h
+#        robot_interface/codec.h
+#        ${ALL_SOURCES})
+#target_link_libraries(PlatformRobotInterface pthread ${OpenCV_LIBS} libhv.so zbar pthread boost_system libapriltag.so.3)
 
 
 #add_executable(Channel_test
@@ -118,11 +118,11 @@ add_executable(TcpServer_test
         test/TcpServer_test.cc
         ${ALL_SOURCES})
 target_link_libraries(TcpServer_test pthread ${OpenCV_LIBS} libhv.so zbar pthread boost_system libapriltag.so.3)
-#
-add_executable(TcpClient_test
-        test/TcpClient_test.cc
-        ${ALL_SOURCES})
-target_link_libraries(TcpClient_test pthread ${OpenCV_LIBS} libhv.so zbar pthread boost_system libapriltag.so.3)
+
+#add_executable(TcpClient_test
+#        test/TcpClient_test.cc
+#        ${ALL_SOURCES})
+#target_link_libraries(TcpClient_test pthread ${OpenCV_LIBS} libhv.so zbar pthread boost_system libapriltag.so.3)
 
 #add_executable(Buffer_test
 #        test/Buffer_test.cc

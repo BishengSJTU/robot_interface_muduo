@@ -196,7 +196,7 @@ void Connector::handleWrite()
 
 void Connector::handleError()
 {
-  LOG_ERROR << "Connector::handleError state=" << state_;
+//  LOG_ERROR << "Connector::handleError state=" << state_;
   if (state_ == kConnecting)
   {
     int sockfd = removeAndResetChannel();
@@ -212,8 +212,8 @@ void Connector::retry(int sockfd)
   setState(kDisconnected);
   if (connect_)
   {
-    LOG_INFO << "Connector::retry - Retry connecting to " << serverAddr_.toIpPort()
-             << " in " << retryDelayMs_ << " milliseconds. ";
+    LOG_INFO << "Connector::retry - " << "在" << retryDelayMs_ << "毫秒后尝试重连"
+    << serverAddr_.toIpPort();
     loop_->runAfter(retryDelayMs_/1000.0,
                     std::bind(&Connector::startInLoop, shared_from_this()));
     retryDelayMs_ = std::min(retryDelayMs_ * 2, kMaxRetryDelayMs);

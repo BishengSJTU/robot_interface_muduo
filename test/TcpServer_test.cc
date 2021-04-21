@@ -11,6 +11,17 @@ void onConnection(const muduo::net::TcpConnectionPtr &conn) {
     } else {
         printf("onConnection(): connection [%s] is down\n", conn->name().c_str());
     }
+    sleep(2);
+    char* data = new char[8];
+    data[0] = 0xA1;
+    data[1] = 0x00;
+    data[2] = 0x00;
+    data[3] = 0x00;
+    data[4] = 0x07;
+    data[5] = 0x00;
+    data[6] = 0x01;
+    data[7] = 0xaa;
+    conn->send(data, 8);
 }
 
 void onMessage(const muduo::net::TcpConnectionPtr &conn, muduo::net::Buffer *buf,

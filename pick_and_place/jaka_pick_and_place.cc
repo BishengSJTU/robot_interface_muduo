@@ -44,9 +44,22 @@ bool JAKAPickAndPlace::JAKAPickCab(int cab_id, int position, bool& mechanical_er
     // 移动至中间过渡点
     int all_position_num = flexible_config_.get<int>("cab" + std::to_string(cab_id) + "_all_position_num");
 
-    std::vector<float> transition_point = flexible_config_.get<std::vector<float> >("transition_point");
-    robot_client_.MoveJ(transition_point, fixed_joint_speed);
-    std::cout << "移动至transition point" << std::endl;
+    // 根据位置号判断机械臂的观察点Aruco码号和基准位置
+    int root;
+    int benchmark_position;
+    MappingTable(all_position_num, position, root, benchmark_position);
+
+    std::vector<float> transition_point1 = flexible_config_.get<std::vector<float> >("transition_point");
+    std::vector<float> watch_points = flexible_config_.get<std::vector<float> >("watch_cab" + std::to_string(cab_id) + "_" + std::to_string(root));
+    std::vector<float> transition_point2;
+    transition_point2.push_back(watch_points[0]);
+    for(int i = 1; i < 6; i++)
+        transition_point2.push_back(transition_point1[i]);
+
+    robot_client_.MoveJ(transition_point1, fixed_joint_speed);
+    std::cout << "移动至transition point1 " << std::endl;
+    robot_client_.MoveJ(transition_point2, fixed_joint_speed);
+    std::cout << "移动至transition point2" << std::endl;
 
 
     auto plc_fun = [&]() -> void{
@@ -61,16 +74,10 @@ bool JAKAPickAndPlace::JAKAPickCab(int cab_id, int position, bool& mechanical_er
     };
     std::thread t1(plc_fun);
 
-    // 根据位置号判断机械臂的观察点Aruco码号和基准位置
-    int root;
-    int benchmark_position;
-    MappingTable(all_position_num, position, root, benchmark_position);
-
-    std::vector<float> watch_points;
-    watch_points = flexible_config_.get<std::vector<float> >("watch_cab" + std::to_string(cab_id) + "_" + std::to_string(root));
     robot_client_.MoveJ(watch_points, fixed_joint_speed);
     std::cout << "移动至watch point" << std::endl;
 
+    robot_client_.Jog(JAKAX, fixed_linear_speed, -160);
 
     PoseTransform pose_transform;
     PoseTransform target_pose_transform(
@@ -119,7 +126,7 @@ bool JAKAPickAndPlace::JAKAPickCab(int cab_id, int position, bool& mechanical_er
         robot_client_.Jog(JAKAX, fixed_linear_speed, offset);
         robot_client_.Jog(JAKAZ, fixed_linear_speed, 36);
         plc_.ControlPLC(AirpumpO);
-        robot_client_.Jog(JAKAY, fixed_linear_speed, -93);
+        robot_client_.Jog(JAKAY, fixed_linear_speed, -76);
         robot_client_.Jog(JAKAZ, fixed_linear_speed, -16);
     }
 /////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -144,8 +151,10 @@ bool JAKAPickAndPlace::JAKAPickCab(int cab_id, int position, bool& mechanical_er
     robot_client_.Jog(JAKAY, fixed_linear_speed, 60);
     robot_client_.MoveJ(watch_points, fixed_joint_speed);
     std::cout << "移动至watch point" << std::endl;
-    robot_client_.MoveJ(transition_point, fixed_joint_speed);
-    std::cout << "移动至transition point" << std::endl;
+    robot_client_.MoveJ(transition_point2, fixed_joint_speed);
+    std::cout << "移动至transition point2" << std::endl;
+    robot_client_.MoveJ(transition_point1, fixed_joint_speed);
+    std::cout << "移动至transition point1" << std::endl;
 
     LOG_INFO << "从档案柜中取档结束!";
     return pick_result;
@@ -158,20 +167,27 @@ bool JAKAPickAndPlace::JAKAPlaceCab(int cab_id, int position,  bool& mechanical_
     // 移动至中间过渡点
     int all_position_num = flexible_config_.get<int>("cab" + std::to_string(cab_id) + "_all_position_num");
 
-    std::vector<float> transition_point = flexible_config_.get<std::vector<float> >(
-            "transition_point");
-    robot_client_.MoveJ(transition_point, fixed_joint_speed);
-    std::cout << "移动至transition point" << std::endl;
-
     // 根据位置号判断机械臂的观察点位置和基准位置
     int root;
     int benchmark_position;
     MappingTable(all_position_num, position, root, benchmark_position);
 
-    std::vector<float> watch_points;
-    watch_points = flexible_config_.get<std::vector<float> >("watch_cab" + std::to_string(cab_id) + "_" + std::to_string(root));
+    std::vector<float> transition_point1 = flexible_config_.get<std::vector<float> >("transition_point");
+    std::vector<float> watch_points = flexible_config_.get<std::vector<float> >("watch_cab" + std::to_string(cab_id) + "_" + std::to_string(root));
+    std::vector<float> transition_point2;
+    transition_point2.push_back(watch_points[0]);
+    for(int i = 1; i < 6; i++)
+        transition_point2.push_back(transition_point1[i]);
+
+    robot_client_.MoveJ(transition_point1, fixed_joint_speed);
+    std::cout << "移动至transition point1" << std::endl;
+    robot_client_.MoveJ(transition_point2, fixed_joint_speed);
+    std::cout << "移动至transition point2" << std::endl;
+
     robot_client_.MoveJ(watch_points, fixed_joint_speed);
     std::cout << "移动至watch point" << std::endl;
+
+    robot_client_.Jog(JAKAX, fixed_linear_speed, -160);
 
     PoseTransform pose_transform;
     PoseTransform target_pose_transform(
@@ -215,7 +231,7 @@ bool JAKAPickAndPlace::JAKAPlaceCab(int cab_id, int position,  bool& mechanical_
         float offset = CAB_SPACE * (position - benchmark_position) - 7;
         robot_client_.Jog(JAKAX, fixed_linear_speed, offset);
         robot_client_.Jog(JAKAZ, fixed_linear_speed, 20);
-        robot_client_.Jog(JAKAY, fixed_linear_speed, -92);
+        robot_client_.Jog(JAKAY, fixed_linear_speed, -76);
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
         if(plc_.ControlPLC(MoveMF) == false) {
@@ -245,8 +261,10 @@ bool JAKAPickAndPlace::JAKAPlaceCab(int cab_id, int position,  bool& mechanical_
 
     robot_client_.MoveJ(watch_points, fixed_joint_speed);
     std::cout << "移动至watch point" << std::endl;
-    robot_client_.MoveJ(transition_point, fixed_joint_speed);
-    std::cout << "移动至transition point" << std::endl;
+    robot_client_.MoveJ(transition_point2, fixed_joint_speed);
+    std::cout << "移动至transition point2" << std::endl;
+    robot_client_.MoveJ(transition_point1, fixed_joint_speed);
+    std::cout << "移动至transition point1" << std::endl;
     if(mechanical_error)
         return false;
 
@@ -273,15 +291,21 @@ bool JAKAPickAndPlace::JAKAPickWindow(int position, bool& mechanical_error) {
     // 基准位置
     int benchmark_position = 3;
 
-    std::vector<float> transition_point = flexible_config_.get<std::vector<float> >(
-            "transition_point");
-    robot_client_.MoveJ(transition_point, fixed_joint_speed);
-    std::cout << "移动至transition point" << std::endl;
+    std::vector<float> transition_point1 = flexible_config_.get<std::vector<float> >("transition_point");
+    std::vector<float> watch_points = flexible_config_.get<std::vector<float> >("watch_cab0_1");
+    std::vector<float> transition_point2;
+    transition_point2.push_back(watch_points[0]);
+    for(int i = 1; i < 6; i++)
+        transition_point2.push_back(transition_point1[i]);
 
-    std::vector<float> watch_points;
-    watch_points = flexible_config_.get<std::vector<float> >("watch_cab0_1");
+    robot_client_.MoveJ(transition_point1, fixed_joint_speed);
+    std::cout << "移动至transition point1" << std::endl;
+    robot_client_.MoveJ(transition_point2, fixed_joint_speed);
+    std::cout << "移动至transition point2" << std::endl;
     robot_client_.MoveJ(watch_points, fixed_joint_speed);
     std::cout << "移动至watch point" << std::endl;
+
+    robot_client_.Jog(JAKAX, fixed_linear_speed, -160);
 
     PoseTransform pose_transform;
     PoseTransform target_pose_transform(
@@ -300,9 +324,9 @@ bool JAKAPickAndPlace::JAKAPickWindow(int position, bool& mechanical_error) {
         std::cout << "---------------视觉调整次数: " << adjust_time + 1 << " -------------" << std::endl;
 
         if(!vision_detection_.GetPose(CODEING_ID, pose, times)) {
-            robot_client_.Jog(JAKAX, fixed_linear_speed, 40);
+            robot_client_.Jog(JAKAX, fixed_linear_speed, 30);
             if(!vision_detection_.GetPose(CODEING_ID, pose, times)) {
-                robot_client_.Jog(JAKAX, fixed_linear_speed, -80);
+                robot_client_.Jog(JAKAX, fixed_linear_speed, -60);
                 if(!vision_detection_.GetPose(CODEING_ID, pose, times)) {
                     LOG_ERROR << "无法估计aruco码的位姿";
                     pick_result = false;
@@ -362,9 +386,10 @@ bool JAKAPickAndPlace::JAKAPickWindow(int position, bool& mechanical_error) {
     robot_client_.Jog(JAKAY, fixed_linear_speed, 40);
     robot_client_.MoveJ(watch_points, fixed_joint_speed);
     std::cout << "移动至watch point" << std::endl;
-    robot_client_.MoveJ(transition_point, fixed_joint_speed);
-    std::cout << "移动至transition point" << std::endl;
-
+    robot_client_.MoveJ(transition_point2, fixed_joint_speed);
+    std::cout << "移动至transition point2" << std::endl;
+    robot_client_.MoveJ(transition_point1, fixed_joint_speed);
+    std::cout << "移动至transition point1" << std::endl;
 
     LOG_INFO << "从窗口中取档结束!";
     return pick_result;
@@ -377,16 +402,21 @@ bool JAKAPickAndPlace::JAKAPlaceWindow(int position, bool &mechanical_error) {
     // 基准位置
     int benchmark_position = 3;
 
-    std::vector<float> transition_point = flexible_config_.get<std::vector<float> >(
-            "transition_point");
-    robot_client_.MoveJ(transition_point, fixed_joint_speed);
-    std::cout << "移动至transition point" << std::endl;
+    std::vector<float> transition_point1 = flexible_config_.get<std::vector<float> >("transition_point");
+    std::vector<float> watch_points = flexible_config_.get<std::vector<float> >("watch_cab0_1");
+    std::vector<float> transition_point2;
+    transition_point2.push_back(watch_points[0]);
+    for(int i = 1; i < 6; i++)
+        transition_point2.push_back(transition_point1[i]);
 
-    std::vector<float> watch_points;
-    watch_points = flexible_config_.get<std::vector<float> >("watch_cab0_1");
+    robot_client_.MoveJ(transition_point1, fixed_joint_speed);
+    std::cout << "移动至transition point1" << std::endl;
+    robot_client_.MoveJ(transition_point2, fixed_joint_speed);
+    std::cout << "移动至transition point2" << std::endl;
     robot_client_.MoveJ(watch_points, fixed_joint_speed);
     std::cout << "移动至watch point" << std::endl;
 
+    robot_client_.Jog(JAKAX, fixed_linear_speed, -160);
 
     PoseTransform pose_transform;
     PoseTransform target_pose_transform(
@@ -405,9 +435,9 @@ bool JAKAPickAndPlace::JAKAPlaceWindow(int position, bool &mechanical_error) {
         std::cout << "---------------视觉调整次数: " << adjust_time + 1 << " -------------" << std::endl;
 
         if(!vision_detection_.GetPose(CODEING_ID, pose, times)) {
-            robot_client_.Jog(JAKAX, fixed_linear_speed, 40);
+            robot_client_.Jog(JAKAX, fixed_linear_speed, 30);
             if(!vision_detection_.GetPose(CODEING_ID, pose, times)) {
-                robot_client_.Jog(JAKAX, fixed_linear_speed, -80);
+                robot_client_.Jog(JAKAX, fixed_linear_speed, -60);
                 if(!vision_detection_.GetPose(CODEING_ID, pose, times)) {
                     LOG_ERROR << "无法估计aruco码的位姿";
                     place_result = false;
@@ -461,8 +491,10 @@ bool JAKAPickAndPlace::JAKAPlaceWindow(int position, bool &mechanical_error) {
 
     robot_client_.MoveJ(watch_points, fixed_joint_speed);
     std::cout << "移动至watch point" << std::endl;
-    robot_client_.MoveJ(transition_point, fixed_joint_speed);
-    std::cout << "移动至transition point" << std::endl;
+    robot_client_.MoveJ(transition_point2, fixed_joint_speed);
+    std::cout << "移动至transition point2" << std::endl;
+    robot_client_.MoveJ(transition_point1, fixed_joint_speed);
+    std::cout << "移动至transition point1" << std::endl;
 
     if(mechanical_error)
         return false;

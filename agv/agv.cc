@@ -248,6 +248,7 @@ namespace jiazhi {
     }
 
     void AGV::InitializeAGV() {
+        LOG_INFO << "Initialize begin";
         HttpRequest req2;
         req2.method = HTTP_GET;
         req2.url = url_pre_ + "/api/v1/robots";
@@ -260,7 +261,8 @@ namespace jiazhi {
                     auto js = Json::parse(result);
                     int run_state = js[0]["run_state"];
                     // 就绪中、充电中
-                    if (run_state == AGV_READY) {
+                    if (run_state == AGV_READY || run_state == AGV_CHARGING || run_state || AGV_BUSY) {
+                        LOG_INFO << "Initialize end";
                         return;
                     } else {
                         LOG_INFO << "Jiazhi初始化中... 状态仍在初始化中";
