@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="archive_robot" targetName="JakaRobotInterface" />
+      <config projectName="archive_robot" targetName="PlatformRobotInterface" />
       <config projectName="archive_robot" targetName="TcpServer_test" />
     </generated>
   </component>
@@ -13,7 +13,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ea00259e-2efd-419c-bb95-908181337d76" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build/CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/JakaRobotInterface" beforeDir="false" afterPath="$PROJECT_DIR$/build/JakaRobotInterface" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/config/FixedConfig.YML" beforeDir="false" afterPath="$PROJECT_DIR$/build/config/FixedConfig.YML" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PlatformRobotInterface.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/PlatformRobotInterface.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/archive_robot.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/archive_robot.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc" beforeDir="false" afterPath="$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot_interface/platform_robot_interface.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/platform_robot_interface.cc" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/CMakeFiles/" />
@@ -46,38 +59,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/robot_interface/jaka.cc">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="414">
+              <caret line="68" column="25" selection-start-line="62" selection-start-column="18" selection-end-line="68" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc">
+        <entry file="file://$PROJECT_DIR$/robot_interface/platform_robot_interface.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="12762">
-              <caret line="709" column="24" selection-start-line="709" selection-start-column="24" selection-end-line="709" selection-end-column="24" />
+            <state relative-caret-position="252">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/TcpServer_test.cc">
+        <entry file="file://$PROJECT_DIR$/plc/jaka_plc.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#22#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="234">
+              <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -86,8 +87,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>stateMsg</find>
-      <find>WRITE</find>
       <find>onconnec</find>
       <find>onconn</find>
       <find>oncon</find>
@@ -101,8 +100,6 @@
       <find>pickw</find>
       <find>stre</find>
       <find>pickca</find>
-      <find>160</find>
-      <find>switch</find>
       <find>swi</find>
       <find>swit</find>
       <find>：收到充电任务</find>
@@ -111,14 +108,19 @@
       <find>currentPower</find>
       <find>20</find>
       <find>withdrawCheckResultGiven</find>
-      <find>onconnection</find>
       <find>readyCab</find>
       <find>singleArchiveFinishedReceived</find>
       <find>jakaPickAndPlace_</find>
       <find>JAKAStretch</find>
+      <find>onconnection</find>
+      <find>switch</find>
+      <find>对方&lt;---</find>
+      <find>160</find>
+      <find>构造</find>
     </findStrings>
     <replaceStrings>
       <replace>int</replace>
+      <replace>---&gt;对方</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -164,20 +166,20 @@
         <option value="$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.h" />
         <option value="$PROJECT_DIR$/net/Connector.h" />
         <option value="$PROJECT_DIR$/net/EventLoop.cc" />
-        <option value="$PROJECT_DIR$/robot_interface/platform_robot_interface.cc" />
         <option value="$PROJECT_DIR$/agv/agv.cc" />
         <option value="$PROJECT_DIR$/build/FixedConfig.YML" />
         <option value="$PROJECT_DIR$/build/FlexibleConfig.YML" />
         <option value="$PROJECT_DIR$/plc/jaka_plc.cc" />
         <option value="$PROJECT_DIR$/robot_interface/jaka_robot_interface.h" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/robot_interface/jaka.cc" />
         <option value="$PROJECT_DIR$/net/Channel.cc" />
-        <option value="$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc" />
         <option value="$PROJECT_DIR$/net/Connector.cc" />
-        <option value="$PROJECT_DIR$/build/config/FixedConfig.YML" />
         <option value="$PROJECT_DIR$/test/TcpServer_test.cc" />
+        <option value="$PROJECT_DIR$/robot_interface/platform_robot_interface.cc" />
         <option value="$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc" />
+        <option value="$PROJECT_DIR$/build/config/FixedConfig.YML" />
+        <option value="$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -284,8 +286,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.JakaRobotInterface">
-    <configuration name="JakaRobotInterface" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="archive_robot" TARGET_NAME="JakaRobotInterface" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="archive_robot" RUN_TARGET_NAME="JakaRobotInterface">
+  <component name="RunManager" selected="CMake Application.PlatformRobotInterface">
+    <configuration name="PlatformRobotInterface" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="archive_robot" TARGET_NAME="PlatformRobotInterface" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="archive_robot" RUN_TARGET_NAME="PlatformRobotInterface">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -296,7 +298,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="CMake Application.JakaRobotInterface" />
+      <item itemvalue="CMake Application.PlatformRobotInterface" />
       <item itemvalue="CMake Application.TcpServer_test" />
     </list>
   </component>
@@ -350,12 +352,12 @@
       <workItem from="1618899094754" duration="1482000" />
       <workItem from="1618903485844" duration="2035000" />
       <workItem from="1618994989598" duration="14260000" />
-      <workItem from="1619024985832" duration="8523000" />
+      <workItem from="1619024985832" duration="13986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="367346000" />
+    <option name="totallyTimeSpent" value="373108000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -392,7 +394,7 @@
       <window_info anchor="right" id="Database" order="3" weight="0.32988048" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22231075" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.238247" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -418,16 +420,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/datetime/Date.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#160#177#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datetime/Date.h">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -522,16 +514,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot_interface/platform_robot_interface.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="52" column="20" selection-start-line="52" selection-start-column="20" selection-end-line="52" selection-end-column="20" />
-          <folding>
-            <element signature="e#33#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/datetime/Timestamp.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -570,16 +552,6 @@
     <entry file="file://$PROJECT_DIR$/plc/my_plc.cc" />
     <entry file="file://$PROJECT_DIR$/plc/my_plc.h" />
     <entry file="file://$PROJECT_DIR$/build/FlexibleConfig .YML" />
-    <entry file="file://$PROJECT_DIR$/robot_interface/platform.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/net/TimerQueue.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-540" />
@@ -667,13 +639,6 @@
     <entry file="file://$PROJECT_DIR$/net/EventLoop.h">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/robot_interface/platform_robot_interface.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12807">
-          <caret line="115" column="13" selection-start-line="115" selection-start-column="13" selection-end-line="115" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/agv/agv.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -691,41 +656,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/FixedConfig.YML">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/FlexibleConfig.YML">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="27" column="40" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plc/jaka_plc.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="66" column="7" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="233" column="56" selection-start-line="233" selection-start-column="56" selection-end-line="233" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/build/FixedConfig.YML" />
+    <entry file="file://$PROJECT_DIR$/build/FlexibleConfig.YML" />
     <entry file="file://$PROJECT_DIR$/robot_interface/jaka_robot_interface.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -750,13 +682,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build/config/FixedConfig.YML">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/robot_interface/jaka.cc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -766,18 +691,76 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/TcpServer_test.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+        <state relative-caret-position="180">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding>
             <element signature="e#0#22#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build/config/FixedConfig.YML">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" column="21" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build/config/FlexibleConfig.YML">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="622" column="62" selection-start-line="622" selection-start-column="62" selection-end-line="622" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plc/jaka_plc.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="37" lean-forward="true" selection-start-line="30" selection-start-column="37" selection-end-line="30" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12762">
-          <caret line="709" column="24" selection-start-line="709" selection-start-column="24" selection-end-line="709" selection-end-column="24" />
+        <state relative-caret-position="13644">
+          <caret line="758" column="15" selection-start-line="758" selection-start-column="15" selection-end-line="758" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_interface/platform.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_interface/platform_robot_interface.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-157">
+          <caret line="63" column="17" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="17" />
+          <folding>
+            <element signature="e#33#52#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/robot_interface/platform_robot_interface.cc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="33" column="19" lean-forward="true" selection-start-line="33" selection-end-line="34" />
         </state>
       </provider>
     </entry>

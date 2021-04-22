@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="archive_robot"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\usr\;CMake Files\..\..\..\usr\local\;CMake Files\..\..\..\usr\local\share\;CMake Files\..\..\..\usr\local\share\OpenCV\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PlatformRobotInterface">
+				<Option output="/home/bisheng/robot_interface_muduo/cmake-build-debug/PlatformRobotInterface" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bisheng/robot_interface_muduo/datetime"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/logging"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/net"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/thread"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/plc"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/config"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/vision_detection"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/robotic_arm"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv_wait_action_finish"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/websocket"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/zbar"/>
+					<Add directory="/usr/local/include/hv"/>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 PlatformRobotInterface"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="PlatformRobotInterface/fast">
+				<Option output="/home/bisheng/robot_interface_muduo/cmake-build-debug/PlatformRobotInterface" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bisheng/robot_interface_muduo/datetime"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/logging"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/net"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/thread"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/plc"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/config"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/vision_detection"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/robotic_arm"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv_wait_action_finish"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/websocket"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/zbar"/>
+					<Add directory="/usr/local/include/hv"/>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 PlatformRobotInterface/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TcpServer_test">
+				<Option output="/home/bisheng/robot_interface_muduo/cmake-build-debug/TcpServer_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bisheng/robot_interface_muduo/datetime"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/logging"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/net"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/thread"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/plc"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/config"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/vision_detection"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/robotic_arm"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv_wait_action_finish"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/websocket"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/zbar"/>
+					<Add directory="/usr/local/include/hv"/>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 TcpServer_test"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="TcpServer_test/fast">
+				<Option output="/home/bisheng/robot_interface_muduo/cmake-build-debug/TcpServer_test" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/bisheng/robot_interface_muduo/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/bisheng/robot_interface_muduo/datetime"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/logging"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/net"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/thread"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/plc"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/config"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/vision_detection"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/robotic_arm"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/kinematics"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/pick_and_place"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/mapping_table"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv_wait_action_finish"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/agv"/>
+					<Add directory="/home/bisheng/robot_interface_muduo/websocket"/>
+					<Add directory="/usr/include/jsoncpp"/>
+					<Add directory="/usr/include/zbar"/>
+					<Add directory="/usr/local/include/hv"/>
+					<Add directory="/usr/local/include/apriltag"/>
+					<Add directory="/usr/local/include/opencv"/>
+					<Add directory="/usr/include/c++/5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/5"/>
+					<Add directory="/usr/include/c++/5/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/5/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 TcpServer_test/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/bisheng/robot_interface_muduo/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/bisheng/robot_interface_muduo/agv/agv.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/agv/agv.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/config/config.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/config/config.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/datetime/Date.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/datetime/Date.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/datetime/TimeZone.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/datetime/TimeZone.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/datetime/Timestamp.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/datetime/Timestamp.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/kinematics/kinematics.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/kinematics/kinematics.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/logging/AsyncLogging.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/logging/AsyncLogging.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/logging/FileUtil.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/logging/FileUtil.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/logging/LogFile.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/logging/LogFile.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/logging/LogStream.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/logging/LogStream.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/logging/Logging.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/logging/Logging.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/logging/ProcessInfo.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/logging/ProcessInfo.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/mapping_table/mapping_table.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/mapping_table/mapping_table.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Acceptor.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Acceptor.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Buffer.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Buffer.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Channel.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Channel.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Connector.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Connector.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/DefaultPoller.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/EPollPoller.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/EPollPoller.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/EventLoop.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/EventLoop.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/EventLoopThread.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/EventLoopThread.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/EventLoopThreadPool.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/EventLoopThreadPool.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/InetAddress.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/InetAddress.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/PollPoller.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/PollPoller.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Poller.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Poller.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Socket.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Socket.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/SocketsOps.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/SocketsOps.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/TcpClient.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/TcpClient.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/TcpConnection.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/TcpConnection.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/TcpServer.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/TcpServer.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Timer.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/Timer.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/TimerQueue.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/net/TimerQueue.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/plc/jaka_plc.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/plc/jaka_plc.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/codec.h">
+			<Option target="PlatformRobotInterface"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/platform.cc">
+			<Option target="PlatformRobotInterface"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/platform_robot_interface.cc">
+			<Option target="PlatformRobotInterface"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface/platform_robot_interface.h">
+			<Option target="PlatformRobotInterface"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/test/TcpServer_test.cc">
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/thread/Condition.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/thread/Condition.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/thread/CountDownLatch.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/thread/CountDownLatch.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/thread/CurrentThread.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/thread/CurrentThread.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/thread/Exception.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/thread/Exception.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/thread/Thread.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/thread/Thread.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/thread/ThreadPool.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/thread/ThreadPool.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.h">
+			<Option target="PlatformRobotInterface"/>
+			<Option target="TcpServer_test"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/../../../usr/local/share/OpenCV/OpenCVConfig-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/../../../usr/local/share/OpenCV/OpenCVConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/../../../usr/local/share/OpenCV/OpenCVModules-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+		<Unit filename="/home/bisheng/robot_interface_muduo/../../../usr/local/share/OpenCV/OpenCVModules.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\usr\local\share\OpenCV\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

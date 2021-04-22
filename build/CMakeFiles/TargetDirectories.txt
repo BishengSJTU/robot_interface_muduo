@@ -1,4 +1,0 @@
-/home/bisheng/robot_interface_muduo/build/CMakeFiles/edit_cache.dir
-/home/bisheng/robot_interface_muduo/build/CMakeFiles/rebuild_cache.dir
-/home/bisheng/robot_interface_muduo/build/CMakeFiles/TcpServer_test.dir
-/home/bisheng/robot_interface_muduo/build/CMakeFiles/JakaRobotInterface.dir
