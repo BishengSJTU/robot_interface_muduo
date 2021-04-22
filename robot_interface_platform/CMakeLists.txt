@@ -23,8 +23,6 @@ FILE (
         "plc/*.cc"
         "config/*.cc"
         "vision_detection/*.cc"
-        "robotic_arm/*.cc"
-        "kinematics/*.cc"
         "pick_and_place/*.cc"
         "vision_detection/*.cc"
         "mapping_table/*.cc"
@@ -40,8 +38,6 @@ include_directories(
         plc
         config
         vision_detection
-        robotic_arm
-        kinematics
         pick_and_place
         vision_detection
         mapping_table

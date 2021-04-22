@@ -993,81 +993,9 @@ CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position
 CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o.provides.build: CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o
 
 
-CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
-CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o: ../robotic_arm/robot_client_tcp.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/robotic_arm/robot_client_tcp.cc
-
-CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/robotic_arm/robot_client_tcp.cc > CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.i
-
-CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/robotic_arm/robot_client_tcp.cc -o CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.s
-
-CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.requires:
-
-.PHONY : CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.requires
-
-CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.provides: CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.requires
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.provides.build
-.PHONY : CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.provides
-
-CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.provides.build: CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o
-
-
-CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
-CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o: ../kinematics/kinematics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/kinematics/kinematics.cc
-
-CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/kinematics/kinematics.cc > CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.i
-
-CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/kinematics/kinematics.cc -o CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.s
-
-CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o.requires:
-
-.PHONY : CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o.requires
-
-CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o.provides: CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o.requires
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o.provides.build
-.PHONY : CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o.provides
-
-CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o.provides.build: CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o
-
-
-CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
-CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../pick_and_place/jaka_pick_and_place.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/pick_and_place/jaka_pick_and_place.cc
-
-CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/pick_and_place/jaka_pick_and_place.cc > CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i
-
-CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/pick_and_place/jaka_pick_and_place.cc -o CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s
-
-CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o.requires:
-
-.PHONY : CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o.requires
-
-CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o.provides: CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o.requires
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o.provides.build
-.PHONY : CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o.provides
-
-CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o.provides.build: CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o
-
-
 CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o: ../mapping_table/mapping_table.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/mapping_table/mapping_table.cc
 
 CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.i: cmake_force
@@ -1091,7 +1019,7 @@ CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o.provides.
 
 CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o: ../agv_wait_action_finish/action_finish.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/agv_wait_action_finish/action_finish.cc
 
 CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.i: cmake_force
@@ -1115,7 +1043,7 @@ CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o.
 
 CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o: ../agv/agv.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o"
 	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/agv/agv.cc
 
 CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.i: cmake_force
@@ -1178,9 +1106,6 @@ PlatformRobotInterface_OBJECTS = \
 "CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o" \
 "CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o" \
 "CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o" \
-"CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o" \
-"CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o" \
-"CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o" \
 "CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o" \
 "CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o" \
 "CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o"
@@ -1227,9 +1152,6 @@ PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/thread/Exception.c
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o
-PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o
-PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o
-PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o
@@ -1280,7 +1202,7 @@ PlatformRobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_objdetec
 PlatformRobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1
 PlatformRobotInterface: /opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Linking CXX executable PlatformRobotInterface"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Linking CXX executable PlatformRobotInterface"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PlatformRobotInterface.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -1327,9 +1249,6 @@ CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterfac
 CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o.requires
 CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o.requires
 CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o.requires
-CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o.requires
-CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o.requires
-CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o.requires
 CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o.requires
 CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o.requires
 CMakeFiles/PlatformRobotInterface.dir/requires: CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o.requires

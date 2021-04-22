@@ -285,33 +285,6 @@ datetime/Timestamp.cc.s:
 	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.s
 .PHONY : datetime/Timestamp.cc.s
 
-kinematics/kinematics.o: kinematics/kinematics.cc.o
-
-.PHONY : kinematics/kinematics.o
-
-# target to build an object file
-kinematics/kinematics.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o
-.PHONY : kinematics/kinematics.cc.o
-
-kinematics/kinematics.i: kinematics/kinematics.cc.i
-
-.PHONY : kinematics/kinematics.i
-
-# target to preprocess a source file
-kinematics/kinematics.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.i
-.PHONY : kinematics/kinematics.cc.i
-
-kinematics/kinematics.s: kinematics/kinematics.cc.s
-
-.PHONY : kinematics/kinematics.s
-
-# target to generate assembly for a file
-kinematics/kinematics.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.s
-.PHONY : kinematics/kinematics.cc.s
-
 logging/AsyncLogging.o: logging/AsyncLogging.cc.o
 
 .PHONY : logging/AsyncLogging.o
@@ -1122,33 +1095,6 @@ robot_interface/platform_robot_interface.cc.s:
 	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.s
 .PHONY : robot_interface/platform_robot_interface.cc.s
 
-robotic_arm/robot_client_tcp.o: robotic_arm/robot_client_tcp.cc.o
-
-.PHONY : robotic_arm/robot_client_tcp.o
-
-# target to build an object file
-robotic_arm/robot_client_tcp.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o
-.PHONY : robotic_arm/robot_client_tcp.cc.o
-
-robotic_arm/robot_client_tcp.i: robotic_arm/robot_client_tcp.cc.i
-
-.PHONY : robotic_arm/robot_client_tcp.i
-
-# target to preprocess a source file
-robotic_arm/robot_client_tcp.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.i
-.PHONY : robotic_arm/robot_client_tcp.cc.i
-
-robotic_arm/robot_client_tcp.s: robotic_arm/robot_client_tcp.cc.s
-
-.PHONY : robotic_arm/robot_client_tcp.s
-
-# target to generate assembly for a file
-robotic_arm/robot_client_tcp.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.s
-.PHONY : robotic_arm/robot_client_tcp.cc.s
-
 thread/Condition.o: thread/Condition.cc.o
 
 .PHONY : thread/Condition.o
@@ -1365,9 +1311,6 @@ help:
 	@echo "... datetime/Timestamp.o"
 	@echo "... datetime/Timestamp.i"
 	@echo "... datetime/Timestamp.s"
-	@echo "... kinematics/kinematics.o"
-	@echo "... kinematics/kinematics.i"
-	@echo "... kinematics/kinematics.s"
 	@echo "... logging/AsyncLogging.o"
 	@echo "... logging/AsyncLogging.i"
 	@echo "... logging/AsyncLogging.s"
@@ -1458,9 +1401,6 @@ help:
 	@echo "... robot_interface/platform_robot_interface.o"
 	@echo "... robot_interface/platform_robot_interface.i"
 	@echo "... robot_interface/platform_robot_interface.s"
-	@echo "... robotic_arm/robot_client_tcp.o"
-	@echo "... robotic_arm/robot_client_tcp.i"
-	@echo "... robotic_arm/robot_client_tcp.s"
 	@echo "... thread/Condition.o"
 	@echo "... thread/Condition.i"
 	@echo "... thread/Condition.s"

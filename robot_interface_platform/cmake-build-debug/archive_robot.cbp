@@ -41,8 +41,6 @@
 					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/plc"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/config"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/vision_detection"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/robotic_arm"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/kinematics"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/pick_and_place"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/mapping_table"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/agv_wait_action_finish"/>
@@ -83,8 +81,6 @@
 					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/plc"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/config"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/vision_detection"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/robotic_arm"/>
-					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/kinematics"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/pick_and_place"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/mapping_table"/>
 					<Add directory="/home/bisheng/robot_interface_muduo/robot_interface_platform/agv_wait_action_finish"/>
@@ -156,12 +152,6 @@
 			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/datetime/Timestamp.h">
-			<Option target="PlatformRobotInterface"/>
-		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/kinematics/kinematics.cc">
-			<Option target="PlatformRobotInterface"/>
-		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/kinematics/kinematics.h">
 			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/logging/AsyncLogging.cc">
@@ -339,12 +329,6 @@
 			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/robot_interface/platform_robot_interface.h">
-			<Option target="PlatformRobotInterface"/>
-		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/robotic_arm/robot_client_tcp.cc">
-			<Option target="PlatformRobotInterface"/>
-		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/robotic_arm/robot_client_tcp.h">
 			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/thread/Condition.cc">
