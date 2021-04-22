@@ -16,8 +16,8 @@ CMakeFiles/JakaRobotInterface.dir/agv/agv.cc.o
  ../thread/CurrentThread.h
  ../thread/Mutex.h
  ../websocket/websocket_endpoint.h
- /home/bisheng/robot_interface_muduo/agv/agv.cc
- /home/bisheng/robot_interface_muduo/agv/agv.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/agv/agv.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/agv/agv.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
@@ -168,11 +168,11 @@ CMakeFiles/JakaRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o
  ../logging/StringPiece.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.cc
- /home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/agv_wait_action_finish/action_finish.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/agv_wait_action_finish/action_finish.h
 CMakeFiles/JakaRobotInterface.dir/config/config.cc.o
- /home/bisheng/robot_interface_muduo/config/config.cc
- /home/bisheng/robot_interface_muduo/config/config.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/config/config.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/config/config.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
@@ -303,22 +303,22 @@ CMakeFiles/JakaRobotInterface.dir/config/config.cc.o
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/xfeatures2d/cuda.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/xfeatures2d/nonfree.hpp
 CMakeFiles/JakaRobotInterface.dir/datetime/Date.cc.o
- /home/bisheng/robot_interface_muduo/datetime/Date.cc
- /home/bisheng/robot_interface_muduo/datetime/Date.h
- /home/bisheng/robot_interface_muduo/datetime/Types.h
- /home/bisheng/robot_interface_muduo/datetime/copyable.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/Date.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/Date.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/Types.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/copyable.h
 CMakeFiles/JakaRobotInterface.dir/datetime/TimeZone.cc.o
- /home/bisheng/robot_interface_muduo/datetime/Date.h
- /home/bisheng/robot_interface_muduo/datetime/TimeZone.cc
- /home/bisheng/robot_interface_muduo/datetime/TimeZone.h
- /home/bisheng/robot_interface_muduo/datetime/Types.h
- /home/bisheng/robot_interface_muduo/datetime/copyable.h
- /home/bisheng/robot_interface_muduo/datetime/noncopyable.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/Date.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/TimeZone.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/TimeZone.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/Types.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/copyable.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/noncopyable.h
 CMakeFiles/JakaRobotInterface.dir/datetime/Timestamp.cc.o
- /home/bisheng/robot_interface_muduo/datetime/Timestamp.cc
- /home/bisheng/robot_interface_muduo/datetime/Timestamp.h
- /home/bisheng/robot_interface_muduo/datetime/Types.h
- /home/bisheng/robot_interface_muduo/datetime/copyable.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/Timestamp.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/Timestamp.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/Types.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/datetime/copyable.h
 CMakeFiles/JakaRobotInterface.dir/kinematics/kinematics.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -331,9 +331,9 @@ CMakeFiles/JakaRobotInterface.dir/kinematics/kinematics.cc.o
  ../robotic_arm/robot_client_tcp.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/kinematics/kinematics.cc
- /home/bisheng/robot_interface_muduo/kinematics/kinematics.h
- /home/bisheng/robot_interface_muduo/kinematics/pose_transform.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/kinematics/kinematics.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/kinematics/kinematics.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/kinematics/pose_transform.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/calib3d/calib3d_c.h
@@ -478,21 +478,21 @@ CMakeFiles/JakaRobotInterface.dir/logging/AsyncLogging.cc.o
  ../thread/CurrentThread.h
  ../thread/Mutex.h
  ../thread/Thread.h
- /home/bisheng/robot_interface_muduo/logging/AsyncLogging.cc
- /home/bisheng/robot_interface_muduo/logging/AsyncLogging.h
- /home/bisheng/robot_interface_muduo/logging/LogFile.h
- /home/bisheng/robot_interface_muduo/logging/LogStream.h
- /home/bisheng/robot_interface_muduo/logging/StringPiece.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/AsyncLogging.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/AsyncLogging.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/LogFile.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/LogStream.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/StringPiece.h
 CMakeFiles/JakaRobotInterface.dir/logging/FileUtil.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
  ../datetime/copyable.h
  ../datetime/noncopyable.h
- /home/bisheng/robot_interface_muduo/logging/FileUtil.cc
- /home/bisheng/robot_interface_muduo/logging/FileUtil.h
- /home/bisheng/robot_interface_muduo/logging/LogStream.h
- /home/bisheng/robot_interface_muduo/logging/Logging.h
- /home/bisheng/robot_interface_muduo/logging/StringPiece.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/FileUtil.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/FileUtil.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/LogStream.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/Logging.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/StringPiece.h
 CMakeFiles/JakaRobotInterface.dir/logging/LogFile.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -500,17 +500,17 @@ CMakeFiles/JakaRobotInterface.dir/logging/LogFile.cc.o
  ../datetime/noncopyable.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/logging/FileUtil.h
- /home/bisheng/robot_interface_muduo/logging/LogFile.cc
- /home/bisheng/robot_interface_muduo/logging/LogFile.h
- /home/bisheng/robot_interface_muduo/logging/ProcessInfo.h
- /home/bisheng/robot_interface_muduo/logging/StringPiece.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/FileUtil.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/LogFile.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/LogFile.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/ProcessInfo.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/StringPiece.h
 CMakeFiles/JakaRobotInterface.dir/logging/LogStream.cc.o
  ../datetime/Types.h
  ../datetime/noncopyable.h
- /home/bisheng/robot_interface_muduo/logging/LogStream.cc
- /home/bisheng/robot_interface_muduo/logging/LogStream.h
- /home/bisheng/robot_interface_muduo/logging/StringPiece.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/LogStream.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/LogStream.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/StringPiece.h
 CMakeFiles/JakaRobotInterface.dir/logging/Logging.cc.o
  ../datetime/TimeZone.h
  ../datetime/Timestamp.h
@@ -518,23 +518,23 @@ CMakeFiles/JakaRobotInterface.dir/logging/Logging.cc.o
  ../datetime/copyable.h
  ../datetime/noncopyable.h
  ../thread/CurrentThread.h
- /home/bisheng/robot_interface_muduo/logging/LogStream.h
- /home/bisheng/robot_interface_muduo/logging/Logging.cc
- /home/bisheng/robot_interface_muduo/logging/Logging.h
- /home/bisheng/robot_interface_muduo/logging/StringPiece.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/LogStream.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/Logging.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/Logging.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/StringPiece.h
 CMakeFiles/JakaRobotInterface.dir/logging/ProcessInfo.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
  ../datetime/copyable.h
  ../datetime/noncopyable.h
  ../thread/CurrentThread.h
- /home/bisheng/robot_interface_muduo/logging/FileUtil.h
- /home/bisheng/robot_interface_muduo/logging/ProcessInfo.cc
- /home/bisheng/robot_interface_muduo/logging/ProcessInfo.h
- /home/bisheng/robot_interface_muduo/logging/StringPiece.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/FileUtil.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/ProcessInfo.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/ProcessInfo.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/logging/StringPiece.h
 CMakeFiles/JakaRobotInterface.dir/mapping_table/mapping_table.cc.o
- /home/bisheng/robot_interface_muduo/mapping_table/mapping_table.cc
- /home/bisheng/robot_interface_muduo/mapping_table/mapping_table.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/mapping_table/mapping_table.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/mapping_table/mapping_table.h
 CMakeFiles/JakaRobotInterface.dir/net/Acceptor.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -545,23 +545,23 @@ CMakeFiles/JakaRobotInterface.dir/net/Acceptor.cc.o
  ../logging/StringPiece.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/net/Acceptor.cc
- /home/bisheng/robot_interface_muduo/net/Acceptor.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/Channel.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/InetAddress.h
- /home/bisheng/robot_interface_muduo/net/Socket.h
- /home/bisheng/robot_interface_muduo/net/SocketsOps.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Acceptor.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Acceptor.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Channel.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/InetAddress.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Socket.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/SocketsOps.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
 CMakeFiles/JakaRobotInterface.dir/net/Buffer.cc.o
  ../datetime/Types.h
  ../datetime/copyable.h
  ../logging/StringPiece.h
- /home/bisheng/robot_interface_muduo/net/Buffer.cc
- /home/bisheng/robot_interface_muduo/net/Buffer.h
- /home/bisheng/robot_interface_muduo/net/Endian.h
- /home/bisheng/robot_interface_muduo/net/SocketsOps.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Buffer.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Buffer.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Endian.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/SocketsOps.h
 CMakeFiles/JakaRobotInterface.dir/net/Channel.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -572,11 +572,11 @@ CMakeFiles/JakaRobotInterface.dir/net/Channel.cc.o
  ../logging/StringPiece.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/Channel.cc
- /home/bisheng/robot_interface_muduo/net/Channel.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Channel.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Channel.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
 CMakeFiles/JakaRobotInterface.dir/net/Connector.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -587,14 +587,14 @@ CMakeFiles/JakaRobotInterface.dir/net/Connector.cc.o
  ../logging/StringPiece.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/Channel.h
- /home/bisheng/robot_interface_muduo/net/Connector.cc
- /home/bisheng/robot_interface_muduo/net/Connector.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/InetAddress.h
- /home/bisheng/robot_interface_muduo/net/SocketsOps.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Channel.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Connector.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Connector.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/InetAddress.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/SocketsOps.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
 CMakeFiles/JakaRobotInterface.dir/net/DefaultPoller.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -602,13 +602,13 @@ CMakeFiles/JakaRobotInterface.dir/net/DefaultPoller.cc.o
  ../datetime/noncopyable.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/DefaultPoller.cc
- /home/bisheng/robot_interface_muduo/net/EPollPoller.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/PollPoller.h
- /home/bisheng/robot_interface_muduo/net/Poller.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/DefaultPoller.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EPollPoller.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/PollPoller.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Poller.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
 CMakeFiles/JakaRobotInterface.dir/net/EPollPoller.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -619,13 +619,13 @@ CMakeFiles/JakaRobotInterface.dir/net/EPollPoller.cc.o
  ../logging/StringPiece.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/Channel.h
- /home/bisheng/robot_interface_muduo/net/EPollPoller.cc
- /home/bisheng/robot_interface_muduo/net/EPollPoller.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/Poller.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Channel.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EPollPoller.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EPollPoller.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Poller.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
 CMakeFiles/JakaRobotInterface.dir/net/EventLoop.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -636,14 +636,14 @@ CMakeFiles/JakaRobotInterface.dir/net/EventLoop.cc.o
  ../logging/StringPiece.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/Channel.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.cc
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/Poller.h
- /home/bisheng/robot_interface_muduo/net/SocketsOps.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
- /home/bisheng/robot_interface_muduo/net/TimerQueue.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Channel.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Poller.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/SocketsOps.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerQueue.h
 CMakeFiles/JakaRobotInterface.dir/net/EventLoopThread.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -655,11 +655,11 @@ CMakeFiles/JakaRobotInterface.dir/net/EventLoopThread.cc.o
  ../thread/CurrentThread.h
  ../thread/Mutex.h
  ../thread/Thread.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/EventLoopThread.cc
- /home/bisheng/robot_interface_muduo/net/EventLoopThread.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoopThread.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoopThread.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
 CMakeFiles/JakaRobotInterface.dir/net/EventLoopThreadPool.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -671,12 +671,12 @@ CMakeFiles/JakaRobotInterface.dir/net/EventLoopThreadPool.cc.o
  ../thread/CurrentThread.h
  ../thread/Mutex.h
  ../thread/Thread.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/EventLoopThread.h
- /home/bisheng/robot_interface_muduo/net/EventLoopThreadPool.cc
- /home/bisheng/robot_interface_muduo/net/EventLoopThreadPool.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoopThread.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoopThreadPool.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoopThreadPool.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
 CMakeFiles/JakaRobotInterface.dir/net/InetAddress.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -685,10 +685,10 @@ CMakeFiles/JakaRobotInterface.dir/net/InetAddress.cc.o
  ../logging/LogStream.h
  ../logging/Logging.h
  ../logging/StringPiece.h
- /home/bisheng/robot_interface_muduo/net/Endian.h
- /home/bisheng/robot_interface_muduo/net/InetAddress.cc
- /home/bisheng/robot_interface_muduo/net/InetAddress.h
- /home/bisheng/robot_interface_muduo/net/SocketsOps.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Endian.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/InetAddress.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/InetAddress.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/SocketsOps.h
 CMakeFiles/JakaRobotInterface.dir/net/PollPoller.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -699,13 +699,13 @@ CMakeFiles/JakaRobotInterface.dir/net/PollPoller.cc.o
  ../logging/StringPiece.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/Channel.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/PollPoller.cc
- /home/bisheng/robot_interface_muduo/net/PollPoller.h
- /home/bisheng/robot_interface_muduo/net/Poller.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Channel.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/PollPoller.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/PollPoller.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Poller.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
 CMakeFiles/JakaRobotInterface.dir/net/Poller.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -713,12 +713,12 @@ CMakeFiles/JakaRobotInterface.dir/net/Poller.cc.o
  ../datetime/noncopyable.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/Channel.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/Poller.cc
- /home/bisheng/robot_interface_muduo/net/Poller.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Channel.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Poller.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Poller.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
 CMakeFiles/JakaRobotInterface.dir/net/Socket.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -727,10 +727,10 @@ CMakeFiles/JakaRobotInterface.dir/net/Socket.cc.o
  ../logging/LogStream.h
  ../logging/Logging.h
  ../logging/StringPiece.h
- /home/bisheng/robot_interface_muduo/net/InetAddress.h
- /home/bisheng/robot_interface_muduo/net/Socket.cc
- /home/bisheng/robot_interface_muduo/net/Socket.h
- /home/bisheng/robot_interface_muduo/net/SocketsOps.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/InetAddress.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Socket.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Socket.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/SocketsOps.h
 CMakeFiles/JakaRobotInterface.dir/net/SocketsOps.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -739,9 +739,9 @@ CMakeFiles/JakaRobotInterface.dir/net/SocketsOps.cc.o
  ../logging/LogStream.h
  ../logging/Logging.h
  ../logging/StringPiece.h
- /home/bisheng/robot_interface_muduo/net/Endian.h
- /home/bisheng/robot_interface_muduo/net/SocketsOps.cc
- /home/bisheng/robot_interface_muduo/net/SocketsOps.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Endian.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/SocketsOps.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/SocketsOps.h
 CMakeFiles/JakaRobotInterface.dir/net/TcpClient.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -752,17 +752,17 @@ CMakeFiles/JakaRobotInterface.dir/net/TcpClient.cc.o
  ../logging/StringPiece.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/net/Buffer.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/Connector.h
- /home/bisheng/robot_interface_muduo/net/Endian.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/InetAddress.h
- /home/bisheng/robot_interface_muduo/net/SocketsOps.h
- /home/bisheng/robot_interface_muduo/net/TcpClient.cc
- /home/bisheng/robot_interface_muduo/net/TcpClient.h
- /home/bisheng/robot_interface_muduo/net/TcpConnection.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Buffer.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Connector.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Endian.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/InetAddress.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/SocketsOps.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TcpClient.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TcpClient.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TcpConnection.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
 CMakeFiles/JakaRobotInterface.dir/net/TcpConnection.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -773,18 +773,18 @@ CMakeFiles/JakaRobotInterface.dir/net/TcpConnection.cc.o
  ../logging/StringPiece.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/net/Buffer.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/Channel.h
- /home/bisheng/robot_interface_muduo/net/Endian.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/InetAddress.h
- /home/bisheng/robot_interface_muduo/net/Socket.h
- /home/bisheng/robot_interface_muduo/net/SocketsOps.h
- /home/bisheng/robot_interface_muduo/net/TcpConnection.cc
- /home/bisheng/robot_interface_muduo/net/TcpConnection.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
- /home/bisheng/robot_interface_muduo/net/WeakCallback.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Buffer.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Channel.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Endian.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/InetAddress.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Socket.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/SocketsOps.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TcpConnection.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TcpConnection.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/WeakCallback.h
 CMakeFiles/JakaRobotInterface.dir/net/TcpServer.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -796,29 +796,29 @@ CMakeFiles/JakaRobotInterface.dir/net/TcpServer.cc.o
  ../thread/Atomic.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/net/Acceptor.h
- /home/bisheng/robot_interface_muduo/net/Buffer.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/Channel.h
- /home/bisheng/robot_interface_muduo/net/Endian.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/EventLoopThreadPool.h
- /home/bisheng/robot_interface_muduo/net/InetAddress.h
- /home/bisheng/robot_interface_muduo/net/Socket.h
- /home/bisheng/robot_interface_muduo/net/SocketsOps.h
- /home/bisheng/robot_interface_muduo/net/TcpConnection.h
- /home/bisheng/robot_interface_muduo/net/TcpServer.cc
- /home/bisheng/robot_interface_muduo/net/TcpServer.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Acceptor.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Buffer.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Channel.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Endian.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoopThreadPool.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/InetAddress.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Socket.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/SocketsOps.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TcpConnection.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TcpServer.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TcpServer.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
 CMakeFiles/JakaRobotInterface.dir/net/Timer.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
  ../datetime/copyable.h
  ../datetime/noncopyable.h
  ../thread/Atomic.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/Timer.cc
- /home/bisheng/robot_interface_muduo/net/Timer.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Timer.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Timer.h
 CMakeFiles/JakaRobotInterface.dir/net/TimerQueue.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -830,13 +830,13 @@ CMakeFiles/JakaRobotInterface.dir/net/TimerQueue.cc.o
  ../thread/Atomic.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/net/Callbacks.h
- /home/bisheng/robot_interface_muduo/net/Channel.h
- /home/bisheng/robot_interface_muduo/net/EventLoop.h
- /home/bisheng/robot_interface_muduo/net/Timer.h
- /home/bisheng/robot_interface_muduo/net/TimerId.h
- /home/bisheng/robot_interface_muduo/net/TimerQueue.cc
- /home/bisheng/robot_interface_muduo/net/TimerQueue.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Callbacks.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Channel.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/EventLoop.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/Timer.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerId.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerQueue.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/net/TimerQueue.h
 CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o
  ../config/config.h
  ../datetime/Timestamp.h
@@ -855,8 +855,8 @@ CMakeFiles/JakaRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o
  ../thread/CurrentThread.h
  ../thread/Mutex.h
  ../vision_detection/vision_detection_position.h
- /home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc
- /home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/pick_and_place/jaka_pick_and_place.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/pick_and_place/jaka_pick_and_place.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/aruco.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/aruco/dictionary.hpp
@@ -1021,8 +1021,8 @@ CMakeFiles/JakaRobotInterface.dir/plc/jaka_plc.cc.o
  ../logging/StringPiece.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc
- /home/bisheng/robot_interface_muduo/plc/jaka_plc.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/plc/jaka_plc.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/plc/jaka_plc.h
 CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o
  ../agv/agv.h
  ../agv_wait_action_finish/action_finish.h
@@ -1058,9 +1058,9 @@ CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka.cc.o
  ../thread/ThreadPool.h
  ../vision_detection/vision_detection_position.h
  ../websocket/websocket_endpoint.h
- /home/bisheng/robot_interface_muduo/robot_interface/codec.h
- /home/bisheng/robot_interface_muduo/robot_interface/jaka.cc
- /home/bisheng/robot_interface_muduo/robot_interface/jaka_robot_interface.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/robot_interface/codec.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/robot_interface/jaka.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/robot_interface/jaka_robot_interface.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/aruco.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/aruco/dictionary.hpp
@@ -1258,9 +1258,9 @@ CMakeFiles/JakaRobotInterface.dir/robot_interface/jaka_robot_interface.cc.o
  ../thread/ThreadPool.h
  ../vision_detection/vision_detection_position.h
  ../websocket/websocket_endpoint.h
- /home/bisheng/robot_interface_muduo/robot_interface/codec.h
- /home/bisheng/robot_interface_muduo/robot_interface/jaka_robot_interface.cc
- /home/bisheng/robot_interface_muduo/robot_interface/jaka_robot_interface.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/robot_interface/codec.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/robot_interface/jaka_robot_interface.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/robot_interface/jaka_robot_interface.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/aruco.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/aruco/dictionary.hpp
@@ -1434,33 +1434,33 @@ CMakeFiles/JakaRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o
  ../logging/StringPiece.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc
- /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/robotic_arm/robot_client_tcp.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/robotic_arm/robot_client_tcp.h
  /usr/local/include/hv/json.hpp
 CMakeFiles/JakaRobotInterface.dir/thread/Condition.cc.o
  ../datetime/Types.h
  ../datetime/noncopyable.h
- /home/bisheng/robot_interface_muduo/thread/Condition.cc
- /home/bisheng/robot_interface_muduo/thread/Condition.h
- /home/bisheng/robot_interface_muduo/thread/CurrentThread.h
- /home/bisheng/robot_interface_muduo/thread/Mutex.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Condition.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Condition.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/CurrentThread.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Mutex.h
 CMakeFiles/JakaRobotInterface.dir/thread/CountDownLatch.cc.o
  ../datetime/Types.h
  ../datetime/noncopyable.h
- /home/bisheng/robot_interface_muduo/thread/Condition.h
- /home/bisheng/robot_interface_muduo/thread/CountDownLatch.cc
- /home/bisheng/robot_interface_muduo/thread/CountDownLatch.h
- /home/bisheng/robot_interface_muduo/thread/CurrentThread.h
- /home/bisheng/robot_interface_muduo/thread/Mutex.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Condition.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/CountDownLatch.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/CountDownLatch.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/CurrentThread.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Mutex.h
 CMakeFiles/JakaRobotInterface.dir/thread/CurrentThread.cc.o
  ../datetime/Types.h
- /home/bisheng/robot_interface_muduo/thread/CurrentThread.cc
- /home/bisheng/robot_interface_muduo/thread/CurrentThread.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/CurrentThread.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/CurrentThread.h
 CMakeFiles/JakaRobotInterface.dir/thread/Exception.cc.o
  ../datetime/Types.h
- /home/bisheng/robot_interface_muduo/thread/CurrentThread.h
- /home/bisheng/robot_interface_muduo/thread/Exception.cc
- /home/bisheng/robot_interface_muduo/thread/Exception.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/CurrentThread.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Exception.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Exception.h
 CMakeFiles/JakaRobotInterface.dir/thread/Thread.cc.o
  ../datetime/Timestamp.h
  ../datetime/Types.h
@@ -1469,26 +1469,26 @@ CMakeFiles/JakaRobotInterface.dir/thread/Thread.cc.o
  ../logging/LogStream.h
  ../logging/Logging.h
  ../logging/StringPiece.h
- /home/bisheng/robot_interface_muduo/thread/Atomic.h
- /home/bisheng/robot_interface_muduo/thread/Condition.h
- /home/bisheng/robot_interface_muduo/thread/CountDownLatch.h
- /home/bisheng/robot_interface_muduo/thread/CurrentThread.h
- /home/bisheng/robot_interface_muduo/thread/Exception.h
- /home/bisheng/robot_interface_muduo/thread/Mutex.h
- /home/bisheng/robot_interface_muduo/thread/Thread.cc
- /home/bisheng/robot_interface_muduo/thread/Thread.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Atomic.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Condition.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/CountDownLatch.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/CurrentThread.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Exception.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Mutex.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Thread.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Thread.h
 CMakeFiles/JakaRobotInterface.dir/thread/ThreadPool.cc.o
  ../datetime/Types.h
  ../datetime/noncopyable.h
- /home/bisheng/robot_interface_muduo/thread/Atomic.h
- /home/bisheng/robot_interface_muduo/thread/Condition.h
- /home/bisheng/robot_interface_muduo/thread/CountDownLatch.h
- /home/bisheng/robot_interface_muduo/thread/CurrentThread.h
- /home/bisheng/robot_interface_muduo/thread/Exception.h
- /home/bisheng/robot_interface_muduo/thread/Mutex.h
- /home/bisheng/robot_interface_muduo/thread/Thread.h
- /home/bisheng/robot_interface_muduo/thread/ThreadPool.cc
- /home/bisheng/robot_interface_muduo/thread/ThreadPool.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Atomic.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Condition.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/CountDownLatch.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/CurrentThread.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Exception.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Mutex.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/Thread.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/ThreadPool.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/thread/ThreadPool.h
 CMakeFiles/JakaRobotInterface.dir/vision_detection/vision_detection_position.cc.o
  ../config/config.h
  ../datetime/Timestamp.h
@@ -1501,8 +1501,8 @@ CMakeFiles/JakaRobotInterface.dir/vision_detection/vision_detection_position.cc.
  ../logging/StringPiece.h
  ../thread/CurrentThread.h
  ../thread/Mutex.h
- /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc
- /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.h
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/vision_detection/vision_detection_position.cc
+ /home/bisheng/robot_interface_muduo/robot_interface_jaka/vision_detection/vision_detection_position.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv/cxcore.h
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/aruco.hpp
  /opt/ros/kinetic/include/opencv-3.3.1-dev/opencv2/aruco/dictionary.hpp

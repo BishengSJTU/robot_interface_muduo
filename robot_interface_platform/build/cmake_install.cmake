@@ -1,4 +1,4 @@
-# Install script for directory: /home/bisheng/robot_interface_muduo
+# Install script for directory: /home/bisheng/robot_interface_muduo/robot_interface_platform
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/bisheng/robot_interface_muduo/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/bisheng/robot_interface_muduo/robot_interface_platform/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

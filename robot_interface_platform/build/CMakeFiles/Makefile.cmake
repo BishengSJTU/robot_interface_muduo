@@ -118,6 +118,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/TcpServer_test.dir/DependInfo.cmake"
-  "CMakeFiles/JakaRobotInterface.dir/DependInfo.cmake"
+  "CMakeFiles/PlatformRobotInterface.dir/DependInfo.cmake"
   )

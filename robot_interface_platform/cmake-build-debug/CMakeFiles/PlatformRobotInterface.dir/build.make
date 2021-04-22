@@ -43,10 +43,10 @@ RM = /opt/clion-2019.1.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bisheng/robot_interface_muduo
+CMAKE_SOURCE_DIR = /home/bisheng/robot_interface_muduo/robot_interface_platform
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bisheng/robot_interface_muduo/cmake-build-debug
+CMAKE_BINARY_DIR = /home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/PlatformRobotInterface.dir/depend.make
@@ -59,588 +59,588 @@ include CMakeFiles/PlatformRobotInterface.dir/flags.make
 
 CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o: ../robot_interface/platform.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface/platform.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/robot_interface/platform.cc
 
 CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface/platform.cc > CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/robot_interface/platform.cc > CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface/platform.cc -o CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/robot_interface/platform.cc -o CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.o: ../robot_interface/platform_robot_interface.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface/platform_robot_interface.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/robot_interface/platform_robot_interface.cc
 
 CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface/platform_robot_interface.cc > CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/robot_interface/platform_robot_interface.cc > CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface/platform_robot_interface.cc -o CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/robot_interface/platform_robot_interface.cc -o CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o: ../agv/agv.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o -c /home/bisheng/robot_interface_muduo/agv/agv.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/agv/agv.cc
 
 CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/agv/agv.cc > CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/agv/agv.cc > CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/agv/agv.cc -o CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/agv/agv.cc -o CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o: ../agv_wait_action_finish/action_finish.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o -c /home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/agv_wait_action_finish/action_finish.cc
 
 CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.cc > CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/agv_wait_action_finish/action_finish.cc > CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/agv_wait_action_finish/action_finish.cc -o CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/agv_wait_action_finish/action_finish.cc -o CMakeFiles/PlatformRobotInterface.dir/agv_wait_action_finish/action_finish.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o: ../config/config.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o -c /home/bisheng/robot_interface_muduo/config/config.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/config/config.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/config/config.cc
 
 CMakeFiles/PlatformRobotInterface.dir/config/config.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/config/config.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/config/config.cc > CMakeFiles/PlatformRobotInterface.dir/config/config.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/config/config.cc > CMakeFiles/PlatformRobotInterface.dir/config/config.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/config/config.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/config/config.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/config/config.cc -o CMakeFiles/PlatformRobotInterface.dir/config/config.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/config/config.cc -o CMakeFiles/PlatformRobotInterface.dir/config/config.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.o: ../datetime/Date.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.o -c /home/bisheng/robot_interface_muduo/datetime/Date.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/datetime/Date.cc
 
 CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/datetime/Date.cc > CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/datetime/Date.cc > CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/datetime/Date.cc -o CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/datetime/Date.cc -o CMakeFiles/PlatformRobotInterface.dir/datetime/Date.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.o: ../datetime/TimeZone.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.o -c /home/bisheng/robot_interface_muduo/datetime/TimeZone.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/datetime/TimeZone.cc
 
 CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/datetime/TimeZone.cc > CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/datetime/TimeZone.cc > CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/datetime/TimeZone.cc -o CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/datetime/TimeZone.cc -o CMakeFiles/PlatformRobotInterface.dir/datetime/TimeZone.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.o: ../datetime/Timestamp.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.o -c /home/bisheng/robot_interface_muduo/datetime/Timestamp.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/datetime/Timestamp.cc
 
 CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/datetime/Timestamp.cc > CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/datetime/Timestamp.cc > CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/datetime/Timestamp.cc -o CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/datetime/Timestamp.cc -o CMakeFiles/PlatformRobotInterface.dir/datetime/Timestamp.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o: ../kinematics/kinematics.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o -c /home/bisheng/robot_interface_muduo/kinematics/kinematics.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/kinematics/kinematics.cc
 
 CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/kinematics/kinematics.cc > CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/kinematics/kinematics.cc > CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/kinematics/kinematics.cc -o CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/kinematics/kinematics.cc -o CMakeFiles/PlatformRobotInterface.dir/kinematics/kinematics.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.o: ../logging/AsyncLogging.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.o -c /home/bisheng/robot_interface_muduo/logging/AsyncLogging.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/AsyncLogging.cc
 
 CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/logging/AsyncLogging.cc > CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/AsyncLogging.cc > CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/logging/AsyncLogging.cc -o CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/AsyncLogging.cc -o CMakeFiles/PlatformRobotInterface.dir/logging/AsyncLogging.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.o: ../logging/FileUtil.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.o -c /home/bisheng/robot_interface_muduo/logging/FileUtil.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/FileUtil.cc
 
 CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/logging/FileUtil.cc > CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/FileUtil.cc > CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/logging/FileUtil.cc -o CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/FileUtil.cc -o CMakeFiles/PlatformRobotInterface.dir/logging/FileUtil.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.o: ../logging/LogFile.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.o -c /home/bisheng/robot_interface_muduo/logging/LogFile.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/LogFile.cc
 
 CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/logging/LogFile.cc > CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/LogFile.cc > CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/logging/LogFile.cc -o CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/LogFile.cc -o CMakeFiles/PlatformRobotInterface.dir/logging/LogFile.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.o: ../logging/LogStream.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.o -c /home/bisheng/robot_interface_muduo/logging/LogStream.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/LogStream.cc
 
 CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/logging/LogStream.cc > CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/LogStream.cc > CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/logging/LogStream.cc -o CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/LogStream.cc -o CMakeFiles/PlatformRobotInterface.dir/logging/LogStream.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.o: ../logging/Logging.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.o -c /home/bisheng/robot_interface_muduo/logging/Logging.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/Logging.cc
 
 CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/logging/Logging.cc > CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/Logging.cc > CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/logging/Logging.cc -o CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/Logging.cc -o CMakeFiles/PlatformRobotInterface.dir/logging/Logging.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.o: ../logging/ProcessInfo.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.o -c /home/bisheng/robot_interface_muduo/logging/ProcessInfo.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/ProcessInfo.cc
 
 CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/logging/ProcessInfo.cc > CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/ProcessInfo.cc > CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/logging/ProcessInfo.cc -o CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/logging/ProcessInfo.cc -o CMakeFiles/PlatformRobotInterface.dir/logging/ProcessInfo.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o: ../mapping_table/mapping_table.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o -c /home/bisheng/robot_interface_muduo/mapping_table/mapping_table.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/mapping_table/mapping_table.cc
 
 CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/mapping_table/mapping_table.cc > CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/mapping_table/mapping_table.cc > CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/mapping_table/mapping_table.cc -o CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/mapping_table/mapping_table.cc -o CMakeFiles/PlatformRobotInterface.dir/mapping_table/mapping_table.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.o: ../net/Acceptor.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.o -c /home/bisheng/robot_interface_muduo/net/Acceptor.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Acceptor.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/Acceptor.cc > CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Acceptor.cc > CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/Acceptor.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Acceptor.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Acceptor.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.o: ../net/Buffer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.o -c /home/bisheng/robot_interface_muduo/net/Buffer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Buffer.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/Buffer.cc > CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Buffer.cc > CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/Buffer.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Buffer.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Buffer.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.o: ../net/Channel.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.o -c /home/bisheng/robot_interface_muduo/net/Channel.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Channel.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/Channel.cc > CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Channel.cc > CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/Channel.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Channel.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Channel.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.o: ../net/Connector.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.o -c /home/bisheng/robot_interface_muduo/net/Connector.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Connector.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/Connector.cc > CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Connector.cc > CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/Connector.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Connector.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Connector.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.o: ../net/DefaultPoller.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.o -c /home/bisheng/robot_interface_muduo/net/DefaultPoller.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/DefaultPoller.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/DefaultPoller.cc > CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/DefaultPoller.cc > CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/DefaultPoller.cc -o CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/DefaultPoller.cc -o CMakeFiles/PlatformRobotInterface.dir/net/DefaultPoller.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.o: ../net/EPollPoller.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.o -c /home/bisheng/robot_interface_muduo/net/EPollPoller.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/EPollPoller.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/EPollPoller.cc > CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/EPollPoller.cc > CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/EPollPoller.cc -o CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/EPollPoller.cc -o CMakeFiles/PlatformRobotInterface.dir/net/EPollPoller.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.o: ../net/EventLoop.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.o -c /home/bisheng/robot_interface_muduo/net/EventLoop.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/EventLoop.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/EventLoop.cc > CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/EventLoop.cc > CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/EventLoop.cc -o CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/EventLoop.cc -o CMakeFiles/PlatformRobotInterface.dir/net/EventLoop.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.o: ../net/EventLoopThread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.o -c /home/bisheng/robot_interface_muduo/net/EventLoopThread.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/EventLoopThread.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/EventLoopThread.cc > CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/EventLoopThread.cc > CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/EventLoopThread.cc -o CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/EventLoopThread.cc -o CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThread.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.o: ../net/EventLoopThreadPool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.o -c /home/bisheng/robot_interface_muduo/net/EventLoopThreadPool.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/EventLoopThreadPool.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/EventLoopThreadPool.cc > CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/EventLoopThreadPool.cc > CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/EventLoopThreadPool.cc -o CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/EventLoopThreadPool.cc -o CMakeFiles/PlatformRobotInterface.dir/net/EventLoopThreadPool.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.o: ../net/InetAddress.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.o -c /home/bisheng/robot_interface_muduo/net/InetAddress.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/InetAddress.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/InetAddress.cc > CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/InetAddress.cc > CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/InetAddress.cc -o CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/InetAddress.cc -o CMakeFiles/PlatformRobotInterface.dir/net/InetAddress.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.o: ../net/PollPoller.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.o -c /home/bisheng/robot_interface_muduo/net/PollPoller.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/PollPoller.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/PollPoller.cc > CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/PollPoller.cc > CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/PollPoller.cc -o CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/PollPoller.cc -o CMakeFiles/PlatformRobotInterface.dir/net/PollPoller.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.o: ../net/Poller.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.o -c /home/bisheng/robot_interface_muduo/net/Poller.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Poller.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/Poller.cc > CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Poller.cc > CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/Poller.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Poller.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Poller.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.o: ../net/Socket.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.o -c /home/bisheng/robot_interface_muduo/net/Socket.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Socket.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/Socket.cc > CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Socket.cc > CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/Socket.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Socket.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Socket.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.o: ../net/SocketsOps.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.o -c /home/bisheng/robot_interface_muduo/net/SocketsOps.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/SocketsOps.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/SocketsOps.cc > CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/SocketsOps.cc > CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/SocketsOps.cc -o CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/SocketsOps.cc -o CMakeFiles/PlatformRobotInterface.dir/net/SocketsOps.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.o: ../net/TcpClient.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.o -c /home/bisheng/robot_interface_muduo/net/TcpClient.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/TcpClient.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/TcpClient.cc > CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/TcpClient.cc > CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/TcpClient.cc -o CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/TcpClient.cc -o CMakeFiles/PlatformRobotInterface.dir/net/TcpClient.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.o: ../net/TcpConnection.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.o -c /home/bisheng/robot_interface_muduo/net/TcpConnection.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/TcpConnection.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/TcpConnection.cc > CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/TcpConnection.cc > CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/TcpConnection.cc -o CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/TcpConnection.cc -o CMakeFiles/PlatformRobotInterface.dir/net/TcpConnection.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.o: ../net/TcpServer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.o -c /home/bisheng/robot_interface_muduo/net/TcpServer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/TcpServer.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/TcpServer.cc > CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/TcpServer.cc > CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/TcpServer.cc -o CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/TcpServer.cc -o CMakeFiles/PlatformRobotInterface.dir/net/TcpServer.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.o: ../net/Timer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.o -c /home/bisheng/robot_interface_muduo/net/Timer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Timer.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/Timer.cc > CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Timer.cc > CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/Timer.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/Timer.cc -o CMakeFiles/PlatformRobotInterface.dir/net/Timer.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.o: ../net/TimerQueue.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.o -c /home/bisheng/robot_interface_muduo/net/TimerQueue.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/net/TimerQueue.cc
 
 CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/net/TimerQueue.cc > CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/net/TimerQueue.cc > CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/net/TimerQueue.cc -o CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/net/TimerQueue.cc -o CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o: ../pick_and_place/jaka_pick_and_place.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o -c /home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/pick_and_place/jaka_pick_and_place.cc
 
 CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc > CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/pick_and_place/jaka_pick_and_place.cc > CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/pick_and_place/jaka_pick_and_place.cc -o CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/pick_and_place/jaka_pick_and_place.cc -o CMakeFiles/PlatformRobotInterface.dir/pick_and_place/jaka_pick_and_place.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o: ../plc/jaka_plc.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o -c /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/plc/jaka_plc.cc
 
 CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc > CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/plc/jaka_plc.cc > CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/plc/jaka_plc.cc -o CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/plc/jaka_plc.cc -o CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o: ../robotic_arm/robot_client_tcp.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o -c /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/robotic_arm/robot_client_tcp.cc
 
 CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc > CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/robotic_arm/robot_client_tcp.cc > CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robotic_arm/robot_client_tcp.cc -o CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/robotic_arm/robot_client_tcp.cc -o CMakeFiles/PlatformRobotInterface.dir/robotic_arm/robot_client_tcp.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o: ../thread/Condition.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o -c /home/bisheng/robot_interface_muduo/thread/Condition.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/Condition.cc
 
 CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/thread/Condition.cc > CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/Condition.cc > CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/thread/Condition.cc -o CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/Condition.cc -o CMakeFiles/PlatformRobotInterface.dir/thread/Condition.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.o: ../thread/CountDownLatch.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.o -c /home/bisheng/robot_interface_muduo/thread/CountDownLatch.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/CountDownLatch.cc
 
 CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/thread/CountDownLatch.cc > CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/CountDownLatch.cc > CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/thread/CountDownLatch.cc -o CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/CountDownLatch.cc -o CMakeFiles/PlatformRobotInterface.dir/thread/CountDownLatch.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.o: ../thread/CurrentThread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.o -c /home/bisheng/robot_interface_muduo/thread/CurrentThread.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/CurrentThread.cc
 
 CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/thread/CurrentThread.cc > CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/CurrentThread.cc > CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/thread/CurrentThread.cc -o CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/CurrentThread.cc -o CMakeFiles/PlatformRobotInterface.dir/thread/CurrentThread.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o: ../thread/Exception.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o -c /home/bisheng/robot_interface_muduo/thread/Exception.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/Exception.cc
 
 CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/thread/Exception.cc > CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/Exception.cc > CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/thread/Exception.cc -o CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/Exception.cc -o CMakeFiles/PlatformRobotInterface.dir/thread/Exception.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.o: ../thread/Thread.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.o -c /home/bisheng/robot_interface_muduo/thread/Thread.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/Thread.cc
 
 CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/thread/Thread.cc > CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/Thread.cc > CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/thread/Thread.cc -o CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/Thread.cc -o CMakeFiles/PlatformRobotInterface.dir/thread/Thread.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.o: ../thread/ThreadPool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.o -c /home/bisheng/robot_interface_muduo/thread/ThreadPool.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/ThreadPool.cc
 
 CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/thread/ThreadPool.cc > CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/ThreadPool.cc > CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/thread/ThreadPool.cc -o CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/ThreadPool.cc -o CMakeFiles/PlatformRobotInterface.dir/thread/ThreadPool.cc.s
 
 CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o: CMakeFiles/PlatformRobotInterface.dir/flags.make
 CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o: ../vision_detection/vision_detection_position.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o -c /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.o -c /home/bisheng/robot_interface_muduo/robot_interface_platform/vision_detection/vision_detection_position.cc
 
 CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc > CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bisheng/robot_interface_muduo/robot_interface_platform/vision_detection/vision_detection_position.cc > CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.i
 
 CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/vision_detection/vision_detection_position.cc -o CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bisheng/robot_interface_muduo/robot_interface_platform/vision_detection/vision_detection_position.cc -o CMakeFiles/PlatformRobotInterface.dir/vision_detection/vision_detection_position.cc.s
 
 # Object files for target PlatformRobotInterface
 PlatformRobotInterface_OBJECTS = \
@@ -786,7 +786,7 @@ PlatformRobotInterface: /usr/local/lib/libopencv_imgcodecs.so.3.4.8
 PlatformRobotInterface: /usr/local/lib/libopencv_imgproc.so.3.4.8
 PlatformRobotInterface: /usr/local/lib/libopencv_core.so.3.4.8
 PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Linking CXX executable PlatformRobotInterface"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Linking CXX executable PlatformRobotInterface"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PlatformRobotInterface.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -799,6 +799,6 @@ CMakeFiles/PlatformRobotInterface.dir/clean:
 .PHONY : CMakeFiles/PlatformRobotInterface.dir/clean
 
 CMakeFiles/PlatformRobotInterface.dir/depend:
-	cd /home/bisheng/robot_interface_muduo/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bisheng/robot_interface_muduo /home/bisheng/robot_interface_muduo /home/bisheng/robot_interface_muduo/cmake-build-debug /home/bisheng/robot_interface_muduo/cmake-build-debug /home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles/PlatformRobotInterface.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/bisheng/robot_interface_muduo/robot_interface_platform /home/bisheng/robot_interface_muduo/robot_interface_platform /home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug /home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug /home/bisheng/robot_interface_muduo/robot_interface_platform/cmake-build-debug/CMakeFiles/PlatformRobotInterface.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/PlatformRobotInterface.dir/depend
 
