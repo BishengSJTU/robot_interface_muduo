@@ -1,22 +1,21 @@
 #include "platform_robot_interface.h"
 
-RobotInterface::RobotInterface():
+RobotInterface::RobotInterface(std::string path):
 codec_(std::bind(&RobotInterface::onCompleteMessage, this, muduo::_1, muduo::_2, muduo::_3)),
 taskCondition_(taskMessageMutex_),
-externalCondition_(externalInfoMutex_)
+externalCondition_(externalInfoMutex_),
+connectionCondition_(connectionMutex_),
+config_(path + "/FixedConfig.YML"),
+agv_(path, ROBOT_INLINE)
 {
-    {
-        MutexLockGuard lock(externalInfoMutex_);
-        externalInfo_.readyCab = {};
-        externalInfo_.actualRFID = "";
-        externalInfo_.singleArchiveFinishedReceived = false;
-    }
-
+    taskServerIP_ = config_.get<std::string>("MIDDLE_LAYER_IP");
+    taskServerPort_ = config_.get<int>("MIDDLE_LAYER_PORT");
+    initialize();
 }
 
 void RobotInterface::eventLoopThread() {
     muduo::net::EventLoop loop;
-    muduo::net::InetAddress serverAddr("192.168.101.4", 20001);
+    muduo::net::InetAddress serverAddr(taskServerIP_, taskServerPort_);
     muduo::net::TcpClient client(&loop, serverAddr, "TcpClient");
     client.setConnectionCallback(std::bind(&RobotInterface::onConnection, this, muduo::_1));
     client.setMessageCallback(std::bind(&LengthHeaderCodec::onMessage, &codec_, muduo::_1, muduo::_2, muduo::_3));
@@ -62,7 +61,7 @@ void RobotInterface::execTaskThread() {
                     if (data[7 + 2 * i] == 0xA1)
                         response[7 + 2 * i] = 0x00;
                 }
-            } else if (taskType == CHARGE_TASK || taskType == ALL_FINISH_TASK) {
+            } else if (taskType == DEPOSIT_PREPARE_TASK || taskType == CHARGE_TASK || taskType == ALL_FINISH_TASK) {
                 response[7] = 0x00;
             }
             StringPiece responseMsg(response);
@@ -73,7 +72,7 @@ void RobotInterface::execTaskThread() {
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送：" << log;
+                LOG_INFO << "--->对方：忽略任务，机器人尚未处于可工作状态" << log;
             }
             continue;
         }
@@ -90,7 +89,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int) (unsigned char) responseMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "发送：" << log;
+                        LOG_INFO << "--->对方：忽略任务，机器人正在充电中，再次收到充电任务" << log;
                     }
                     continue;
                 }
@@ -109,7 +108,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "忽略任务：机器人处于低电量状态，只能执行充电任务" << log;
+                        LOG_INFO << "--->对方：忽略停止充电任务，机器人处于低电量状态，只能执行充电任务" << log;
                     }
                     continue;
                 }
@@ -126,10 +125,10 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "发送：" << log;
+                    LOG_INFO << "--->对方：忽略存取档任务，机器人处于低电量状态，只能执行充电任务" << log;
                 }
                 continue;
-            } else if (taskType == ALL_FINISH_TASK) {
+            } else if (taskType == ALL_FINISH_TASK || taskType == DEPOSIT_PREPARE_TASK) {
                 response[7] = 0x00;
                 StringPiece responseMsg(response);
                 write(responseMsg);
@@ -139,20 +138,43 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "发送：" << log;
+                    LOG_INFO << "--->对方：忽略存档准备任务/任务结束，机器人处于低电量状态，只能执行充电任务" << log;
                 }
                 continue;
             }
         }
         // 可执行任务状态
         switch (taskType) {
+            //存档准备
+            case DEPOSIT_PREPARE_TASK: {
+                ///跑到窗口
+                if(ROBOT_INLINE) {
+                    int agvMissionId;
+                    agv_.AgvGo(0, 1, agvMissionId);
+                    agv_.AgvReached();
+                    agv_.ActionFinishedAgvGo();
+                }
+
+                response[7] = 0x01;
+                StringPiece responseMsg(response);
+                write(responseMsg);
+                {
+                    std::stringstream ss;
+                    for(int i = 0; i < responseMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "--->对方：完成任务，存档准备" << log;
+                }
+                break;
+            }
             //存档
             case DEPOSIT_TASK: {
                 {
                     MutexLockGuard lock(robotInfoMutex_);
                     robotInfo_.currentState = IS_DEPOSITING;
                     stateMsgArray[7] = robotInfo_.currentPower;
-                    stateMsgArray[8] = 0x01;
+                    stateMsgArray[8] = IS_DEPOSITING;
                 }
                 string stateMsg(sizeof(stateMsgArray), '0');
                 for(int i = 0; i < stateMsg.size(); i++)
@@ -164,27 +186,22 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "发送：" << log;
+                    LOG_INFO << "--->对方：更新状态，机器人正在存档中" << log;
                 }
 
-                ; /// 跑到窗口
-                // 等待接收RFID消息
-                muduo::string actualRFID;
-                {
-                    MutexLockGuard lock(externalInfoMutex_);
-                    while (externalInfo_.actualRFID == "") {
-                        externalCondition_.wait();
-                    }
-                    actualRFID = externalInfo_.actualRFID;
-                    externalInfo_.actualRFID = "";
+                // 跑到窗口,机械臂伸展
+                if(ROBOT_INLINE) {
+                    int agvMissionId;
+                    agv_.AgvGo(0, 1, agvMissionId);
+                    agv_.AgvReached();
                 }
-                //根据RFID结果取出存取口的所有档案
-                const char *dataRFID = actualRFID.data();
+
                 int turntablePosition = 0;
                 std::map<int, std::vector<int> > cabIDTurntablePositionsMap;
                 for (int i = 0; i < turntablePositionTotalNum; i++) {
                     if (data[7 + 2 * i] == 0xA1) {
-                        turntablePosition++;;//取出档案
+                        ;///取出档案
+                        turntablePosition++;
                         int cabID = data[8 + 2 * i];
                         if (cabIDTurntablePositionsMap.find(cabID) == cabIDTurntablePositionsMap.end()) {
                             std::vector<int> turntablePositions;
@@ -198,7 +215,8 @@ void RobotInterface::execTaskThread() {
 
                 for (auto cabIDTurntablePositions : cabIDTurntablePositionsMap) {
                     int cabID = cabIDTurntablePositions.first;
-                    std::vector<int> turntablePositions = cabIDTurntablePositions.second;; // 跑到对应柜子前
+                    std::vector<int> turntablePositions = cabIDTurntablePositions.second;
+                    ; /// 跑到对应柜子前
                     //　等待档案柜就绪
                     {
                         MutexLockGuard lock(externalInfoMutex_);
@@ -211,47 +229,49 @@ void RobotInterface::execTaskThread() {
                     //此柜需要操作的总的档案数量
                     int operationArchiveNum = turntablePositions.size();
 
-                    // 额外等待档案柜就绪次数
-                    int extraOperationTimes =
-                            (operationArchiveNum % cabPositionTotalNum == 0)
-                            ? (operationArchiveNum / cabPositionTotalNum - 1)
-                            : (operationArchiveNum / cabPositionTotalNum);
+                    // 额外等待档案柜就绪次数(圆盘)
+//                    int extraOperationTimes =
+//                            (operationArchiveNum % cabPositionTotalNum == 0)
+//                            ? (operationArchiveNum / cabPositionTotalNum - 1)
+//                            : (operationArchiveNum / cabPositionTotalNum);
+
+                    // 额外等待档案柜就绪次数(直斗)
+                    int extraOperationTimes = 0;
 
 
-                    for (int turntableNum = 1;
-                         turntableNum <= operationArchiveNum; turntableNum++) {
+                    for (int turntableNum = 1; turntableNum <= operationArchiveNum; turntableNum++) {
                         ; /// 将档案从转盘中放入柜中
-                        // 额外等待次数>0并且本轮操作结束，等待档案柜就绪
-                        if (extraOperationTimes > 0 && (turntableNum % cabPositionTotalNum == 0)) {
-                            singleFinishMsgArray[7] = cabID;
-                            string singleFinishMsg(sizeof(singleFinishMsgArray), '0');
-                            for(int i = 0; i < singleFinishMsg.size(); i++)
-                                singleFinishMsg[i] = singleFinishMsgArray[i];
-                            write(singleFinishMsg);
-                            {
-                                std::stringstream ss;
-                                for(int i = 0; i < singleFinishMsg.size(); i++) {
-                                    ss << std::hex << (unsigned int)(unsigned char)singleFinishMsg[i] << ",";
-                                }
-                                std::string log = ss.str();
-                                LOG_INFO << "发送：" << log;
-                            }
-                            {
-                                MutexLockGuard lock(externalInfoMutex_);
-                                while (externalInfo_.singleArchiveFinishedReceived == false) {
-                                    externalCondition_.wait();
-                                }
-                                externalInfo_.singleArchiveFinishedReceived = false;
-                            }
-                            {
-                                MutexLockGuard lock(externalInfoMutex_);
-                                while (externalInfo_.readyCab.find(cabID) == externalInfo_.readyCab.end()) {
-                                    externalCondition_.wait();
-                                }
-                                externalInfo_.readyCab.erase(cabID);
-                                extraOperationTimes--;
-                            }
-                        }
+                        // 额外等待次数>0并且本轮操作结束，等待档案柜就绪(圆盘)
+//                        if (extraOperationTimes > 0 && (turntableNum % cabPositionTotalNum == 0)) {
+//                            singleFinishMsgArray[7] = cabID;
+//                            string singleFinishMsg(sizeof(singleFinishMsgArray), '0');
+//                            for(int i = 0; i < singleFinishMsg.size(); i++)
+//                                singleFinishMsg[i] = singleFinishMsgArray[i];
+//                            write(singleFinishMsg);
+//                            {
+//                                std::stringstream ss;
+//                                for(int i = 0; i < singleFinishMsg.size(); i++) {
+//                                    ss << std::hex << (unsigned int)(unsigned char)singleFinishMsg[i] << ",";
+//                                }
+//                                std::string log = ss.str();
+//                                LOG_INFO << "--->对方：单轮动作完成" << log;
+//                            }
+//                            {
+//                                MutexLockGuard lock(externalInfoMutex_);
+//                                while (externalInfo_.singleArchiveFinishedReceived == false) {
+//                                    externalCondition_.wait();
+//                                }
+//                                externalInfo_.singleArchiveFinishedReceived = false;
+//                            }
+//                            {
+//                                MutexLockGuard lock(externalInfoMutex_);
+//                                while (externalInfo_.readyCab.find(cabID) == externalInfo_.readyCab.end()) {
+//                                    externalCondition_.wait();
+//                                }
+//                                externalInfo_.readyCab.erase(cabID);
+//                                extraOperationTimes--;
+//                            }
+//                        }
                     }
 
                     singleFinishMsgArray[7] = cabID;
@@ -266,7 +286,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)singleFinishMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "发送：" << log;
+                        LOG_INFO << "--->对方：单台动作完成" << log;
                     }
 
                     {
@@ -290,8 +310,34 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "发送：" << log;
+                    LOG_INFO << "--->对方：完成任务，存档" << log;
                 }
+
+                if(ROBOT_INLINE) {
+                    int agvMissionId;
+                    agv_.AgvGo(0, 0, agvMissionId);
+                    agv_.AgvReached();
+                    agv_.ActionFinishedAgvGo();
+                }
+
+                {
+                    MutexLockGuard lock(robotInfoMutex_);
+                    robotInfo_.currentState = IS_FREE;
+                    stateMsgArray[7] = robotInfo_.currentPower;
+                    stateMsgArray[8] = IS_FREE;
+                }
+                for(int i = 0; i < stateMsg.size(); i++)
+                    stateMsg[i] = stateMsgArray[i];
+                write(stateMsg);
+                {
+                    std::stringstream ss;
+                    for(int i = 0; i < stateMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "--->对方：更新状态，机器人空闲" << log;
+                }
+
                 break;
             }
 
@@ -301,7 +347,7 @@ void RobotInterface::execTaskThread() {
                     MutexLockGuard lock(robotInfoMutex_);
                     robotInfo_.currentState = IS_WITHDRAWING;
                     stateMsgArray[7] = robotInfo_.currentPower;
-                    stateMsgArray[8] = 0x02;
+                    stateMsgArray[8] = IS_WITHDRAWING;
                 }
                 string stateMsg(sizeof(stateMsgArray), '0');
                 for(int i = 0; i < stateMsg.size(); i++)
@@ -313,7 +359,7 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "发送：" << log;
+                    LOG_INFO << "--->对方：更新状态，机器人正在取档中" << log;
                 }
 
                 //根据任务清单将所有档案归类
@@ -335,7 +381,8 @@ void RobotInterface::execTaskThread() {
 
                 for (auto cabIDTurntablePositions : cabIDTurntablePositionsMap) {
                     int cabID = cabIDTurntablePositions.first;
-                    std::vector<int> turntablePositions = cabIDTurntablePositions.second;; // 跑到对应柜子前
+                    std::vector<int> turntablePositions = cabIDTurntablePositions.second;
+                    ; /// 跑到对应柜子前
                     //　等待档案柜就绪
                     {
                         MutexLockGuard lock(externalInfoMutex_);
@@ -348,46 +395,47 @@ void RobotInterface::execTaskThread() {
                     //此柜需要操作的总的档案数量
                     int operationArchiveNum = turntablePositions.size();
 
-                    // 额外等待档案柜就绪次数
-                    int extraOperationTimes =
-                            (operationArchiveNum % cabPositionTotalNum == 0)
-                            ? (operationArchiveNum / cabPositionTotalNum - 1)
-                            : (operationArchiveNum / cabPositionTotalNum);
+                    // 额外等待档案柜就绪次数（圆盘）
+//                    int extraOperationTimes =
+//                            (operationArchiveNum % cabPositionTotalNum == 0)
+//                            ? (operationArchiveNum / cabPositionTotalNum - 1)
+//                            : (operationArchiveNum / cabPositionTotalNum);
+                    int extraOperationTimes = 0;
 
 
-                    for (int turntableNum = 1;
-                         turntableNum <= operationArchiveNum; turntableNum++) { ; //将档案从柜中放入转盘中
-                        // 额外等待次数>0并且本轮操作结束，等待档案柜就绪
-                        if (extraOperationTimes > 0 && (turntableNum % cabPositionTotalNum == 0)) {
-                            singleFinishMsgArray[7] = cabID;
-                            string singleFinishMsg(sizeof(singleFinishMsgArray), '0');
-                            for(int i = 0; i < singleFinishMsg.size(); i++)
-                                singleFinishMsg[i] = singleFinishMsgArray[i];
-                            write(singleFinishMsg);
-                            {
-                                std::stringstream ss;
-                                for(int i = 0; i < singleFinishMsg.size(); i++) {
-                                    ss << std::hex << (unsigned int)(unsigned char)singleFinishMsg[i] << ",";
-                                }
-                                std::string log = ss.str();
-                                LOG_INFO << "发送：" << log;
-                            }
-                            {
-                                MutexLockGuard lock(externalInfoMutex_);
-                                while (externalInfo_.singleArchiveFinishedReceived == false) {
-                                    externalCondition_.wait();
-                                }
-                                externalInfo_.singleArchiveFinishedReceived = false;
-                            }
-                            {
-                                MutexLockGuard lock(externalInfoMutex_);
-                                while (externalInfo_.readyCab.find(cabID) == externalInfo_.readyCab.end()) {
-                                    externalCondition_.wait();
-                                }
-                                externalInfo_.readyCab.erase(cabID);
-                                extraOperationTimes--;
-                            }
-                        }
+                    for (int turntableNum = 1; turntableNum <= operationArchiveNum; turntableNum++) {
+                        ; ///将档案从柜中放入转盘中
+                        // 额外等待次数>0并且本轮操作结束，等待档案柜就绪(圆盘)
+//                        if (extraOperationTimes > 0 && (turntableNum % cabPositionTotalNum == 0)) {
+//                            singleFinishMsgArray[7] = cabID;
+//                            string singleFinishMsg(sizeof(singleFinishMsgArray), '0');
+//                            for(int i = 0; i < singleFinishMsg.size(); i++)
+//                                singleFinishMsg[i] = singleFinishMsgArray[i];
+//                            write(singleFinishMsg);
+//                            {
+//                                std::stringstream ss;
+//                                for(int i = 0; i < singleFinishMsg.size(); i++) {
+//                                    ss << std::hex << (unsigned int)(unsigned char)singleFinishMsg[i] << ",";
+//                                }
+//                                std::string log = ss.str();
+//                                LOG_INFO << "发送：" << log;
+//                            }
+//                            {
+//                                MutexLockGuard lock(externalInfoMutex_);
+//                                while (externalInfo_.singleArchiveFinishedReceived == false) {
+//                                    externalCondition_.wait();
+//                                }
+//                                externalInfo_.singleArchiveFinishedReceived = false;
+//                            }
+//                            {
+//                                MutexLockGuard lock(externalInfoMutex_);
+//                                while (externalInfo_.readyCab.find(cabID) == externalInfo_.readyCab.end()) {
+//                                    externalCondition_.wait();
+//                                }
+//                                externalInfo_.readyCab.erase(cabID);
+//                                extraOperationTimes--;
+//                            }
+//                        }
                     }
 
                     singleFinishMsgArray[7] = cabID;
@@ -401,7 +449,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)singleFinishMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "发送：" << log;
+                        LOG_INFO << "--->对方：单台动作完成" << log;
                     }
                     {
                         MutexLockGuard lock(externalInfoMutex_);
@@ -426,7 +474,32 @@ void RobotInterface::execTaskThread() {
                         ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                     }
                     std::string log = ss.str();
-                    LOG_INFO << "发送：" << log;
+                    LOG_INFO << "--->对方：完成任务，取档" << log;
+                }
+
+                if(ROBOT_INLINE) {
+                    int agvMissionId;
+                    agv_.AgvGo(0, 0, agvMissionId);
+                    agv_.AgvReached();
+                    agv_.ActionFinishedAgvGo();
+                }
+
+                {
+                    MutexLockGuard lock(robotInfoMutex_);
+                    robotInfo_.currentState = IS_FREE;
+                    stateMsgArray[7] = robotInfo_.currentPower;
+                    stateMsgArray[8] = IS_FREE;
+                }
+                for(int i = 0; i < stateMsg.size(); i++)
+                    stateMsg[i] = stateMsgArray[i];
+                write(stateMsg);
+                {
+                    std::stringstream ss;
+                    for(int i = 0; i < stateMsg.size(); i++) {
+                        ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
+                    }
+                    std::string log = ss.str();
+                    LOG_INFO << "--->对方：更新状态，机器人空闲" << log;
                 }
                 break;
             }
@@ -437,7 +510,7 @@ void RobotInterface::execTaskThread() {
                         MutexLockGuard lock(robotInfoMutex_);
                         robotInfo_.currentState = CHARGE_PREPARE;
                         stateMsgArray[7] = robotInfo_.currentPower;
-                        stateMsgArray[8] = 0x07;
+                        stateMsgArray[8] = CHARGE_PREPARE;
                     }
                     string stateMsg(sizeof(stateMsgArray), '0');
                     for(int i = 0; i < stateMsg.size(); i++)
@@ -462,13 +535,13 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "发送：" << log;
+                        LOG_INFO << "--->对方：完成任务，充电" << log;
                     }
                     {
                         MutexLockGuard lock(robotInfoMutex_);
                         robotInfo_.currentState = IS_CHARGING;
                         stateMsgArray[7] = robotInfo_.currentPower;
-                        stateMsgArray[8] = 0x03;
+                        stateMsgArray[8] = IS_CHARGING;
                     }
 
                     for(int i = 0; i < stateMsg.size(); i++)
@@ -480,7 +553,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "发送：" << log;
+                        LOG_INFO << "--->对方：更新状态，机器人正在充电中" << log;
                     }
                 }
                 else if(data[7] == 0xA0) {
@@ -488,7 +561,7 @@ void RobotInterface::execTaskThread() {
                         MutexLockGuard lock(robotInfoMutex_);
                         robotInfo_.currentState = CHARGE_FINISHED;
                         stateMsgArray[7] = robotInfo_.currentPower;
-                        stateMsgArray[8] = 0x08;
+                        stateMsgArray[8] = CHARGE_FINISHED;
                     }
                     string stateMsg(sizeof(stateMsgArray), '0');
                     for(int i = 0; i < stateMsg.size(); i++)
@@ -500,7 +573,7 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "发送：" << log;
+                        LOG_INFO << "--->对方：更新状态，机器人充电完成" << log;
                     }
                     ; ///　跑到休息区
 
@@ -531,7 +604,25 @@ void RobotInterface::execTaskThread() {
                             ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
                         }
                         std::string log = ss.str();
-                        LOG_INFO << "发送：" << log;
+                        LOG_INFO << "--->对方：完成任务，取消充电" << log;
+                    }
+                    {
+                        MutexLockGuard lock(robotInfoMutex_);
+                        robotInfo_.currentState = IS_FREE;
+                        stateMsgArray[7] = robotInfo_.currentPower;
+                        stateMsgArray[8] = IS_FREE;
+                    }
+
+                    for(int i = 0; i < stateMsg.size(); i++)
+                        stateMsg[i] = stateMsgArray[i];
+                    write(stateMsg);
+                    {
+                        std::stringstream ss;
+                        for(int i = 0; i < stateMsg.size(); i++) {
+                            ss << std::hex << (unsigned int)(unsigned char)stateMsg[i] << ",";
+                        }
+                        std::string log = ss.str();
+                        LOG_INFO << "--->对方：更新状态，机器人空闲中" << log;
                     }
                 }
                 break;
@@ -581,42 +672,6 @@ void RobotInterface::execTaskThread() {
     }
 }
 
-
-
-void RobotInterface::onConnection(const TcpConnectionPtr& conn) {
-    u_char connectArray[8] = {0xA1, 0x00, 0x00, 0x00, 0x11, 0x00, 0x01, 0xAA};
-    string connectMsg(sizeof(connectArray), '0');
-    for(int i = 0; i < connectMsg.size(); i++)
-        connectMsg[i] = connectArray[i];
-
-    LOG_INFO << conn->localAddress().toIpPort() << " -> "
-             << conn->peerAddress().toIpPort() << " is "
-             << (conn->connected() ? "UP" : "DOWN");
-
-    {
-        MutexLockGuard lock(connectionMutex_);
-        if (conn->connected()) {
-            connection_ = conn;
-        } else {
-            connection_.reset();
-        }
-    }
-
-    if(conn->connected()) {
-        write(connectMsg);
-        {
-            std::stringstream ss;
-            for(int i = 0; i < connectMsg.size(); i++) {
-                ss << std::hex << (unsigned int)(unsigned char)connectMsg[i] << ",";
-                std::cout << std::hex << (unsigned int)(unsigned char)connectMsg[i] << ",";
-            }
-            std::cout << std::endl;
-            std::string log = ss.str();
-            LOG_INFO << "发送：" << log;
-        }
-    }
-}
-
 void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                             const muduo::string& message,
                             Timestamp) {
@@ -626,7 +681,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
             ss << std::hex << (unsigned int)(unsigned char)message[i] << ",";
         }
         std::string log = ss.str();
-        LOG_INFO << "接收：" << log;
+        LOG_INFO << "对方--->：" << log;
     }
 
     const char *data_ptr = message.c_str();
@@ -655,7 +710,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送：" << log;
+                LOG_INFO << "--->对方：收到存档任务" << log;
             }
             {
                 MutexLockGuard lock(taskMessageMutex_);
@@ -684,7 +739,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送：" << log;
+                LOG_INFO << "--->对方：收到取档任务" << log;
             }
             {
                 MutexLockGuard lock(taskMessageMutex_);
@@ -712,7 +767,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送：" << log;
+                LOG_INFO << "--->对方：收到充电任务" << log;
             }
             {
                 MutexLockGuard lock(taskMessageMutex_);
@@ -741,7 +796,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg1[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送：" << log;
+                LOG_INFO << "--->对方：收到查询指令" << log;
             }
             //回复机器人状态
             u_char responseData2[9];
@@ -764,13 +819,13 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg2[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送：" << log;
+                LOG_INFO << "--->对方：机器人状态" << log;
             }
             break;
         }
-        //外部发送校验的RFID消息05
-        case RFID_INFO: {
-            assert(message.size() == 31);
+        //存档准备任务05
+        case DEPOSIT_PREPARE_TASK: {
+            assert(message.size() == 8);
             u_char responseData[8];
             for(int i = 0; i < sizeof(responseData); i++) {
                 responseData[i] = data[i];
@@ -787,12 +842,12 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送：" << log;
+                LOG_INFO << "--->对方：收到存档准备任务" << log;
             }
             {
-                MutexLockGuard lock(externalInfoMutex_);
-                externalInfo_.actualRFID = message;
-                externalCondition_.notifyAll();
+                MutexLockGuard lock(taskMessageMutex_);
+                taskMessage_ = message;
+                taskCondition_.notifyAll();
             }
             break;
         }
@@ -825,7 +880,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送：" << log;
+                LOG_INFO << "--->对方：收到档案柜就绪状态" << log;
             }
             {
                 MutexLockGuard lock(externalInfoMutex_);
@@ -853,7 +908,7 @@ void RobotInterface::onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                     ss << std::hex << (unsigned int)(unsigned char)responseMsg[i] << ",";
                 }
                 std::string log = ss.str();
-                LOG_INFO << "发送：" << log;
+                LOG_INFO << "--->对方：所有任务完成" << log;
             }
             {
                 MutexLockGuard lock(taskMessageMutex_);
@@ -873,5 +928,137 @@ void RobotInterface::write(const StringPiece& message)
     if (connection_)
     {
         codec_.send(get_pointer(connection_), message);
+    }
+}
+
+void RobotInterface::onConnection(const TcpConnectionPtr& conn) {
+    u_char connectArray[8] = {0xA1, 0x00, 0x00, 0x00, 0x11, 0x00, 0x01, 0xAA};
+    string connectMsg(sizeof(connectArray), '0');
+    for(int i = 0; i < connectMsg.size(); i++)
+        connectMsg[i] = connectArray[i];
+
+    LOG_INFO << conn->localAddress().toIpPort() << " -> "
+             << conn->peerAddress().toIpPort() << "已"
+             << (conn->connected() ? "连接" : "断连");
+
+    {
+        MutexLockGuard lock(connectionMutex_);
+        if (conn->connected()) {
+            connection_ = conn;
+            connectionCondition_.notifyAll();
+        } else {
+            connection_.reset();
+            initialize();
+        }
+    }
+
+    if(conn->connected()) {
+        write(connectMsg);
+        {
+            std::stringstream ss;
+            for(int i = 0; i < connectMsg.size(); i++) {
+                ss << std::hex << (unsigned int)(unsigned char)connectMsg[i] << ",";
+                std::cout << std::hex << (unsigned int)(unsigned char)connectMsg[i] << ",";
+            }
+            std::cout << std::endl;
+            std::string log = ss.str();
+            LOG_INFO << "--->对方：连接" << log;
+        }
+    }
+}
+
+void RobotInterface::initialize()
+{
+    {
+        MutexLockGuard lock(taskMessageMutex_);
+        taskMessage_ = "";
+    }
+    {
+        MutexLockGuard lock(externalInfoMutex_);
+        externalInfo_.readyCab = {};
+        externalInfo_.singleArchiveFinishedReceived = false;
+    }
+    int agvState = AGV_READY;
+    int agvPower = powerLowerLimit;
+
+    if(ROBOT_INLINE) {
+        agv_.GetAgvPowerAndState(agvPower, agvState);
+    }
+    if( agvState == AGV_FAILURE || agvState == AGV_MT) {
+        MutexLockGuard lock(robotInfoMutex_);
+        robotInfo_.currentPower = agvPower;
+        robotInfo_.currentState = IS_INITIALIZING;
+    } else if(agvState == AGV_BUSY) {
+        MutexLockGuard lock(robotInfoMutex_);
+        robotInfo_.currentPower = agvPower;
+        robotInfo_.currentState = NEED_INITIALIZING;
+    } else if(agvState == AGV_CHARGING) {
+        MutexLockGuard lock(robotInfoMutex_);
+        robotInfo_.currentPower = agvPower;
+        robotInfo_.currentState = IS_CHARGING;
+    } else if(agvState == AGV_READY) {
+        MutexLockGuard lock(robotInfoMutex_);
+        robotInfo_.currentPower = agvPower;
+        robotInfo_.currentState = IS_FREE;
+    }
+}
+
+void RobotInterface::inquireRobotStateThread() {
+
+    while (1) {
+        if(!ROBOT_INLINE) {
+            sleep(5);
+            continue;
+        } else {
+            {
+                MutexLockGuard lock(taskMessageMutex_);
+                while (connection_ == nullptr) {
+                    connectionCondition_.wait();
+                }
+            }
+            sleep(5);
+            if (ROBOT_INLINE) {
+                int agvState;
+                int agvPower;
+                int currentAgvState = AGV_READY;
+                int currentAgvPower = powerLowerLimit;
+                {
+                    MutexLockGuard lock(robotInfoMutex_);
+                    agvState = robotInfo_.currentState;
+                    agvPower = robotInfo_.currentPower;
+                }
+
+                if (ROBOT_INLINE) {
+                    agv_.GetAgvPowerAndState(currentAgvPower, currentAgvState);
+                }
+                // 没有机械故障
+                if (agvState != MECHANICAL_ERROR) {
+                    if (currentAgvState == AGV_READY) {
+                        if (agvState == NEED_INITIALIZING
+                            || agvState == INITIALIZE_FINISH
+                            || agvState == IS_CHARGING
+                            || agvState == IS_INITIALIZING) {
+                            agvState = IS_FREE;
+                        }
+                    } else if (currentAgvState == AGV_CHARGING) {
+                        agvState = IS_CHARGING;
+                    } else if (currentAgvState == AGV_FAILURE || currentAgvState == AGV_MT) {
+                        agvState = NEED_INITIALIZING;
+                    }
+                } else {
+                    agvState = MECHANICAL_ERROR;
+                }
+                {
+                    MutexLockGuard lock(robotInfoMutex_);
+                    robotInfo_.currentState = agvState;
+                    robotInfo_.currentPower = agvPower;
+                }
+                if ((agvState != IS_WITHDRAWING) && (agvState != IS_DEPOSITING)) {
+                    if (ROBOT_INLINE) {
+                        ; ///PLC保活
+                    }
+                }
+            }
+        }
     }
 }

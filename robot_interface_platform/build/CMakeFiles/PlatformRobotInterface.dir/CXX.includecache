@@ -6,6 +6,26 @@
 
 #IncludeRegexTransform: 
 
+../agv/agv.h
+http_client.h
+../agv/http_client.h
+config.h
+../agv/config.h
+action_finish.h
+../agv/action_finish.h
+websocket_endpoint.h
+../agv/websocket_endpoint.h
+mapping_table.h
+../agv/mapping_table.h
+stdlib.h
+-
+time.h
+-
+Logging.h
+../agv/Logging.h
+LogFile.h
+../agv/LogFile.h
+
 ../agv_wait_action_finish/action_finish.h
 netinet/in.h
 -
@@ -1205,6 +1225,10 @@ LogFile.h
 /home/bisheng/robot_interface_muduo/robot_interface_platform/robot_interface/LogFile.h
 codec.h
 /home/bisheng/robot_interface_muduo/robot_interface_platform/robot_interface/codec.h
+config.h
+/home/bisheng/robot_interface_muduo/robot_interface_platform/robot_interface/config.h
+agv.h
+/home/bisheng/robot_interface_muduo/robot_interface_platform/robot_interface/agv.h
 
 /home/bisheng/robot_interface_muduo/robot_interface_platform/thread/Atomic.h
 noncopyable.h

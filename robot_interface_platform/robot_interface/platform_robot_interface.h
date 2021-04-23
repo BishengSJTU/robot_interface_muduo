@@ -15,7 +15,12 @@
 #include "Logging.h"
 #include "LogFile.h"
 #include "codec.h"
+#include "config.h"
+#include "agv.h"
 
+#define ROBOT_INLINE false
+
+using namespace jiazhi;
 using namespace muduo;
 using namespace muduo::net;
 
@@ -49,7 +54,6 @@ public:
     //外部设备信息
     struct ExternalInfo
     {
-        muduo::string actualRFID; //读卡器传来的RFID
         std::set<int> readyCab; //准备就绪的档案柜
         bool singleArchiveFinishedReceived; //单次动作完成被成功接收
     };
@@ -59,27 +63,33 @@ public:
         WITHDRAW_TASK = 0x02,
         CHARGE_TASK = 0x03,
         INQUIRE = 0x04,
-        RFID_INFO = 0x05,
+        DEPOSIT_PREPARE_TASK = 0x05,
         SINGLE_ARCHIVE_FINISH = 0x06,
         CAB_READY = 0x07,
         ALL_FINISH_TASK = 0X08
     };
-    RobotInterface();
+    RobotInterface(std::string path);
     void eventLoopThread(); //收发消息及定时器函数线程
     void execTaskThread(); //执行任务函数线程
+    void inquireRobotStateThread(); //查询机器人状态线程
     void write(const StringPiece& message); //往Buffer里写数据
     void onCompleteMessage(const muduo::net::TcpConnectionPtr&,
                          const muduo::string& message,
                          Timestamp); //收到完整指令回调，并执行对应任务
     void onConnection(const TcpConnectionPtr& conn); //连接回调
+    void initialize(); // 初始化
 
 private:
+    const Config config_;
+    AGV agv_;
+
     string taskServerIP_;
     uint16_t taskServerPort_;
 
     LengthHeaderCodec codec_;
     MutexLock connectionMutex_;
     TcpConnectionPtr connection_ GUARDED_BY(connectionMutex_);
+    Condition connectionCondition_ GUARDED_BY(connectionMutex_);
 
     MutexLock taskMessageMutex_;
     StringPiece taskMessage_ GUARDED_BY(taskMessageMutex_);

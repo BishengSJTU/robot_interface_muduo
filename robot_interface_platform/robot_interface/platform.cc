@@ -13,20 +13,25 @@ void outputFunc(const char* msg, int len)
 }
 
 int main(int argc, char* argv[]) {
-    char log_name[256] = { '\0' };
-    strncpy(log_name, argv[0], sizeof log_name - 1);
-    g_logFile.reset(new muduo::LogFile(::basename(log_name), 600*1000));
-    muduo::Logger::setOutput(outputFunc);
+    char name[256] = { '\0' };
+    strncpy(name, argv[0], sizeof name - 1);
+    std::string path = ::dirname(name);
 
-    RobotInterface robotInterface;
+//    g_logFile.reset(new muduo::LogFile(::basename(name), 600*1000));
+//    muduo::Logger::setOutput(outputFunc);
+
+    RobotInterface robotInterface(path + "/config");
     muduo::Thread receive_task(std::bind(&RobotInterface::eventLoopThread, &robotInterface));
     muduo::Thread execute_task(std::bind(&RobotInterface::execTaskThread, &robotInterface));
+    muduo::Thread inquireThread(std::bind(&RobotInterface::inquireRobotStateThread, &robotInterface));
 
     receive_task.start();
     execute_task.start();
+    inquireThread.start();
 
     receive_task.join();
     execute_task.join();
+    inquireThread.join();
 
     return 0;
 }

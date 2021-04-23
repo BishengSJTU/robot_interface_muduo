@@ -59,82 +59,45 @@ RM = /opt/clion-2019.1.4/bin/cmake/linux/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/bisheng/robot_interface_muduo
+CMAKE_SOURCE_DIR = /home/bisheng/robot_interface_muduo/robot_interface_jaka
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/bisheng/robot_interface_muduo/cmake-build-debug
+CMAKE_BINARY_DIR = /home/bisheng/robot_interface_muduo/robot_interface_jaka/cmake-build-debug
 
 #=============================================================================
-# Target rules for target CMakeFiles/PlatformRobotInterface.dir
+# Target rules for target CMakeFiles/JakaRobotInterface.dir
 
 # All Build rule for target.
-CMakeFiles/PlatformRobotInterface.dir/all:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/depend
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46 "Built target PlatformRobotInterface"
-.PHONY : CMakeFiles/PlatformRobotInterface.dir/all
+CMakeFiles/JakaRobotInterface.dir/all:
+	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/depend
+	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bisheng/robot_interface_muduo/robot_interface_jaka/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46 "Built target JakaRobotInterface"
+.PHONY : CMakeFiles/JakaRobotInterface.dir/all
 
 # Include target in all.
-all: CMakeFiles/PlatformRobotInterface.dir/all
+all: CMakeFiles/JakaRobotInterface.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/PlatformRobotInterface.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles 46
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/PlatformRobotInterface.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/PlatformRobotInterface.dir/rule
+CMakeFiles/JakaRobotInterface.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bisheng/robot_interface_muduo/robot_interface_jaka/cmake-build-debug/CMakeFiles 46
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/JakaRobotInterface.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/bisheng/robot_interface_muduo/robot_interface_jaka/cmake-build-debug/CMakeFiles 0
+.PHONY : CMakeFiles/JakaRobotInterface.dir/rule
 
 # Convenience name for target.
-PlatformRobotInterface: CMakeFiles/PlatformRobotInterface.dir/rule
+JakaRobotInterface: CMakeFiles/JakaRobotInterface.dir/rule
 
-.PHONY : PlatformRobotInterface
-
-# clean rule for target.
-CMakeFiles/PlatformRobotInterface.dir/clean:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/clean
-.PHONY : CMakeFiles/PlatformRobotInterface.dir/clean
+.PHONY : JakaRobotInterface
 
 # clean rule for target.
-clean: CMakeFiles/PlatformRobotInterface.dir/clean
-
-.PHONY : clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/TcpServer_test.dir
-
-# All Build rule for target.
-CMakeFiles/TcpServer_test.dir/all:
-	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/depend
-	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles --progress-num=47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91 "Built target TcpServer_test"
-.PHONY : CMakeFiles/TcpServer_test.dir/all
-
-# Include target in all.
-all: CMakeFiles/TcpServer_test.dir/all
-
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/TcpServer_test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles 45
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/TcpServer_test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/bisheng/robot_interface_muduo/cmake-build-debug/CMakeFiles 0
-.PHONY : CMakeFiles/TcpServer_test.dir/rule
-
-# Convenience name for target.
-TcpServer_test: CMakeFiles/TcpServer_test.dir/rule
-
-.PHONY : TcpServer_test
+CMakeFiles/JakaRobotInterface.dir/clean:
+	$(MAKE) -f CMakeFiles/JakaRobotInterface.dir/build.make CMakeFiles/JakaRobotInterface.dir/clean
+.PHONY : CMakeFiles/JakaRobotInterface.dir/clean
 
 # clean rule for target.
-CMakeFiles/TcpServer_test.dir/clean:
-	$(MAKE) -f CMakeFiles/TcpServer_test.dir/build.make CMakeFiles/TcpServer_test.dir/clean
-.PHONY : CMakeFiles/TcpServer_test.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/TcpServer_test.dir/clean
+clean: CMakeFiles/JakaRobotInterface.dir/clean
 
 .PHONY : clean
 

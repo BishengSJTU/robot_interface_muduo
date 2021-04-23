@@ -231,7 +231,7 @@ bool JAKAPickAndPlace::JAKAPlaceCab(int cab_id, int position,  bool& mechanical_
         float offset = CAB_SPACE * (position - benchmark_position) - 7;
         robot_client_.Jog(JAKAX, fixed_linear_speed, offset);
         robot_client_.Jog(JAKAZ, fixed_linear_speed, 20);
-        robot_client_.Jog(JAKAY, fixed_linear_speed, -82);
+        robot_client_.Jog(JAKAY, fixed_linear_speed, -84);
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
         if(plc_.ControlPLC(MoveMF) == false) {
@@ -239,7 +239,7 @@ bool JAKAPickAndPlace::JAKAPlaceCab(int cab_id, int position,  bool& mechanical_
             LOG_ERROR << "PlaceCab不可修复的机械故障，原地保护性停止！";
             return false;
         } else {
-            robot_client_.Jog(JAKAY, fixed_linear_speed, 5);
+            robot_client_.Jog(JAKAY, fixed_linear_speed, 8);
             if(plc_.ControlPLC(MoveF) == false) {
                 robot_client_.Jog(JAKAY, fixed_linear_speed, 10);
                 // 不可修复的故障
@@ -251,10 +251,17 @@ bool JAKAPickAndPlace::JAKAPlaceCab(int cab_id, int position,  bool& mechanical_
                     robot_client_.Jog(JAKAY, fixed_linear_speed, -10);
                 }
             }
-            robot_client_.Jog(JAKAY, fixed_linear_speed, -5);
+            robot_client_.Jog(JAKAY, fixed_linear_speed, -6);
         }
 
     }
+
+    // 档案还在手中
+    if(plc_.ArchiveInHand()) {
+        place_result = false;
+        LOG_ERROR << "Pickcab档案盒未取出";
+    }
+
     robot_client_.Jog(JAKAZ, fixed_linear_speed, 5);
     robot_client_.Jog(JAKAY, fixed_linear_speed, 60);
 
@@ -499,8 +506,13 @@ bool JAKAPickAndPlace::JAKAPlaceWindow(int position, bool &mechanical_error) {
     if(mechanical_error)
         return false;
 
+    if(plc_.ArchiveInHand()) {
+        place_result = false;
+        LOG_ERROR << "Pickcab档案盒未取出";
+    }
+
     LOG_INFO << "向窗口中放入档案结束!";
-    return true;
+    return place_result;
 }
 
 bool JAKAPickAndPlace::JAKAPickStorage(int position, bool &mechanical_error) {
@@ -562,6 +574,7 @@ bool JAKAPickAndPlace::JAKAPickStorage(int position, bool &mechanical_error) {
     robot_client_.MoveJ(storage_transition_point, fixed_joint_speed);
     std::cout << "移动至storage_transition_point" << std::endl;
 
+    LOG_INFO << "从背篓中取档结束!";
     return pick_result;
 }
 
@@ -614,6 +627,12 @@ bool JAKAPickAndPlace::JAKAPlaceStorage(int position, bool &mechanical_error) {
     if(mechanical_error)
         return false;
 
+    if(plc_.ArchiveInHand()) {
+        LOG_ERROR << "Pickcab档案盒未取出";
+        return false;
+    }
+
+    LOG_INFO << "向背篓中放档结束!";
     return true;
 }
 

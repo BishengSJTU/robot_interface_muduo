@@ -152,6 +152,7 @@ void RobotInterface::execTaskThread() {
                     int agvMissionId;
                     agv_.AgvGo(0, 1, agvMissionId);
                     agv_.AgvReached();
+                    agv_.ActionFinishedAgvGo();
                 }
 
                 response[7] = 0x01;
@@ -204,6 +205,9 @@ void RobotInterface::execTaskThread() {
 
                 //机械臂伸展
                 if(ROBOT_INLINE) {
+                    int agvMissionId;
+                    agv_.AgvGo(0, 1, agvMissionId);
+                    agv_.AgvReached();
                     jakaPickAndPlace_.JAKAStretch();
                 }
                 for(int archive = 0; archive < storagePositionTotalNum; archive++) {
@@ -220,8 +224,10 @@ void RobotInterface::execTaskThread() {
                     if(windowMechanicalError || storageMechanicalError || !isConnecting) break;
                     if(data[7 + 18 * archive] == 0xA1) {
                         if(ROBOT_INLINE) {
-                            windowResults[archive] = jakaPickAndPlace_.JAKAPickWindow(archive + 1,
-                                                                                      windowMechanicalError);
+                            windowResults[archive] = jakaPickAndPlace_.JAKAPickWindow(archive + 1, windowMechanicalError);
+                            //没取出来，再试一次
+                            if(windowResults[archive] == false)
+                                windowResults[archive] = jakaPickAndPlace_.JAKAPickWindow(archive + 1, windowMechanicalError);
                         }
                         if(windowMechanicalError) {
                             {
@@ -350,8 +356,13 @@ void RobotInterface::execTaskThread() {
                                 continue;
                             }
                             if(ROBOT_INLINE) {
-                                cabResults[archive] = jakaPickAndPlace_.JAKAPlaceCab(cabId, positionId,
-                                                                                     cabMechanicalError);
+                                cabResults[archive] = jakaPickAndPlace_.JAKAPlaceCab(cabId, positionId, cabMechanicalError);
+                                //没放进去，再试一次
+                                if(cabResults[archive] == false)
+                                    cabResults[archive] = jakaPickAndPlace_.JAKAPlaceCab(cabId, positionId, cabMechanicalError);
+                                //两次失败，放回背篓里
+                                if(cabResults[archive] == false)
+                                    jakaPickAndPlace_.JAKAPlaceStorage(archive + 1, storageMechanicalError);
                             }
                             if(cabMechanicalError) {
                                 {
@@ -544,6 +555,9 @@ void RobotInterface::execTaskThread() {
                         if(ROBOT_INLINE) {
                             jakaPickAndPlace_.JAKAStretch();
                             cabResults[archive] = jakaPickAndPlace_.JAKAPickCab(cabId, positionId, cabMechanicalError);
+                            //没取出来，再试一次
+                            if(cabResults[archive] == false)
+                                cabResults[archive] = jakaPickAndPlace_.JAKAPickCab(cabId, positionId, cabMechanicalError);
                         }
 
                         if(cabMechanicalError) {
@@ -777,8 +791,14 @@ void RobotInterface::execTaskThread() {
                             }
 
                             if(ROBOT_INLINE) {
-                                windowResults[archive] = jakaPickAndPlace_.JAKAPlaceWindow(archive + 1,
-                                                                                           windowMechanicalError);
+                                windowResults[archive] = jakaPickAndPlace_.JAKAPlaceWindow(archive + 1, windowMechanicalError);
+                                // 没放进去，再试一次
+                                if(windowResults[archive] == false)
+                                    windowResults[archive] = jakaPickAndPlace_.JAKAPlaceWindow(archive + 1, windowMechanicalError);
+                                // 两次失败，放回背篓
+                                if(windowResults[archive] == false)
+                                    jakaPickAndPlace_.JAKAPlaceStorage(archive + 1, storageMechanicalError);
+
                             }
                             if(windowMechanicalError) {
                                 {
@@ -964,7 +984,7 @@ void RobotInterface::execTaskThread() {
                         MutexLockGuard lock(robotInfoMutex_);
                         robotInfo_.currentState = IS_FREE;
                         stateMsgArray[7] = robotInfo_.currentPower;
-                        stateMsgArray[8] = 0x00;
+                        stateMsgArray[8] = IS_FREE;
                     }
 
                     for(int i = 0; i < stateMsg.size(); i++)
@@ -1372,7 +1392,7 @@ void RobotInterface::onConnection(const TcpConnectionPtr& conn) {
         connectMsg[i] = connectData[i];
 
     LOG_INFO << conn->localAddress().toIpPort() << " -> "
-             << conn->peerAddress().toIpPort() << " 已 "
+             << conn->peerAddress().toIpPort() << "已"
              << (conn->connected() ? "连接" : "断连");
 
     {
