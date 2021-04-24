@@ -387,26 +387,27 @@ void RobotInterface::execTaskThread() {
                 }
 
                 //根据任务清单将所有档案归类
-                int turntablePosition = 0;
-                std::map<int, std::vector<int> > cabIDTurntablePositionsMap;
+                int commandPosition = 0;
+                std::map<int, std::vector<int> > cabIDCommandPositionsMap;
+                std::map<int, int > turntablePositionCommandPositionMap;
                 for (int i = 0; i < turntablePositionTotalNum; i++) {
                     if (data[7 + 2 * i] == 0xA1) {
-                        turntablePosition++;
                         int cabID = data[8 + 2 * i];
-                        if (cabIDTurntablePositionsMap.find(cabID) == cabIDTurntablePositionsMap.end()) {
-                            std::vector<int> turntablePositions;
-                            turntablePositions.push_back(turntablePosition);
-                            cabIDTurntablePositionsMap.insert(std::make_pair(cabID, turntablePositions));
+                        if (cabIDCommandPositionsMap.find(cabID) == cabIDCommandPositionsMap.end()) {
+                            std::vector<int> commandPositions;
+                            commandPositions.push_back(commandPosition);
+                            cabIDCommandPositionsMap.insert(std::make_pair(cabID, commandPositions));
                         } else {
-                            cabIDTurntablePositionsMap.find(cabID)->second.push_back(turntablePosition);
+                            cabIDCommandPositionsMap.find(cabID)->second.push_back(commandPosition);
                         }
+                        commandPosition++;
                     }
                 }
 
-                turntablePosition = turntablePositionTotalNum;
-                for (auto cabIDTurntablePositions : cabIDTurntablePositionsMap) {
-                    int cabID = cabIDTurntablePositions.first;
-                    std::vector<int> turntablePositions = cabIDTurntablePositions.second;
+                int turntablePosition = turntablePositionTotalNum;
+                for (auto cabIDCommandPositions : cabIDCommandPositionsMap) {
+                    int cabID = cabIDCommandPositions.first;
+                    std::vector<int> commandPositions = cabIDCommandPositions.second;
                     ; /// 跑到对应柜子前
                     //　等待档案柜就绪
                     {
@@ -418,7 +419,7 @@ void RobotInterface::execTaskThread() {
                     }
 
                     //此柜需要操作的总的档案数量
-                    int operationArchiveNum = turntablePositions.size();
+                    int operationArchiveNum = commandPositions.size();
 
                     // 额外等待档案柜就绪次数（圆盘）
 //                    int extraOperationTimes =
@@ -431,6 +432,7 @@ void RobotInterface::execTaskThread() {
                     for (int turntableNum = 1; turntableNum <= operationArchiveNum; turntableNum++) {
                         ; ///将档案从柜中放入转盘中
 //                        PlatformPickCab(turntableNum, turntablePosition);
+                        turntablePositionCommandPositionMap.insert(std::make_pair(turntablePosition, commandPositions[turntableNum - 1]));
                         // 额外等待次数>0并且本轮操作结束，等待档案柜就绪(圆盘)
 //                        if (extraOperationTimes > 0 && (turntableNum % cabPositionTotalNum == 0)) {
 //                            singleFinishMsgArray[7] = cabID;
@@ -489,7 +491,7 @@ void RobotInterface::execTaskThread() {
 
                 ; /// 跑到存取口前，将档案放入
                 int windowPosition = 1;
-                for(int i = turntablePosition + 1; i <= turntablePositionTotalNum; i--) {
+                for(int i = turntablePosition + 1; i <= turntablePositionTotalNum; i++) {
 //                    PlatformPlaceWindow(i, windowPosition);
                     windowPosition++;
                 }
