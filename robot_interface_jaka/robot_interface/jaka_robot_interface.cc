@@ -226,8 +226,11 @@ void RobotInterface::execTaskThread() {
                         if(ROBOT_INLINE) {
                             windowResults[archive] = jakaPickAndPlace_.JAKAPickWindow(archive + 1, windowMechanicalError);
                             //没取出来，再试一次
-                            if(windowResults[archive] == false)
-                                windowResults[archive] = jakaPickAndPlace_.JAKAPickWindow(archive + 1, windowMechanicalError);
+                            if(!windowMechanicalError) {// 保证没有发生机械故障
+                                if (windowResults[archive] == false)
+                                    windowResults[archive] = jakaPickAndPlace_.JAKAPickWindow(archive + 1,
+                                                                                              windowMechanicalError);
+                            }
                         }
                         if(windowMechanicalError) {
                             {
@@ -358,11 +361,16 @@ void RobotInterface::execTaskThread() {
                             if(ROBOT_INLINE) {
                                 cabResults[archive] = jakaPickAndPlace_.JAKAPlaceCab(cabId, positionId, cabMechanicalError);
                                 //没放进去，再试一次
-                                if(cabResults[archive] == false)
-                                    cabResults[archive] = jakaPickAndPlace_.JAKAPlaceCab(cabId, positionId, cabMechanicalError);
-                                //两次失败，放回背篓里
-                                if(cabResults[archive] == false)
-                                    jakaPickAndPlace_.JAKAPlaceStorage(archive + 1, storageMechanicalError);
+                                if(!cabMechanicalError) { //保证未发生机械故障
+                                    if (cabResults[archive] == false)
+                                        cabResults[archive] = jakaPickAndPlace_.JAKAPlaceCab(cabId, positionId,
+                                                                                             cabMechanicalError);
+                                    //两次失败，放回背篓里
+                                    if(!cabMechanicalError) { //保证未发生机械故障
+                                        if (cabResults[archive] == false)
+                                            jakaPickAndPlace_.JAKAPlaceStorage(archive + 1, storageMechanicalError);
+                                    }
+                                }
                             }
                             if(cabMechanicalError) {
                                 {
@@ -556,8 +564,11 @@ void RobotInterface::execTaskThread() {
                             jakaPickAndPlace_.JAKAStretch();
                             cabResults[archive] = jakaPickAndPlace_.JAKAPickCab(cabId, positionId, cabMechanicalError);
                             //没取出来，再试一次
-                            if(cabResults[archive] == false)
-                                cabResults[archive] = jakaPickAndPlace_.JAKAPickCab(cabId, positionId, cabMechanicalError);
+                            if(!cabMechanicalError) { //保证未发生机械故障
+                                if (cabResults[archive] == false)
+                                    cabResults[archive] = jakaPickAndPlace_.JAKAPickCab(cabId, positionId,
+                                                                                        cabMechanicalError);
+                            }
                         }
 
                         if(cabMechanicalError) {
@@ -793,11 +804,16 @@ void RobotInterface::execTaskThread() {
                             if(ROBOT_INLINE) {
                                 windowResults[archive] = jakaPickAndPlace_.JAKAPlaceWindow(archive + 1, windowMechanicalError);
                                 // 没放进去，再试一次
-                                if(windowResults[archive] == false)
-                                    windowResults[archive] = jakaPickAndPlace_.JAKAPlaceWindow(archive + 1, windowMechanicalError);
-                                // 两次失败，放回背篓
-                                if(windowResults[archive] == false)
-                                    jakaPickAndPlace_.JAKAPlaceStorage(archive + 1, storageMechanicalError);
+                                if(!windowMechanicalError) { //保证没有发生机械故障
+                                    if (windowResults[archive] == false)
+                                        windowResults[archive] = jakaPickAndPlace_.JAKAPlaceWindow(archive + 1,
+                                                                                                   windowMechanicalError);
+                                    if(!windowMechanicalError) { //保证没有发生机械故障
+                                        // 两次失败，放回背篓
+                                        if (windowResults[archive] == false)
+                                            jakaPickAndPlace_.JAKAPlaceStorage(archive + 1, storageMechanicalError);
+                                    }
+                                }
 
                             }
                             if(windowMechanicalError) {

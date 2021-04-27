@@ -987,32 +987,59 @@ net/TimerQueue.cc.s:
 	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/net/TimerQueue.cc.s
 .PHONY : net/TimerQueue.cc.s
 
-plc/jaka_plc.o: plc/jaka_plc.cc.o
+pick_and_place/platform_pick_and_place.o: pick_and_place/platform_pick_and_place.cc.o
 
-.PHONY : plc/jaka_plc.o
+.PHONY : pick_and_place/platform_pick_and_place.o
 
 # target to build an object file
-plc/jaka_plc.cc.o:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o
-.PHONY : plc/jaka_plc.cc.o
+pick_and_place/platform_pick_and_place.cc.o:
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/pick_and_place/platform_pick_and_place.cc.o
+.PHONY : pick_and_place/platform_pick_and_place.cc.o
 
-plc/jaka_plc.i: plc/jaka_plc.cc.i
+pick_and_place/platform_pick_and_place.i: pick_and_place/platform_pick_and_place.cc.i
 
-.PHONY : plc/jaka_plc.i
+.PHONY : pick_and_place/platform_pick_and_place.i
 
 # target to preprocess a source file
-plc/jaka_plc.cc.i:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.i
-.PHONY : plc/jaka_plc.cc.i
+pick_and_place/platform_pick_and_place.cc.i:
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/pick_and_place/platform_pick_and_place.cc.i
+.PHONY : pick_and_place/platform_pick_and_place.cc.i
 
-plc/jaka_plc.s: plc/jaka_plc.cc.s
+pick_and_place/platform_pick_and_place.s: pick_and_place/platform_pick_and_place.cc.s
 
-.PHONY : plc/jaka_plc.s
+.PHONY : pick_and_place/platform_pick_and_place.s
 
 # target to generate assembly for a file
-plc/jaka_plc.cc.s:
-	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.s
-.PHONY : plc/jaka_plc.cc.s
+pick_and_place/platform_pick_and_place.cc.s:
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/pick_and_place/platform_pick_and_place.cc.s
+.PHONY : pick_and_place/platform_pick_and_place.cc.s
+
+plc/platform_plc.o: plc/platform_plc.cc.o
+
+.PHONY : plc/platform_plc.o
+
+# target to build an object file
+plc/platform_plc.cc.o:
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/platform_plc.cc.o
+.PHONY : plc/platform_plc.cc.o
+
+plc/platform_plc.i: plc/platform_plc.cc.i
+
+.PHONY : plc/platform_plc.i
+
+# target to preprocess a source file
+plc/platform_plc.cc.i:
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/platform_plc.cc.i
+.PHONY : plc/platform_plc.cc.i
+
+plc/platform_plc.s: plc/platform_plc.cc.s
+
+.PHONY : plc/platform_plc.s
+
+# target to generate assembly for a file
+plc/platform_plc.cc.s:
+	$(MAKE) -f CMakeFiles/PlatformRobotInterface.dir/build.make CMakeFiles/PlatformRobotInterface.dir/plc/platform_plc.cc.s
+.PHONY : plc/platform_plc.cc.s
 
 robot_interface/platform.o: robot_interface/platform.cc.o
 
@@ -1362,9 +1389,12 @@ help:
 	@echo "... net/TimerQueue.o"
 	@echo "... net/TimerQueue.i"
 	@echo "... net/TimerQueue.s"
-	@echo "... plc/jaka_plc.o"
-	@echo "... plc/jaka_plc.i"
-	@echo "... plc/jaka_plc.s"
+	@echo "... pick_and_place/platform_pick_and_place.o"
+	@echo "... pick_and_place/platform_pick_and_place.i"
+	@echo "... pick_and_place/platform_pick_and_place.s"
+	@echo "... plc/platform_plc.o"
+	@echo "... plc/platform_plc.i"
+	@echo "... plc/platform_plc.s"
 	@echo "... robot_interface/platform.o"
 	@echo "... robot_interface/platform.i"
 	@echo "... robot_interface/platform.s"

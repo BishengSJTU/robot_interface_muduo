@@ -38,7 +38,7 @@ storage_point_5: [104.611, 24.508, 78.851, 166.641, -90.000, -75.389] #暂存架
 
 
 #地图名称
-map_name: "0421"
+map_name: "0426"
 
 #地图上跑到对应点位所需动作
 map_position_cab0_3: ["cab0_0", "charge"]   #停止充电对应路点及动作
@@ -46,7 +46,7 @@ map_position_cab0_2: ["cab0_0", "charge"]   #充电对应路点及动作
 map_position_cab0_1: ["cab0_1", "cab0_1_action"]   #窗口对应路点及动作
 map_position_cab0_0: ["cab0_0", "cab0_1_action"]   #休息区对应路点及动作
 
-map_position_cab1_1: ["cab1_1", "cab1_1_action"]   #柜子1的1号码对应图中的应该跑的路点及动作
+map_position_cab1_1: ["cab1_1", "move"]   #柜子1的1号码对应图中的应该跑的路点及动作
 map_position_cab1_2: ["cab1_1", "cab1_1_action"]   #柜子1的2号码对应图中的应该跑的路点及动作
 map_position_cab1_3: ["cab1_1", "cab1_1_action"]   #柜子1的3号码对应图中的应该跑的路点及动作
 map_position_cab1_4: ["cab1_1", "cab1_1_action"]   #柜子1的4号码对应图中的应该跑的路点及动作

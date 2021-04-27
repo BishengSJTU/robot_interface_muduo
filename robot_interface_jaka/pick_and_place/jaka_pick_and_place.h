@@ -22,7 +22,7 @@
 #include <eigen3/Eigen/QR>
 #include <sstream>
 
-#define CODEING_ID 0 // 0号位姿估计码
+#define CODEING_ID 0 // ID=0号位姿估计码
 #define CAB_SPACE 44.2 // 档案柜中档案间隙
 #define WINDOW_SPACE 42.8 // 窗口中档案间隙
 

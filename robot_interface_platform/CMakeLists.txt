@@ -28,6 +28,7 @@ FILE (
         "mapping_table/*.cc"
         "agv_wait_action_finish/*.cc"
         "agv/*.cc"
+        "pick_and_place/*.cc"
 )
 
 include_directories(
@@ -44,6 +45,7 @@ include_directories(
         agv_wait_action_finish
         agv
         websocket
+        pick_and_place
 )
 include_directories(${JSON_DIR} ${ZBAR_DIR} ${OpenCV_INCLUDE_DIRS} ${HV_DIR} ${APRILTAG_DIR})
 link_directories(${LIB_HV_DIR} ${LIB_APRILTAG_DIR})

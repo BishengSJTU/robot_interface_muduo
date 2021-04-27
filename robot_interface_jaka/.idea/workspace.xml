@@ -11,7 +11,40 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4c2ccc74-2658-483c-84a7-ad8a980a0bb3" name="Default Changelist" comment="" />
+    <list default="true" id="4c2ccc74-2658-483c-84a7-ad8a980a0bb3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.h" beforeDir="false" afterPath="$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc" beforeDir="false" afterPath="$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/agv/agv.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/plc/jaka_plc.cc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/PlatformRobotInterface.dir/robot_interface/platform_robot_interface.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/PlatformRobotInterface" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/PlatformRobotInterface" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/config/FixedConfig.YML" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/config/FixedConfig.YML" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/build/config/FlexibleConfig.YML" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/build/config/FlexibleConfig.YML" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/cmake-build-debug/CMakeFiles/PlatformRobotInterface.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/cmake-build-debug/CMakeFiles/PlatformRobotInterface.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/cmake-build-debug/CMakeFiles/PlatformRobotInterface.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/cmake-build-debug/CMakeFiles/PlatformRobotInterface.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/cmake-build-debug/CMakeFiles/PlatformRobotInterface.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/cmake-build-debug/CMakeFiles/PlatformRobotInterface.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/cmake-build-debug/CMakeFiles/PlatformRobotInterface.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/cmake-build-debug/CMakeFiles/PlatformRobotInterface.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/cmake-build-debug/archive_robot.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/cmake-build-debug/archive_robot.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/plc/jaka_plc.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/plc/jaka_plc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robot_interface_platform/robot_interface/platform.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../robot_interface_platform/robot_interface/platform.cc" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +61,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1297">
+            <state relative-caret-position="10368">
               <caret line="576" column="22" selection-start-line="576" selection-start-column="22" selection-end-line="576" selection-end-column="22" />
             </state>
           </provider>
@@ -37,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="793" column="87" selection-start-line="793" selection-start-column="79" selection-end-line="793" selection-end-column="87" />
+            <state relative-caret-position="186">
+              <caret line="805" column="44" selection-start-line="805" selection-start-column="40" selection-end-line="805" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -59,6 +92,7 @@
       <find>stateMsg</find>
       <find>currentState</find>
       <find>pickcab</find>
+      <find>再试一次</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -84,12 +118,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="archive_robot" type="b2602c69:ProjectViewProjectNode" />
               <item name="robot_interface_jaka" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="archive_robot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robot_interface_jaka" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="archive_robot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="robot_interface_jaka" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="archive_robot" type="b2602c69:ProjectViewProjectNode" />
@@ -110,7 +156,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -159,17 +204,18 @@
       <workItem from="1619075813386" duration="1095000" />
       <workItem from="1619136150092" duration="599000" />
       <workItem from="1619145082733" duration="2145000" />
+      <workItem from="1619500627135" duration="1073000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9301000" />
+    <option name="totallyTimeSpent" value="10374000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1301" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2613546" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26613545" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -209,7 +255,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pick_and_place/jaka_pick_and_place.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1297">
+        <state relative-caret-position="10368">
           <caret line="576" column="22" selection-start-line="576" selection-start-column="22" selection-end-line="576" selection-end-column="22" />
         </state>
       </provider>
@@ -221,10 +267,15 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/build/config/FixedConfig.YML">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/robot_interface/jaka_robot_interface.cc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="793" column="87" selection-start-line="793" selection-start-column="79" selection-end-line="793" selection-end-column="87" />
+        <state relative-caret-position="186">
+          <caret line="805" column="44" selection-start-line="805" selection-start-column="40" selection-end-line="805" selection-end-column="44" />
         </state>
       </provider>
     </entry>

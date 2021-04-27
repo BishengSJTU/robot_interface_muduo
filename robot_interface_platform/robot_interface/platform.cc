@@ -2,6 +2,8 @@
 #include "Thread.h"
 #include "LogFile.h"
 #include "Logging.h"
+#include "agv.h"
+using namespace jiazhi;
 
 std::unique_ptr<muduo::LogFile> g_logFile;
 std::unique_ptr<muduo::LogFile> g_logStdout;
@@ -20,18 +22,23 @@ int main(int argc, char* argv[]) {
 //    g_logFile.reset(new muduo::LogFile(::basename(name), 600*1000));
 //    muduo::Logger::setOutput(outputFunc);
 
-    RobotInterface robotInterface(path + "/config");
-    muduo::Thread receive_task(std::bind(&RobotInterface::eventLoopThread, &robotInterface));
-    muduo::Thread execute_task(std::bind(&RobotInterface::execTaskThread, &robotInterface));
-    muduo::Thread inquireThread(std::bind(&RobotInterface::inquireRobotStateThread, &robotInterface));
+    AGV agv(path + "/config", true);
+    int missionId;
+    agv.AgvGo(1, 1, missionId);
 
-    receive_task.start();
-    execute_task.start();
-    inquireThread.start();
+//    RobotInterface robotInterface(path + "/config");
 
-    receive_task.join();
-    execute_task.join();
-    inquireThread.join();
+//    muduo::Thread receive_task(std::bind(&RobotInterface::eventLoopThread, &robotInterface));
+//    muduo::Thread execute_task(std::bind(&RobotInterface::execTaskThread, &robotInterface));
+//    muduo::Thread inquireThread(std::bind(&RobotInterface::inquireRobotStateThread, &robotInterface));
+//
+//    receive_task.start();
+//    execute_task.start();
+//    inquireThread.start();
+//
+//    receive_task.join();
+//    execute_task.join();
+//    inquireThread.join();
 
     return 0;
 }

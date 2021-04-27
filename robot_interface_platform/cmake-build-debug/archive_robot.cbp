@@ -307,16 +307,16 @@
 		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/net/TimerQueue.h">
 			<Option target="PlatformRobotInterface"/>
 		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/pick_and_place/jaka_pick_and_place.cc">
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/pick_and_place/platform_pick_and_place.cc">
 			<Option target="PlatformRobotInterface"/>
 		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/pick_and_place/jaka_pick_and_place.h">
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/pick_and_place/platform_pick_and_place.h">
 			<Option target="PlatformRobotInterface"/>
 		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/plc/jaka_plc.cc">
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/plc/platform_plc.cc">
 			<Option target="PlatformRobotInterface"/>
 		</Unit>
-		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/plc/jaka_plc.h">
+		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/plc/platform_plc.h">
 			<Option target="PlatformRobotInterface"/>
 		</Unit>
 		<Unit filename="/home/bisheng/robot_interface_muduo/robot_interface_platform/robot_interface/codec.h">
